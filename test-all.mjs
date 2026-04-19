@@ -280,9 +280,38 @@ for (const section of requiredSections) {
   }
 }
 
-// ── 10. VERSION FILE ─────────────────────────────────────────────
+// ── 10. LATEX RESUME COMPILER ────────────────────────────────────
 
-console.log('\n10. Version file');
+console.log('\n10. LaTeX resume compiler');
+
+if (fileExists('compile-latex-resume.mjs')) {
+  const latexSyntax = run('node', ['--check', 'compile-latex-resume.mjs']);
+  if (latexSyntax !== null) {
+    pass('compile-latex-resume.mjs syntax OK');
+  } else {
+    fail('compile-latex-resume.mjs has syntax errors');
+  }
+
+  const pdflatex = run('which', ['pdflatex']);
+  const xelatex = run('which', ['xelatex']);
+  if (pdflatex || xelatex) {
+    pass(`LaTeX compiler available: ${pdflatex ? 'pdflatex' : 'xelatex'}`);
+  } else {
+    warn('LaTeX compiler not found (pdflatex/xelatex) — compile-latex-resume.mjs requires it');
+  }
+
+  if (fileExists('resume')) {
+    pass('resume/ directory exists');
+  } else {
+    warn('resume/ directory missing — add your .tex/.cls files there');
+  }
+} else {
+  fail('compile-latex-resume.mjs missing');
+}
+
+// ── 11. VERSION FILE ─────────────────────────────────────────────
+
+console.log('\n11. Version file');
 
 if (fileExists('VERSION')) {
   const version = readFile('VERSION').trim();

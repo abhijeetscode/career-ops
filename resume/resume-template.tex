@@ -1,0 +1,78 @@
+% resume-template.tex — LaTeX resume template for career-ops
+%
+% Placeholders use {{KEY}} syntax. Pass values with:
+%   node compile-latex-resume.mjs --tex resume/resume-template.tex \
+%     --var JOBTITLE="ML Engineer" --var COMPANY="Anthropic"
+%
+% Or via a JSON file:
+%   node compile-latex-resume.mjs --tex resume/resume-template.tex \
+%     --vars-file resume/vars-anthropic.json
+%
+% Available placeholders (customise to match your .cls fields):
+%   {{NAME}}       Full name
+%   {{EMAIL}}      Email address
+%   {{PHONE}}      Phone number
+%   {{LOCATION}}   City, Country
+%   {{LINKEDIN}}   LinkedIn URL or handle
+%   {{GITHUB}}     GitHub URL or handle
+%   {{WEBSITE}}    Portfolio / website
+%   {{JOBTITLE}}   Target job title (used in summary/objective)
+%   {{COMPANY}}    Target company name (used in cover snippets)
+%   {{SUMMARY}}    Professional summary paragraph
+%   {{SKILLS}}     Comma-separated skills list
+
+\documentclass{resume}   % Replace "resume" with your actual .cls filename (without extension)
+
+% ── Contact ─────────────────────────────────────────────────────────────────
+
+\name{{{NAME}}}
+
+\address{
+  {{EMAIL}} \\ {{PHONE}} \\ {{LOCATION}}
+}
+\address{
+  \href{https://linkedin.com/in/{{LINKEDIN}}}{linkedin.com/in/{{LINKEDIN}}} \\
+  \href{https://github.com/{{GITHUB}}}{github.com/{{GITHUB}}} \\
+  \href{https://{{WEBSITE}}}{{{WEBSITE}}}
+}
+
+\begin{document}
+
+% ── Summary ──────────────────────────────────────────────────────────────────
+
+\begin{rSection}{Summary}
+  {{SUMMARY}}
+\end{rSection}
+
+% ── Skills ───────────────────────────────────────────────────────────────────
+
+\begin{rSection}{Skills}
+  \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+    Core & {{SKILLS}} \\
+  \end{tabular}
+\end{rSection}
+
+% ── Experience ───────────────────────────────────────────────────────────────
+
+\begin{rSection}{Experience}
+
+  \begin{rSubsection}{Your Company}{Year -- Present}{Your Role}{Location}
+    \item Achievement 1 — quantify impact
+    \item Achievement 2 — quantify impact
+  \end{rSubsection}
+
+  % Add more positions below following the same pattern
+
+\end{rSection}
+
+% ── Education ────────────────────────────────────────────────────────────────
+
+\begin{rSection}{Education}
+
+  \begin{rSubsection}{Your University}{Year}{Degree, Major}{}
+    \item Relevant coursework or achievement (optional)
+  \end{rSubsection}
+
+\end{rSection}
+
+\end{document}

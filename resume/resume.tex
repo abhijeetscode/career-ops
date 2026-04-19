@@ -1,0 +1,188 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template
+% Version 2.0 (8/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Trey Hunner (http://www.treyhunner.com/)
+%
+% Important note:
+% This template requires the resume.cls file to be in the same directory as the
+% .tex file. The resume.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%   PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{resume} % Use the custom resume.cls style
+\usepackage[left=0.7in,top=0.4in,right=0.7in,bottom=0.5in]
+{geometry} % Document margins
+\usepackage{url}
+\usepackage{bookman}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+
+%----------------------------------------------------------------------------------------
+%   DOCUMENT START
+%----------------------------------------------------------------------------------------
+\name{Abhijeet Lokhande} % Your name
+\designation{AI Alchemist}
+
+\address{07480801382 \\ London, United Kingdom}
+\address{\href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \\ https://www.linkedin.com/in/ablds/}
+
+\begin{document}
+\title{Anon Resume}
+%----------------------------------------------------------------------------------------
+%   EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Summary}
+AI Alchemist committed to continuous learning and building impactful AI solutions from fine-tuning LLMs (50K+ HuggingFace downloads) to developing AI agents and data pipelines.
+Passionate about solving real-world problems through innovative machine learning approaches.
+\end{rSection}
+
+\begin{rSection}{Technical Skills}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+Proficient In   & {Machine/Deep Learning, NLP, LLMs, AI Agents, DSPy}\\
+                & {Python, SQL, Django}\\
+                & {Geopandas, Scikit-Learn, TensorFlow, Keras, PyTorch, XGBoost}\\
+                & {Langchain, LlamaIndex, LangGraph}\\
+                & {FastAPI, Test Driven Development}\\
+                & {Retrieval Augmented Generation(RAG), Data Analysis}\\
+
+                & {ETL processes, Data pipelines, MySQL, PostgreSQL, MongoDB}\\
+                & {AWS, Git, GitHub, Docker} \\
+                & {Numerical Optimization, Statistics, Forecasting} \\
+\end{tabular}
+
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%   Personal Details
+%----------------------------------------------------------------------------------------
+
+
+\begin{rSection}{Profile Links}
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+Linkedin & https://www.linkedin.com/in/ablds/  \\
+Github & https://github.com/abhijeetscode \\
+Hugging Face & https://huggingface.co/ab-ai
+\end{tabular}
+
+\end{rSection}
+
+
+%----------------------------------------------------------------------------------------
+%   WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Open Source Contributions}
+\begin{itemize}
+    \item Fine-tuned Large Language Models (GPT with LoRA and BERT) to detect Personally Identifiable Information (PII), with published models collectively achieving 30,000+ downloads on HuggingFace.
+    \url{https://huggingface.co/ab-ai/PII-Model-Phi3-Mini} \\
+    \url{https://huggingface.co/ab-ai/pii_model}
+    \item Built an autonomous ReAct-based coding agent using LangGraph and the Anthropic API that generates installable, tested software packages from plain-language markdown specs, achieving 9/9 pass rate across a polyglot benchmark (Python, Go, Rust, Java, JS). \url{https://github.com/abhijeetscode/Spec-to-Code-Agent}
+    \item Developed CLIP-style architecture for searching images based on
+    natural language prompts using dual-encoder embeddings. \\
+    \url{https://github.com/abhijeetscode/text-to-image-search}
+    \item  Built a Digital Detox mobile app that helps users reduce social media usage through intentional friction and app-blocking mechanisms. \\
+    \url{https://abhijeets-code.itch.io/digitaldetox}
+
+\end{itemize}
+\end{rSection}
+
+\begin{rSection}{Work Experience}
+\begin{rSubsection}{Built AI (FinTech \& AI Company)}{April-2022 - Present}{AI Alchemist (Early Stage Hire)}{London, UK}
+\item Developed and deployed an autonomous AI agent that generates Discounted Cash Flow (DCF) financial models from raw financial data, reducing analyst modeling time by ~70\% and significantly improving workflow efficiency.
+\item Built a production-ready LLM agent to understand and explain financial cashflows to users, with robust validation to ensure accurate and reliable outputs.
+\item Developing an AI agent that interprets investment-related queries, retrieves relevant outputs from a financial modeling engine, and generates user-friendly responses with actionable insights.
+\item Built a Conversational AI bot for analyzing financial documents using LLMs, RAG, embeddings, and vector database — enabled financial analysts to query multiple PDFs with natural language, cutting manual review time.
+\item Developed and deployed a novel machine learning model to infer missing values in large-scale property datasets. Enabled accurate estimation of rent per square foot across London postcodes.
+\item Built a data processing and ingestion pipeline by linking 80\% of property records across diverse datasets with geolocation enrichment, enabling a machine learning model to infer missing rental values by area.
+\item Improved performance of the financial modelling engine by 85\% by rearchitecting the existing codebase into a graph-based system leveraging Apache Hamilton and Vectorisation techniques.
+\item Delivered a 30\% productivity gain by designing and implementing an automated financial document processing pipeline leveraging AWS Textract.
+\end{rSubsection}
+
+
+\begin{rSubsection}{King's College London}{March 2021 - January 2022}{Research Associate}{London, UK}
+\item Developed a novel Deep Learning model utilizing Graph Convolution Network and Generative Adversarial Network (GAN) techniques for Drug Discovery, resulting in a 63\% enhancement in the novelty score of
+drug structures.
+\item Designed and implemented a robust data preprocessing pipeline for clinical data, ensuring accuracy and completeness of the a million-row dataset.
+\item Utilized Scrapy and Beautiful Soup to gather data from various websites for research purposes
+
+\end{rSubsection}
+
+\end{rSection}
+
+
+%----------------------------------------------------------------------------------------
+%   Personal Project
+%----------------------------------------------------------------------------------------
+
+
+\iffalse
+\begin{rSection}{Relevant Project}
+\begin{description}
+  \item[$\cdot$] Solved infinite monkey problem using evolutionary algorithms.
+  \item[$\cdot$] Automated a Pacman on a small grid using reinforcement learning.
+  \item[$\cdot$] I built VAE to generate new images from the fashion MNIST dataset.
+  \item[$\cdot$] I built a movie recommender system using cosine similarity.
+\end{description}
+\end{rSection}
+\fi
+
+
+%----------------------------------------------------------------------------------------
+%   Achievements
+%----------------------------------------------------------------------------------------
+\iffalse
+\begin{rSection}{Achievements}
+\begin{description}
+  \item[$\cdot$] Completed all level of Google FooBar.
+  \item[$\cdot$] Got a certificate of appreciation from Merck \& Co.
+  \item[$\cdot$] Arctic Code Vault Contributor of Github.
+\end{description}
+\end{rSection}
+\fi
+%----------------------------------------------------------------------------------------
+%   Technical Experience
+%----------------------------------------------------------------------------------------
+
+
+
+%----------------------------------------------------------------------------------------
+%   TECHNICAL STRENGTHS SECTION
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Education}
+% September 2020 - January 2022
+\begin{rSubsection}{King's College London}{}{MSc in Data Science }{London, UK}
+%\vspace{-.1cm}
+%Overall GPA: 78\%
+\vspace{-.65cm}
+\item[]
+\end{rSubsection}
+\begin{rSubsection}{C-DAC: Centre for Development of Advanced Computing, India}{}{Post Graduate Diploma in Advanced Computing (PG-DAC)}{Pune, India}
+%\vspace{-.1cm}
+%Overall GPA: 78\%
+\vspace{-.65cm}
+\item[]
+\end{rSubsection}
+% June 2013 - June 2017
+\begin{rSubsection}{University of Pune}{}{Bachelor of Engineering in Computer Science}{Pune, India}
+%\vspace{-.1cm}
+%Overall GPA: 78\%
+\vspace{-.65cm}
+\item[]
+\end{rSubsection}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}

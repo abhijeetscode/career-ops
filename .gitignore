@@ -27,6 +27,16 @@ modes/_profile.md
 node_modules/
 bun.lock
 
+# LaTeX compilation artifacts (resume/ source files are tracked)
+resume/*.pdf
+resume/*.aux
+resume/*.log
+resume/*.out
+resume/*.toc
+resume/*.fls
+resume/*.fdb_latexmk
+resume/*.synctex.gz
+
 # OS
 .DS_Store
 *.mov

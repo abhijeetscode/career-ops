@@ -1,0 +1,16 @@
+# Applications Tracker
+
+| # | Date | Company | Role | Score | Status | PDF | Report | Notes |
+|---|------|---------|------|-------|--------|-----|--------|-------|
+| 9 | 2026-04-11 | Parloa | (Senior) AI Agent Architect | 3.6/5 | Evaluated | ✅ | [009](reports/009-parloa-ai-agent-architect-2026-04-11.md) | Good agent/prompt fit; Germany-centric location is a risk — confirm London remote before applying |
+| 10 | 2026-04-11 | Intercom | Forward Deployed Software Engineer | 3.8/5 | Evaluated | ✅ | [010](reports/010-intercom-fde-2026-04-11.md) | Good FDE fit; prefer Senior FDE (#011) — apply both; Intercom 40% layoffs in 2025 is a stability risk |
+| 11 | 2026-04-11 | Intercom | Senior Forward Deployed Engineer | 4.1/5 | Evaluated | ✅ | [011](reports/011-intercom-senior-fde-2026-04-11.md) | Strong FDE fit; founding role is well-matched to Abhijeet's profile; apply alongside #010 |
+| 30 | 2026-04-11 | Vercel | Forward Deployed Engineer, v0 | 3.1/5 | Evaluated | ✅ | [030](reports/030-vercel-fde-v0-2026-04-11.md) | US-only remote + TypeScript-heavy stack; London candidate ineligible; org turbulence signals |
+| 31 | 2026-04-11 | Adaptive ML | Forward Deployed AI Engineer | 3.3/5 | Evaluated | ✅ | [031](reports/031-adaptive-ml-fde-2026-04-11.md) | Strong technical fit; NYC/Toronto in-person required — viable only if open to relocation; visa sponsorship offered |
+| 1 | 2026-04-10 | Isomorphic Labs | Research Scientist (Applied LLMs) | 3.2/5 | Evaluated | ❌ | [001](reports/001-isomorphic-labs-2026-04-10.md) | PhD required (hard blocker); unique drug discovery angle (KCL GCN+GAN); apply and let them decide |
+| 2 | 2026-04-10 | Anthropic | Applied AI Engineer (Tokyo) | 2.8/5 | SKIP | ❌ | [002](reports/002-anthropic-applied-ai-tokyo-2026-04-10.md) | Location blocker: Tokyo on-site; identical role to London FDE (003) but wrong geography |
+| 3 | 2026-04-10 | Anthropic | Forward Deployed Engineer, Applied AI | 4.4/5 | Evaluated | ❌ | [003](reports/003-anthropic-fde-london-2026-04-10.md) | Top priority: £225K-£255K, strong FinTech match; FDE framing needed; apply immediately |
+| 4 | 2026-04-10 | Parloa | Senior Forward Deployed Engineer - UK | 3.5/5 | Evaluated | ❌ | [004](reports/004-parloa-senior-fde-uk-2026-04-10.md) | Voice/telephony domain gap; conditional fit; apply after Anthropic FDE and PhysicsX |
+| 5 | 2026-04-10 | Glean | Machine Learning Engineer, AI Agents | 3.0/5 | SKIP | ❌ | [005](reports/005-glean-mle-agents-2026-04-10.md) | Location blocker: Palo Alto hybrid 3-4d/week; strong technical match if US relocation considered |
+| 7 | 2026-04-10 | Perplexity | AI Inference Engineer (London) | 2.3/5 | SKIP | ❌ | [007](reports/007-perplexity-ai-inference-london-2026-04-10.md) | Fundamental mismatch: CUDA/Rust/C++ inference specialisation not on CV |
+| 8 | 2026-04-10 | PhysicsX | Senior AI Engineer - Applied | 4.1/5 | Evaluated | ❌ | [008](reports/008-physicsx-senior-ai-applied-2026-04-10.md) | Strong agentic match; physics domain stretch mitigated by dual-domain expertise; apply |

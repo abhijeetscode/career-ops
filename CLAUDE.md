@@ -55,6 +55,7 @@ AI-powered job search automation built on Claude Code: pipeline tracking, offer 
 | `portals.yml` | Query and company config |
 | `templates/cv-template.html` | HTML template for CVs |
 | `generate-pdf.mjs` | Playwright: HTML to PDF |
+| `compile-latex-resume.mjs` | LaTeX compiler: .tex + .cls → PDF (never modifies .cls) |
 | `article-digest.md` | Compact proof points from portfolio (optional) |
 | `interview-prep/story-bank.md` | Accumulated STAR+R stories across evaluations |
 | `interview-prep/{company}-{role}.md` | Company-specific interview intel reports |
