@@ -1,0 +1,13 @@
+{
+  "NAME": "Abhijeet Lokhande",
+  "EMAIL": "abhijeet_lokhande@proton.me",
+  "PHONE": "07480801382",
+  "LOCATION": "London, United Kingdom",
+  "LINKEDIN": "ablds",
+  "GITHUB": "abhijeetscode",
+  "WEBSITE": "huggingface.co/ab-ai",
+  "JOBTITLE": "AI Engineer",
+  "COMPANY": "Alpha CRC",
+  "SUMMARY": "AI engineer specializing in multi-agent orchestration and LLM fine-tuning for production systems. Architected autonomous agent systems using CrewAI and LangGraph that reduced manual work by 70\\%. Expert in model adaptation (LoRA, PEFT, fine-tuning) with 50K+ HuggingFace downloads. Proven ability to design end-to-end AI pipelines from data ingestion through model optimization to production deployment, with obsessive focus on reliability and performance.",
+  "SKILLS": "CrewAI, LangGraph, LLM fine-tuning (LoRA, PEFT), Ollama, RAG systems, Vector embeddings, Anthropic API, LangChain, FastAPI, Python, PostgreSQL+pgvector, Docker, Apache Hamilton, AWS, GCP, Git"
+}

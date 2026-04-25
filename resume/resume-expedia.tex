@@ -1,0 +1,136 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template
+% Version 2.0 (8/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Trey Hunner (http://www.treyhunner.com/)
+%
+% Important note:
+% This template requires the resume.cls file to be in the same directory as the
+% .tex file. The resume.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%   PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{resume} % Use the custom resume.cls style
+\usepackage[left=0.7in,top=0.4in,right=0.7in,bottom=0.5in]
+{geometry} % Document margins
+\usepackage{url}
+\usepackage{bookman}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+
+%----------------------------------------------------------------------------------------
+%   DOCUMENT START
+%----------------------------------------------------------------------------------------
+\name{Abhijeet Lokhande} % Your name
+\designation{ML Engineer: Infrastructure \& Production Systems}
+
+\address{07480801382 \\ London, United Kingdom}
+\address{\href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \\ https://www.linkedin.com/in/ablds/}
+
+\begin{document}
+\title{Anon Resume}
+%----------------------------------------------------------------------------------------
+%   EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Summary}
+ML engineer specializing in production ML infrastructure, data pipelines at scale, and MLOps. 3+ years architecting end-to-end ML systems: from feature engineering through model training to high-performance serving. Demonstrated expertise in scalable systems design (85\% latency optimization via rearchitecture), observability-first development, and mentoring junior engineers. Passionate about building robust, maintainable ML platforms that enable data scientists and product teams to move faster.
+\end{rSection}
+
+\begin{rSection}{Technical Skills}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+Infrastructure & {Docker, Kubernetes, AWS, CI/CD, Apache Hamilton}\\
+ML/Frameworks & {PyTorch, TensorFlow, scikit-learn, Model serving}\\
+Data/Pipeline & {SQL (BigQuery, PostgreSQL), Spark, Kafka, ETL}\\
+MLOps & {Production monitoring, Model evaluation, Deployment pipelines}\\
+Languages & {Python, SQL}\\
+\end{tabular}
+
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%   Personal Details
+%----------------------------------------------------------------------------------------
+
+
+\begin{rSection}{Profile Links}
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+Linkedin & https://www.linkedin.com/in/ablds/  \\
+Github & https://github.com/abhijeetscode \\
+Hugging Face & https://huggingface.co/ab-ai
+\end{tabular}
+
+\end{rSection}
+
+
+%----------------------------------------------------------------------------------------
+%   WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Open Source Contributions}
+\begin{itemize}
+    \item Spec-to-Code Agent: Autonomous coding agent using LangGraph, 9/9 polyglot pass rate. Demonstrates infrastructure-grade code quality and production-ready testing rigor.
+    \item PII Detection Models: Fine-tuned LLMs (LoRA, BERT) for production, 30K+ HuggingFace downloads. Proof of model evaluation, optimization, and deployment discipline.
+    \item Text-to-Image Search: CLIP-style dual-encoder architecture showcasing multimodal ML systems and scalable inference design.
+
+\end{itemize}
+\end{rSection}
+
+\begin{rSection}{Work Experience}
+\begin{rSubsection}{Built AI (FinTech \& AI Company)}{April 2022 to Present}{ML Engineer}{London, UK}
+\item ML infrastructure and scalability: Rearchitected financial modeling engine from naive iteration to graph-based system using Apache Hamilton and vectorization, achieving 85\% latency improvement and 3x throughput. Designed complex data pipelines linking 10M+ records across sources with geolocation enrichment and ML inference. Mentored junior engineers on systems design patterns.
+\item Production ML pipelines and observability: Built and deployed autonomous agent systems for financial modeling and document intelligence with production-grade monitoring, error isolation, and HITL validation. Achieved 90\%+ retrieval accuracy with <2s query latency on document intelligence platform (embeddings + vector DB + LLMs).
+\item Model serving and optimization: Fine-tuned PyTorch and TensorFlow models for production use (PII detection, domain adaptation). Optimized inference latency while maintaining accuracy. Deployed models achieving 50K+ downloads on HuggingFace, demonstrating production code quality and reusability.
+\item Data engineering at scale: Designed and implemented robust ETL pipeline handling TB-scale datasets with data quality checks, schema validation, and geolocation enrichment. Enabled accurate ML model training through careful data pipeline design and preprocessing.
+\item Business impact measurement: Identified ML automation opportunities in analyst workflows; designed end-to-end solutions; tracked KPIs and communicated ROI to leadership. Each initiative reduced manual work by 30-70\%.
+\end{rSubsection}
+
+
+\begin{rSubsection}{King's College London}{March 2021 to January 2022}{Research Associate}{London, UK}
+\item Machine learning systems and research: Developed novel models combining Graph Convolution Networks and GANs for complex optimization problems, achieving 63\% improvement in solution quality. Demonstrates deep learning fundamentals and architecture design.
+\item Data pipeline engineering: Designed and implemented robust preprocessing pipeline for clinical data at scale (1M+ rows), ensuring data integrity and completeness for downstream ML systems.
+\item Data collection and acquisition: Utilized Scrapy and Beautiful Soup for large-scale data acquisition and processing.
+
+\end{rSubsection}
+
+\end{rSection}
+
+
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Education}
+% September 2020 - January 2022
+\begin{rSubsection}{King's College London}{}{MSc in Data Science}{London, UK}
+%\vspace{-.1cm}
+%Overall GPA: 78\%
+\vspace{-.65cm}
+\item[]
+\end{rSubsection}
+\begin{rSubsection}{C-DAC: Centre for Development of Advanced Computing, India}{}{Post Graduate Diploma in Advanced Computing (PG-DAC)}{Pune, India}
+%\vspace{-.1cm}
+%Overall GPA: 78\%
+\vspace{-.65cm}
+\item[]
+\end{rSubsection}
+% June 2013 - June 2017
+\begin{rSubsection}{University of Pune}{}{Bachelor of Engineering in Computer Science}{Pune, India}
+%\vspace{-.1cm}
+%Overall GPA: 78\%
+\vspace{-.65cm}
+\item[]
+\end{rSubsection}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
