@@ -20,6 +20,7 @@ AI engineer committed to continuous learning and building impactful AI solutions
 ### Built AI — AI Alchemist (Early Stage Hire)
 **FinTech & AI Company · London, UK · April 2022 – Present**
 
+- Enabled secure enterprise access to 180+ AI-powered tools by building a production-ready MCP server on FastAPI, exposed through the Model Context Protocol for Claude Desktop and Glean-compatible clients.
 - Developed and deployed an autonomous AI agent that generates Discounted Cash Flow (DCF) financial models from raw financial data, reducing analyst modeling time by 70%.
 - Built a production-ready LLM agent to understand and explain financial cashflows to users, with robust validation to ensure accurate and reliable outputs.
 - Developing an AI agent that interprets investment-related queries, retrieves relevant outputs from a financial modeling engine, and generates user-friendly responses with actionable insights.
@@ -45,12 +46,6 @@ AI engineer committed to continuous learning and building impactful AI solutions
 
 - **Spec-to-Code Agent:** Built an autonomous ReAct-based coding agent using LangGraph and the Anthropic API that generates installable, tested software packages from plain-language markdown specs. Achieves 9/9 pass rate across a polyglot benchmark (Python, Go, Rust, Java, JS).  
   https://github.com/abhijeetscode/Spec-to-Code-Agent
-
-- **Text-to-Image Search:** Developed CLIP-style architecture for searching images based on natural language prompts using dual-encoder embeddings.  
-  https://github.com/abhijeetscode/text-to-image-search
-
-- **Digital Detox App:** Built a mobile app that helps users reduce social media usage through intentional friction and app-blocking mechanisms.  
-  https://abhijeets-code.itch.io/digitaldetox
 
 ---
 
