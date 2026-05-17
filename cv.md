@@ -21,6 +21,7 @@ AI engineer committed to continuous learning and building impactful AI solutions
 **FinTech & AI Company · London, UK · April 2022 – Present**
 
 - Enabled secure enterprise access to 180+ AI-powered tools by building a production-ready MCP server on FastAPI, exposed through the Model Context Protocol for Claude Desktop and Glean-compatible clients.
+- Designed agent evals, Quality of Service metrics, and incident-triggering mechanisms to monitor reliability, groundedness, latency, and failure modes in production.
 - Developed and deployed an autonomous AI agent that generates Discounted Cash Flow (DCF) financial models from raw financial data, reducing analyst modeling time by 70%.
 - Built a production-ready LLM agent to understand and explain financial cashflows to users, with robust validation to ensure accurate and reliable outputs.
 - Developing an AI agent that interprets investment-related queries, retrieves relevant outputs from a financial modeling engine, and generates user-friendly responses with actionable insights.
