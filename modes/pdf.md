@@ -92,33 +92,10 @@ Use the template in `cv-template.html`. Replace the `{{...}}` placeholders with 
 | `{{SECTION_SKILLS}}` | Skills |
 | `{{SKILLS}}` | Skills HTML |
 
-## LaTeX Resume Compilation (optional)
-
-If `config/profile.yml` has `latex_resume_tex` set (path to a `.tex` resume file), offer this as a generation option:
-- **"HTML/PDF (fast, ATS-optimized)"** — existing flow above
-- **"LaTeX PDF (design-preserving, for custom .cls templates)"** — compile the user's `.tex` resume
-
-### LaTeX workflow
-
-1. Read `latex_resume_tex` (and optionally `latex_resume_cls`) from `config/profile.yml`
-2. If template variables are needed (job-specific summary, keywords), collect them
-3. Determine output filename: `output/cv-{candidate}-{company}-{YYYY-MM-DD}.pdf`
-4. Run: `node compile-latex-resume.mjs --tex {latex_resume_tex} [--var KEY=VALUE ...] --output output/`
-5. The `.cls` file is never modified — integrity is verified automatically
-6. Report: PDF path. Update tracker PDF column to ✅.
-
-**When to suggest LaTeX over HTML/PDF:**
-- User has a custom-designed `.cls` template they want to preserve
-- User prefers academic/technical resume style
-- User explicitly asks for LaTeX compilation
-
----
-
 ## Canva CV Generation (optional)
 
 If `config/profile.yml` has `cv.canva_resume_design_id` set, offer the user a choice before generating:
 - **"HTML/PDF (fast, ATS-optimized)"** — existing flow above
-- **"LaTeX PDF (if latex_resume_tex is configured)"** — LaTeX compilation flow above
 - **"Canva CV (visual, design-preserving)"** — new flow below
 
 If the user has no `cv.canva_resume_design_id`, skip this prompt and use the HTML/PDF flow.
