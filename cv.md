@@ -17,9 +17,10 @@ AI engineer committed to continuous learning and building impactful AI solutions
 
 ## Experience
 
-### Built AI — AI Alchemist (Early Stage Hire)
+### Built AI — AI/ML Engineer (Early Stage Hire)
 **FinTech & AI Company · London, UK · April 2022 – Present**
 
+- Core engineer on an [Innovate UK funded R&D project](https://gtr.ukri.org/projects?ref=10022996) (£205,895 grant, 2022–23) that built a novel ML data platform and street-level analytics, enabling commercial real estate investors to make data-driven decisions over hyper-local market signals.
 - Enabled secure enterprise access to 180+ AI-powered tools by building a production-ready MCP server on FastAPI, exposed through the Model Context Protocol for Claude Desktop and Glean-compatible clients.
 - Designed agent evals, Quality of Service metrics, and incident-triggering mechanisms to monitor reliability, groundedness, latency, and failure modes in production.
 - Developed and deployed an autonomous AI agent that generates Discounted Cash Flow (DCF) financial models from raw financial data, reducing analyst modeling time by 70%.
@@ -48,6 +49,9 @@ AI engineer committed to continuous learning and building impactful AI solutions
 - **Spec-to-Code Agent:** Built an autonomous ReAct-based coding agent using LangGraph and the Anthropic API that generates installable, tested software packages from plain-language markdown specs. Achieves 9/9 pass rate across a polyglot benchmark (Python, Go, Rust, Java, JS).  
   https://github.com/abhijeetscode/Spec-to-Code-Agent
 
+- **Transformer from Scratch in Rust:** Built a GPT-style decoder-only transformer from first principles in Rust using the Candle framework — multi-head causal self-attention, pre-norm blocks with residual connections, token/position embeddings, and a full training loop with early stopping and SafeTensors checkpointing. Supports character and BPE (r50k_base) training with Metal GPU acceleration; default config mirrors GPT-2 small (768 dims, 12 heads, 12 layers, 1024-token context).  
+  https://github.com/abhijeetscode/transformer-rust
+
 ---
 
 ## Education
@@ -66,8 +70,8 @@ Bachelor of Engineering in Computer Science · Pune, India
 ## Technical Skills
 
 **AI/ML:** Machine Learning, Deep Learning, NLP, LLMs, AI Agents, RAG, Numerical Optimization, Statistics, Forecasting  
-**Frameworks:** Scikit-Learn, TensorFlow, Keras, PyTorch, XGBoost, LangChain, LlamaIndex, LangGraph, Geopandas  
-**Languages:** Python, SQL  
+**Frameworks:** Scikit-Learn, TensorFlow, Keras, PyTorch, Candle, XGBoost, LangChain, LlamaIndex, LangGraph, Geopandas  
+**Languages:** Python, SQL, Rust  
 **Web/API:** FastAPI, Django, Test Driven Development  
 **Data:** ETL processes, Data pipelines, MySQL, PostgreSQL, MongoDB, Data Analysis  
 **Infrastructure:** AWS, Docker, Git, GitHub
