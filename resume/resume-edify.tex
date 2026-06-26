@@ -1,0 +1,94 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template -- Version 2.0 (8/5/13)
+% http://www.LaTeXTemplates.com -- Original author: Trey Hunner
+% Requires resume.cls in the same directory.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%   PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{resume} % Use the custom resume.cls style
+\usepackage[left=0.5in,top=0.15in,right=0.5in,bottom=0.1in]
+{geometry} % Document margins
+\usepackage{url}
+\usepackage{bookman}
+\usepackage[T1]{fontenc}
+\usepackage[hidelinks]{hyperref}
+
+% Tighten whole-document spacing (overrides resume.cls macros; .cls untouched)
+\def\nameskip{\smallskip}
+\def\sectionskip{\vspace{0pt}}
+
+%----------------------------------------------------------------------------------------
+%   DOCUMENT START
+%----------------------------------------------------------------------------------------
+\name{Abhijeet Lokhande} % Your name
+\designation{AI Engineer: Shipping Production LLM Features, Build-vs-Buy \& Evals}
+
+\address{07480801382 \\ London, United Kingdom}
+\address{\href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \\ https://www.linkedin.com/in/ablds/}
+
+\begin{document}
+\title{Anon Resume}
+%----------------------------------------------------------------------------------------
+%   SUMMARY SECTION
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Summary}
+AI engineer who ships LLM-powered features end-to-end, prototype to production: takes a business problem, picks the right managed model (Anthropic, OpenAI, Google) and pattern (RAG, agents/tool use, structured outputs), and makes it reliable, fast, and cost-effective. Strong on the parts that separate a demo from a product: eval harnesses and regression testing, prompt and version management, observability, cost and latency controls, and safety guardrails. 4+ years building production AI in a fast-moving FinTech startup, comfortable driving a high-level goal to a shipped feature. Open-source proof: 67K+ HuggingFace downloads, 9/9 polyglot benchmark.
+\end{rSection}
+
+\begin{rSection}{Technical Skills}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{4ex}} p{5.4in} }
+LLM Toolkit & {Anthropic, OpenAI, Google, RAG, Agents/tool use, Structured outputs}\\
+Production AI & {Eval harnesses, Regression tests, Observability, Cost/latency, Guardrails}\\
+Engineering & {Python (production-grade, TDD), SQL, Go, FastAPI, AWS, Docker, Git}\\
+Infra/ML & {Microservices, PostgreSQL/pgvector, Embeddings, Fine-tuning (LoRA, BERT)}\\
+\end{tabular}
+
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%   WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Work Experience}
+\begin{rSubsection}{Built AI (FinTech \& AI Company)}{April 2022 to Present}{AI Engineer (Early Stage Hire)}{London, UK}
+\item Shipped LLM features prototype to production on a live SaaS platform (LangGraph, Anthropic): DCF modeling, document intelligence, and natural-language query interpretation with tool use and structured outputs --- real users relying on them, cutting analyst manual work by 70\%.
+\item Made build-vs-buy and architecture calls: chose the right managed model and pattern (RAG, agents, structured outputs) balancing accuracy, latency, cost, and data privacy; rearchitected the engine for 85\% lower latency, exposing 180+ tools via a service API.
+\item Owned the things that separate a demo from a product: eval harnesses and regression testing, prompt and version management, observability and tracing, cost and latency controls, and safety guardrails.
+\item Queried the data warehouse over SQL for context and sanity-checks; deployed into a microservices architecture on AWS, driving high-level goals to shipped features without a pre-written roadmap.
+\end{rSubsection}
+
+
+\begin{rSubsection}{King's College London}{March 2021 to January 2022}{Research Associate}{London, UK}
+\item Built Graph Convolution Networks and GANs for molecular optimization (63\% novelty gain) and robust clinical-data pipelines (1M+ rows).
+
+\end{rSubsection}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%   OPEN SOURCE SECTION
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Open Source Contributions}
+\begin{itemize}\setlength\itemsep{-0.4em}
+    \item \textbf{Spec-to-Code Agent}: Autonomous multi-step ReAct agent (LangGraph + Anthropic) with tool use and orchestration that ships tested, installable packages from plain-language specs --- 9/9 pass rate across a polyglot benchmark (Python, Go, Rust, Java, JS). \url{https://github.com/abhijeetscode/Spec-to-Code-Agent}
+    \item \textbf{PII Detection Models}: Fine-tuned GPT (LoRA) and BERT for PII detection, 67K+ downloads in production. \url{https://huggingface.co/ab-ai/pii_model}
+
+\end{itemize}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Education}
+{\bf King's College London}, MSc in Data Science \hfill {\em London, UK}\\
+{\bf C-DAC, India}, Post Graduate Diploma in Advanced Computing (PG-DAC) \hfill {\em Pune, India}\\
+{\bf University of Pune}, B.E. in Computer Science \hfill {\em Pune, India}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}

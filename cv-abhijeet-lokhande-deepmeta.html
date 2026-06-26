@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abhijeet Lokhande - CV</title>
+<style>
+  @font-face {
+    font-family: 'Space Grotesk';
+    src: url('./fonts/space-grotesk-latin.woff2') format('woff2');
+    font-weight: 300 700; font-style: normal; font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  @font-face {
+    font-family: 'Space Grotesk';
+    src: url('./fonts/space-grotesk-latin-ext.woff2') format('woff2');
+    font-weight: 300 700; font-style: normal; font-display: swap;
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  @font-face {
+    font-family: 'DM Sans';
+    src: url('./fonts/dm-sans-latin.woff2') format('woff2');
+    font-weight: 100 1000; font-style: normal; font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  @font-face {
+    font-family: 'DM Sans';
+    src: url('./fonts/dm-sans-latin-ext.woff2') format('woff2');
+    font-weight: 100 1000; font-style: normal; font-display: swap;
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: 'DM Sans', sans-serif; font-size: 11px; line-height: 1.5; color: #1a1a2e; background: #fff; }
+  .page { width: 100%; max-width: 210mm; margin: 0 auto; padding: 2px 0; }
+
+  .header { margin-bottom: 12px; }
+  .header h1 { font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; color: #1a1a2e; letter-spacing: -0.02em; margin-bottom: 6px; line-height: 1.1; }
+  .header-gradient { height: 2px; background: linear-gradient(to right, hsl(187,74%,32%), hsl(270,70%,45%)); border-radius: 1px; margin-bottom: 10px; }
+  .contact-row { display: flex; flex-wrap: wrap; gap: 8px 14px; font-size: 10.5px; line-height: 1.4; color: #555; }
+  .contact-row a { color: #555; text-decoration: none; }
+  .contact-row .separator { color: #ccc; }
+
+  .section { margin-bottom: 6px; }
+  .section-title { font-family: 'Space Grotesk', sans-serif; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: hsl(187,74%,32%); border-bottom: 1.5px solid #e2e2e2; padding-bottom: 3px; margin-bottom: 8px; line-height: 1.2; }
+
+  .summary-text { font-size: 11px; line-height: 1.5; color: #2f2f2f; }
+  a { white-space: nowrap; }
+
+  .competencies-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+  .competency-tag { font-size: 10px; font-weight: 500; color: hsl(187,74%,28%); background: hsl(187,40%,95%); padding: 4px 10px; border-radius: 3px; border: 1px solid hsl(187,40%,88%); }
+
+  .job { margin-bottom: 9px; }
+  .job-header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 4px; }
+  .job-company { font-family: 'Space Grotesk', sans-serif; font-size: 12.5px; font-weight: 600; color: hsl(270,70%,45%); }
+  .job-period { font-size: 10.5px; color: #777; white-space: nowrap; }
+  .job-role { font-size: 11px; font-weight: 600; color: #333; margin-bottom: 6px; }
+  .job-location { font-size: 10px; color: #888; }
+  .job ul { padding-left: 18px; margin-top: 6px; }
+  .job li { font-size: 10.5px; line-height: 1.42; color: #333; margin-bottom: 2px; }
+  .job li strong { font-weight: 600; }
+
+  .project { margin-bottom: 7px; }
+  .project-title { font-family: 'Space Grotesk', sans-serif; font-size: 11.5px; font-weight: 600; color: hsl(270,70%,45%); }
+  .project-desc { font-size: 10.5px; color: #444; margin-top: 3px; line-height: 1.5; }
+  .project-tech { font-size: 9.5px; color: #888; margin-top: 3px; }
+
+  .edu-item { margin-bottom: 5px; }
+  .edu-header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .edu-title { font-weight: 600; font-size: 11px; color: #333; }
+  .edu-org { color: hsl(270,70%,45%); font-weight: 500; }
+  .edu-year { font-size: 10px; color: #777; white-space: nowrap; }
+
+  .skills-grid { display: flex; flex-direction: column; gap: 5px; }
+  .skill-item { font-size: 10.5px; color: #444; line-height: 1.5; }
+  .skill-category { font-weight: 600; color: #333; font-size: 10.5px; }
+
+  @media print { body { -webkit-print-color-adjust: exact; print-color-adjust: exact; } .page { padding: 0; } }
+  .avoid-break, .job, .project, .edu-item { break-inside: avoid; page-break-inside: avoid; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header avoid-break">
+    <h1>Abhijeet Lokhande</h1>
+    <div class="header-gradient"></div>
+    <div class="contact-row">
+      <span>07480801382</span>
+      <span class="separator">|</span>
+      <span>abhijeet_lokhande@proton.me</span>
+      <span class="separator">|</span>
+      <a href="https://www.linkedin.com/in/ablds/">linkedin.com/in/ablds</a>
+      <span class="separator">|</span>
+      <a href="https://github.com/abhijeetscode">github.com/abhijeetscode</a>
+      <span class="separator">|</span>
+      <span>London, United Kingdom</span>
+    </div>
+  </div>
+
+  <div class="section avoid-break">
+    <div class="section-title">Professional Summary</div>
+    <div class="summary-text">AI leader and founding engineer (early-stage hire) who translates customer and business problems into machine learning solutions and ships them to production. Combines hands-on technical depth (Python ML stack, PyTorch, time-series modelling, production-grade code on AWS with CI/CD and containers) with technical leadership: advising the leadership team, aligning technology choices to business goals, mentoring engineers and shaping the technical roadmap. Comfortable working cross-functionally and forward-deployed with customers, and communicating complex AI to technical and non-technical audiences. Published open-source models with 67K+ downloads.</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Core Competencies</div>
+    <div class="competencies-grid">
+      <span class="competency-tag">Founding-Engineer Leadership</span>
+      <span class="competency-tag">Business-to-ML Translation</span>
+      <span class="competency-tag">Production ML on Cloud</span>
+      <span class="competency-tag">Time-Series Modelling</span>
+      <span class="competency-tag">Python ML (PyTorch)</span>
+      <span class="competency-tag">Mentoring &amp; Roadmaps</span>
+      <span class="competency-tag">Stakeholder Communication</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Work Experience</div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-company">Built AI</span>
+        <span class="job-period">April 2022 to Present</span>
+      </div>
+      <div class="job-role">AI Architect / Founding Engineer (Early-Stage Hire) <span class="job-location">· FinTech &amp; AI · London, UK</span></div>
+      <ul>
+        <li><strong>Technical leadership:</strong> As an early-stage founding hire, provided technical leadership, advised the founding team on AI strategy, mentored engineers and helped shape the technical roadmap.</li>
+        <li><strong>Business-to-ML translation:</strong> Translated customer and business problems into machine learning solutions across financial modelling, forecasting and automation, cutting analyst work by 70%.</li>
+        <li><strong>Production ML on cloud:</strong> Wrote production-grade Python (ML stack, PyTorch) deployed on AWS with CI/CD and containers, including an MCP server (FastAPI); re-architected the modelling engine for an 85% latency reduction.</li>
+        <li><strong>Time-series &amp; data:</strong> Built forecasting, time-series and inference models on large datasets, with SQL and database management feeding training and inference.</li>
+        <li><strong>Cross-functional delivery:</strong> Worked cross-functionally with business and product partners, presenting solutions clearly and maintaining documentation of designs and decisions.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-company">King's College London</span>
+        <span class="job-period">March 2021 to January 2022</span>
+      </div>
+      <div class="job-role">Research Associate <span class="job-location">· London, UK</span></div>
+      <ul>
+        <li>Built and trained deep learning models (Graph Convolution Networks and GANs) for drug discovery, a 63% improvement in novelty score, with large-scale data pipelines.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="section avoid-break">
+    <div class="section-title">Open Source &amp; Projects</div>
+
+    <div class="project">
+      <div class="project-title">Spec-to-Code Agent</div>
+      <div class="project-desc">Autonomous multi-agent system (LangGraph + Anthropic API) with planning, tool-use and output validation, turning specs into installable, tested packages. 9/9 pass rate on a polyglot benchmark (Python, Go, Rust, Java, JS).</div>
+      <div class="project-tech">LangGraph · Anthropic · agents · github.com/abhijeetscode/Spec-to-Code-Agent</div>
+    </div>
+
+    <div class="project">
+      <div class="project-title">PII Detection Models (Open Source)</div>
+      <div class="project-desc">Fine-tuned LLMs (Phi-3-Mini, BERT, GPT with LoRA) for entity detection; published open-source models with 67K+ combined HuggingFace downloads.</div>
+      <div class="project-tech">PyTorch · LoRA · Transformers · huggingface.co/ab-ai/pii_model</div>
+    </div>
+
+  </div>
+
+  <div class="section avoid-break">
+    <div class="section-title">Education</div>
+    <div class="edu-item">
+      <div class="edu-header">
+        <span class="edu-title"><span class="edu-org">King's College London</span> · MSc in Data Science</span>
+        <span class="edu-year">London, UK</span>
+      </div>
+    </div>
+    <div class="edu-item">
+      <div class="edu-header">
+        <span class="edu-title"><span class="edu-org">C-DAC</span> · PG Diploma in Advanced Computing (PG-DAC)</span>
+        <span class="edu-year">Pune, India</span>
+      </div>
+    </div>
+    <div class="edu-item">
+      <div class="edu-header">
+        <span class="edu-title"><span class="edu-org">University of Pune</span> · B.E. in Computer Science</span>
+        <span class="edu-year">Pune, India</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Technical Skills</div>
+    <div class="skills-grid">
+      <div class="skill-item"><span class="skill-category">ML &amp; AI:</span> Machine Learning, Deep Learning, Time-series &amp; Forecasting, LLMs, AI agents, RAG, Fine-tuning (LoRA), Statistics, Numerical optimisation</div>
+      <div class="skill-item"><span class="skill-category">Languages &amp; Frameworks:</span> Python (ML stack), PyTorch, scikit-learn, TensorFlow, XGBoost, LangGraph, FastAPI, SQL</div>
+      <div class="skill-item"><span class="skill-category">Engineering &amp; Cloud:</span> Production-grade code, CI/CD, Docker/containers, Git, AWS, Database management, Observability</div>
+      <div class="skill-item"><span class="skill-category">Leadership:</span> Technical leadership, Mentoring, Technical roadmaps, Cross-functional collaboration, Stakeholder communication, Documentation</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% JetBrains-tailored resume
+% Based on: Medium Length Professional CV (resume.cls)
+% Font: Charter (formal serif)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{resume}
+\usepackage[a4paper,left=0.7in,top=0.4in,right=0.7in,bottom=0.5in]{geometry}
+\usepackage{url}
+\usepackage{charter}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+
+\name{Abhijeet Lokhande}
+\designation{AI Engineer: Agentic Models, LLM Post Training \& Evaluation}
+
+\address{07480801382 \\ London, United Kingdom}
+\address{\href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \\ \href{https://www.linkedin.com/in/ablds/}{linkedin.com/in/ablds}}
+
+\begin{document}
+\title{Abhijeet Lokhande Resume}
+
+\begin{rSection}{Summary}
+AI engineer specialising in LLMs, agentic systems, and production ML pipelines. 3+ years shipping AI products in FinTech, with a research background in deep learning at King's College London. Built autonomous coding agents (ReAct/LangGraph), finetuned LLMs with LoRA (30K+ downloads), and shipped agent evaluation pipelines grounded in real user workflows. Applying end to end systems thinking to multistep coding agents, SFT/RL post training, and product driven evaluation at JetBrains.
+\end{rSection}
+
+\begin{rSection}{Technical Skills}
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+LLM \& Agents & {LLMs, AI Agents, RAG, SFT, LoRA, ReAct, LangGraph, LangChain, Anthropic API, MCP} \\
+ML Engineering & {PyTorch, Deep Learning, NLP, Evaluation Pipelines, Observability, Experiment Tracking} \\
+Languages & {Python, SQL, Rust} \\
+Data \& Infra & {ETL Pipelines, PostgreSQL, MongoDB, AWS, Docker, Git, Apache Hamilton} \\
+\end{tabular}
+\end{rSection}
+
+\begin{rSection}{Profile Links}
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+LinkedIn & \href{https://www.linkedin.com/in/ablds/}{linkedin.com/in/ablds} \\
+GitHub & \href{https://github.com/abhijeetscode}{github.com/abhijeetscode} \\
+Hugging Face & \href{https://huggingface.co/ab-ai}{huggingface.co/ab-ai}
+\end{tabular}
+\end{rSection}
+
+\begin{rSection}{Open Source Contributions}
+\begin{itemize}
+    \item \textbf{Spec-to-Code Agent:} Built an autonomous ReAct based coding agent using LangGraph and the Anthropic API that generates installable, tested software packages from plain language markdown specs. Achieves 9/9 pass rate across a polyglot benchmark (Python, Go, Rust, Java, JS). \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{github.com/abhijeetscode/Spec-to-Code-Agent}
+    \item \textbf{PII Detection LLMs:} Finetuned GPT (with LoRA) and BERT to detect Personally Identifiable Information (PII). Published models collectively achieving 30,000+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/PII-Model-Phi3-Mini}{huggingface.co/ab-ai/PII-Model-Phi3-Mini}
+    \item \textbf{Transformer from Scratch in Rust:} Built a GPT style decoder only transformer from first principles in Rust using the Candle framework, including multi head causal self attention, pre norm residual blocks, token/position embeddings, and a full training loop with early stopping and SafeTensors checkpointing. \href{https://github.com/abhijeetscode/transformer-rust}{github.com/abhijeetscode/transformer-rust}
+\end{itemize}
+\end{rSection}
+
+\begin{rSection}{Work Experience}
+\begin{rSubsection}{Built AI (FinTech \& AI Company)}{April 2022 to Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\item Designed agent evaluation frameworks, Quality of Service metrics, and incident triggering mechanisms to monitor reliability, groundedness, latency, and failure modes in production.
+\item Developed and deployed an autonomous AI agent that generates Discounted Cash Flow (DCF) financial models from raw financial data, reducing analyst modeling time by 70\%.
+\item Built a production ready LLM agent that explains financial cashflows to users, with robust validation to ensure accurate and reliable outputs.
+\item Enabled secure enterprise access to 180+ AI powered tools by building a production ready MCP server on FastAPI, exposed through the Model Context Protocol for Claude Desktop and Glean compatible clients.
+\item Built a Conversational AI bot for analyzing financial documents using LLMs, RAG, embeddings, and vector databases, enabling analysts to query multiple PDFs with natural language and cutting manual review time.
+\item Core engineer on an \href{https://gtr.ukri.org/projects?ref=10022996}{Innovate UK funded R\&D project} (GBP 205,895 grant, 2022 to 2023) that built a novel ML data platform and street level analytics for commercial real estate investors.
+\item Improved performance of the financial modelling engine by 85\% by rearchitecting the codebase into a graph based system leveraging Apache Hamilton and vectorisation techniques.
+\end{rSubsection}
+
+\begin{rSubsection}{King's College London}{March 2021 to January 2022}{Research Associate}{London, UK}
+\item Developed a novel deep learning model utilising Graph Convolution Network and Generative Adversarial Network (GAN) techniques for drug discovery, resulting in a 63\% enhancement in the novelty score of drug structures.
+\item Designed and implemented a robust data preprocessing pipeline for clinical data, ensuring accuracy and completeness of a million row dataset.
+\end{rSubsection}
+\end{rSection}
+
+\begin{rSection}{Education}
+\begin{rSubsection}{King's College London}{}{MSc in Data Science}{London, UK}
+\vspace{-.65cm}
+\item[]
+\end{rSubsection}
+\begin{rSubsection}{CDAC: Centre for Development of Advanced Computing, India}{}{Post Graduate Diploma in Advanced Computing (PG DAC)}{Pune, India}
+\vspace{-.65cm}
+\item[]
+\end{rSubsection}
+\begin{rSubsection}{University of Pune}{}{Bachelor of Engineering in Computer Science}{Pune, India}
+\vspace{-.65cm}
+\item[]
+\end{rSubsection}
+\end{rSection}
+
+\end{document}

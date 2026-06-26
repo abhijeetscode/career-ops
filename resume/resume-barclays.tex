@@ -1,0 +1,120 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Barclays (BPL) -- Applied AI Engineer -- self-contained (no .cls).
+% Tailored: production ML, MLOps/LLMOps, GenAI, AWS, FinTech/payments.
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=1.4cm,bottom=1.2cm,left=1.6cm,right=1.6cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.05}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{9pt}{5pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=2pt,topsep=2pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large Applied AI Engineer: Production ML, LLMOps \& GenAI in FinTech}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+Applied AI engineer who builds and deploys scalable, reliable AI and machine learning solutions in FinTech. Strong in Python and ML frameworks (PyTorch, TensorFlow, scikit-learn), with hands-on MLOps/LLMOps: model and agent evaluation, observability, and production monitoring. Practical GenAI experience across LLMs, RAG, prompt engineering, and APIs, delivered on AWS with data pipelines feeding real business decisions. Comfortable partnering with data scientists and stakeholders to ship governed, production-grade systems. MSc Data Science (King's College London); open-source proof: 67K+ HuggingFace downloads.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{AI/ML:} Machine Learning, Deep Learning, NLP, LLMs, GenAI, Fine-Tuning (LoRA, BERT), RAG, Prompt Engineering, Model Evaluation, Statistical \& Predictive Modelling
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{MLOps / LLMOps:} model \& agent evaluation, observability \& monitoring, CI/CD, cost \& latency control
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Frameworks:} PyTorch, TensorFlow, scikit-learn, Keras, XGBoost, LangChain, LangGraph, LlamaIndex
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Cloud \& Data:} AWS (S3, Textract), ETL \& Data Pipelines, PostgreSQL, MySQL, MongoDB, Vector Databases
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Languages:} Python (production-grade, TDD), SQL, Rust
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Built and deployed scalable production ML models (PyTorch, scikit-learn) in a FinTech environment, from a property-valuation model estimating rent per square foot across London postcodes to an 85\% performance gain rearchitecting the financial modelling engine into a graph-based system (Apache Hamilton, vectorisation) for 3x throughput.
+  \item Designed data pipelines and ETL on AWS: linked 80\% of property records across diverse datasets with geolocation enrichment, and built an automated document-processing pipeline on AWS Textract that delivered a 30\% productivity gain.
+  \item Applied MLOps/LLMOps practices, model and agent evaluation, Quality of Service metrics, observability, and incident-triggering monitoring, tracking reliability, groundedness, latency, and failure modes in production.
+  \item Built and deployed autonomous LLM agents (LangGraph, Anthropic API) for Discounted Cash Flow (DCF) modelling and document intelligence, cutting analyst modelling time by 70\%, integrated via APIs and prompt engineering.
+  \item Built a conversational AI system over financial documents using LLMs, RAG, embeddings, and a vector database, letting analysts query multiple PDFs in natural language and cutting manual review time.
+  \item Core engineer on an \href{https://gtr.ukri.org/projects?ref=10022996}{Innovate UK funded R\&D project} (\pounds205,895 grant) building an ML data platform and street-level analytics for commercial real estate.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Developed a deep learning model using Graph Convolution Networks and GANs for drug discovery, achieving a 63\% improvement in the novelty score of generated drug structures.
+  \item Designed a robust data preprocessing pipeline for clinical data, ensuring accuracy and completeness across a million-row dataset.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{PII Detection LLMs:} fine-tuned GPT (with LoRA) and BERT for Personally Identifiable Information detection, with model evaluation across datasets; published models collectively reaching 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+  \item \textbf{Spec-to-Code Agent:} autonomous ReAct-based coding agent (LangGraph + Anthropic API) that ships installable, tested packages from plain-language specs; 9/9 pass rate across a polyglot benchmark (Python, Go, Rust, Java, JS). \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+  \item \textbf{Transformer from Scratch in Rust:} GPT-style decoder-only transformer built from first principles (multi-head causal self-attention, pre-norm residual blocks, full training loop with SafeTensors checkpointing) using the Candle framework with Metal GPU acceleration. \href{https://github.com/abhijeetscode/transformer-rust}{View on GitHub}
+  \item \textbf{Text-to-Image Search:} CLIP-style dual-encoder architecture for multimodal retrieval, matching natural-language queries to images through a shared embedding space. \href{https://github.com/abhijeetscode/text-to-image-search}{View on GitHub}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+\entry{King's College London}{}{MSc in Data Science}{London, UK}
+\vspace{-3pt}
+\entry{C-DAC, India}{}{Post Graduate Diploma in Advanced Computing (PG-DAC)}{Pune, India}
+\vspace{-3pt}
+\entry{University of Pune}{}{B.E. in Computer Science}{Pune, India}
+
+\end{document}

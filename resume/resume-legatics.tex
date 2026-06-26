@@ -21,12 +21,16 @@
 %----------------------------------------------------------------------------------------
 
 \documentclass{resume} % Use the custom resume.cls style
-\usepackage[left=0.7in,top=0.4in,right=0.7in,bottom=0.5in]
+\usepackage[left=0.5in,top=0.25in,right=0.5in,bottom=0.2in]
 {geometry} % Document margins
 \usepackage{url}
 \usepackage{bookman}
 \usepackage[T1]{fontenc}
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
+
+% Tighten whole-document spacing (overrides resume.cls macros; .cls untouched)
+\def\nameskip{\medskip}
+\def\sectionskip{\smallskip}
 
 %----------------------------------------------------------------------------------------
 %   DOCUMENT START
@@ -43,16 +47,16 @@
 %   EDUCATION SECTION
 %----------------------------------------------------------------------------------------
 \begin{rSection}{Summary}
-AI architect specializing in designing and deploying production LLM systems, intelligent automation, and commercial analytics. Built end-to-end AI solutions: autonomous agents (LangGraph, Anthropic), ML pipelines, data infrastructure, and business impact measurement. 67K+ HuggingFace downloads on PII detection models (\url{https://huggingface.co/ab-ai/pii_model}). Expert in translating business problems into technical architectures. Proven track record shipping rapidly, measuring ROI, and advising stakeholders on AI strategy. Pragmatic builder focused on working solutions.
+AI architect specializing in production LLM systems, intelligent automation, and commercial analytics. Build end-to-end AI solutions (autonomous agents, predictive ML, data infrastructure) and translate business problems into technical architectures. 67K+ HuggingFace downloads on PII detection models. Proven at shipping rapidly, measuring ROI, and advising senior stakeholders on AI strategy.
 \end{rSection}
 
 \begin{rSection}{Technical Skills}
 
 \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-AI/LLM & {OpenAI, Anthropic, LangGraph, RAG, Prompt engineering, Agents}\\
-ML/Data & {PyTorch, scikit-learn, Data pipelines, Feature engineering}\\
+AI/LLM & {OpenAI, Anthropic, LangGraph, RAG, Prompt engineering, AI agents, MCP}\\
+ML/Data & {PyTorch, scikit-learn, Forecasting, Data pipelines, Feature engineering}\\
 Architecture & {API design, Database design, Data infrastructure, ETL}\\
-Analytics & {SQL (BigQuery, PostgreSQL), BI dashboards, KPI measurement}\\
+Analytics & {SQL (BigQuery, PostgreSQL), BI dashboards, KPIs, ROI measurement}\\
 Systems & {Python, FastAPI, Docker, AWS, Git}\\
 \end{tabular}
 
@@ -64,41 +68,29 @@ Systems & {Python, FastAPI, Docker, AWS, Git}\\
 %----------------------------------------------------------------------------------------
 
 
-\begin{rSection}{Profile Links}
-\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-Linkedin & https://www.linkedin.com/in/ablds/  \\
-Github & https://github.com/abhijeetscode \\
-Hugging Face & https://huggingface.co/ab-ai (67K+ downloads on PII models)
-\end{tabular}
-
-\end{rSection}
-
-
 %----------------------------------------------------------------------------------------
 %   WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
 \begin{rSection}{Open Source Contributions}
-\begin{itemize}
-    \item Spec-to-Code Agent: Autonomous LangGraph agent, 9/9 polyglot pass rate (Python, Go, Rust, Java, JS). \url{https://github.com/abhijeetscode/Spec-to-Code-Agent}
-    \item PII Detection Models: Fine-tuned LLMs in production, 67K+ HuggingFace downloads. \url{https://huggingface.co/ab-ai/pii_model}
-    \item Text-to-Image Search: CLIP-style dual-encoder for multimodal systems. \url{https://github.com/abhijeetscode/text-to-image-search}
+\begin{itemize}\setlength\itemsep{-0.4em}
+    \item \textbf{Spec-to-Code Agent}: Autonomous LangGraph coding agent, 9/9 polyglot pass rate. \url{https://github.com/abhijeetscode/Spec-to-Code-Agent}
+    \item \textbf{PII Detection Models}: Fine-tuned LLMs in production, 67K+ downloads. \url{https://huggingface.co/ab-ai/pii_model}
+    \item \textbf{Text-to-Image Search}: CLIP-style dual-encoder for multimodal search. \url{https://github.com/abhijeetscode/text-to-image-search}
 
 \end{itemize}
 \end{rSection}
 
 \begin{rSection}{Work Experience}
 \begin{rSubsection}{Built AI (FinTech \& AI Company)}{April 2022 to Present}{AI Architect}{London, UK}
-\item Autonomous agent systems and LLM application: Architected and deployed autonomous agents for financial modeling, document intelligence, and query interpretation using LangGraph and Anthropic APIs. Measured business impact: 70\% reduction in analyst manual work. Established responsible AI practices (validation, error handling, HITL escalation).
-\item Revenue analytics and business intelligence: Built ML models for financial forecasting, risk assessment, and business metrics. Delivered KPI dashboards showing 30-70\% efficiency gains. Translated technical results into narratives for senior stakeholders.
-\item Commercial automation and workflow: Designed end-to-end solutions automating analyst workflows. Prototyped rapidly using LLMs and AI agents. Measured adoption and ROI: each initiative delivered measurable business value.
-\item Data infrastructure and systems design: Architected commercial data ecosystem (80\% record linking, geolocation enrichment, ML inference). Built data pipelines handling TB-scale datasets. Designed data models, governance standards, quality frameworks.
-\item AI strategy and stakeholder leadership: Served as technical advisor to leadership on AI adoption. Trained teams on new AI tools and workflows. Established responsible AI governance practices.
+\item Production AI architecture and deployment: Built a production-ready MCP server on FastAPI, enabling enterprise clients to connect through MCP hosts such as Glean and Claude Desktop and securely invoke 180+ AI-powered tools via the Model Context Protocol.
+\item LLM automation and AI agents: Architected autonomous agents (LangGraph, Anthropic) for financial modeling (DCF), document intelligence (RAG), and query interpretation, cutting analyst manual work by 70\%, with agent evals, QoS metrics, and incident-triggering for production reliability.
+\item Predictive ML and commercial analytics: Built forecasting and risk models (incl. inferring missing property values across London postcodes) and KPI dashboards translating model output into business narratives for senior stakeholders.
+\item Data ecosystem and systems design: Architected the ingestion pipeline linking 80\% of records with geolocation enrichment; rearchitected the modeling engine (Apache Hamilton + vectorization) for 85\% lower latency.
 \end{rSubsection}
 
 
 \begin{rSubsection}{King's College London}{March 2021 to January 2022}{Research Scientist}{London, UK}
-\item Advanced ML systems: Developed Graph Convolution Networks and GANs for complex optimization (63\% improvement). Demonstrates deep learning architecture design applicable to commercial problems.
-\item Data engineering: Built robust data pipelines for clinical datasets (1M+ rows) with validation, quality standards, integrity checks.
+\item Built Graph Convolution Networks and GANs for molecular optimization (63\% novelty gain) and robust clinical-data pipelines (1M+ rows).
 
 \end{rSubsection}
 
@@ -108,26 +100,9 @@ Hugging Face & https://huggingface.co/ab-ai (67K+ downloads on PII models)
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Education}
-% September 2020 - January 2022
-\begin{rSubsection}{King's College London}{}{MSc in Data Science}{London, UK}
-%\vspace{-.1cm}
-%Overall GPA: 78\%
-\vspace{-.65cm}
-\item[]
-\end{rSubsection}
-\begin{rSubsection}{C-DAC: Centre for Development of Advanced Computing, India}{}{Post Graduate Diploma in Advanced Computing (PG-DAC)}{Pune, India}
-%\vspace{-.1cm}
-%Overall GPA: 78\%
-\vspace{-.65cm}
-\item[]
-\end{rSubsection}
-% June 2013 - June 2017
-\begin{rSubsection}{University of Pune}{}{Bachelor of Engineering in Computer Science}{Pune, India}
-%\vspace{-.1cm}
-%Overall GPA: 78\%
-\vspace{-.65cm}
-\item[]
-\end{rSubsection}
+{\bf King's College London}, MSc in Data Science \hfill {\em London, UK}\\
+{\bf C-DAC, India}, Post Graduate Diploma in Advanced Computing (PG-DAC) \hfill {\em Pune, India}\\
+{\bf University of Pune}, B.E. in Computer Science \hfill {\em Pune, India}
 \end{rSection}
 
 %----------------------------------------------------------------------------------------

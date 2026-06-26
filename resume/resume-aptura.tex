@@ -1,0 +1,120 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Aptura -- Member of Technical Staff, Applied AI (London) -- self-contained.
+% Tailored: LLM evaluation/verification, agentic harnesses, finance domain, agency.
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=1.4cm,bottom=1.2cm,left=1.6cm,right=1.6cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.05}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{9pt}{5pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=2pt,topsep=2pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large Applied AI Engineer: LLM Evaluation, Agentic Harnesses \& Finance Domain}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+Applied AI engineer who builds LLM systems that actually run in production, not notebooks. I build agents and agentic harnesses, design the evaluation and verification that tells good model outputs from bad, and work directly with finance domain experts to define what a correct answer looks like (DCF and financial models, document workflows). High agency by default: as an early-stage hire I scope, build, ship, and iterate end to end with minimal specification. Comfortable moving between engineering, evaluation design, and domain collaboration in the same day. Open-source proof: a coding agent at 9/9 on a verifiable polyglot benchmark and fine-tuned models with 67K+ HuggingFace downloads. MSc Data Science (King's College London).
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{LLM building:} prompting, agents \& agentic harnesses, tool use, MCP, RAG, structured outputs, LangGraph, Anthropic / GPT
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Evaluation \& Verification:} eval harnesses, golden answers, programmatic checks, model \& agent evaluation, QoS metrics, groundedness \& failure-mode detection
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Model training:} fine-tuning / post-training (LoRA, BERT), PyTorch, deep learning, GANs
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Domain:} finance (DCF / financial modelling, document intelligence), healthcare-adjacent (clinical data, drug discovery)
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Engineering \& Cloud:} Python (production-grade, TDD), FastAPI, SQL, Rust, AWS, Docker, PostgreSQL, Vector Databases
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Built LLM systems that run in production, not notebooks: autonomous agents and agentic harnesses (LangGraph, Anthropic API), owned end to end from scoping with domain experts through to a working, shipped system.
+  \item Designed evaluation and verification for production AI: agent and model evaluations, Quality of Service metrics, and programmatic checks that distinguish good outputs from bad across groundedness, reliability, and failure modes.
+  \item Deep finance domain: built an autonomous agent that generates DCF financial models from raw data and a system that explains financial cashflows, partnering with analysts to define what a correct answer looks like.
+  \item Fine-tuned and post-trained models (LoRA, BERT) and built RAG systems with embeddings and vector search over financial documents.
+  \item Operated with high agency as an early-stage hire: shipped and iterated fast with minimal specification; also improved engine performance by 85\% via a graph-based rearchitecture (Apache Hamilton, vectorisation).
+  \item Core engineer on an \href{https://gtr.ukri.org/projects?ref=10022996}{Innovate UK funded R\&D project} (\pounds205,895 grant) building an ML data platform.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Healthcare-adjacent research: built Graph Convolution Networks and GANs for drug discovery, achieving a 63\% improvement in the novelty score of generated molecular structures.
+  \item Designed a robust data preprocessing pipeline for clinical data, ensuring accuracy and completeness across a million-row dataset.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Spec-to-Code Agent:} autonomous ReAct-based agentic harness (LangGraph + Anthropic API) that turns plain-language specs into installable, tested packages, measured against a verifiable polyglot benchmark with programmatic pass/fail (9/9: Python, Go, Rust, Java, JS). \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+  \item \textbf{PII Detection LLMs:} fine-tuned GPT (with LoRA) and BERT for Personally Identifiable Information detection, with model evaluation across datasets; published models collectively reaching 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+  \item \textbf{Transformer from Scratch in Rust:} GPT-style decoder-only transformer built from first principles, multi-head causal self-attention and a full training loop with SafeTensors checkpointing, using the Candle framework. \href{https://github.com/abhijeetscode/transformer-rust}{View on GitHub}
+  \item \textbf{Text-to-Image Search:} CLIP-style dual-encoder for multimodal retrieval through a shared embedding space. \href{https://github.com/abhijeetscode/text-to-image-search}{View on GitHub}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+\entry{King's College London}{}{MSc in Data Science}{London, UK}
+\vspace{-3pt}
+\entry{C-DAC, India}{}{Post Graduate Diploma in Advanced Computing (PG-DAC)}{Pune, India}
+\vspace{-3pt}
+\entry{University of Pune}{}{B.E. in Computer Science}{Pune, India}
+
+\end{document}

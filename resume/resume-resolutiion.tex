@@ -1,0 +1,120 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Resolutiion -- AI Engineer (Remote, UK) -- self-contained (no .cls).
+% Tailored: AI agents for enterprise (info extraction, summarisation),
+% Python in production cloud, privacy & security for B2B, OpenAI/Anthropic,
+% AWS (ECS, Aurora), LangGraph, robust maintainable software.
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=1.1cm,bottom=1.0cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.02}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{6pt}{4pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=2pt,topsep=2pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large AI Engineer: Production AI Agents for Enterprise, Built in Python}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+AI engineer who designs and builds AI agents that solve complex enterprise problems, from information extraction to smart summarisation, and runs them in production cloud environments. Deep in Python: at an early-stage FinTech I own autonomous LLM agents (LangGraph, Anthropic and OpenAI) that real B2B users depend on, built with security, performance, and scalability in mind, plus the evaluation and monitoring that keeps them reliable. I balance speed and quality to ship robust, maintainable software to high engineering standards. Open-source proof: a ReAct coding agent at 9/9 on a polyglot benchmark and fine-tuned models with 67K+ HuggingFace downloads.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{AI Agents:} designing \& building production agents for enterprise, information extraction, smart summarisation, tool use, orchestration, ReAct, structured outputs, LangGraph, MCP
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{LLMs \& AI Apps:} OpenAI, Anthropic, RAG, embeddings, vector search, agent \& model evaluation, fine-tuning (LoRA, BERT), multimodal (CLIP)
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Python Engineering:} production-grade Python (async, TDD), FastAPI, REST APIs, robust \& maintainable software, SQL, Rust
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Security \& Scale (B2B):} privacy \& data protection, performance \& scalability, observability \& monitoring, debugging deep system failures, CI/CD
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Cloud \& Data:} AWS (ECS, Aurora), Docker, PostgreSQL, MongoDB, Vector Databases, ETL \& Data Pipelines
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Designed and built autonomous AI agents end to end (LangGraph, Anthropic and OpenAI) for financial modelling, document intelligence, and query interpretation, owning them from first implementation through iteration and cutting analyst modelling time by 70\%.
+  \item Built information extraction and summarisation over financial documents using RAG, embeddings, and vector search, letting B2B users resolve queries in natural language and cutting manual review time.
+  \item Built a production MCP server on FastAPI (async) exposing 180+ tools through the Model Context Protocol, with security and access control to safeguard enterprise data for agentic clients (Claude Desktop, Glean).
+  \item Drove technical quality with agent and model evaluations, Quality of Service metrics, and incident-triggering monitoring of reliability, groundedness, latency, and failure modes to keep agents dependable in production.
+  \item Improved engine performance by 85\% via a graph-based rearchitecture (Apache Hamilton, vectorisation) for 3x throughput at scale, and shipped production ML models with robust validation.
+  \item Core engineer on an \href{https://gtr.ukri.org/projects?ref=10022996}{Innovate UK funded R\&D project} (\pounds205,895 grant) building an ML data platform on AWS for commercial real estate.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Developed a deep learning model using Graph Convolution Networks and GANs for drug discovery, achieving a 63\% improvement in the novelty score of generated molecular structures.
+  \item Designed a robust data preprocessing pipeline for clinical data across a million-row dataset.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Spec-to-Code Agent:} autonomous ReAct-based coding agent (LangGraph + Anthropic API) with tool use and orchestration that ships installable, tested packages from plain-language specs; 9/9 pass rate across a polyglot benchmark (Python, Go, Rust, Java, JS). \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+  \item \textbf{PII Detection LLMs:} fine-tuned GPT (with LoRA) and BERT for Personally Identifiable Information detection, directly relevant to privacy in enterprise software; published models collectively reaching 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+\begin{tight}
+  \item {\color{company}\bfseries King's College London} -- MSc in Data Science \hfill {\color{muted}London, UK}
+  \item {\color{company}\bfseries C-DAC} -- Post Graduate Diploma in Advanced Computing (PG-DAC) \hfill {\color{muted}Pune, India}
+  \item {\color{company}\bfseries University of Pune} -- B.E. in Computer Science \hfill {\color{muted}Pune, India}
+\end{tight}
+
+\end{document}

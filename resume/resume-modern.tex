@@ -1,0 +1,112 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Modern, ATS-friendly resume -- self-contained (no external .cls).
+% Single column, real text, standard section headers, selectable text.
+% Fonts: Fira Sans (modern humanist sans). Accent: teal + purple.
+% Compile: pdflatex (2 passes) or: node compile-latex-resume.mjs --tex this.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[sfdefault,scale=1.0]{FiraSans}   % modern sans as the default family
+\usepackage[a4paper,top=1.4cm,bottom=1.2cm,left=1.6cm,right=1.6cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.05}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{9pt}{5pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=2pt,topsep=2pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large AI Engineer: Shipping Production LLM Features, Build-vs-Buy \& Evals}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{linkedin.com/in/ablds} \sep
+    \href{https://github.com/abhijeetscode}{github.com/abhijeetscode} \sep
+    \href{https://huggingface.co/ab-ai}{huggingface.co/ab-ai}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+AI engineer who ships LLM-powered features end to end, prototype to production: takes a business problem, picks the right managed model (Anthropic, OpenAI, Google) and pattern (RAG, agents/tool use, structured outputs), and makes it reliable, fast, and cost-effective. Strong on the parts that separate a demo from a product: eval harnesses and regression testing, prompt and version management, observability, cost and latency controls, and safety guardrails. 4+ years building production AI in a fast-moving FinTech startup, comfortable driving a high-level goal to a shipped feature. Open-source proof: 67K+ HuggingFace downloads, 9/9 polyglot agent benchmark.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{LLM toolkit:} Anthropic, OpenAI, Google models, RAG, agents/tool use, structured outputs, prompt engineering, MCP
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Production AI:} eval harnesses, regression testing, observability/tracing, cost \& latency controls, safety guardrails
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Engineering:} Python (production-grade, TDD), SQL (warehouse queries), Go, FastAPI, REST API design, Git
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Infra \& data:} AWS, Docker, microservices, PostgreSQL/pgvector, embeddings, document/PDF extraction
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{ML:} fine-tuning open models (LoRA, BERT), PyTorch, NLP, forecasting
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Shipped LLM features prototype to production on a live SaaS platform (LangGraph, Anthropic): DCF modeling, document intelligence, and natural-language query interpretation with tool use and structured outputs --- real users relying on them, cutting analyst manual work by 70\%.
+  \item Made build-vs-buy and architecture calls: chose the right managed model and pattern (RAG, agents, structured outputs) balancing accuracy, latency, cost, and data privacy; rearchitected the engine for 85\% lower latency, exposing 180+ tools via a service API.
+  \item Owned the things that separate a demo from a product: eval harnesses and regression testing, prompt and version management, observability and tracing, cost and latency controls, and safety guardrails.
+  \item Queried the data warehouse over SQL for context and sanity-checks; deployed into a microservices architecture on AWS, driving high-level goals to shipped features without a pre-written roadmap.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Built Graph Convolution Networks and GANs for molecular optimization (63\% novelty gain) and robust clinical-data pipelines (1M+ rows).
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source Projects}
+\begin{tight}
+  \item \textbf{Spec-to-Code Agent} --- autonomous multi-step ReAct agent (LangGraph + Anthropic) with tool use and orchestration that ships tested, installable packages from plain-language specs; 9/9 pass rate across a polyglot benchmark (Python, Go, Rust, Java, JS). \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{github.com/abhijeetscode/Spec-to-Code-Agent}
+  \item \textbf{PII Detection Models} --- fine-tuned GPT (LoRA) and BERT for PII detection; 67K+ downloads in production. \href{https://huggingface.co/ab-ai/pii_model}{huggingface.co/ab-ai/pii\_model}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+\entry{King's College London}{}{MSc in Data Science}{London, UK}
+\vspace{-3pt}
+\entry{C-DAC, India}{}{Post Graduate Diploma in Advanced Computing (PG-DAC)}{Pune, India}
+\vspace{-3pt}
+\entry{University of Pune}{}{B.E. in Computer Science}{Pune, India}
+
+\end{document}
