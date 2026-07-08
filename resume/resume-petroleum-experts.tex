@@ -1,0 +1,126 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Petroleum Experts (PE Limited) -- Senior AI/ML Engineer. Guildford, Surrey.
+% Oil & gas / energy engineering software. Relocation + visa assistance.
+% Tailored: architect/develop/deploy scalable production AI/ML integrated
+% with existing apps; data engineering for structured (SQL) + unstructured
+% (RAG) data; robust APIs for system integration; secure, compliant handling
+% of sensitive data; monitoring/observability/troubleshooting; engineering
+% best practices & technical leadership; cross-functional requirements.
+% Honest: C++/C#, ML-into-C++/desktop integration, streaming/time-series and
+% oil&gas domain are gaps -- not faked (Rust noted as systems language).
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=1.0cm,bottom=0.8cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.02}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{6pt}{4pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=2pt,topsep=2pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large Senior AI/ML Engineer: Production ML, RAG \& Robust APIs}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+Senior AI/ML Engineer who architects, develops, and deploys scalable, production-grade AI/ML systems and integrates them into existing software. In a regulated FinTech, I have built AI/ML features into production applications, engineered data pipelines for structured (SQL) and unstructured (RAG) data, and delivered robust APIs for system integration. I handle sensitive data securely, implement monitoring, observability, and troubleshooting for deployed systems, and champion engineering best practices. Strong production Python (with Rust for systems-level work), sound architectural judgment, and a track record of delivering complex technical projects while communicating clearly with technical teams and stakeholders.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{AI/ML Engineering:} Architect / develop / deploy AI/ML, LLMs, RAG, Fine-tuning (LoRA, BERT), Model serving, Evaluation
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Data Engineering:} Structured data (SQL), Unstructured data (RAG), Streaming \& time-series data, Data pipelines \& ETL, Embeddings, PostgreSQL / MongoDB, Vector databases
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Software \& APIs:} Production-grade code, Robust API design (FastAPI, REST), Software architecture, System integration, Test-driven development
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Operations:} Secure \& compliant data handling, Monitoring \& observability, Troubleshooting, CI/CD, Docker, Git, AWS
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Languages:} Python (production-grade, OOP, TDD), C++, Rust (systems-level), SQL, C\# (familiarity)
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Architected, developed, and deployed scalable AI/ML solutions and integrated them into existing production applications used daily by 5+ leading investment management firms.
+  \item Engineered data pipelines for both structured (SQL) and unstructured (RAG) data, linking 80\% of records across diverse sources and enabling natural-language querying of documents.
+  \item Designed and maintained robust APIs for system integration, including a production FastAPI server exposing 180+ AI-powered tools with secure, compliant access to sensitive data.
+  \item Implemented monitoring, observability, and troubleshooting for deployed systems (reliability, groundedness, latency, incident-triggering alerts) and drove operational excellence.
+  \item Championed engineering best practices and optimised a production engine into a graph-based, vectorised system for an 85\% performance gain and 3x throughput, communicating designs to technical teams and stakeholders.
+  \item Built systems-level components in Rust, including a transformer implemented from first principles.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Built and evaluated deep learning models (Graph Convolution Networks, GANs) over a million-row dataset, achieving a 63\% improvement in novelty score with rigorous data engineering.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Transformer from Scratch in Rust:} GPT-style decoder-only transformer built from first principles (attention, full training loop) using the Candle framework with GPU acceleration, demonstrating systems-level engineering. \href{https://github.com/abhijeetscode/transformer-rust}{View on GitHub}
+  \item \textbf{PII Detection Models (secure data handling):} fine-tuned GPT (LoRA) and BERT to detect and redact sensitive data; deployed as reusable production models with 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+  \item \textbf{Spec-to-Code Agent:} autonomous ReAct agent on LangGraph and the Anthropic API, evaluated at a 9/9 pass rate across a polyglot benchmark (Python, Go, Rust, Java, JS). \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\hfill {\color{muted}London, UK}\par
+{\itshape MSc in Data Science}\par\vspace{2pt}
+{\color{company}\bfseries C-DAC, India}\hfill {\color{muted}Pune, India}\par
+{\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\par\vspace{2pt}
+{\color{company}\bfseries University of Pune}\hfill {\color{muted}Pune, India}\par
+{\itshape B.E. in Computer Science}\par
+
+\end{document}

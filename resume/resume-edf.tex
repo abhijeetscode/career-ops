@@ -1,0 +1,124 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% EDF -- Senior AI Engineer (AI & Automation Centre of Excellence). Hybrid
+% UK/London. GBP 75K. Internal AI platform engineering.
+% Tailored: design/build internal AI & ML platforms for scalable delivery;
+% lead design/build of agent & multi-agent systems; Python software &
+% platform engineering; AWS cloud; CI/CD & MLOps; set engineering standards
+% & drive technical design decisions; senior-stakeholder communication.
+% Honest: Terraform / IaC is a stated shortlist requirement the candidate
+% lacks -- not faked (Docker/CI-CD included truthfully).
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=1.0cm,bottom=0.8cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.02}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{6pt}{4pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=2pt,topsep=2pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large Senior AI Engineer: AI Platforms, Multi-Agent Systems \& MLOps}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+Senior AI Engineer who designs and builds internal AI platforms that let teams deliver scalable AI solutions. As an early-stage hire in a regulated FinTech, I built a production platform exposing 180+ AI-powered tools to the business, led the design and build of agent and multi-agent systems, and established engineering standards and technical design decisions. Strong software and platform engineering in Python, hands-on with AWS, CI/CD, and MLOps, and experienced communicating technical and delivery detail to senior stakeholders. I enjoy setting best practice, mentoring peers, and aligning AI solutions with business goals.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Agent Systems:} Agent \& multi-agent design and build, Orchestration, Tool integration, Model Context Protocol (MCP), LangGraph, LangChain
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Platform \& MLOps:} Internal AI/ML platforms, Model serving, CI/CD pipelines, Monitoring \& observability, Reliability, Reproducibility
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Software \& Cloud:} Python (software \& platform engineering, OOP, TDD), FastAPI, REST APIs, AWS, Docker, Git, SQL, Rust
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Leadership:} Engineering standards, Technical design decisions, Mentoring \& peer review, Senior-stakeholder communication
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{AI/ML:} LLMs, RAG, Fine-tuning (LoRA, BERT), Evaluation frameworks, PyTorch, Embeddings
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Designed and built an internal AI platform that enabled scalable solution delivery: a production FastAPI server exposing 180+ AI-powered tools to the business through the Model Context Protocol with secure access.
+  \item Led the design and build of agent and multi-agent systems, including an autonomous agent that orchestrates multi-step workflows to generate financial models, cutting analyst time by 70\%.
+  \item Set engineering standards and drove technical design decisions for production AI systems, and built and maintained CI/CD pipelines and MLOps capabilities (model serving, monitoring, evaluation).
+  \item Collaborated with product and senior stakeholders to align AI solutions with business goals, communicating technical and delivery detail clearly.
+  \item Optimised platform performance by rearchitecting the core engine into a graph-based, vectorised system for an 85\% gain and 3x throughput, and mentored fellow engineers.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Built and evaluated deep learning models (Graph Convolution Networks, GANs) over a million-row dataset, achieving a 63\% improvement in the novelty score of generated structures.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Spec-to-Code Agent (multi-agent system):} autonomous ReAct agent on LangGraph and the Anthropic API that plans, calls tools, and ships installable, tested packages from specs; 9/9 pass rate across a polyglot benchmark (Python, Go, Rust, Java, JS). \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+  \item \textbf{PII Detection LLMs:} fine-tuned GPT (LoRA) and BERT for PII detection and deployed them as reusable production models; collectively 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+  \item \textbf{Transformer from Scratch in Rust:} GPT-style decoder-only transformer built from first principles using the Candle framework with GPU acceleration. \href{https://github.com/abhijeetscode/transformer-rust}{View on GitHub}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\hfill {\color{muted}London, UK}\par
+{\itshape MSc in Data Science}\par\vspace{2pt}
+{\color{company}\bfseries C-DAC, India}\hfill {\color{muted}Pune, India}\par
+{\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\par\vspace{2pt}
+{\color{company}\bfseries University of Pune}\hfill {\color{muted}Pune, India}\par
+{\itshape B.E. in Computer Science}\par
+
+\end{document}

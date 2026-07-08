@@ -1,0 +1,138 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BBC -- Senior AI Engineer (Gen AI). BBC Media Technology, embedded in
+% Strategy & Transformation. Salford, GBP 60-70K, Band D, permanent.
+% Role: help BBC make practical, responsible use of Gen AI. Build data
+% pipelines + technical components enabling evaluation & adoption of
+% agentic/AI automation tooling; take AI from pilot to handover/scaling;
+% evaluate AI capabilities with data + evidence; multidisciplinary
+% collaboration; good engineering practice (data quality, governance,
+% documentation); responsible AI adoption.
+% Essential: LLM-based workflows/apps (pipelines, models, platform
+% components); Python + demonstrable AI-assisted dev tools; AWS + IaC;
+% containers/orchestration (Docker, Kubernetes); multidisciplinary teams;
+% critical evidence-based tool evaluation.
+% Desirable: FastAPI; GenAI/agentic frameworks (LangChain/LangGraph/
+% PydanticAI) + managed AI services (Bedrock/Azure); enterprise automation
+% (Power Platform/Copilot Studio); data governance/security/quality;
+% academic/research credentials.
+% NOTE: honest tailoring -- candidate leads on LLM workflows/pipelines,
+% agentic automation, evidence-based evaluation (evals/QoS/terminal
+% impact/search-agent), AI-assisted dev (coding agents), AWS+Docker,
+% FastAPI, LangGraph/LangChain, responsible AI, MSc + research. No K8s /
+% IaC / Bedrock / PydanticAI / Power Platform claimed -- AWS + Docker honest.
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.7cm,bottom=0.7cm,left=1.4cm,right=1.4cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=2pt,topsep=2pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large AI Engineer: Applied LLMs, Agentic Automation \& Evaluation}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+AI Engineer who helps organisations make practical, responsible use of generative AI. In a regulated FinTech, I design and deliver LLM-based workflows and applications, building the data pipelines, technical components, and agentic automation that carry AI from pilot to production. I evaluate AI and automation tooling with data and evidence (evals, quality-of-service metrics, and outcome measures) so teams adopt the right solution, not the loudest one. Strong Python with maintainable, testable code and hands-on use of AI-assisted development tools, delivered on AWS with Docker. Comfortable partnering across multidisciplinary teams and embedding data quality, governance, and responsible-AI practice throughout.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Applied LLMs \& Agents:} LLM-based workflows \& applications, RAG, LangGraph, LangChain, multi-step agents (plan, retrieve, act), Model Context Protocol (MCP), fine-tuning (LoRA, BERT), embeddings
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Evaluation \& Responsible AI:} evidence-based tool evaluation, evals \& quality-of-service metrics, outcome metrics, data quality, governance, auditability, security
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Python \& AI-Assisted Dev:} Python (maintainable, testable services), AI-assisted \& agentic coding tools, testing/TDD, code review, FastAPI, REST APIs
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Data Pipelines \& Cloud:} data engineering pipelines, pipeline/DAG orchestration (Apache Hamilton), AWS, Docker, ETL, PostgreSQL/MongoDB, vector databases
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{ML:} PyTorch, TensorFlow, model deployment \& inference optimisation, CI/CD, monitoring \& drift signals
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Designed and delivered LLM-based workflows and applications end-to-end, building the data pipelines and technical components that took AI from pilot to production for 5+ leading investment firms.
+  \item Built agentic automation tooling, including a production API server on FastAPI exposing 180+ AI-powered tools through the Model Context Protocol (MCP) with secure enterprise access.
+  \item Evaluated AI and automation capabilities with data and evidence: evals, quality-of-service metrics, and ``terminal impact,'' an outcome metric measuring whether users leave an agent dialogue satisfied, so the team adopted solutions on merit.
+  \item Used AI-assisted development tools daily and built my own agentic coding agent, improving code quality and delivery pace across the team.
+  \item Partnered with analysts and domain experts to translate business problems into shipped AI solutions, embedding data quality, governance, and responsible-AI practice in a regulated environment.
+  \item Rearchitected a production inference-heavy engine into a graph-based pipeline (Apache Hamilton + vectorisation) for an 85\% performance gain and 3x throughput on AWS with Docker.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Built and evaluated deep learning models (Graph Convolution Networks, GANs) for drug discovery over a million-row dataset, achieving a 63\% improvement in novelty score, with a reproducible preprocessing and training pipeline.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Spec-to-Code Agent (AI-assisted development):} autonomous ReAct agent on LangGraph and the Anthropic API that ships installable, tested packages from plain-language specs; 9/9 pass rate across a polyglot benchmark. \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+  \item \textbf{Agentic Search API (evaluation-driven):} FastAPI + Elasticsearch semantic search, Qwen3 embeddings and Claude tool-calling, with a deterministic fallback for resilience; measured p95 latency and 0.76 QoS eval score. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+  \item \textbf{PII Detection LLMs (responsible AI):} fine-tuned GPT (LoRA) and BERT to detect personally identifiable information, deployed as reusable production artefacts; collectively 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\hfill {\color{muted}London, UK}\par
+{\itshape MSc in Data Science}\par\vspace{2pt}
+{\color{company}\bfseries C-DAC, India}\hfill {\color{muted}Pune, India}\par
+{\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\par\vspace{2pt}
+{\color{company}\bfseries University of Pune}\hfill {\color{muted}Pune, India}\par
+{\itshape B.E. in Computer Science}\par
+
+\end{document}

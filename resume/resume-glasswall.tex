@@ -1,0 +1,126 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Glasswall -- Senior AI Engineer (Applied AI). UK, cybersecurity.
+% Tailored: production ML/DL/GenAI; LLM systems (RAG, prompt/context
+% engineering, fine-tuning, structured outputs, function calling,
+% context-window mgmt, secure integration); agentic AI (tool-calling, MCP,
+% multi-agent orchestration, multi-step reasoning, HITL, trust/safety);
+% agentic engineering tooling (coding assistants, skills/plugins, sandboxed
+% CI/CD workflows); model adaptation (LoRA); evaluation frameworks
+% (hallucination, safety, cost, non-determinism); inference/pipeline
+% optimisation; MLOps (monitoring, drift, reproducibility); mentoring.
+% Honest: 5+yr / QLoRA-distillation-quantisation / Azure-MLflow are gaps.
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=1.0cm,bottom=0.8cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.02}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{6pt}{4pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=2pt,topsep=2pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large Senior AI Engineer: Production LLM \& Agentic Systems, Evals \& MLOps}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+Senior-minded AI Engineer who builds production AI systems across classical ML, deep learning, and generative AI, and helps raise the technical bar around them. I design LLM-powered systems (RAG, prompt and context engineering, fine-tuning, structured outputs, function calling, context-window management, secure integration) and agentic systems (tool-calling, MCP, multi-agent orchestration, multi-step reasoning with human-in-the-loop and safety boundaries). I build evaluation frameworks for hallucination, safety, cost, and non-deterministic behaviour, and own end-to-end pipelines with strong MLOps. Deep hands-on PyTorch, scikit-learn, and Hugging Face; strong Python, Git, testing, and CI/CD; MSc in Data Science.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{LLM Systems:} RAG, Prompt \& context engineering, Fine-tuning (LoRA), Structured outputs, Function calling, Context-window management, Secure model integration
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Agentic AI:} Tool-calling architectures, Model Context Protocol (MCP), Multi-agent orchestration, Multi-step reasoning, HITL, Trust/safety boundaries, Coding-assistant tooling
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Evaluation \& MLOps:} Eval frameworks (hallucination, safety, cost, non-determinism), Monitoring, Drift detection, Observability, Reproducibility, Inference \& pipeline optimisation
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{ML/DL:} PyTorch, Scikit-learn, Hugging Face, TensorFlow, XGBoost, Graph Neural Networks, GANs, Feature engineering, Statistical analysis
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Engineering:} Python, SQL, Rust, FastAPI, AWS, Docker, Git, CI/CD, PostgreSQL/MongoDB, vector databases
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Designed and built production LLM-powered systems: RAG pipelines, prompt and context engineering, structured outputs, and function calling over financial documents, with secure enterprise integration.
+  \item Built agentic AI systems with tool-calling and multi-step reasoning, including a production MCP server exposing 180+ tools and an autonomous multi-step agent that generates financial models, cutting analyst time by 70\%.
+  \item Developed evaluation frameworks and Quality-of-Service metrics covering reliability, groundedness, latency, cost, and non-deterministic failure modes across classical and generative AI systems.
+  \item Owned production-grade pipelines with MLOps practices: real-time and batch inference, performance monitoring, drift and incident detection, observability, and reproducibility.
+  \item Optimised end-to-end pipelines for speed and scalability (graph-based, vectorised rearchitecture, 85\% gain, 3x throughput) and provided technical guidance to fellow engineers while shipping AI products used by 5+ leading investment management firms.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Built, tuned, and evaluated deep learning models (Graph Convolution Networks, GANs) for drug discovery over a million-row dataset, achieving a 63\% improvement in novelty score, with rigorous feature engineering and validation.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Spec-to-Code Agent (agentic coding tooling):} autonomous ReAct agent on LangGraph and the Anthropic API that plans, uses tools, and ships installable, tested packages from specs; 9/9 pass rate across a polyglot benchmark (Python, Go, Rust, Java, JS). \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+  \item \textbf{PII Detection \& Redaction Models (security-relevant):} fine-tuned GPT (LoRA) and BERT to detect and redact Personally Identifiable Information; deployed as reusable models with 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+  \item \textbf{Transformer from Scratch in Rust:} GPT-style decoder-only transformer built from first principles (attention, full training loop) using the Candle framework with GPU acceleration. \href{https://github.com/abhijeetscode/transformer-rust}{View on GitHub}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\hfill {\color{muted}London, UK}\par
+{\itshape MSc in Data Science}\par\vspace{2pt}
+{\color{company}\bfseries C-DAC, India}\hfill {\color{muted}Pune, India}\par
+{\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\par\vspace{2pt}
+{\color{company}\bfseries University of Pune}\hfill {\color{muted}Pune, India}\par
+{\itshape B.E. in Computer Science}\par
+
+\end{document}

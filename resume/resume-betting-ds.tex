@@ -1,0 +1,124 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Data Scientist -- Quantitative Analysis, sports betting. Probabilistic
+% models for real-time odds/pricing/in-play decisions.
+% Tailored: predictive models from data, statistical analysis & probability,
+% large-dataset handling, model optimisation for accuracy + computational
+% efficiency, scikit-learn/PyTorch/TensorFlow, cloud, statistical validation,
+% research from academic literature. Honest: sports/gambling domain interest
+% and deep probability-theory are the soft spots; not overclaimed.
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=1.0cm,bottom=0.8cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.02}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{6pt}{4pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=2pt,topsep=2pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large Data Scientist: Predictive Modelling, Statistics \& Large-Scale Data}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+Data Scientist who builds predictive models from large, messy datasets and takes them to production. MSc in Data Science with a research background applying statistical and generative models to real-world problems, from inferring missing values across millions of records to graph and generative networks for scientific discovery. Strong in Python and ML frameworks (scikit-learn, PyTorch, TensorFlow, XGBoost), with a focus on statistical validation, forecasting, and optimising models for both accuracy and computational efficiency. Experienced handling and enriching large-scale data and deploying on cloud, and comfortable researching novel approaches from academic literature.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Modelling:} Predictive modelling, Statistical analysis, Probability \& statistics, Forecasting, Generative models (GANs), Graph Neural Networks, Numerical optimization
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{ML Frameworks:} scikit-learn, PyTorch, TensorFlow, Keras, XGBoost
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Data:} Large-dataset handling \& enrichment, Data quality \& validation, ETL \& data pipelines, PostgreSQL / MySQL / MongoDB, Data analysis
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Engineering:} Python (production-grade, OOP, TDD), SQL, Rust, model performance optimisation, vectorisation
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Cloud \& Tools:} AWS, Docker, Git, CI/CD
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Developed and deployed a predictive machine learning model to infer missing values across large-scale datasets, enabling accurate estimation of rent per square foot across London postcodes.
+  \item Built the data pipeline linking 80\% of property records across diverse datasets with geolocation enrichment, resolving data-quality issues to feed reliable model inputs.
+  \item Optimised a production modelling engine for accuracy and computational efficiency, rearchitecting it into a graph-based, vectorised system for an 85\% performance gain and 3x throughput.
+  \item Delivered a machine learning data platform on an Innovate UK-funded R\&D project (GBP 205,895 grant), turning hyper-local market signals into data-driven decisions for investors.
+  \item Applied statistical validation and evaluation to keep production models accurate and reliable against real-world data.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Researched and implemented novel statistical and generative models (Graph Convolution Networks, GANs) for drug discovery, achieving a 63\% improvement in the novelty score of generated structures, drawing directly on academic literature.
+  \item Built a data preprocessing and validation pipeline over a million-row clinical dataset to ensure accuracy and completeness for modelling.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{PII Detection Models:} fine-tuned and evaluated transformer models (LoRA, BERT), validated on benchmarks and deployed as reusable production models; collectively 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+  \item \textbf{Transformer from Scratch in Rust:} deep learning model built from first principles (attention, training loop, optimisation) using the Candle framework with GPU acceleration. \href{https://github.com/abhijeetscode/transformer-rust}{View on GitHub}
+  \item \textbf{Spec-to-Code Agent:} autonomous agent rigorously evaluated at a 9/9 pass rate across a polyglot benchmark (Python, Go, Rust, Java, JS). \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\hfill {\color{muted}London, UK}\par
+{\itshape MSc in Data Science}\par\vspace{2pt}
+{\color{company}\bfseries C-DAC, India}\hfill {\color{muted}Pune, India}\par
+{\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\par\vspace{2pt}
+{\color{company}\bfseries University of Pune}\hfill {\color{muted}Pune, India}\par
+{\itshape B.E. in Computer Science}\par
+
+\end{document}

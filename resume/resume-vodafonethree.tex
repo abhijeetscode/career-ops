@@ -1,0 +1,130 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% VodafoneThree -- Machine Learning Engineer (MLOps / production ML).
+% Newbury / London, hybrid. FCA-regulated (DBS + financial checks).
+% Role: bridge data-science experimentation and production-grade ML;
+% deployment pipelines, model serving (real-time + batch), monitoring/
+% alerting, versioning/reproducibility/automated retraining, CI/CD for
+% ML, governance/audit, FinOps cost optimisation, platform standardisation.
+% Stack asks: Python + SW-eng fundamentals (testing, VCS, design patterns),
+% ML platforms (Azure ML/Databricks/GCP), containerisation/orchestration.
+% NOTE: honest tailoring -- candidate leads on production ML deployment,
+% Docker/CI-CD, observability/monitoring, reproducibility/audit in
+% regulated FinTech, cost/perf optimisation (FinOps-adjacent), real-time +
+% batch serving. No Azure ML/Databricks/GCP/K8s claimed -- AWS + Docker
+% stated honestly; containerisation real, orchestration framed as Docker.
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=1.0cm,bottom=0.8cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=2pt,topsep=2pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large Machine Learning Engineer: Production ML, Deployment \& MLOps}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+Machine Learning Engineer who bridges data-science experimentation and production-grade, scalable ML systems. In a regulated FinTech, I take validated models into reliable production: deployment pipelines, real-time and batch inference services, CI/CD automation, containerisation with Docker, and end-to-end monitoring for reliability, drift, latency, and failure modes. Strong Python with software-engineering fundamentals (testing, version control, code review, design patterns), plus evaluation and quality gates that keep models measurable and safe. Experienced embedding reproducibility and audit discipline in an FCA-regulated environment, and optimising compute cost against production performance.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Python \& Software Engineering:} Python (services, automation, tooling), OOP \& design patterns, testing/TDD, code review, Git (branching, protected merges), REST APIs, FastAPI
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Deployment \& CI/CD:} Docker, CI/CD pipelines for ML workloads, real-time \& batch inference serving, model packaging, versioning \& promotion, release discipline
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{MLOps \& Observability:} Model \& pipeline monitoring, drift \& data-quality signals, alerting/incident triggers, evaluation \& regression gates, reproducibility, audit trails
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{ML \& Serving:} PyTorch, TensorFlow, model deployment \& inference optimisation, RAG, fine-tuning (LoRA, BERT), embeddings
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Cloud \& Data:} AWS, compute/cost optimisation (FinOps-adjacent), PostgreSQL/MongoDB, vector databases, ETL \& data pipelines, LangGraph, MCP
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Productionised validated models from experimentation into reliable services, owning the path from code commit to monitored production with Docker and CI/CD automation across environments.
+  \item Built and operated ML and LLM inference services for both real-time (conversational/agent) and batch (document and data-pipeline) workloads, used by 5+ leading investment management firms.
+  \item Implemented end-to-end observability for models and pipelines, tracking reliability, groundedness, drift, latency, and failure modes, with incident-triggering alerts and Quality-of-Service metrics.
+  \item Built evaluation frameworks and regression checks as quality gates, keeping model logic and agent behaviour measurable, reproducible, and safe as systems changed.
+  \item Wrote Python automation and tooling for model workflows, plus a production API server on FastAPI exposing 180+ AI-powered tools through the Model Context Protocol (MCP) with secure enterprise access.
+  \item Cut compute and infrastructure cost by rearchitecting a production inference-heavy engine into a graph-based system (Apache Hamilton + vectorisation), delivering an 85\% performance gain and 3x throughput, while standardising deployment and documentation patterns for reuse in an FCA-regulated environment.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Built and evaluated deep learning models (Graph Convolution Networks, GANs) for drug discovery over a million-row dataset, achieving a 63\% improvement in novelty score, with a reproducible preprocessing and training pipeline.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{PII Detection LLMs (packaging \& deployment):} fine-tuned GPT (LoRA) and BERT, versioned and deployed them as reusable production model artefacts; collectively 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+  \item \textbf{Spec-to-Code Agent (CI-tested agent):} autonomous ReAct agent on LangGraph and the Anthropic API shipping installable, tested packages from specs; 9/9 pass rate across a polyglot benchmark. \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+  \item \textbf{Agentic Search API (production ML service):} FastAPI + Elasticsearch semantic search, Qwen3 embeddings and Claude tool-calling, with a deterministic fallback for resilience; measured p95 latency and 0.76 QoS eval score. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\hfill {\color{muted}London, UK}\par
+{\itshape MSc in Data Science}\par\vspace{2pt}
+{\color{company}\bfseries C-DAC, India}\hfill {\color{muted}Pune, India}\par
+{\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\par\vspace{2pt}
+{\color{company}\bfseries University of Pune}\hfill {\color{muted}Pune, India}\par
+{\itshape B.E. in Computer Science}\par
+
+\end{document}

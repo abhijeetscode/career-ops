@@ -1,0 +1,126 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SumUp -- Senior Machine Learning Engineer I. Berlin, office-first
+% (relocation assistance). FinTech, AI for Customer Support.
+% Tailored: architect/deploy production AI (reliability, performance,
+% scalability); LLMs, RAG, chatbot assistant; ML infra & pipelines,
+% model serving, monitoring & alerting; fine-tune/optimise models;
+% large text dataset preprocessing; feature-engineering pipelines, data
+% ingestion/transformation; Python, cloud (AWS), Docker, Git, CI/CD, unit
+% testing; FinTech domain. Honest: 8+ yrs and named MLOps tools
+% (MLflow/Kubeflow/Airflow/Langfuse) are gaps -- not faked.
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=1.0cm,bottom=0.8cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.02}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{6pt}{4pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=2pt,topsep=2pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large Senior Machine Learning Engineer: Production LLMs, RAG \& ML Pipelines}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+Machine Learning Engineer who architects, builds, and deploys AI solutions in production with a focus on reliability, performance, and scalability. In a regulated FinTech, I have shipped LLM and RAG-based conversational assistants, built ML pipelines and model-serving with monitoring and alerting, and fine-tuned models to improve accuracy and efficiency. Strong software engineering discipline (Python, CI/CD, unit testing, version control, Docker) and hands-on with cloud (AWS), feature-engineering pipelines, and large text-dataset preprocessing. I collaborate closely with data scientists, product managers, and backend engineers to turn business requirements into AI solutions that improve customer experience.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{AI Products:} LLMs, RAG systems, Chatbot / conversational assistants, Embeddings, Agents, NLP
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{ML Engineering:} Model training \& serving, Fine-tuning \& optimisation, Feature-engineering pipelines, Data ingestion \& transformation, Large text-dataset preprocessing
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Production \& MLOps:} Scalable deployment, ML pipelines \& infrastructure, Monitoring \& alerting, Continuous evaluation, Reliability \& performance
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Engineering:} Python (production-grade, OOP, TDD), Rust, SQL, FastAPI, CI/CD, unit testing, Git, Docker
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Cloud \& Data:} AWS, PostgreSQL / MongoDB, Vector databases, PyTorch, TensorFlow, scikit-learn
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Architected, developed, and deployed AI solutions in production with reliability, high performance, and scalability, including LLM and RAG-based conversational assistants used daily by 5+ client organisations.
+  \item Developed and maintained ML pipelines and model-serving infrastructure for efficient data processing, training, and serving, with monitoring, alerting, and continuous evaluation of production models.
+  \item Fine-tuned and optimised models to improve accuracy, efficiency, and scalability, and collected, preprocessed, and cleaned large text datasets for high-quality training and evaluation.
+  \item Embraced software engineering best practices day to day: version control, CI/CD, and unit testing, integrating ML solutions seamlessly into software applications.
+  \item Built feature-engineering and data ingestion/transformation pipelines, and rearchitected the core engine into a graph-based, vectorised system for an 85\% performance gain and 3x throughput.
+  \item Collaborated with data scientists, product managers, and backend engineers to translate business requirements into AI solutions.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Built and evaluated deep learning models (Graph Convolution Networks, GANs) over a million-row dataset, achieving a 63\% improvement in novelty score, with rigorous data preprocessing.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Spec-to-Code Agent:} autonomous ReAct agent on LangGraph and the Anthropic API that plans, uses tools, and ships tested packages from specs; 9/9 pass rate across a polyglot benchmark (Python, Go, Rust, Java, JS). \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+  \item \textbf{PII Detection LLMs:} fine-tuned GPT (LoRA) and BERT for PII detection and deployed them as reusable production models; collectively 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+  \item \textbf{Transformer from Scratch in Rust:} GPT-style decoder-only transformer built from first principles using the Candle framework with GPU acceleration. \href{https://github.com/abhijeetscode/transformer-rust}{View on GitHub}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\hfill {\color{muted}London, UK}\par
+{\itshape MSc in Data Science}\par\vspace{2pt}
+{\color{company}\bfseries C-DAC, India}\hfill {\color{muted}Pune, India}\par
+{\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\par\vspace{2pt}
+{\color{company}\bfseries University of Pune}\hfill {\color{muted}Pune, India}\par
+{\itshape B.E. in Computer Science}\par
+
+\end{document}

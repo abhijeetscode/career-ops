@@ -1,0 +1,122 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Healf -- Founding AI Engineer (London, hybrid). Tailored.
+% Self-contained (no external .cls). Single column, real text, standard headers.
+% Fonts: Source Sans Pro. Accent: teal + purple.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=1.4cm,bottom=1.2cm,left=1.6cm,right=1.6cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal
+\definecolor{company}{HTML}{6C2BB3}  % purple
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.05}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{9pt}{5pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=2pt,topsep=2pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large AI Engineer: Production Agents, LLMs \& Evaluation}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+AI engineer who ships production agents that real teams depend on, not demos. At an early-stage FinTech I took problems from operations, finance, and customer-facing functions and turned them into autonomous agents that take action week after week: a conversational AI used by 5+ investment firms, and a DCF modelling agent that cut analyst time by 70\%. I build for the unhappy path, designing the evaluations, observability, and incident monitoring that let agents be trusted on their worst day, and I have strong build-versus-buy instincts, reaching for LangGraph and LangChain when a problem demands it and shipping off-the-shelf when speed matters. MSc Data Science (King's College London).
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Shipped a client-facing conversational AI agent now relied on by 5+ leading investment firms and handling \textasciitilde100 Slack messages/day, letting investors manage portfolios in natural language across Slack, chat, and live Google Meet calls through a single multi-channel agent.
+  \item Cut analyst modelling time by 70\% by building and deploying an autonomous agent that generates Discounted Cash Flow (DCF) financial models from raw financial data.
+  \item Made agents trustworthy by designing the evaluation harness, Quality of Service metrics, and incident-triggering monitoring that track reliability, groundedness, latency, and failure modes in production, catching regressions before users do.
+  \item Drove team velocity by building reusable building blocks, including a production MCP server on FastAPI exposing 180+ AI-powered tools through the Model Context Protocol for Claude Desktop and Glean-compatible enterprise clients.
+  \item Reduced manual document review time by building a conversational system over financial documents using LLMs, RAG, embeddings, and a vector database, letting analysts query multiple PDFs in natural language.
+  \item Improved the financial modelling engine's performance by 85\% (3x throughput) by rearchitecting it into a graph-based system using Apache Hamilton and vectorisation, exercising a clear build-versus-rewrite call under real stakes.
+  \item Estimated rent per square foot across London postcodes by deploying a production ML model that infers missing values in large-scale property datasets, fed by an ETL pipeline linking 80\% of property records with geolocation enrichment.
+  \item Core engineer on an \href{https://gtr.ukri.org/projects?ref=10022996}{Innovate UK funded R\&D project} (\pounds205,895 grant) building a novel ML data platform and street-level analytics for commercial real estate investors.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Improved the novelty score of generated drug structures by 63\% by developing a deep learning model using Graph Convolution Networks and Generative Adversarial Networks (GANs) for drug discovery.
+  \item Ensured accuracy and completeness across a million-row clinical dataset by designing a robust data preprocessing pipeline.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Spec-to-Code Agent:} autonomous ReAct-based coding agent (LangGraph + Anthropic API) that ships installable, tested packages from plain-language specs; 9/9 pass rate across a polyglot benchmark (Python, Go, Rust, Java, JS). \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+  \item \textbf{PII Detection LLMs:} fine-tuned GPT (with LoRA) and BERT for Personally Identifiable Information detection; published models collectively reaching 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+  \item \textbf{Transformer from Scratch in Rust:} GPT-style decoder-only transformer built from first principles (multi-head causal self-attention, pre-norm residual blocks, full training loop with SafeTensors checkpointing) using the Candle framework with Metal GPU acceleration. \href{https://github.com/abhijeetscode/transformer-rust}{View on GitHub}
+  \item \textbf{Text-to-Image Search:} CLIP-style dual-encoder architecture for multimodal retrieval, matching natural-language queries to images through a shared embedding space. \href{https://github.com/abhijeetscode/text-to-image-search}{View on GitHub}
+\end{tight}
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Agents \& LLMs:} AI Agents, LangChain, LangGraph, Pydantic AI, RAG, Model Context Protocol (MCP), Fine-Tuning (LoRA, BERT), Prompt \& Eval Design
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Evaluation \& Observability:} Agent Evals, Quality of Service Metrics, Groundedness \& Latency Tracking, Incident Monitoring, Human-in-the-Loop Guardrails
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{ML:} Machine Learning, Deep Learning, NLP, PyTorch, TensorFlow, scikit-learn, XGBoost, Candle
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Languages \& APIs:} Python (production-grade, TDD), SQL, Rust, FastAPI, REST API design
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Data \& Infra:} ETL \& Data Pipelines, PostgreSQL, MongoDB, Vector Databases, Embeddings, AWS, Docker, Git, CI/CD
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+\entry{King's College London}{}{MSc in Data Science}{London, UK}
+\vspace{-3pt}
+\entry{C-DAC, India}{}{Post Graduate Diploma in Advanced Computing (PG-DAC)}{Pune, India}
+\vspace{-3pt}
+\entry{University of Pune}{}{B.E. in Computer Science}{Pune, India}
+
+\end{document}

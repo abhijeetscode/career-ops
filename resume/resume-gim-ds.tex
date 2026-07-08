@@ -1,0 +1,126 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Senior Data Scientist (Group Investment Management) -- London. Predict
+% programme-delivery risk & financial overruns; early-warning indicators.
+% Tailored: predictive ML models in a business context, LLM prompt
+% engineering + fine-tuning small LLMs for feature/topic extraction from
+% unstructured data, SQL / data wrangling / ETL from multiple sources,
+% statistical analysis & hypothesis testing, communicate insights (viz),
+% AWS / Bedrock, financial services. Honest: BI dashboards (Power BI/
+% Tableau), PPM/SAP/Workday/Snowflake, and people-management seniority
+% are soft spots -- not overclaimed.
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=1.0cm,bottom=0.8cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.02}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{6pt}{4pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=2pt,topsep=2pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large Senior Data Scientist: Predictive ML, LLM Extraction \& Data-Driven Insight}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+Data Scientist who builds and deploys predictive machine learning models in a business context and turns complex, unstructured data into actionable insight. In a regulated FinTech, I have shipped predictive models on large, messy datasets, used LLM prompt engineering and fine-tuned small models to extract structured features from unstructured documents, and communicated findings to senior stakeholders. Strong in Python (scikit-learn, PyTorch), SQL, data wrangling and ETL from multiple sources, statistical analysis and hypothesis testing, and AWS. MSc in Data Science, with a track record of translating stakeholder needs into technical solutions that drive decisions.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{ML \& Modelling:} Predictive modelling, Deploying ML in business context, Statistical analysis, Hypothesis testing, Forecasting, Numerical optimization
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{LLM \& Extraction:} LLM prompt engineering, Fine-tuning small models (LoRA, BERT), Feature/topic extraction from unstructured data, RAG, Embeddings
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Data:} Strong SQL, Data wrangling \& cleaning, ETL from databases \& APIs, Data integration, PostgreSQL / MySQL / MongoDB
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Tooling:} Python (scikit-learn, PyTorch, TensorFlow, XGBoost), matplotlib, Rust, AWS, Docker, Git
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Communication:} Translating insight for non-technical audiences, Stakeholder collaboration, Technical documentation
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Built and deployed predictive machine learning models in a business context, including a model to infer missing values across large-scale datasets and estimate rent per square foot across London postcodes.
+  \item Used LLM prompt engineering and fine-tuned small models to extract structured features and insights from unstructured documents, letting analysts query and interpret complex financial data.
+  \item Conducted data cleaning, preprocessing, and integration from multiple sources (databases, APIs), linking 80\% of records across diverse datasets and resolving data-quality issues.
+  \item Delivered a data-driven ML platform on an Innovate UK-funded R\&D project (GBP 205,895 grant), turning hyper-local signals into insights for investment decision-making.
+  \item Collaborated with senior stakeholders and analysts to translate their data needs into technical solutions, communicating results clearly to non-technical audiences.
+  \item Applied statistical validation and model performance optimisation to keep production models accurate and reliable.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Applied statistical and machine learning methods (Graph Convolution Networks, GANs) to a million-row dataset for drug discovery, achieving a 63\% improvement in novelty score, with rigorous preprocessing and validation.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Fine-Tuned LLMs for Extraction:} fine-tuned GPT (LoRA) and BERT to extract Personally Identifiable Information from unstructured text; validated and deployed as reusable models with 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+  \item \textbf{Spec-to-Code Agent:} autonomous agent rigorously evaluated at a 9/9 pass rate across a polyglot benchmark (Python, Go, Rust, Java, JS). \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+  \item \textbf{Transformer from Scratch in Rust:} deep learning model built from first principles using the Candle framework with GPU acceleration. \href{https://github.com/abhijeetscode/transformer-rust}{View on GitHub}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\hfill {\color{muted}London, UK}\par
+{\itshape MSc in Data Science}\par\vspace{2pt}
+{\color{company}\bfseries C-DAC, India}\hfill {\color{muted}Pune, India}\par
+{\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\par\vspace{2pt}
+{\color{company}\bfseries University of Pune}\hfill {\color{muted}Pune, India}\par
+{\itshape B.E. in Computer Science}\par
+
+\end{document}

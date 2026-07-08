@@ -1,0 +1,126 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Lloyds Banking Group -- ML/AI Engineer (MLOps/platform). Manchester,
+% hybrid. GBP 71-85K. Data & AI Engineering team.
+% NOTE: platform/MLOps-heavy role (K8s, Harness, CUDA/Triton, Prometheus,
+% MLflow). Candidate leads on applied-AI + productionisation/monitoring +
+% nice-to-haves (MCP, LangGraph, HITL/eval, regulated FinTech). No K8s /
+% Triton / MLflow claimed -- honest tailoring only.
+% Tailored: Python automation & tooling, Docker/CI-CD, production model
+% deployment + observability/monitoring, evaluation & quality gates,
+% reproducibility/audit in regulated FinTech, MCP + agent orchestration.
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=1.0cm,bottom=0.8cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.02}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{6pt}{4pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=2pt,topsep=2pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large ML/AI Engineer: Production ML Systems, Deployment \& Observability}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+ML/AI Engineer who builds and operates production ML systems across the full lifecycle, from code commit to monitored production services. In a regulated FinTech, I own model deployment, CI/CD automation, containerisation with Docker, and end-to-end observability for models and pipelines: reliability, groundedness, latency, and failure modes. Strong Python for automation, tooling, and service development, with evaluation and quality gates that keep models measurable and safe as systems change. Comfortable with agent orchestration (LangGraph, MCP) and human-in-the-loop evaluation, and experienced embedding reproducibility and audit discipline in a regulated environment.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Python \& Tooling:} Python (automation, tooling, service development, OOP, TDD), REST APIs, FastAPI, modular design
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Deployment \& CI/CD:} Docker, CI/CD pipelines, Git (branching, protected merges, code review), model packaging \& promotion, release discipline
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Observability \& Reliability:} Model \& pipeline monitoring, drift \& data-quality signals, latency, incident-triggering alerts, regression testing, evaluation gates
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{ML \& Serving:} PyTorch, TensorFlow, model deployment \& inference services, RAG, fine-tuning (LoRA, BERT), embeddings
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Agents \& Cloud:} LangGraph, LangChain, Model Context Protocol (MCP), HITL evaluation, AWS, PostgreSQL/MongoDB, vector databases
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Owned the path from code commit to reliable, monitored production services: deployed and operated ML and LLM services with Docker and CI/CD automation across environments.
+  \item Implemented end-to-end observability for models and pipelines, tracking reliability, groundedness, latency, and failure modes, with incident-triggering alerts and Quality-of-Service metrics.
+  \item Built evaluation frameworks and regression checks as quality gates, keeping model logic and agent behavior measurable and safe as systems changed.
+  \item Wrote Python automation and tooling for model workflows, plus a production API server on FastAPI exposing 180+ AI-powered tools through the Model Context Protocol (MCP) with secure enterprise access.
+  \item Optimised a production inference-heavy engine, rearchitecting it into a graph-based system (Apache Hamilton + vectorisation) for an 85\% performance gain and 3x throughput.
+  \item Shipped RAG and agentic systems used by 5+ leading investment management firms, applying reproducibility and audit discipline required in a regulated financial environment.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Built and evaluated deep learning models (Graph Convolution Networks, GANs) for drug discovery over a million-row dataset, achieving a 63\% improvement in novelty score, with a reproducible preprocessing and training pipeline.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{PII Detection LLMs (packaging \& deployment):} fine-tuned GPT (LoRA) and BERT, versioned and deployed them as reusable production model artefacts; collectively 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+  \item \textbf{Spec-to-Code Agent (CI-tested agent):} autonomous ReAct agent on LangGraph and the Anthropic API that ships installable, tested packages from specs; evaluated at a 9/9 pass rate across a polyglot benchmark (Python, Go, Rust, Java, JS). \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+  \item \textbf{Transformer from Scratch in Rust:} GPT-style decoder-only transformer built from first principles using the Candle framework with Metal GPU acceleration. \href{https://github.com/abhijeetscode/transformer-rust}{View on GitHub}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\hfill {\color{muted}London, UK}\par
+{\itshape MSc in Data Science}\par\vspace{2pt}
+{\color{company}\bfseries C-DAC, India}\hfill {\color{muted}Pune, India}\par
+{\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\par\vspace{2pt}
+{\color{company}\bfseries University of Pune}\hfill {\color{muted}Pune, India}\par
+{\itshape B.E. in Computer Science}\par
+
+\end{document}

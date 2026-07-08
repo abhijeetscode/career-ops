@@ -20,9 +20,11 @@ AI engineer committed to continuous learning and building impactful AI solutions
 ### Built AI — AI/ML Engineer (Early Stage Hire)
 **FinTech & AI Company · London, UK · April 2022 – Present**
 
+- Designed and deployed a client-facing conversational AI persona, now used by 5+ leading investment management firms and handling ~100 Slack messages/day, that helps investors manage their portfolios in natural language: users talk to her, message her on Slack, add her to Google Meet calls, and ask ad-hoc questions, served through a multi-channel agent across chat and live meetings.
 - Core engineer on an [Innovate UK funded R&D project](https://gtr.ukri.org/projects?ref=10022996) (£205,895 grant, 2022–23) that built a novel ML data platform and street-level analytics, enabling commercial real estate investors to make data-driven decisions over hyper-local market signals.
 - Enabled secure enterprise access to 180+ AI-powered tools by building a production-ready MCP server on FastAPI, exposed through the Model Context Protocol for Claude Desktop and Glean-compatible clients.
 - Designed agent evals, Quality of Service metrics, and incident-triggering mechanisms to monitor reliability, groundedness, latency, and failure modes in production.
+- Defined and measured "terminal impact," a conversation-outcome metric that classifies the state in which a user exits an agent dialogue (positive, negative, or unsatisfied), computed from real client chats to track whether conversations actually help users rather than just complete.
 - Developed and deployed an autonomous AI agent that generates Discounted Cash Flow (DCF) financial models from raw financial data, reducing analyst modeling time by 70%.
 - Built a production-ready LLM agent to understand and explain financial cashflows to users, with robust validation to ensure accurate and reliable outputs.
 - Developing an AI agent that interprets investment-related queries, retrieves relevant outputs from a financial modeling engine, and generates user-friendly responses with actionable insights.
@@ -48,6 +50,9 @@ AI engineer committed to continuous learning and building impactful AI solutions
 
 - **Spec-to-Code Agent:** Built an autonomous ReAct-based coding agent using LangGraph and the Anthropic API that generates installable, tested software packages from plain-language markdown specs. Achieves 9/9 pass rate across a polyglot benchmark (Python, Go, Rust, Java, JS).  
   https://github.com/abhijeetscode/Spec-to-Code-Agent
+
+- **Agentic Search API:** Built a production-grade cross-domain search service (FastAPI, PostgreSQL, Elasticsearch semantic search) for wealth-management advisors. Claude decomposes queries and routes to specialized tools (lexical/semantic client search, document search) with a deterministic lexical + semantic fallback for resilience when the LLM fails. Local Qwen3 embeddings (no external embedding API), PDF ingestion with auto-classification and chunking, and read-your-write consistency. Achieves p95 ≈ 175ms deterministic retrieval and a 0.76 macro QoS evaluation score across mixed query types.  
+  https://github.com/abhijeetscode/search-agent
 
 - **Transformer from Scratch in Rust:** Built a GPT-style decoder-only transformer from first principles in Rust using the Candle framework — multi-head causal self-attention, pre-norm blocks with residual connections, token/position embeddings, and a full training loop with early stopping and SafeTensors checkpointing. Supports character and BPE (r50k_base) training with Metal GPU acceleration; default config mirrors GPT-2 small (768 dims, 12 heads, 12 layers, 1024-token context).  
   https://github.com/abhijeetscode/transformer-rust
