@@ -1,0 +1,126 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% OpenHuman (openhumanlab.com) -- founding-team outreach. NOTE: this is a
+% MANIFESTO, not a JD -- no listed role/requirements. They are assembling a
+% small team across engineering, research, applied AI, go-to-market;
+% mission = understanding people faithfully to inform decisions (markets,
+% institutions, societies). Apply via founders@openhumanlab.com.
+% Positioning: applied-AI engineer + research background + early-stage
+% builder; human-facing conversational/agent systems; research-to-production.
+% Honest: content from cv.md + confirmed updates only. No fabricated fit to
+% requirements that don't exist.
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.7cm,bottom=0.7cm,left=1.4cm,right=1.4cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=1pt,topsep=1pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large Applied AI Engineer: Multi-Agent Systems, Behavioural Modelling \& Explainable Reasoning}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+Applied AI engineer and early-stage builder who turns research into production. I design multi-agent LLM systems that reason step by step and expose their reasoning, and I build the behavioural outcome metrics and evaluation frameworks that measure whether they actually help, including "terminal impact," a metric that classifies how users exit a conversation. As an early hire in a fast-moving startup I have led multiple AI initiatives end to end, from prototype to production, pairing strong Python engineering with a research background in deep learning (GNNs, GANs) from King's College London. I care about building AI that represents people faithfully rather than flattening them into averages, and I contribute in the open (67K+ HuggingFace downloads).
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Applied AI \& Agents:} LLM agents, tool use \& orchestration (LangGraph, LangChain), RAG, prompt engineering, Model Context Protocol (MCP), human-in-the-loop
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Research \& Deep Learning:} PyTorch, TensorFlow, transformers (built from scratch), GANs, Graph Convolution Networks, fine-tuning (LoRA, BERT), NLP, predictive modelling
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Evaluation \& Reliability:} evaluation frameworks, quality-of-service \& outcome metrics (``terminal impact''), groundedness \& drift, monitoring, observability
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Engineering:} Python, TypeScript \& React, FastAPI, REST APIs, microservices, RabbitMQ, SQL, PostgreSQL/MongoDB, vector databases, data pipelines
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Cloud \& Practices:} AWS \& GCP, Docker, CI/CD, testing/TDD, code review, data privacy \& PII, performance \& cost optimisation
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Designed a client-facing conversational AI persona that understands users and answers their questions in natural language across Slack and live calls, used by 5+ leading investment management firms.
+  \item Led multiple AI initiatives end to end, from prototype to production, building LLM agents and RAG systems and setting technical direction and standards for the team.
+  \item Built evaluation and reliability into every system: evals, quality-of-service metrics, groundedness and drift signals, and ``terminal impact,'' an outcome metric for whether users leave a dialogue satisfied.
+  \item Built reusable platform infrastructure, including a production FastAPI server exposing 180+ AI-powered tools through the Model Context Protocol (MCP) with secure enterprise access.
+  \item Optimised a production inference-heavy engine into a graph-based pipeline (Apache Hamilton + vectorisation) for an 85\% performance gain, and shipped an autonomous agent that authors DCF models from raw data (70\% less analyst time).
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Researched and built deep learning models (Graph Convolution Networks, GANs) for drug discovery, achieving a 63\% improvement in novelty score, with a reproducible pipeline over a million-row clinical dataset.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Adverse Media Screening Agent:} LangGraph ReAct agent that reasons about a person from news coverage, extracting names, normalising identities, and producing Pydantic-structured, explainable verdicts (match, sentiment, reasoning trail); a second LLM judges evidence sufficiency, evaluated with an LLM-as-judge rubric and 84 tests. \href{https://github.com/abhijeetscode/adverse-media-screening}{View on GitHub}
+  \item \textbf{Agentic Enterprise Assistant:} agent answering questions over grounded data with RBAC at an MCP server, a grounding-validation gate, and auditable traces; hybrid BM25 + semantic search; OpenTelemetry to Arize Phoenix. Passed 13/13 evaluation cases. \href{https://github.com/abhijeetscode/Agentic-Enterprise-Assistant}{View on GitHub}
+  \item \textbf{Agentic Search API:} FastAPI + Elasticsearch semantic search, Qwen3 embeddings and Claude tool-calling, with a deterministic fallback for resilience; p95 around 175ms and a 0.76 macro QoS eval score. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+  \item \textbf{PII Detection LLMs:} fine-tuned GPT (LoRA) and BERT to detect and protect personal data in text; collectively 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\hfill {\color{muted}London, UK}\par
+{\itshape MSc in Data Science}\par\vspace{2pt}
+{\color{company}\bfseries C-DAC, India}\hfill {\color{muted}Pune, India}\par
+{\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\par\vspace{2pt}
+{\color{company}\bfseries University of Pune}\hfill {\color{muted}Pune, India}\par
+{\itshape B.E. in Computer Science}\par
+
+\end{document}

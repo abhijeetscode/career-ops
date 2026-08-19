@@ -1,0 +1,140 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Machine Learning Engineer, Platform -- Scale (Scale GP). London.
+% Build retrieval + knowledge-representation systems at heart of an
+% enterprise GenAI platform. Own ML components end to end (research/proto
+% -> production): knowledge bases, vector stores, RAG pipelines, context
+% engines powering agents for enterprise customers.
+% Scope: knowledge representation (ontologies, knowledge graphs, structured
+% reasoning); RAG (chunking, embedding, indexing, retrieval, reranking);
+% integrations to enterprise data sources / vector DBs / APIs; context
+% retrieval balancing recall/precision/latency/cost; eval frameworks,
+% datasets, metrics (retrieval quality, context relevance, e2e agent perf);
+% reliable backend services + data pipelines; ship experiments fast w/
+% customer feedback loops; cross-functional (product/ML/infra).
+% Need: 5+ yrs prod ML/AI; Master's/PhD or equiv; deep retrieval/RAG/
+% embeddings/vector indexing/knowledge rep; semantic search / agentic;
+% strong production Python; high-growth startup scaling; ambiguity;
+% research + pragmatic; customer-facing communication.
+% HONEST TAILORING -- candidate leads on: RAG end to end (chunking,
+% embeddings, Elasticsearch indexing, hybrid BM25+semantic retrieval,
+% reciprocal rank fusion / reranking), vector DBs, eval frameworks + QoS +
+% latency/cost, backend (FastAPI), data pipelines, prototype->production,
+% early-stage startup, customer-facing for 5+ firms, MSc, agentic systems.
+% NOT claimed: ontologies / knowledge graphs (no direct experience -- GCN
+% and Hamilton DAG are graph-structured but NOT knowledge graphs; stated
+% honestly, not conflated).
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.8cm,bottom=0.7cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.01}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{6pt}{4pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=2pt,topsep=2pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large Machine Learning Engineer: Retrieval, RAG Systems \& Production ML Platforms}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+Machine learning engineer who builds the retrieval systems that power production LLM applications. As an early-stage hire at a high-growth FinTech, I have owned ML components end to end, from research and prototyping through to production, building RAG pipelines (chunking, embedding, indexing, retrieval, reranking) and evaluation frameworks that balance recall, precision, latency, and cost for 5+ leading investment management firms. Strong production Python and backend engineering, with a bias for shipping experiments fast against tight customer feedback loops. Open-source proof: a retrieval service at p95 175ms with a 0.76 QoS score and a coding agent at 9/9 on a polyglot benchmark. MSc Data Science, King's College London.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Retrieval \& RAG:} RAG pipelines (chunking, embedding, indexing, retrieval, reranking), hybrid BM25 + semantic search, reciprocal rank fusion, embeddings (Qwen3), vector databases, Elasticsearch, context relevance
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Evaluation \& Quality:} Evaluation frameworks, datasets \& metrics, retrieval quality, Quality-of-Service scoring, groundedness, recall/precision/latency/cost trade-offs
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Agentic \& LLM Systems:} Agentic systems, tool use, orchestration (LangGraph, LangChain), Model Context Protocol (MCP), prompt engineering, fine-tuning (LoRA, BERT)
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Backend \& Platform:} Python (production-quality, testable, OOP, TDD), FastAPI, REST APIs, reliable backend services, data pipelines \& ETL, PostgreSQL, Redis
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Cloud \& Ops:} AWS, Docker, CI/CD, observability \& monitoring (OpenTelemetry), high-growth startup delivery
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Built production retrieval and RAG systems end to end over financial documents (chunking, Qwen3 embeddings, Elasticsearch indexing, hybrid BM25 + semantic retrieval with reciprocal rank fusion) for 5+ leading investment management firms.
+  \item Owned ML components from research and prototyping through to production deployment as an early-stage hire at a high-growth FinTech, shipping experiments fast against tight customer feedback loops.
+  \item Built evaluation frameworks, datasets, and metrics measuring retrieval quality, context relevance, and end-to-end agent performance, including Quality-of-Service metrics, groundedness checks, and a ``terminal impact'' outcome metric.
+  \item Built reliable backend services and data pipelines for ML and LLM components in production, including a FastAPI MCP server exposing 180+ tools with secure enterprise access and a pipeline linking 80\% of records across diverse sources.
+  \item Optimised retrieval and inference for latency and cost, rearchitecting the modelling engine into a graph-based system (Apache Hamilton + vectorisation) for an 85\% performance gain and 3x throughput on AWS.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Researched and built graph-based deep learning models (Graph Convolution Networks, GANs) over a million-row clinical dataset, achieving a 63\% improvement in the novelty score of generated structures.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Agentic Search API (retrieval + latency/cost):} cross-domain retrieval service (FastAPI, PostgreSQL, Elasticsearch) with PDF ingestion, chunking, and Claude query-routing plus a deterministic fallback for resilience; measured p95 175ms retrieval and a 0.76 macro QoS eval score. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+  \item \textbf{Agentic Enterprise Assistant (retrieval + evals):} hybrid BM25 + semantic search (Qwen3 embeddings, reciprocal rank fusion) over Elasticsearch with RBAC at the MCP server, a grounding-validation gate, and OpenTelemetry; passed 13/13 evaluation cases. \href{https://github.com/abhijeetscode/Agentic-Enterprise-Assistant}{View on GitHub}
+  \item \textbf{Spec-to-Code Agent (agentic + testing rigour):} autonomous ReAct agent on LangGraph and the Anthropic API that ships installable, tested packages from plain-language specs; 9/9 pass rate across a polyglot benchmark. \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\hfill {\color{muted}London, UK}\par
+{\itshape MSc in Data Science}\par\vspace{2pt}
+{\color{company}\bfseries C-DAC, India}\hfill {\color{muted}Pune, India}\par
+{\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\par\vspace{2pt}
+{\color{company}\bfseries University of Pune}\hfill {\color{muted}Pune, India}\par
+{\itshape B.E. in Computer Science}\par
+
+\end{document}

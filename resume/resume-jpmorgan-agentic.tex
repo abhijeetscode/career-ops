@@ -1,0 +1,138 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Applied AI Engineer, Agentic Systems -- Senior Associate. J.P. Morgan.
+% Commercial & Investment Bank, 25 Bank Street, Canary Wharf, London.
+% Job ID 210701867. Category: Predictive Science. #CIBAppliedAI.
+% JD focus: architect / develop / productionize autonomous & assistive AI
+% agents; design MULTI-AGENT SYSTEMS (role definition, tool integration,
+% planning, memory, workflow orchestration); RAG pipelines + semantic search
+% with VECTOR DBs (indexing, retrieval policies, evaluation); agent tools &
+% APIs to external services/DBs with robust OUTPUT PARSING + ERROR HANDLING;
+% advanced prompt engineering + output validation + GUARDRAILS to reduce
+% hallucinations; MICROSERVICES architecture + multi-step workflows;
+% instrument agents for TRACING, METRICS, FEEDBACK LOOPS; stakeholder
+% partnering + human-AI interfaces; A/B tests; mentoring.
+% Required: advanced degree; production agentic AI; PyTorch/TensorFlow/
+% scikit-learn; Python + comprehensive tests + EVALUATION HARNESSES;
+% agent frameworks (LangChain, CrewAI, AutoGen, LangGraph); generative
+% models (transformers, GANs, VAEs, diffusion); preprocessing/feature eng;
+% cloud + containerization.
+% Preferred: financial services; LoRA/QLoRA/DoRA fine-tuning; prompt eval
+% suites; distributed computing; AWS.
+% HONEST -- NOT claimed: VAEs, diffusion models, CrewAI, AutoGen, QLoRA,
+% DoRA, quantization, distillation, A/B testing, distributed computing /
+% data sharding, memory architectures, formal mentoring, investment
+% banking operations. Only skills/metrics from cv.md + verified proof points.
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.7cm,bottom=0.6cm,left=1.4cm,right=1.4cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{0.99}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{4pt}{3pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=0.5pt,topsep=0.5pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large Applied AI Engineer: Agentic Systems, RAG \& Production Guardrails}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+Applied AI engineer who architects, builds, and productionizes autonomous and assistive agents in regulated financial services. I have shipped multi-agent systems for 5+ leading investment management firms, covering tool integration, workflow orchestration, and human-AI interfaces from Slack to live meetings, and I build the layers that make agents safe: output validation and grounding gates that reduce hallucinations, RAG and semantic search over vector databases with measured retrieval quality, and instrumentation for tracing, metrics, and feedback loops. I write production Python with tests and evaluation harnesses for agents and prompts, and design microservices-based architectures on FastAPI. MSc Data Science, King's College London.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Agentic Systems:} multi-agent design, role definition \& task decomposition, tool integration \& function calling, planning, workflow orchestration, agent frameworks (LangGraph, LangChain, native tool-use agent loops), Model Context Protocol (MCP)
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{RAG \& Retrieval:} RAG pipelines, semantic search, vector databases, embeddings (local Qwen3), indexing \& chunking, hybrid BM25 plus semantic retrieval with reciprocal rank fusion, Elasticsearch
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Evaluation \& Guardrails:} evaluation harnesses for agents \& prompts, grounding gates to reduce hallucinations, output validation \& error handling, quality-of-service metrics, drift monitoring, tracing \& feedback loops (OpenTelemetry, Arize Phoenix)
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{ML \& Generative Models:} PyTorch, TensorFlow, scikit-learn, transformers (built from scratch), GANs, Graph Convolution Networks, fine-tuning (LoRA, BERT), data preprocessing \& feature engineering, NLP
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Engineering \& Cloud:} Python (production-grade, TDD), microservices \& async APIs (FastAPI), performance optimisation, Docker, CI/CD, AWS \& GCP, PostgreSQL, role-based access (Keycloak JWT), PII protection
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Architected, built, and productionized autonomous and assistive AI agents streamlining complex financial workflows for 5+ leading investment management firms, including one automating Discounted Cash Flow modelling that cut analyst modelling time by 70\%.
+  \item Designed multi-agent systems covering role definition, tool integration, and workflow orchestration: agents that decompose queries, route to specialised tools, and fall back deterministically on failure.
+  \item Implemented RAG pipelines and semantic search over vector databases, with chunked indexing, hybrid BM25 plus semantic retrieval using reciprocal rank fusion, and measured retrieval quality.
+  \item Built and integrated agent tools and APIs connecting agents to external services and internal systems, exposing 180+ tools through a production FastAPI Model Context Protocol server.
+  \item Practised advanced prompt engineering with output validation and guardrails to reduce hallucinations: grounding-validation gates checking every answer against tool results, plus role-based access and auditable traces.
+  \item Instrumented agents for tracing, metrics, and feedback loops (OpenTelemetry to Arize Phoenix): agent evals, quality-of-service and groundedness metrics, drift monitoring, and ``terminal impact,'' an outcome metric from real client conversations.
+  \item Partnered with stakeholders on requirements and human-AI interfaces, delivering a multimodal agent that investors query in natural language across Slack, chat, and live meetings with real-time voice.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Built and evaluated deep-learning models (Graph Convolution Networks, GANs) over a million-row dataset, achieving a 63\% novelty-score improvement.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Agentic Enterprise Assistant:} LLM agent (Claude, native tool use) over grounded data with role-based access at the MCP server (Keycloak JWT), a grounding-validation gate, and auditable traces; hybrid BM25 plus semantic search with reciprocal rank fusion, OpenTelemetry to Arize Phoenix. Passed 13/13 evaluation cases (tool selection, grounding, access compliance). \href{https://github.com/abhijeetscode/Agentic-Enterprise-Assistant}{View on GitHub}
+  \item \textbf{Spec-to-Code Agent:} autonomous ReAct agent on LangGraph and the Anthropic API that ships installable, tested packages from plain-language specs; 9/9 pass rate across a polyglot benchmark (Python, Go, Rust, Java, JS). \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+  \item \textbf{PII Detection LLMs:} fine-tuned GPT (LoRA) and BERT to detect and protect personal data, published as reusable production models; collectively 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\sep{\itshape MSc in Data Science}\hfill {\color{muted}London, UK}\par\vspace{1pt}
+{\color{company}\bfseries C-DAC}\sep{\itshape PG Diploma in Advanced Computing (PG-DAC)}\hfill {\color{muted}Pune, India}\par\vspace{1pt}
+{\color{company}\bfseries University of Pune}\sep{\itshape B.E. in Computer Science}\hfill {\color{muted}Pune, India}\par
+
+\end{document}

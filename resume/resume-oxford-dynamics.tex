@@ -1,0 +1,142 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AI Engineer -- Oxford Dynamics. London (hybrid). Defence / national
+% security deep-tech (AVIS multi-modal AI framework, STRIDER robotics).
+% Build + ship agentic AI in production; multi-agent pipelines; integrate
+% LLMs + vision-language models; deploy to cloud, on-prem, air-gapped;
+% own features end to end; reliability + security over speed.
+% Responsibilities: architect/build/optimise multi-agent systems (LangGraph,
+% Haystack, or equiv); integrate LLMs + VLMs for reasoning/search/summary/
+% task exec; deploy cloud/on-prem/air-gapped; production pipelines ingestion
+% -> inference; observability (agent behaviour, model perf, failure modes);
+% stakeholder collaboration; evaluation frameworks; technical authority /
+% set design patterns for juniors.
+% Requirements: commercial multi-agent/agentic in prod; strong Python + LLM
+% frameworks (LangGraph/LangChain/Haystack); deploy AI/ML to prod; Docker,
+% Git, cloud (AWS preferred); secure deployment (air-gapped/on-prem/sovereign).
+% Preferred: multimodal reasoning; edge/offline; Kubernetes (EKS/OpenShift);
+% MLOps (eval, monitoring, reproducibility); observability for agents; agent
+% orchestration + A2A; MCPs; secure-by-design (ISO 27001/NIST/OWASP);
+% defence/national security; open-source contributions. SC/DV desirable.
+% HONEST TAILORING -- candidate leads on: agentic/multi-agent + multi-step
+% pipelines (LangGraph/ReAct), LLM integration (reasoning/search/summary),
+% multimodal (text/voice/video), production pipelines ingestion->inference,
+% SELF-HOSTED / LOCAL-ONLY inference (no external API -- air-gap-friendly),
+% eval + agent-behaviour/failure-mode observability, secure design (RBAC,
+% redaction, auditable traces), MCP, Docker, AWS, strong open-source.
+% NOT claimed: defence/national-security domain (NONE), SC/DV clearance
+% (none), Haystack, vision-language models specifically, Kubernetes, A2A.
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.8cm,bottom=0.7cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=2pt,topsep=2pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large AI Engineer: Multi-Agent Systems, LLM Integration \& Secure Production Deployment}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+AI engineer who builds and ships agentic AI systems into production, owning features end to end from design to deployment. As an early-stage hire at a FinTech, I have architected multi-agent and multi-step pipelines with LangGraph, integrating LLMs for reasoning, search, summarisation, and task execution for 5+ leading investment management firms. I care about reliability and security over speed to market: self-hosted, local-only inference with no external API dependency, role-based access, and observability into agent behaviour and failure modes. Delivery-focused and comfortable across the stack. Open-source proof: a coding agent at 9/9 on a polyglot benchmark and fine-tuned models with 67K+ HuggingFace downloads. MSc Data Science, King's College London.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Agentic AI:} Multi-agent systems, agent orchestration, multi-step pipelines, LangGraph, LangChain, ReAct, tool use, Model Context Protocol (MCP)
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Multimodal \& GenAI:} LLM integration (Claude, GPT), multimodal (text, voice, video), reasoning, search, summarisation, task execution, RAG, embeddings
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Evaluation \& Observability:} Evaluation frameworks, agent-behaviour \& failure-mode monitoring, model performance tracking, QoS metrics, observability (OpenTelemetry)
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Secure Deployment:} Production pipelines (ingestion to inference), self-hosted / local-only inference (no external API), role-based access (Keycloak JWT), auditable traces, Docker
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Engineering \& Cloud:} Python (production-grade, TDD), FastAPI, Rust, AWS, Git, CI/CD, PostgreSQL, Elasticsearch
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Built and shipped agentic AI systems in production for 5+ leading investment management firms as an early-stage hire, owning features end to end from design through to deployment.
+  \item Architected multi-agent and multi-step pipelines with LangGraph, integrating LLMs for reasoning, search, summarisation, and task execution, including a multimodal conversational agent across text, voice, and video.
+  \item Built production pipelines from data ingestion through to inference (PDF ingestion, chunking, embeddings, hybrid retrieval), using local-only embeddings with no external API dependency, suited to self-hosted and secure environments.
+  \item Built observability and evaluation for agentic systems: agent-behaviour and failure-mode tracking, QoS metrics, groundedness checks, and OpenTelemetry monitoring.
+  \item Delivered secure AI with role-based access (Keycloak JWT), token-redacted auditable traces, and containerised deployment (Docker), and optimised inference for an 85\% performance gain and 3x throughput on AWS.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Built deep learning models (Graph Convolution Networks, GANs) over a million-row dataset, achieving a 63\% improvement in the novelty score of generated structures.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Agentic Enterprise Assistant (secure agentic + evals):} LLM agent (Claude, native tool use) over grounded data with RBAC at the MCP server, a grounding-validation gate, Elasticsearch hybrid search, and OpenTelemetry, containerised with Docker Compose; passed 13/13 evaluation cases. \href{https://github.com/abhijeetscode/Agentic-Enterprise-Assistant}{View on GitHub}
+  \item \textbf{Agentic Search API (local-only, air-gap-friendly):} FastAPI + Elasticsearch retrieval with Claude tool-routing and a deterministic fallback for resilience; local Qwen3 embeddings with no external embedding API; measured p95 175ms retrieval and a 0.76 macro QoS eval score. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+  \item \textbf{Spec-to-Code Agent (multi-agent + rigour):} autonomous ReAct agent on LangGraph and the Anthropic API that ships installable, tested packages from plain-language specs; 9/9 pass rate across a polyglot benchmark (Python, Go, Rust, Java, JS). \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\hfill {\color{muted}London, UK}\par
+{\itshape MSc in Data Science}\par\vspace{2pt}
+{\color{company}\bfseries C-DAC, India}\hfill {\color{muted}Pune, India}\par
+{\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\par\vspace{2pt}
+{\color{company}\bfseries University of Pune}\hfill {\color{muted}Pune, India}\par
+{\itshape B.E. in Computer Science}\par
+
+\end{document}

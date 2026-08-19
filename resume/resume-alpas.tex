@@ -1,0 +1,111 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Alpas -- Senior AI Engineer (Berlin). Tailored resume.
+% Framing: agentic systems (LangGraph), NLP pipelines, RAG/vector DBs, MLOps &
+% monitoring at scale, PyTorch NLP models, inference/cost optimisation.
+% Fonts: Source Sans Pro. Accent: teal + purple. Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}
+\usepackage[a4paper,top=1.1cm,bottom=1.0cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}
+\definecolor{company}{HTML}{6C2BB3}
+\definecolor{muted}{HTML}{555555}
+
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{7pt}{4pt}
+
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=1pt,topsep=1pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large Senior AI Engineer: Agentic Systems, NLP Pipelines \& MLOps}\\[5pt]
+  {\small
+    London, UK (open to relocation to Berlin) \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+Senior AI engineer who owns agentic systems end to end, from training through to inference, integration, and monitoring at scale. As an early-stage hire I built scalable AI agents with LangGraph and NLP pipelines, RAG systems over vector databases, and the MLOps around them (evals, monitoring, and inference and cost optimisation) for 5+ enterprise clients. I train and evaluate PyTorch NLP models, write clean, tested Python, and take end-to-end ownership from stakeholder requirement to production. MSc Data Science (King's College London); 67K+ HuggingFace downloads across open models I have fine-tuned.
+
+%======================= COMPETENCIES =======================
+\section{Core Strengths}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Agentic Systems:} LangGraph agents, agentic architecture (training to inference), tool use, multi-agent orchestration, agentic workflow patterns
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{NLP \& RAG:} PyTorch NLP models (train \& evaluate), fine-tuning (LoRA, BERT), RAG with vector databases, embeddings, semantic search
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{MLOps \& Reliability:} CI/CD, Docker, model deployment, monitoring at scale, evals \& benchmarking, inference \& cost optimisation; OpenTelemetry, Arize Phoenix
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Engineering:} Python (PyTest, TDD), FastAPI, PostgreSQL, pandas, scikit-learn; AWS, Git; end-to-end ownership
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Owned AI/ML from training to inference as an early-stage hire: agentic architecture, NLP models, and production integration for 5+ enterprise clients.
+  \item Built scalable AI agents with LangGraph and NLP pipelines, plus RAG systems over vector databases and an MCP server exposing 180+ tools with reliable agent-to-backend integration.
+  \item Built monitoring at scale for agents in production: evals, Quality of Service metrics, groundedness, and incident-triggering alerts, with observability via OpenTelemetry to Arize Phoenix.
+  \item Trained and evaluated PyTorch NLP models (fine-tuned GPT with LoRA and BERT), published as reusable artefacts with 67K+ HuggingFace downloads.
+  \item Optimised model performance, inference efficiency, and cost: low-latency serving (p95 around 175ms) and an 85\% performance gain from a graph-based rearchitecture.
+  \item Applied end-to-end system design and clean, tested code, translating stakeholder requirements into production AI and supporting other engineers on AI design.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Trained deep learning models (Graph Convolution Networks, GANs) for drug discovery, achieving a 63\% improvement in novelty score, over a reproducible preprocessing pipeline on a million-row clinical dataset.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Agentic Enterprise Assistant:} scalable agent over grounded data with RBAC at an MCP server, a grounding-validation gate, and auditable traces; hybrid BM25 + semantic search over a vector store; monitoring via OpenTelemetry to Arize Phoenix. Passed 13/13 evaluation cases. \href{https://github.com/abhijeetscode/Agentic-Enterprise-Assistant}{View on GitHub}
+  \item \textbf{Spec-to-Code Agent:} autonomous ReAct agent on LangGraph and the Anthropic API that ships installable, tested packages from plain-language specs; 9/9 pass rate across a polyglot benchmark. \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+  \item \textbf{PII Detection LLMs:} trained and fine-tuned PyTorch NLP models, GPT (with LoRA) and BERT, for entity detection; published models collectively reaching 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+\entry{King's College London}{}{MSc in Data Science}{London, UK}
+\vspace{-3pt}
+\entry{C-DAC, India}{}{Post Graduate Diploma in Advanced Computing (PG-DAC)}{Pune, India}
+\vspace{-3pt}
+\entry{University of Pune}{}{B.E. in Computer Science}{Pune, India}
+
+\end{document}

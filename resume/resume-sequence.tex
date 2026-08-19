@@ -1,0 +1,116 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Sequence -- AI Engineer (London). Tailored, ATS-friendly.
+% Single column, real text, standard headers.
+% Fonts: Source Sans Pro. Accent: teal + purple.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=1.1cm,bottom=1.0cm,left=1.6cm,right=1.6cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal
+\definecolor{company}{HTML}{6C2BB3}  % purple
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.02}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{6pt}{4pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=1pt,topsep=1pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large AI Engineer: Production LLM Agents, Evals \& Reliable AI Systems}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+AI engineer who ships LLM and agentic systems to production and owns them end to end, from what to build through shipping to keeping it reliable for real customers. Track record building resilient software on top of non-deterministic models in FinTech: production agents for DCF automation and document intelligence, evals and QoS monitoring, and deterministic fallbacks that keep retrieval correct when the model fails. Treats models as untrusted by default, enforcing RBAC boundaries, grounding-validation gates, and token-redacted audit traces across the modern AI stack: agent orchestration, RAG, evals and LLM-as-judge, MCP tooling, and GCP deployment.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{AI \& Agents:} LLMs, Agentic Workflows, Tool Use, Long-Running State, RAG, Fine-Tuning (LoRA, BERT), Multi-Provider (Anthropic, OpenAI, Vertex AI), Prompt Engineering
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Evals \& Reliability:} Agent Eval Suites, LLM-as-Judge, QoS Metrics, Prompt Regression, Incident-Triggering Monitoring, Deterministic Fallbacks, OpenTelemetry / Arize Phoenix
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{AI Security \& Frameworks:} Models-Untrusted-by-Default, RBAC at the MCP Boundary (Keycloak JWT), Grounding Gates, Token-Redacted Traces, LangGraph, LangChain, Anthropic API, PyTorch, Candle
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Languages:} Python (production-grade, TDD), SQL, Rust
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Data \& Infra:} PostgreSQL, BigQuery, Elasticsearch, Vector Databases \& Embeddings, ETL Pipelines, GCP (Cloud Run, IAM), AWS, Docker, Terraform, CI/CD, FastAPI
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Built and operated production LLM agents (LangGraph, Anthropic) for DCF financial modelling, document intelligence, and query interpretation, using tool calling and multi-step reasoning over customer APIs to cut analyst modelling time by 70\%.
+  \item Built evals infrastructure beyond vibes-based testing: agent eval suites, QoS metrics, and incident-triggering monitoring of accuracy, groundedness, latency, and failure modes, driving systematic improvements to prompts and tools in production.
+  \item Shipped a production MCP server on FastAPI exposing 180+ tools to enterprise clients (Claude Desktop, Glean-compatible hosts), treating models as untrusted with RBAC as the authoritative access boundary, grounding checks before responding, and token-redacted audit traces.
+  \item Built a conversational AI system over financial documents using LLMs, RAG, embeddings, and a vector database, letting analysts query multiple PDFs in natural language and cutting manual review time.
+  \item Improved financial-modelling engine performance by 85\% by rearchitecting the codebase into a graph-based system using Apache Hamilton and vectorisation, on a platform that fed a novel property-valuation ML model via an ETL pipeline linking 80\% of records.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Built a deep learning model using Graph Convolution Networks and GANs for drug discovery, achieving a 63\% improvement in the novelty score of generated structures, fed by a robust preprocessing pipeline over a million-row clinical dataset.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Agentic Enterprise Assistant:} LLM agent (Claude, native tool use) over grounded data, with RBAC enforced at the MCP server (Keycloak JWT), a grounding-validation gate on every answer, and token-redacted audit traces; 13/13 eval cases passed (tool selection, grounding, RBAC). \href{https://github.com/abhijeetscode/Agentic-Enterprise-Assistant}{View on GitHub}
+  \item \textbf{Agentic Search API:} production search where Claude routes queries to specialised tools, with a deterministic lexical + semantic fallback for resilience when the LLM fails; p95 $\approx$ 175ms retrieval and a 0.76 macro QoS score. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+  \item \textbf{Spec-to-Code Agent:} autonomous ReAct agent (LangGraph + Anthropic API) shipping installable, tested packages from plain-language specs; 9/9 pass rate across a polyglot benchmark. \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+  \item \textbf{PII Detection LLMs:} fine-tuned GPT (LoRA) and BERT for PII detection; published models reaching 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}, MSc in Data Science \hfill {\color{muted}London, UK}\\
+{\color{company}\bfseries C-DAC, India}, Post Graduate Diploma in Advanced Computing (PG-DAC) \hfill {\color{muted}Pune, India}\\
+{\color{company}\bfseries University of Pune}, B.E. in Computer Science \hfill {\color{muted}Pune, India}
+
+\end{document}

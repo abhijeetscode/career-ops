@@ -1,0 +1,142 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Centrica -- AI Software Engineer. Windsor, UK-based hybrid (occasional
+% site travel). Req R0083247, closes 25 Jul 2026. Energy company; take AI
+% from PoC to production, reusable platforms.
+% Scope: design/build/deploy AI & ML delivering measurable value; develop/
+% train/optimise ML & GenAI models for production; build & operate scalable
+% data pipelines, training workflows, inference services on cloud-native/
+% managed AI platforms; own quality/perf/reliability (monitoring, retraining,
+% continuous improvement); responsible AI (security, privacy, governance,
+% ethics); build vs buy; support live AI (incidents, model behaviour).
+% Core competency: prompt-driven workflows, retrieval augmented systems, AI
+% agents; structured evaluation/testing/monitoring; guardrails.
+% Need: degree; several yrs SWE + 2-3 yrs AI/ML in production; integrate AI
+% into enterprise + customer-facing systems; ML frameworks + API integration;
+% LLMs (fine-tuning OSS or managed foundation models); data pipelines (Python,
+% SQL, Spark or similar); deploy in cloud (containers, managed ML, serverless);
+% MLOps (versioning, experiment tracking, CI/CD, drift monitoring); responsible
+% AI (privacy, bias mitigation, explainability, security).
+% NOTE: honest tailoring -- candidate leads on RAG + AI agents + prompt-driven
+% workflows (MCP 180+ tools), LLMs (fine-tuning LoRA/BERT + Anthropic/OpenAI
+% integration), evaluation/testing/monitoring & guardrails (evals/QoS/terminal
+% impact/groundedness/drift), MLOps (CI/CD, monitoring, versioning), responsible
+% AI (PII/privacy/bias), data pipelines (Python/SQL), enterprise + client-facing
+% integration, cloud (AWS/GCP) + Docker, incident support. Gaps NOT faked:
+% Spark not claimed (Python/SQL/Hamilton pipelines stated); serverless not
+% claimed; several-yrs SWE ~4 yrs total.
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.7cm,bottom=0.7cm,left=1.4cm,right=1.4cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=2pt,topsep=2pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large AI Software Engineer: GenAI, Agents \& Production ML}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+AI software engineer who takes AI from experimentation into production, building reliable, scalable, responsible AI services embedded into products and platforms. In a regulated FinTech I design and operate generative AI and machine learning solutions that deliver measurable value: prompt-driven workflows, retrieval-augmented systems, and AI agents, backed by structured evaluation, testing, monitoring, and guardrails. I own quality, performance, and reliability end to end, from data pipelines and model workflows to inference services, and I apply responsible-AI practices around privacy, bias, and security. Strong Python and API-based integration, with MLOps discipline across CI/CD, monitoring, and drift.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{GenAI \& Agents:} retrieval-augmented systems (RAG), AI agents, prompt-driven workflows, LLMs (fine-tuning LoRA/BERT, managed foundation models), orchestration (LangGraph, LangChain), MCP
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Evaluation \& Responsible AI:} structured evaluation \& testing, guardrails, quality-of-service \& outcome metrics (``terminal impact''), data privacy (PII), bias mitigation, explainability, security controls
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{MLOps \& Reliability:} model versioning, experiment tracking, CI/CD for models, monitoring \& drift, retraining, incident investigation, observability
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Engineering \& Data:} Python, SQL, ML frameworks (PyTorch, TensorFlow, Scikit-Learn), API-based integration, FastAPI, data pipelines \& model workflows, PostgreSQL/MongoDB
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Cloud \& Delivery:} AWS \& GCP, Docker \& containerisation, managed ML services, enterprise \& customer-facing integration, Agile
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Took AI from experimentation into production, designing and operating GenAI and ML services that deliver measurable value for 5+ leading investment management firms.
+  \item Built retrieval-augmented systems, AI agents, and prompt-driven workflows, including a FastAPI server exposing 180+ AI-powered tools through the Model Context Protocol (MCP) integrated into enterprise systems.
+  \item Owned quality, performance, and reliability with structured evaluation, testing, monitoring, and guardrails: evals, quality-of-service metrics, groundedness and drift signals, and ``terminal impact.''
+  \item Applied responsible-AI practices around data privacy, bias, and security, and supported live services by investigating incidents and analysing model behaviour.
+  \item Built data pipelines and model workflows (Python, SQL) and operated inference services on cloud with Docker, with CI/CD and model monitoring.
+  \item Optimised a production inference-heavy engine into a graph-based pipeline (Apache Hamilton + vectorisation) for an 85\% performance gain and 3x throughput.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Built and evaluated deep learning models (Graph Convolution Networks, GANs) over a million-row dataset, achieving a 63\% improvement in novelty score, with a reproducible preprocessing and training pipeline.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{PII Detection LLMs (responsible AI):} fine-tuned GPT (LoRA) and BERT to detect and protect personal data, deployed as reusable production artefacts; collectively 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+  \item \textbf{Agentic Search API (RAG + evals):} FastAPI + Elasticsearch semantic search, Qwen3 embeddings and Claude tool-calling, with a deterministic fallback for resilience; measured p95 latency and 0.76 QoS eval score. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+  \item \textbf{Spec-to-Code Agent (agentic):} autonomous ReAct agent on LangGraph and the Anthropic API that ships installable, tested packages from specs; 9/9 pass rate across a polyglot benchmark. \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\hfill {\color{muted}London, UK}\par
+{\itshape MSc in Data Science}\par\vspace{2pt}
+{\color{company}\bfseries C-DAC, India}\hfill {\color{muted}Pune, India}\par
+{\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\par\vspace{2pt}
+{\color{company}\bfseries University of Pune}\hfill {\color{muted}Pune, India}\par
+{\itshape B.E. in Computer Science}\par
+
+\end{document}

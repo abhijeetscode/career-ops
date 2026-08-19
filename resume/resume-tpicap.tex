@@ -1,0 +1,109 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TP ICAP -- AI Engineering Lead (London). Tailored resume.
+% Framing: embedded GenAI/agentic delivery in regulated FinTech, agent-queryable capability library.
+% Fonts: Source Sans Pro. Accent: teal + purple. Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}
+\usepackage[a4paper,top=1.1cm,bottom=1.0cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}
+\definecolor{company}{HTML}{6C2BB3}
+\definecolor{muted}{HTML}{555555}
+
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{7pt}{4pt}
+
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=1pt,topsep=1pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large AI Engineer: Embedded GenAI, Agentic Tools \& Regulated FinTech Delivery}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+AI engineer who embeds with financial-markets users and turns how they work into production-grade AI tools. As an early-stage hire in FinTech I sat close to investment clients, shipped client-facing AI now used by 5+ firms, and built a shared, agent-queryable capability library (an MCP server exposing 180+ tools) reused across clients. I deliver under finance-grade controls (access control, model risk, auditable traces) rather than treating governance as an obstacle, and I can present the work to both desk users and technical leadership. Strong Python across AI/ML frameworks, on AWS. MSc Data Science (King's College London).
+
+%======================= COMPETENCIES =======================
+\section{Core Strengths}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Embedded \& Domain Delivery:} sitting with business users, translating workflow into production tools, financial-markets domain, stakeholder communication
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Agentic \& GenAI:} LLM agents, tool-calling, RAG, MCP capability libraries queryable by agents, prompt engineering
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Production \& Regulated:} scalable services, model risk, auditable traces, RBAC / OAuth (Keycloak JWT), evals \& monitoring
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Engineering:} Python (AI/ML), FastAPI, PostgreSQL, REST APIs \& microservices, AWS, Docker
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Embedded with financial clients: built client-facing AI now used by 5+ investment management firms, sitting close to their workflow and translating ambiguous needs into shipped, production-grade tools.
+  \item Built a production MCP server exposing 180+ tools as a shared, agent-queryable capability library reused across clients, rather than one-off builds per desk.
+  \item Delivered under finance-grade controls: RBAC and OAuth (Keycloak JWT), grounding-validation gates, and auditable, token-redacted interaction traces for model risk and audit.
+  \item Ran evals, Quality of Service metrics, and incident-triggering monitoring for reliability, groundedness, latency, and failure modes in production.
+  \item Shipped agents that automate financial workflows: an autonomous DCF-modelling agent (70\% less analyst time) and document RAG, and improved a modelling engine's performance by 85\%.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Developed a deep learning model using Graph Convolution Networks and GANs for drug discovery, achieving a 63\% improvement in the novelty score of generated structures, over a preprocessing pipeline built for a million-row clinical dataset.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Agentic Enterprise Assistant:} internal operations assistant where a Claude agent answers questions over grounded data, with RBAC and OAuth enforced at an MCP server (Keycloak JWT), a grounding-validation gate, and auditable traces; hybrid BM25 + semantic search; OpenTelemetry to Arize Phoenix. Passed 13/13 evaluation cases. \href{https://github.com/abhijeetscode/Agentic-Enterprise-Assistant}{View on GitHub}
+  \item \textbf{Spec-to-Code Agent:} autonomous ReAct-based, tool-calling coding agent (LangGraph + Anthropic API) that ships installable, tested packages from plain-language specs; 9/9 pass rate across a polyglot benchmark (Python, Go, Rust, Java, JS). \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+  \item \textbf{Agentic Search API:} production RAG service (FastAPI, PostgreSQL, Elasticsearch) with hybrid lexical and semantic search, local Qwen3 embeddings, and a deterministic fallback. Achieves p95 around 175ms retrieval and a 0.76 macro QoS score. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+\entry{King's College London}{}{MSc in Data Science}{London, UK}
+\vspace{-3pt}
+\entry{C-DAC, India}{}{Post Graduate Diploma in Advanced Computing (PG-DAC)}{Pune, India}
+\vspace{-3pt}
+\entry{University of Pune}{}{B.E. in Computer Science}{Pune, India}
+
+\end{document}

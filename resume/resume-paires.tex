@@ -1,0 +1,135 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Paires -- Applied AI Engineer. Fully remote/async (US Eastern overlap).
+% CAD 200-330K. AI-first fundraising platform; own the CONVERSATION layer:
+% agents that read inbound messages and draft replies (human in the loop),
+% booking, nurture; the eval spine (golden sets, judges, ship/rollback on
+% numbers, guardrails); broader applied-AI features: classification,
+% extraction, routing, summarization; integrate LLMs with email/CRM/
+% messaging. Stack: Python, Supabase, Pydantic AI, Claude Agent SDK, AWS.
+% ENGINEER-FIRST (80/20 eng:research). EXPLICIT ANTI-PATTERN: "an internal
+% knowledge bot or a RAG demo is not the bar" -> do NOT headline RAG /
+% internal-assistant work. Lead on production conversational agents with
+% REAL external users + conversation-outcome evals.
+% Candidate HERO match: client-facing conversational AI persona used daily
+% by 5+ investment firms (Slack ~100 msgs/day, live Google Meet calls),
+% human-in-the-loop; "terminal impact" conversation-outcome eval metric;
+% evals/QoS/groundedness/guardrails (13/13, 9/9 benchmark); classification/
+% extraction/summarization; Python + AWS + Claude/Anthropic API tool use.
+% GAP (not claimed): Supabase, Pydantic AI, Claude Agent SDK specifically
+% (uses Postgres + Anthropic API/Claude tool use -- stated honestly); no
+% CRM/RevOps/sales/IR experience.
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.7cm,bottom=0.7cm,left=1.4cm,right=1.4cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=1pt,topsep=1pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large Applied AI Engineer: Production Conversational Agents \& Evaluation}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+Engineer-first applied AI builder who ships conversational LLM agents that hold real conversations with real users, day after day. At a FinTech I built and run a client-facing AI persona used by 5+ leading investment firms, handling roughly 100 messages a day across Slack and live calls, drafting replies with a human in the loop and carrying conversations to outcomes. I build the eval spine that gates quality: outcome metrics, judge-style checks, groundedness, and guardrails, with ship-or-rollback decisions made on the numbers. I also ship broader applied-AI features, classification, extraction, and summarization, in Python on AWS with the Anthropic API and native tool use, and I own outcomes end to end.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Conversational AI:} production reply \& nurture agents, human-in-the-loop drafting, multi-channel messaging (Slack, live calls), agent orchestration (LangGraph), tool-calling, conversation-to-outcome design
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Evaluation \& Guardrails:} outcome \& quality-of-service metrics, judge-style evals, golden-case suites, groundedness gates, drift monitoring, ship-or-rollback on numbers
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Applied AI Features:} classification, extraction, routing, summarization, weak supervision, fine-tuning (LoRA, BERT), embeddings
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Engineering:} Python, FastAPI, REST APIs, Anthropic API \& Claude tool use, AWS \& GCP, Docker, CI/CD, PostgreSQL, observability (OpenTelemetry)
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Ways of working:} operator mindset (business goal behind the message), fast shipping with AI tooling, ownership end to end, remote/async collaboration
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Built and run a client-facing conversational AI persona used by 5+ leading investment firms, handling roughly 100 messages a day: users message it on Slack, add it to live calls, and get replies drafted with a human in the loop.
+  \item Built the eval spine that gates conversation quality: ``terminal impact,'' an outcome metric classifying how each dialogue ends, plus quality-of-service metrics, groundedness checks, drift signals, and incident-triggering guardrails, computed from real client chats.
+  \item Shipped broader applied-AI features across the product: classification, extraction, and summarization over financial documents, and an autonomous agent that drafts financial models from raw data, cutting analyst time 70\%.
+  \item Integrated LLM agents into real messaging and meeting channels and business workflows, owning them from prototype to stable production for external customers.
+  \item Delivered an 85\% performance gain and 3x throughput by rearchitecting a production engine into a graph-based pipeline (Apache Hamilton), shipping fast with an engineer-first mindset.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Built and evaluated deep learning models (Graph Convolution Networks, GANs) over a million-row dataset, achieving a 63\% novelty improvement.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Spec-to-Code Agent:} autonomous ReAct agent on LangGraph and the Anthropic API that ships installable, tested packages from specs, with ship-or-rollback gated on a benchmark; 9/9 pass rate across a polyglot suite (Python, Go, Rust, Java, JS). \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+  \item \textbf{PII Detection LLMs (classification):} fine-tuned GPT (LoRA) and BERT for classification/redaction, deployed as reusable production artefacts; collectively 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+  \item \textbf{Agentic Query Service:} production FastAPI agent that routes user queries to specialised tools with a deterministic fallback for resilience, gated by evals; p95 around 175ms and a 0.76 macro QoS eval score. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\hfill {\color{muted}London, UK}\par
+{\itshape MSc in Data Science}\par\vspace{2pt}
+{\color{company}\bfseries C-DAC, India}\hfill {\color{muted}Pune, India}\par
+{\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\par\vspace{2pt}
+{\color{company}\bfseries University of Pune}\hfill {\color{muted}Pune, India}\par
+{\itshape B.E. in Computer Science}\par
+
+\end{document}

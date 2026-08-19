@@ -1,0 +1,109 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Scale AI -- Frontier Agents Engineer (London). Tailored resume.
+% Framing: applied/forward-deployed AI, tool-calling & multimodal agents, data-driven ML, client delivery.
+% Fonts: Source Sans Pro. Accent: teal + purple. Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}
+\usepackage[a4paper,top=1.1cm,bottom=1.0cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}
+\definecolor{company}{HTML}{6C2BB3}
+\definecolor{muted}{HTML}{555555}
+
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{7pt}{4pt}
+
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=1pt,topsep=1pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large Applied AI Engineer: Tool-Calling Agents, LLMs \& Client Delivery}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+Applied AI engineer who builds and deploys agents directly into enterprise customers. As an early-stage hire I shipped client-facing AI now used by 5+ investment firms, built tool-calling agents and an MCP server exposing 180+ tools, and ran data-driven experiments (evals, Quality of Service metrics) to find where models were strong or weak and improve them. I turn ambiguous business requirements into working technical solutions, push production code, and move fast across unfamiliar codebases. Strong Python (NumPy, pandas), on AWS. MSc Data Science (King's College London); 67K+ HuggingFace downloads across open models I have fine-tuned.
+
+%======================= COMPETENCIES =======================
+\section{Core Strengths}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Applied / Forward-Deployed:} business requirements to technical solutions, client-facing delivery, shipping production code in new codebases
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Agents \& LLMs:} tool-calling agents, multimodal retrieval, RAG, prompt engineering, Anthropic API, Model Context Protocol
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Data-Driven ML:} evals, benchmarks, QoS metrics, dataset iteration, analysing model strengths and weaknesses
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Engineering:} Python (NumPy, pandas, TDD), FastAPI, PostgreSQL, AWS, Docker; Rust
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Designed and deployed client-facing AI now used by 5+ leading investment management firms, meeting users where they work (Slack, Google Meet, live calls) and translating ambiguous business requirements into shipped technical solutions.
+  \item Built tool-calling agents and a production MCP server exposing 180+ tools through the Model Context Protocol for Claude Desktop and Glean-compatible enterprise clients.
+  \item Ran data-driven experiments to improve models: evals, Quality of Service metrics, and a "terminal impact" outcome metric computed from real client data, using results to find and fix weaknesses.
+  \item Shipped an autonomous agent generating Discounted Cash Flow models from raw data (70\% less analyst time) and a RAG system over financial documents for natural-language querying.
+  \item Improved a modelling engine's performance by 85\% by rearchitecting it into a graph-based system with vectorisation.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Developed a deep learning model using Graph Convolution Networks and GANs for drug discovery, achieving a 63\% improvement in the novelty score of generated structures, over a preprocessing pipeline built for a million-row clinical dataset.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Spec-to-Code Agent:} autonomous ReAct-based, tool-calling coding agent (LangGraph + Anthropic API) that ships installable, tested packages from plain-language specs; 9/9 pass rate across a polyglot benchmark (Python, Go, Rust, Java, JS). \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+  \item \textbf{Text-to-Image Search:} CLIP-style dual-encoder architecture for multimodal retrieval, matching natural-language queries to images through a shared embedding space. \href{https://github.com/abhijeetscode/text-to-image-search}{View on GitHub}
+  \item \textbf{Agentic Enterprise Assistant:} tool-calling agent answering questions over grounded data, with RBAC at an MCP server, a grounding-validation gate, auditable traces, and hybrid BM25 + semantic search; evaluated at 13/13 cases with OpenTelemetry to Arize Phoenix. \href{https://github.com/abhijeetscode/Agentic-Enterprise-Assistant}{View on GitHub}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+\entry{King's College London}{}{MSc in Data Science}{London, UK}
+\vspace{-3pt}
+\entry{C-DAC, India}{}{Post Graduate Diploma in Advanced Computing (PG-DAC)}{Pune, India}
+\vspace{-3pt}
+\entry{University of Pune}{}{B.E. in Computer Science}{Pune, India}
+
+\end{document}

@@ -1,0 +1,124 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AI Acquisition CV -- Abhijeet Lokhande. AI Systems Engineer / Forward-
+% Deployed Builder (remote). Agency/GTM/info-product shop that wants a
+% high-agency agentic-systems builder: take a messy, ambiguous brief and
+% return a tested, working system; own a domain end-to-end. JD screens for
+% self-driven builds (agents, automations, a product you started),
+% systems-level agentic engineering (agents, memory, tools, orchestration,
+% evals, failure modes), ship-fast + right-the-first-time, own the
+% unglamorous plumbing (integrations, data model, tracking), reason
+% commercially, comfort with APIs/JSON + a real language (Python).
+% Honest: only cv.md facts. NO GTM/agency/DTC domain, NO n8n/Make/Zapier,
+% NO CRM/Stripe/attribution claims -- lead with real builder evidence.
+% Font: Source Sans Pro. Accent: teal + purple. Compile: pdflatex (2x).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.7cm,bottom=0.5cm,left=1.4cm,right=1.4cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{3pt}{2pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=1pt,topsep=1pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large AI Systems Engineer / Forward-Deployed Builder: Agentic Systems, Shipped Fast}\\[5pt]
+  {\small
+    London, United Kingdom (remote) \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+AI systems builder who takes a messy, ambiguous brief and comes back with a working, tested system. I build with LLMs at the systems level, not just prompting: agents, memory, tools, orchestration, evals, and failure modes. As an early-stage hire I own domains end to end, and I ship fast and correctly, so a hand-off works without someone checking whether it is half wrong. I also build for myself: open-source agents and models that other people actually use (67K+ HuggingFace downloads, a coding agent at 9/9 on a polyglot benchmark). I think about the business and the user, not only the code, and I write production Python over APIs and data pipelines that have to actually work.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Agentic systems:} agents, memory, tool use, multi-agent orchestration (LangGraph, LangChain, LlamaIndex), evals \& output scoring, failure-mode handling, guardrails, MCP, RAG
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Build \& ship:} rapid prototyping, build-vs-buy-vs-reuse calls under deadline, spec-to-shipped tested packages, internal tools \& platforms, own the unglamorous plumbing
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Engineering:} production Python (async, type hints, TDD), FastAPI, REST APIs, JSON \& API integrations, SQL (PostgreSQL, MongoDB), Docker, CI/CD, AWS, GCP, Git
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Data \& pipelines:} idempotent ETL \& data pipelines, ingestion \& enrichment, reporting/analytics, embeddings, vector search, Elasticsearch
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Reliability:} tracing (OpenTelemetry), monitoring \& drift, incident alerts, groundedness checks, QoS \& outcome metrics, cost \& latency optimisation
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Owned domains end to end as an early-stage hire, shipping agentic systems that real clients depend on (used by 5+ leading investment firms) from ambiguous briefs, not tickets.
+  \item Built at the systems level: a FastAPI Model Context Protocol (MCP) server exposing 180+ tools with memory, orchestration, and guardrails, so agents complete multi-step tasks correctly and with secure access.
+  \item Shipped right the first time: built eval frameworks, quality-of-service and outcome metrics, groundedness checks, tracing, and failure-mode/incident monitoring, so a hand-off is tested and works.
+  \item Turned ambiguous problems into value fast: an autonomous agent that authors Discounted Cash Flow models from raw data (70\% less analyst time) and agents that let people query financial documents in natural language.
+  \item Owned the unglamorous plumbing: idempotent ETL and data pipelines linking 80\% of records across sources with enrichment, plus the tracking and integrations everything else is gated on.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Improved drug-structure novelty 63\% by building deep learning models (Graph Convolution Networks, GANs), backed by a reproducible preprocessing pipeline over a million-row dataset.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Things I've Built (Open Source)}
+\begin{tight}
+  \item \textbf{Spec-to-Code Agent:} autonomous ReAct agent (LangGraph, Anthropic API) that turns a plain-language markdown spec into an installable, tested software package; 9/9 pass rate across a polyglot benchmark (Python, Go, Rust, Java, JS). Built because I wanted to. \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+  \item \textbf{Agentic Enterprise Assistant:} LLM agent over grounded data with agents, memory and tools, RAG, role-based access at an MCP server (Keycloak JWT), a grounding-validation guardrail, and auditable traces. Passed 13/13 evaluation cases. \href{https://github.com/abhijeetscode/Agentic-Enterprise-Assistant}{View on GitHub}
+  \item \textbf{Agentic Search API:} production retrieval service (FastAPI, Elasticsearch, Qwen3 embeddings, Claude tool-calling); an agent decomposes queries and routes to tools, with a deterministic fallback when the LLM fails. p95 around 175ms. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+  \item \textbf{PII Detection LLMs:} fine-tuned GPT (LoRA) and BERT to detect personally identifiable information, shipped as reusable artefacts other people use; collectively 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London} \sep {\itshape MSc in Data Science}\hfill {\color{muted}London, UK}\par\vspace{1pt}
+{\color{company}\bfseries C-DAC, India} \sep {\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\hfill {\color{muted}Pune, India}\par\vspace{1pt}
+{\color{company}\bfseries University of Pune} \sep {\itshape B.E. in Computer Science}\hfill {\color{muted}Pune, India}\par
+
+\end{document}

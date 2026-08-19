@@ -1,0 +1,131 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Brain Co. -- AI/ML Engineer, Deployed. London, hybrid. Applied AI startup
+% (Elad Gil / Jared Kushner; backed by Collison, Karpathy, Krieger, Weil,
+% Srinivas). Forward-deployed role: deploy LLM/agent systems to automate
+% real-world processes for governments, healthcare, energy; turn research
+% into production; build scalable data pipelines; optimize + monitor models
+% at scale; engage directly with officials/stakeholders; wear many hats
+% (build, PM, sales); own problems end to end.
+% Thrive if: GenAI apps (Agents, reasoning models, RAG); LLM architecture
+% familiarity; implemented models in PyTorch/Jax/TF; strong DS&A + SWE;
+% fast-paced; end-to-end ownership.
+% Candidate leads on: forward-deployed customer delivery (client-facing AI
+% for 5+ firms); agents + RAG; scalable data pipelines + model optimization
+% (85% gain, 80% record linkage); evals + monitoring in production; business
+% impact (70%); PyTorch/TF; end-to-end ownership; healthcare research (KCL).
+% GAP (not claimed): Jax; energy/government domains (healthcare via KCL).
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.7cm,bottom=0.7cm,left=1.4cm,right=1.4cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=1pt,topsep=1pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large Forward-Deployed AI/ML Engineer: LLMs, Agents \& Production Impact}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+AI/ML engineer who deploys LLM and agent systems into the real world and owns them end to end. As an early hire in a fast-moving startup, I shipped GenAI products, agents, RAG, and fine-tuned models, into production for 5+ leading enterprise customers, working directly with them to turn manual, expert-heavy processes into automated systems that moved real business metrics. I build the scalable data pipelines and model optimisation that keep deployments fast and reliable, and I wear many hats: building, talking to customers, and shaping the product. Strong Python and PyTorch, an ML research background from King's College London, and a bias for shipping.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{GenAI:} LLMs, AI agents \& agentic workflows (LangGraph), reasoning \& planning, RAG, retrieval, prompt engineering, fine-tuning (LoRA, BERT)
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Deployment \& Scale:} production model deployment, scalable data pipelines \& ETL, model optimisation (performance \& accuracy), monitoring, evaluation, MLOps
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{ML Frameworks:} PyTorch, TensorFlow, transformers (built from scratch), GANs, Graph Convolution Networks, embeddings
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Forward-Deployed:} end-to-end ownership, customer \& stakeholder engagement, cross-functional delivery, prototyping under ambiguity, fast iteration
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Engineering:} Python, SQL, Rust, FastAPI, REST APIs, data structures \& algorithms, AWS \& GCP, Docker, PostgreSQL, Elasticsearch
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Deployed LLM and agent systems into production for 5+ leading enterprise customers, owning problems end to end and working directly with them to automate manual, expert-heavy processes.
+  \item Cut analyst time 70\% with an autonomous agent that generates financial models from raw data, and built RAG systems over documents so users get answers grounded in real content.
+  \item Built scalable data pipelines and ETL linking 80\% of records across sources, and optimised a production engine for an 85\% performance gain and 3x throughput (graph-based rearchitecture, Apache Hamilton).
+  \item Kept deployed models reliable with evaluation and monitoring: evals, quality-of-service and groundedness metrics, drift signals, and incident-triggering alerts.
+  \item Wore many hats as an early hire, building, talking to customers, and shaping the product, and shipped fast in a high-demand environment.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Turned research into working models: built deep learning models (Graph Convolution Networks, GANs) in PyTorch over a million-row healthcare dataset, achieving a 63\% novelty improvement.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Spec-to-Code Agent (agents + reasoning):} autonomous ReAct agent on LangGraph and the Anthropic API that plans, calls tools, and ships installable, tested packages from specs; 9/9 pass rate across a polyglot benchmark (Python, Go, Rust, Java, JS). \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+  \item \textbf{Agentic Enterprise Assistant (agents + RAG):} agent over grounded data with role-based access, a grounding-validation gate, and auditable traces; hybrid BM25 plus semantic search. Passed 13/13 evaluation cases. \href{https://github.com/abhijeetscode/Agentic-Enterprise-Assistant}{View on GitHub}
+  \item \textbf{PII Detection LLMs (fine-tuning):} fine-tuned GPT (LoRA) and BERT, deployed as reusable production models; collectively 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\hfill {\color{muted}London, UK}\par
+{\itshape MSc in Data Science}\par\vspace{2pt}
+{\color{company}\bfseries C-DAC, India}\hfill {\color{muted}Pune, India}\par
+{\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\par\vspace{2pt}
+{\color{company}\bfseries University of Pune}\hfill {\color{muted}Pune, India}\par
+{\itshape B.E. in Computer Science}\par
+
+\end{document}

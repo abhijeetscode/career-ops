@@ -1,0 +1,142 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Research Scientist / Engineer -- early-stage AI company (ANONYMOUS
+% recruiter posting, company not named). Founder with research background.
+% Product: systems that get smarter about their users, learning from how
+% someone interacts with the product and shaping the experience they get.
+% Competitive salary + equity. Formative stage, real input on core tech.
+% THE WORK (this is the spine of the tailoring):
+%  1. Measure whether the system responds APPROPRIATELY given what it knows
+%     about a given user  -> EVALUATION DESIGN
+%  2. Turn REAL USAGE AND FEEDBACK into STRUCTURED SIGNALS the model can
+%     learn from  -> candidate's "terminal impact" metric is exactly this
+%  3. Run TRAINING EXPERIMENTS improving response quality based on HUMAN
+%     FEEDBACK  -> partial: SFT yes, RLHF/RFT NOT claimed
+%  4. Dig into FAILURE CASES: misreads a user, holds onto outdated info,
+%     responds inconsistently  -> failure-mode & drift analysis
+%  5. Weigh in on technical decisions as architecture comes together
+% IDEAL BACKGROUND: a few years shipping ML/AI products; exposure to
+% fine-tuning, evaluation, or human-feedback data; Python + deep learning
+% tooling; self-starter comfortable without structure.
+% CANDIDATE ANGLE: evaluation is his signature (evals, QoS, groundedness,
+% drift, failure modes, 13/13 eval suite, 0.76 macro QoS); "terminal impact"
+% is a genuine structured signal derived from real client conversations;
+% early-stage hire = self-starter without structure; fine-tuning (LoRA,
+% BERT) + PyTorch/HF; transformer + training loop from scratch = research
+% depth for a research-led founder.
+% HONEST -- NOT claimed: RLHF / RFT / reward modelling / preference data
+% training, personalization or user-modelling systems, memory architectures
+% (session/long-term/semantic), recommender systems, A/B testing,
+% published research papers.
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.7cm,bottom=0.6cm,left=1.4cm,right=1.4cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{0.99}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{4pt}{3pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=0.5pt,topsep=0.5pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large Research Engineer: Evaluation, Feedback Signals \& Applied ML}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+Engineer who works on the hardest question in applied AI: whether a system is actually responding well, and how to turn that into something a model can learn from. As an early hire at a startup I have shipped LLM products to real users and built the measurement layer underneath them, including ``terminal impact,'' a metric I defined and computed from real client conversations that classifies the state a user is actually in when they leave a dialogue, because a completed conversation is not the same as a helped one. I spend much of my time on the failure cases: where a system misreads intent, drifts, or answers inconsistently, and what signal catches that class of error next time. I fine-tune models with PyTorch and the Hugging Face ecosystem, publish open models with 67K+ downloads, and I have built a GPT-style transformer and its training loop from first principles. Comfortable with little structure; that is how I have worked for four years.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Evaluation \& Measurement:} evaluation design \& eval suites, response-quality metrics, groundedness checks, quality-of-service scoring, failure-mode taxonomies, drift \& inconsistency detection, benchmark design, offline \& production evaluation
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Feedback \& Signals:} deriving structured signals from real usage and conversation data, outcome metrics from live user interactions, labelled evaluation sets, error analysis, instrumentation for feedback loops (OpenTelemetry, Arize Phoenix)
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Modelling \& Training:} PyTorch, TensorFlow, Hugging Face ecosystem, supervised fine-tuning (LoRA, BERT), embeddings \& representation learning, transformers built from scratch (training loop, checkpointing, GPU acceleration), GANs, Graph Convolution Networks
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Applied AI Products:} production LLM applications \& agentic systems, RAG \& semantic search, prompt \& context engineering, orchestration (LangGraph, LangChain), guardrails \& grounding gates
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Engineering:} Python (production-grade, TDD), Rust, SQL, FastAPI, PostgreSQL, Elasticsearch, Docker, CI/CD, AWS \& GCP, data pipelines over large messy real-world datasets
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Built the measurement layer for production LLM systems serving 5+ leading enterprise customers: evaluation frameworks judging whether responses were appropriate and well grounded, quality-of-service metrics, and groundedness checks run before and after release.
+  \item Turned real usage into structured signal: defined and computed ``terminal impact,'' an outcome metric derived from real client conversations that classifies whether a user exits a dialogue satisfied, unsatisfied, or unresolved, giving the team a learnable measure of whether conversations actually helped.
+  \item Investigated failure cases as a discipline: where agents misread intent, relied on stale or ungrounded context, or answered inconsistently, using drift signals, failure-mode analysis, and incident-triggering alerts to catch whole classes of error.
+  \item Fine-tuned and evaluated models with PyTorch and the Hugging Face ecosystem, and built the embedding and retrieval pipelines that shaped what a model saw before it answered.
+  \item Shaped technical direction from the formative stage as an early hire, making architecture and tooling decisions with founders in an ambiguous, unstructured environment, and mentoring engineers who joined later.
+  \item Shipped AI products end to end with measurable outcomes, including an agent that cut analyst modelling time by 70\% and an 85\% performance gain from rearchitecting a compute-heavy engine.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Ran deep-learning research experiments (Graph Convolution Networks, GANs) over a million-row dataset, achieving a 63\% improvement in the novelty score of generated structures, with a reproducible preprocessing and training pipeline.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Agentic Enterprise Assistant (evaluation-led):} LLM agent over grounded data with a grounding-validation gate checking every answer against tool results, role-based access, and auditable traces; OpenTelemetry to Arize Phoenix. Passed 13/13 evaluation cases across tool selection, grounding, and access compliance. \href{https://github.com/abhijeetscode/Agentic-Enterprise-Assistant}{View on GitHub}
+  \item \textbf{Transformer from Scratch in Rust:} GPT-style decoder-only transformer built from first principles (multi-head causal self-attention, pre-norm blocks, full training loop with early stopping and checkpointing) on Candle with Metal GPU acceleration. \href{https://github.com/abhijeetscode/transformer-rust}{View on GitHub}
+  \item \textbf{PII Detection LLMs:} fine-tuned GPT (LoRA) and BERT, published as open models; collectively 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\sep{\itshape MSc in Data Science}\hfill {\color{muted}London, UK}\par\vspace{1pt}
+{\color{company}\bfseries C-DAC}\sep{\itshape PG Diploma in Advanced Computing (PG-DAC)}\hfill {\color{muted}Pune, India}\par\vspace{1pt}
+{\color{company}\bfseries University of Pune}\sep{\itshape B.E. in Computer Science}\hfill {\color{muted}Pune, India}\par
+
+\end{document}

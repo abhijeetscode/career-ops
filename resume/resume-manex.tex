@@ -1,0 +1,134 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Manex AI -- AI Agent Engineer (f/m/d). Munich (relocation support).
+% Lightspeed/BlueYard-backed; manufacturing data + agentic platform.
+% Build the AI agent stack: tools, skills, subagents + the MCP infra they
+% run on; agent workflows, memory & context management, sandboxed
+% execution, agent observability. Own agentic systems end to end; work
+% with founders & customers. Python or TypeScript.
+% Nice-to-have: MCP servers/clients; tool design + multi-agent orchestration;
+% containers/code execution/sandboxing; agent eval/tracing/observability
+% (Langfuse) + guardrails; retrieval/memory/prompt engineering; LLM APIs +
+% proxies (LiteLLM, OpenRouter).
+% Candidate leads on: production MCP server (180+ tools); agent
+% orchestration + tool-calling (LangGraph); evaluation & observability
+% (evals/QoS/groundedness/terminal impact, OpenTelemetry -> Arize Phoenix);
+% retrieval/memory; containerisation (Docker Compose, isolated MCP server
+% container); Python (+ TypeScript, confirmed); regulated-domain rigour.
+% GAP (not claimed): LiteLLM/OpenRouter proxies; Langfuse specifically
+% (Phoenix/OTel stated); true security sandboxing beyond container
+% isolation. English CV, A4 (Germany search; English application).
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.7cm,bottom=0.7cm,left=1.4cm,right=1.4cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=1pt,topsep=1pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large AI Agent Engineer: Agentic Systems, MCP \& Evaluation}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+Engineer who builds agentic systems end to end: the tools, skills, and orchestration, plus the Model Context Protocol infrastructure they run on. In FinTech I built and operated a production MCP server exposing 180+ tools to agents, with the retrieval, memory, and context management that let them reason and act reliably. I care about the parts that keep agents safe in production: evaluation, tracing, observability, and guardrails, backed by real metrics. I write maintainable Python (and TypeScript), containerise what I ship, and work directly with founders and customers to take agentic systems from prototype to stable production.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Agents:} tools, skills \& subagents, agent workflows, multi-agent orchestration, tool design \& tool-calling (LangGraph, LangChain), agentic reasoning
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{MCP \& Infrastructure:} Model Context Protocol servers \& clients, tool exposure \& lifecycle, secure access, containerised services (Docker, Docker Compose), isolated execution
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Context \& Retrieval:} memory \& context management, RAG, semantic \& BM25 search, embeddings, vector databases, prompt engineering
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Evaluation \& Observability:} evaluation frameworks, tracing (OpenTelemetry to Arize Phoenix), quality-of-service \& outcome metrics, groundedness gates, drift monitoring, guardrails, reliability
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Engineering:} Python, TypeScript, SQL, Rust, FastAPI, REST APIs, LLM APIs (Anthropic), PostgreSQL, Elasticsearch, AWS \& GCP, CI/CD
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Owned agentic systems end to end for 5+ leading enterprise customers, from tools and workflows to production, working directly with founders and clients.
+  \item Designed and built a production FastAPI Model Context Protocol (MCP) server exposing 180+ tools to agents with secure access, and reusable patterns for adding tools safely.
+  \item Built agent orchestration with planning and tool-calling, grounded in a retrieval and memory layer (RAG, semantic and BM25 search) so agents reason over the right context.
+  \item Built evaluation and observability into the stack: evals, quality-of-service and groundedness metrics, drift signals, incident-triggering alerts, and tracing via OpenTelemetry to Arize Phoenix.
+  \item Containerised services with Docker and Docker Compose (including an isolated MCP server container), and delivered an 85\% performance gain by rearchitecting a production engine into a graph-based pipeline.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Built and evaluated deep learning models (Graph Convolution Networks, GANs) over a million-row dataset, achieving a 63\% novelty improvement with rigorous evaluation.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Agentic Enterprise Assistant (MCP + observability):} agent over grounded data with role-based access at an MCP server, a grounding-validation gate, and auditable, token-redacted traces via OpenTelemetry to Arize Phoenix; hybrid BM25 plus semantic search; Docker Compose with a separate MCP server container. Passed 13/13 evaluation cases. \href{https://github.com/abhijeetscode/Agentic-Enterprise-Assistant}{View on GitHub}
+  \item \textbf{Spec-to-Code Agent (tools + eval):} autonomous ReAct agent on LangGraph and the Anthropic API with planning and tool-calling that ships installable, tested packages; 9/9 pass rate across a polyglot benchmark (Python, Go, Rust, Java, JS). \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+  \item \textbf{Agentic Search API (retrieval + memory):} FastAPI agent decomposing queries and routing to semantic (Qwen3 embeddings) and lexical tools with a deterministic fallback; p95 around 175ms and a 0.76 macro QoS eval score. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\hfill {\color{muted}London, UK}\par
+{\itshape MSc in Data Science}\par\vspace{2pt}
+{\color{company}\bfseries C-DAC, India}\hfill {\color{muted}Pune, India}\par
+{\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\par\vspace{2pt}
+{\color{company}\bfseries University of Pune}\hfill {\color{muted}Pune, India}\par
+{\itshape B.E. in Computer Science}\par
+
+\end{document}

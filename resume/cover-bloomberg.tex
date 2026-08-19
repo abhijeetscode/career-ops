@@ -1,0 +1,74 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cover letter -- Bloomberg, Senior AI Engineer (Generative AI & Search).
+% Matches the resume design: Source Sans Pro, teal + purple, clickable
+% links. Achievements as bullet points. One page. Compile: pdflatex.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}
+\usepackage[a4paper,top=1.0cm,bottom=1.0cm,left=1.6cm,right=1.6cm]{geometry}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+\definecolor{accent}{HTML}{117A8B}   % teal
+\definecolor{company}{HTML}{6C2BB3}  % purple
+\definecolor{muted}{HTML}{555555}
+
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\linespread{1.03}
+\pagestyle{empty}
+
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=3pt,topsep=3pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{22}{24}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large Senior AI Engineer: Generative AI, Search \& RAG for Finance}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+
+{\color{accent!35}\hrule height 1pt}
+\vspace{4pt}
+
+{\color{muted}\small Cover Letter \sep Senior AI Engineer, Generative AI \& Search \sep Bloomberg, London}
+
+\vspace{2pt}
+
+Dear Bloomberg AI Experiences team,
+
+I build search and RAG systems over financial data, so this role reads like my day job.
+
+At a FinTech I built LLM-powered search and conversational agents that answer complex financial queries for 5+ leading investment firms. Analysts ask questions in natural language and get grounded answers back, pulled from large document sets over embeddings and vector search. It's the same shape as what your team does: retrieval, generation, and relevance that clients actually trust.
+
+I care about evaluation as much as the models. I built eval frameworks so we could iterate on real user interactions, quality-of-service metrics, groundedness checks, and a metric I called ``terminal impact'' that tracks whether a query leaves someone satisfied. Rapid iteration only works when you can measure it honestly.
+
+My open-source \href{https://github.com/abhijeetscode/search-agent}{search-agent} runs on Elasticsearch: an agent decomposes a query, routes it to semantic and lexical tools, and falls back deterministically when the LLM stumbles. p95 around 175ms and a 0.76 macro QoS score. I've also fine-tuned and open-sourced LLMs to 67K+ downloads on \href{https://huggingface.co/ab-ai}{Hugging Face}, and built a transformer from scratch in Rust to keep the fundamentals under my hands.
+
+The finance part matters to me too. I've spent my career close to markets data and the people who use it, so I understand why latency and relevance aren't afterthoughts when someone is making a decision with money on the line.
+
+I'd love to talk about the AI Experiences team.
+
+\vspace{4pt}
+Best,\\
+{\color{company}\bfseries Abhijeet Lokhande}
+
+\end{document}

@@ -1,0 +1,138 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Brunswick Group -- AI Engineer. London. Global advisory / professional-
+% services firm. Build LLM-powered applications delivering business value.
+% Responsibilities: support/run/iterate existing AI apps; design/develop/
+% deploy/maintain new AI apps scalable across use cases; trial/test with end
+% users; research & analyse data with statistical + ML techniques; track AI
+% landscape.
+% Want: LLM solutions + deep GenAI landscape; dataset design + model
+% evaluations + fine-tuning foundation models; strong production Python;
+% front-end (JavaScript, React, HTML, CSS); stats + ML fundamentals;
+% quantitative degree; communication; fast-paced iterative user-focused.
+% Form key Qs (all YES): 3-5 yrs similar; LLM solutions + GenAI; production
+% Python; front-end (JS/React/HTML/CSS); designing/building/deploying AI
+% agents. Advantageous: professional services; Azure; DevOps (CI/CD, Git);
+% secure software development.
+% NOTE: honest tailoring -- candidate leads on LLM apps + agents (built/
+% deployed AI agents, MCP), fine-tuning foundation models (LoRA/BERT, 67K
+% downloads), dataset design + model evaluations (evals/QoS/terminal impact),
+% production Python, stats + ML fundamentals (KCL research, DL), DevOps
+% (CI/CD, Git, Docker), front-end (JavaScript, React, HTML/CSS). Gaps NOT
+% faked: Azure -> AWS/GCP (not claimed); front-end secondary (listed honestly,
+% not architect-level); professional-services domain -> FinTech-adjacent.
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.7cm,bottom=0.7cm,left=1.4cm,right=1.4cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=2pt,topsep=2pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large AI Engineer: LLM Applications, Agents \& Fine-Tuning}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+AI engineer who designs, develops, and deploys LLM-powered applications that deliver real business value. I build and iterate production AI systems, agents, and LLM applications, scaling them across multiple use cases, and I test with end users to optimise them. I have a deep understanding of the generative AI landscape, hands-on experience designing datasets, running model evaluations, and fine-tuning foundation models, and I write robust, maintainable production Python. Backed by strong statistics and machine-learning fundamentals from a research background at King's College London, I turn emerging AI into practical, high-quality products.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{LLMs \& Agents:} LLM-powered applications, AI agents (design, build, deploy), generative AI landscape, RAG, prompt engineering, orchestration (LangGraph, LangChain), MCP
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Evaluation \& Fine-Tuning:} dataset design, model evaluations, fine-tuning foundation models (LoRA, BERT), quality-of-service \& outcome metrics (``terminal impact''), embeddings
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Statistics \& ML:} statistics \& ML fundamentals, deep learning, predictive modelling, PyTorch, TensorFlow, data analysis with statistical \& ML techniques
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Engineering:} production Python, FastAPI, REST APIs, JavaScript \& React, HTML/CSS, SQL, PostgreSQL/MongoDB, testing
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{DevOps \& Cloud:} CI/CD, Git, Docker, monitoring, secure development practices, AWS \& GCP
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Designed, developed, and deployed LLM-powered applications delivering operational and commercial value for 5+ leading investment management firms, scaling them across multiple use cases.
+  \item Built and deployed AI agents, including a production FastAPI server exposing 180+ AI-powered tools through the Model Context Protocol (MCP), then trialled and iterated with end users.
+  \item Designed datasets, ran model evaluations, and fine-tuned foundation models (LoRA, BERT) to improve task-specific performance, with evals, quality-of-service, and ``terminal impact'' metrics.
+  \item Researched and analysed data with statistical and machine-learning techniques, including a predictive model inferring missing values at scale across large datasets.
+  \item Wrote robust, maintainable production Python with CI/CD, Git, and monitoring, and tracked the evolving AI landscape to bring new techniques into products.
+  \item Optimised a production inference-heavy engine into a graph-based pipeline (Apache Hamilton + vectorisation) for an 85\% performance gain and 3x throughput.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Built deep learning models (Graph Convolution Networks, GANs) over a million-row dataset with strong statistical and ML foundations, achieving a 63\% improvement in novelty score.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{PII Detection LLMs (fine-tuning):} fine-tuned GPT (LoRA) and BERT foundation models, deployed as reusable production artefacts; collectively 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+  \item \textbf{Spec-to-Code Agent (AI agents):} autonomous ReAct agent on LangGraph and the Anthropic API that ships installable, tested packages from specs; 9/9 pass rate across a polyglot benchmark. \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+  \item \textbf{Agentic Search API (LLM app + evals):} FastAPI + Elasticsearch semantic search, Qwen3 embeddings and Claude tool-calling, with a deterministic fallback for resilience; measured p95 latency and 0.76 QoS eval score. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\hfill {\color{muted}London, UK}\par
+{\itshape MSc in Data Science}\par\vspace{2pt}
+{\color{company}\bfseries C-DAC, India}\hfill {\color{muted}Pune, India}\par
+{\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\par\vspace{2pt}
+{\color{company}\bfseries University of Pune}\hfill {\color{muted}Pune, India}\par
+{\itshape B.E. in Computer Science}\par
+
+\end{document}

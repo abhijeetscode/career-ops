@@ -1,0 +1,139 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Kallikor -- AI/ML Engineer. London, remote. Supply-chain AI simulation
+% digital twins; building a domain-specific LLM (DSLM) + Project Genome.
+% "Production engineering role FIRST" -- robust Python systems that train
+% and serve LLMs. Build FastAPI services, training pipelines, inference
+% endpoints w/ monitoring; own inference perf (<200ms, vLLM/quantization/
+% batching); evaluation frameworks that catch regressions; mentor via code
+% review + pairing.
+% Stack: Python, FastAPI, PydanticAI, FastMCP, Memgraph, Postgres; PyTorch,
+% Unsloth/Axolotl, vLLM, W&B; AWS, Docker, K8s. Models: Qwen/Llama/GPT/Claude.
+% Must: 5+ yrs production Python; SW-eng fundamentals (patterns, testing,
+% debugging, profiling); LLM integration (OpenAI/Anthropic, prompt eng,
+% streaming, PydanticAI); ML training workflows; Docker/CI-CD; read PyTorch.
+% Nice: fine-tuning (LoRA/QLoRA); distributed training (DeepSpeed/FSDP);
+% graph DBs (Memgraph/Neo4j); supply-chain domain; agent frameworks.
+% NOTE: honest tailoring -- candidate leads on production Python + FastAPI,
+% MCP servers (FastMCP-adjacent, 180+ tools), LLMs in production (Claude/GPT
+% streaming/retries/caching/prompt eng), fine-tuning (LoRA/BERT), evaluation
+% frameworks / regression gates, inference optimisation & latency, observ-
+% ability, reads PyTorch (transformer from scratch), Docker/CI-CD/AWS.
+% Gaps NOT faked: 5+ yrs vs ~4 (early-stage ownership offsets); Memgraph/
+% Neo4j graph DB, distributed training (DeepSpeed/FSDP), vLLM/Unsloth/W&B
+% by name, supply-chain domain -- none claimed.
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.7cm,bottom=0.7cm,left=1.4cm,right=1.4cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=2pt,topsep=2pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large AI/ML Engineer: Production LLM Systems, Inference \& Fine-Tuning}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+Production Python engineer who builds robust systems that train and serve LLMs, engineering-first. I ship FastAPI services, training and data pipelines, and inference endpoints with proper monitoring, integrating ML into an existing Python backend as a natural part of the architecture rather than a bolt-on service. I have run LLMs in production (Claude and GPT) with streaming, retries, caching, and prompt engineering, fine-tuned models with LoRA, and built evaluation frameworks that catch regressions before they reach users. I design for failure, profile and optimise for latency, and raise the bar on code quality through review and pairing.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Production Python \& Backend:} Python (async/await, testing, profiling, design patterns), FastAPI, MCP servers, microservices, REST APIs, PostgreSQL/MongoDB
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{LLMs in Production:} Claude \& GPT integration, streaming responses, retries \& rate-limit handling, caching, prompt engineering, context management, cost control, RAG, agents
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Training \& Fine-Tuning:} fine-tuning (LoRA, BERT), PyTorch, training \& data pipelines, data-quality validation, evaluation metrics, transformers (built from scratch)
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Inference \& Performance:} inference optimisation, latency (p95) \& throughput, batching \& vectorisation, quantization awareness, monitoring \& observability
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Delivery \& Cloud:} Docker, CI/CD, AWS, evaluation frameworks \& regression gates, incident-triggering alerts, drift monitoring
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Built production Python systems that serve LLMs, including a FastAPI server exposing 180+ AI-powered tools through the Model Context Protocol (MCP), integrated into the backend with clean abstractions, error handling, and observability.
+  \item Ran LLMs (Claude and GPT) in production for 5+ leading investment management firms, handling streaming responses, retries, caching, prompt engineering, and context management.
+  \item Fine-tuned models (LoRA, BERT) and built the surrounding infrastructure: data pipelines feeding training, data-quality validation, and evaluation metrics to debug why models underperform.
+  \item Built evaluation frameworks that catch regressions before production: evals, quality-of-service metrics, groundedness and drift signals, and incident-triggering alerts.
+  \item Owned inference performance, rearchitecting a production inference-heavy engine into a graph-based pipeline (Apache Hamilton + vectorisation) for an 85\% performance gain and 3x throughput.
+  \item Raised code quality through review and pairing, set technical standards, and led multiple AI initiatives across the team.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Built and evaluated deep learning models (Graph Convolution Networks, GANs) over a million-row dataset, achieving a 63\% improvement in novelty score, with a reproducible preprocessing and training pipeline.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Agentic Search API (FastAPI + inference + evals):} FastAPI + Elasticsearch semantic search, Qwen3 embeddings and Claude tool-calling, with a deterministic fallback for resilience; measured p95 latency and 0.76 QoS eval score. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+  \item \textbf{Transformer from Scratch in Rust (reads/writes at PyTorch level):} GPT-style decoder-only transformer built from first principles (multi-head attention, full training loop) with the Candle framework and Metal GPU acceleration. \href{https://github.com/abhijeetscode/transformer-rust}{View on GitHub}
+  \item \textbf{PII Detection LLMs (fine-tuning):} fine-tuned GPT (LoRA) and BERT, deployed as reusable production artefacts; collectively 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\hfill {\color{muted}London, UK}\par
+{\itshape MSc in Data Science}\par\vspace{2pt}
+{\color{company}\bfseries C-DAC, India}\hfill {\color{muted}Pune, India}\par
+{\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\par\vspace{2pt}
+{\color{company}\bfseries University of Pune}\hfill {\color{muted}Pune, India}\par
+{\itshape B.E. in Computer Science}\par
+
+\end{document}

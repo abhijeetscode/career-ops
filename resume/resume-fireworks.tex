@@ -1,0 +1,139 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Applied Machine Learning Engineer, EMEA -- Fireworks AI. London.
+% Fireworks = platform for specialized intelligence: build/train/serve AI
+% models on customer data; founded by the PyTorch team; Series D, $17.5B;
+% hundreds of open models across text, image, embedding, audio, multimodal;
+% low-latency inference + scalable model serving.
+% NOTE: this is a CUSTOMER-FACING / FORWARD-DEPLOYED role, not pure research.
+% JD focus: CUSTOMER SUCCESS with GTM (AEs + Solutions Architects); DEMOS /
+% PoCs; end-to-end AI APPLICATION BUILD for customer needs; internal ML
+% PLATFORM features + bug fixes; NEW MODEL ENABLEMENT onto the platform;
+% PERFORMANCE OPTIMIZATION (efficiency, scalability of deployed models);
+% PARTNERSHIP ENABLEMENT.
+% Min quals: BSc CS; 5+ yrs software engineering (customer-facing preferred);
+% strong Python; lead complex technical projects with customer-success focus;
+% strong interpersonal/communication, cross-functional.
+% Preferred: MSc; startup / fast-paced; hands-on fine-tuning incl. SFT and
+% RLHF/RFT; generative AI + ML principles + enterprise infrastructure.
+% CANDIDATE ANGLE: client-facing AI delivery for 5+ enterprise customers;
+% hard performance numbers (85% gain, 3x throughput, p95 ~175ms); publishes
+% OPEN MODELS on HuggingFace (67K+ downloads) which matches the Fireworks
+% open-model/serving world; transformer + training loop built from scratch
+% with GPU acceleration (inference-adjacent depth); PyTorch/TensorFlow.
+% HONEST -- NOT claimed: RLHF / RFT / reward modelling, distributed training,
+% model serving at platform scale, quantization, image/audio/multimodal
+% model serving, GTM/pre-sales quota work. SFT is claimed only as LoRA/BERT
+% supervised fine-tuning, which is what cv.md supports.
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.7cm,bottom=0.6cm,left=1.4cm,right=1.4cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{0.99}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{4pt}{3pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=0.5pt,topsep=0.5pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large Applied ML Engineer: Customer-Facing AI Delivery, Fine-Tuning \& Performance}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+Applied ML engineer who bridges cutting-edge AI and real customer outcomes. As an early hire at a fast-moving startup, I have designed, built, and deployed end-to-end AI applications for 5+ leading enterprise customers, working directly with them from prototype and proof of concept through production and ongoing support. I fine-tune and operationalise models, publish open models that other developers use (67K+ HuggingFace downloads), and I optimise what I ship: an 85\% performance gain and 3x throughput from rearchitecting a compute-heavy engine, and p95 latency around 175ms in a production retrieval service. I work from first principles, having built a GPT-style transformer and its training loop from scratch with GPU acceleration, and I translate technical depth into language customers and commercial teams act on.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Applied ML \& GenAI:} generative AI, LLM applications, supervised fine-tuning (LoRA, BERT), open-weight models \& the Hugging Face ecosystem, embeddings, RAG \& semantic search, agentic workflows (LangGraph, LangChain, MCP)
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Performance \& Scale:} latency, throughput \& cost optimisation, vectorisation, graph-based rearchitecture, GPU acceleration (Metal, Candle), profiling, model deployment \& serving
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Deep Learning:} PyTorch, TensorFlow, Keras, transformers built from scratch, GANs, Graph Convolution Networks, NLP, evaluation \& experiment design
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Engineering \& Infrastructure:} Python (production-grade, TDD), Rust, SQL, FastAPI, microservices \& APIs, Docker, CI/CD, AWS \& GCP, PostgreSQL, Elasticsearch, enterprise integration \& access control
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Customer \& Delivery:} customer-facing technical delivery, proofs of concept \& demos, requirements to production ownership, cross-functional collaboration, translating technical concepts for non-technical and commercial audiences
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Designed, developed, and deployed end-to-end AI-powered applications tailored to customer needs, now used by 5+ leading investment management firms, owning them from prototype and proof of concept through production and ongoing support.
+  \item Worked directly with customers as the technical point of contact, building a client-facing multimodal AI persona that investors query in natural language across Slack, chat, and live meetings, and translating technical capability into outcomes commercial teams could sell and customers could adopt.
+  \item Delivered performance optimisations on deployed systems: an 85\% performance gain and 3x throughput by rearchitecting a compute-heavy engine into a graph-based pipeline (Apache Hamilton, vectorisation), and p95 latency around 175ms in a production retrieval service.
+  \item Fine-tuned and operationalised models for production use, and enabled new model capabilities across the platform, including integrating open-weight models and exposing 180+ tools through a production FastAPI Model Context Protocol server.
+  \item Built internal platform features and tooling that other engineers depend on, including evaluation frameworks, quality-of-service and groundedness metrics, and observability with OpenTelemetry.
+  \item Led complex technical projects end to end with a customer-success focus, including an agent automating Discounted Cash Flow modelling that cut analyst modelling time by 70\%, and core engineering on an \href{https://gtr.ukri.org/projects?ref=10022996}{Innovate UK funded R\&D project} (\pounds205,895 grant).
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Built and evaluated deep-learning models (Graph Convolution Networks, GANs) over a million-row dataset, achieving a 63\% novelty-score improvement.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{PII Detection LLMs (open models):} fine-tuned GPT (LoRA) and BERT and published them as reusable open models on Hugging Face, collectively 67K+ downloads by other developers. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+  \item \textbf{Transformer from Scratch in Rust:} GPT-style decoder-only transformer built from first principles (multi-head causal self-attention, pre-norm residual blocks, full training loop with checkpointing) on the Candle framework with Metal GPU acceleration; character and BPE training, mirroring GPT-2 small. \href{https://github.com/abhijeetscode/transformer-rust}{View on GitHub}
+  \item \textbf{Agentic Search API:} production retrieval service on FastAPI plus Elasticsearch semantic search with local Qwen3 embeddings and a deterministic fallback; p95 around 175ms and a 0.76 macro QoS eval score. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\sep{\itshape MSc in Data Science}\hfill {\color{muted}London, UK}\par\vspace{1pt}
+{\color{company}\bfseries C-DAC}\sep{\itshape PG Diploma in Advanced Computing (PG-DAC)}\hfill {\color{muted}Pune, India}\par\vspace{1pt}
+{\color{company}\bfseries University of Pune}\sep{\itshape B.E. in Computer Science}\hfill {\color{muted}Pune, India}\par
+
+\end{document}

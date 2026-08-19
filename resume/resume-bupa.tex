@@ -1,0 +1,138 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bupa Dental Care -- AI Solutions Engineer (38005). Hybrid, occasional
+% Bristol/London (1-2x/month). Healthcare. Forward-deployed role embedded
+% with business teams to deliver AI-driven process automation at scale.
+% Owns: design/build/deploy AI agents executing multi-step business
+% workflows; integrate enterprise systems (secure, governed, production-
+% ready); translate processes into reusable agent skills & workflows
+% (discovery -> optimisation); embed with business functions, rapidly
+% prototype; technical owner in live environments; redesign high-impact
+% processes for agent-led automation; standardise & scale; contribute to
+% internal agent-platform standards, integration components, frameworks,
+% workflow templates.
+% Skills: strong SW eng (APIs, integrations, distributed systems); shipped
+% to production; AI patterns (RAG, tool calling, multi-agent orchestration);
+% LLM-powered workflows; full-stack Python + APIs + integration; enterprise
+% integration/architecture; workflow automation & process modelling;
+% stakeholder engagement; end-to-end ownership; translate technical <-> non-
+% technical.
+% Candidate leads on: production MCP server integrating 180+ enterprise tools
+% (secure, governed); multi-step workflow-automation agents (DCF, 70% time
+% saved; doc pipeline, 30%); reusable agent patterns; RAG + tool calling +
+% orchestration; Python/FastAPI/APIs + enterprise integration; embedded
+% client-facing delivery; evals/governance; healthcare research (KCL).
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.7cm,bottom=0.7cm,left=1.4cm,right=1.4cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=1pt,topsep=1pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large AI Solutions Engineer: Agentic Workflow Automation \& Enterprise Integration}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+Forward-deployed AI engineer who builds and deploys AI agents that automate multi-step business workflows, embedded directly with the teams that run them. In a FinTech I integrated agents with enterprise systems through a secure, governed production layer, turned manual, expert-heavy processes into reusable agent workflows, and owned them from discovery to optimisation in live environments. I pair strong software engineering (Python, APIs, integrations) with AI architecture (RAG, tool calling, multi-agent orchestration), and I translate fluently between technical and business stakeholders. I measure success in efficiency, quality, and experience, and I share my work in open source (67K+ HuggingFace downloads).
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{AI Agents \& Automation:} multi-step agent workflows, reusable agent skills \& patterns, RAG, tool calling, multi-agent orchestration (LangGraph), workflow automation \& process redesign
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Enterprise Integration:} Model Context Protocol (MCP) servers, enterprise system integration, secure access \& governance (RBAC, audit), API wrappers, platform standards \& templates
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Software Engineering:} Python, FastAPI, REST APIs, integrations, distributed \& microservice systems, production delivery, CI/CD, testing
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Delivery \& Ownership:} embedded delivery with business users, discovery-to-optimisation lifecycle, rapid prototyping, measurable outcomes, evaluation \& monitoring
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Platform \& Data:} AWS \& GCP, Docker, PostgreSQL, Elasticsearch, vector databases, LLMs, fine-tuning (LoRA, BERT), stakeholder communication
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Designed and deployed AI agents that execute multi-step business workflows for 5+ leading enterprise customers, working embedded with their teams from discovery through to production.
+  \item Integrated agents with enterprise systems through a production FastAPI Model Context Protocol (MCP) server exposing 180+ tools with secure, governed access (role-based access, audit trails).
+  \item Turned manual, expert-heavy processes into reusable agent workflows: an autonomous agent that drafts financial models from raw data (70\% less analyst time) and a document pipeline that raised productivity 30\%.
+  \item Built reusable patterns, integration components, and evaluation so successful solutions could be standardised and scaled, with evals, quality-of-service metrics, and monitoring to measure impact.
+  \item Acted as technical owner in live environments, translating business workflows into scalable technical solutions and communicating with technical and non-technical stakeholders.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Built and evaluated deep learning models (Graph Convolution Networks, GANs) over a million-row healthcare dataset, achieving a 63\% novelty improvement with a reproducible pipeline.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Agentic Enterprise Assistant (integration + governance):} agent over enterprise data with role-based access and OAuth at an MCP server (Keycloak JWT), a grounding-validation gate, and auditable traces; hybrid BM25 plus semantic search. Passed 13/13 evaluation cases. \href{https://github.com/abhijeetscode/Agentic-Enterprise-Assistant}{View on GitHub}
+  \item \textbf{Spec-to-Code Agent (multi-step workflows):} autonomous ReAct agent on LangGraph and the Anthropic API that plans, calls tools, and ships installable, tested packages; 9/9 pass rate across a polyglot benchmark. \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+  \item \textbf{PII Detection LLMs:} fine-tuned GPT (LoRA) and BERT, deployed as reusable production artefacts; collectively 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\hfill {\color{muted}London, UK}\par
+{\itshape MSc in Data Science}\par\vspace{2pt}
+{\color{company}\bfseries C-DAC, India}\hfill {\color{muted}Pune, India}\par
+{\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\par\vspace{2pt}
+{\color{company}\bfseries University of Pune}\hfill {\color{muted}Pune, India}\par
+{\itshape B.E. in Computer Science}\par
+
+\end{document}

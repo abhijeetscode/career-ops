@@ -1,0 +1,110 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bauer Media Outdoor -- AI Engineer (Mid Level, London). Tailored resume.
+% Single column, real text, standard headers, ATS-clean.
+% Fonts: Source Sans Pro. Accent: teal + purple. Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}
+\usepackage[a4paper,top=1.1cm,bottom=1.0cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}
+\definecolor{company}{HTML}{6C2BB3}
+\definecolor{muted}{HTML}{555555}
+
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{7pt}{4pt}
+
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=1pt,topsep=1pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large AI Engineer: LLM Integration, Backend \& Production ML}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+AI engineer who integrates LLMs into production and ships clean, well-tested backend code. As an early-stage hire, I built an internal AI platform exposing 180+ tools to generative-AI clients, shipped custom AI assistants used by 5+ enterprise firms, and ran the MLOps layer (evals, monitoring, reliability) that keeps them dependable in production. Strong Python across FastAPI services, APIs, and PostgreSQL, with a habit of explaining technical decisions clearly to non-technical stakeholders. MSc Data Science (King's College London); 67K+ HuggingFace downloads across open models I have fine-tuned and released.
+
+%======================= COMPETENCIES =======================
+\section{Core Strengths}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{LLM Integration:} custom AI assistants, RAG, agents, tool use, Model Context Protocol, prompt \& retrieval design
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Backend \& Systems:} Python, FastAPI, REST APIs, microservices, PostgreSQL, Redis, secure software design
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{MLOps \& Reliability:} evals, observability (OpenTelemetry), monitoring, incident triggers, Docker, AWS, CI/CD
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Delivery:} production-ready TDD code, system design, stakeholder communication, mentoring on AI design
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Built a production MCP server on FastAPI exposing 180+ AI-powered tools through the Model Context Protocol for Claude Desktop and Glean-compatible enterprise clients, with secure access controls.
+  \item Designed and deployed client-facing AI assistants now used by 5+ leading investment management firms, meeting users where they work (Slack, Google Meet, live calls) to answer questions and manage portfolios in natural language, handling roughly 100 messages/day.
+  \item Built the MLOps and reliability layer for AI in production: evals, Quality of Service metrics, and incident-triggering monitoring for groundedness, latency, and failure modes, with OpenTelemetry tracing.
+  \item Shipped an autonomous agent that generates Discounted Cash Flow (DCF) models from raw financial data, cutting analyst modelling time by 70\%, and a RAG system over financial documents for natural-language querying of multiple PDFs.
+  \item Improved backend performance of the financial modelling engine by 85\% by rearchitecting it into a graph-based system using Apache Hamilton and vectorisation.
+  \item Core engineer on an \href{https://gtr.ukri.org/projects?ref=10022996}{Innovate UK funded R\&D project} (\pounds205,895 grant) building an ML data platform, with ETL pipelines linking 80\% of property records across datasets.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Developed a deep learning model using Graph Convolution Networks and GANs for drug discovery, achieving a 63\% improvement in the novelty score of generated structures, over a preprocessing pipeline built for a million-row clinical dataset.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Agentic Search API:} production cross-domain search service (FastAPI, PostgreSQL, Elasticsearch) where Claude decomposes queries and routes to lexical and semantic tools, with a deterministic fallback when the LLM fails; local Qwen3 embeddings and PDF ingestion with auto-classification. Achieves p95 around 175ms retrieval and a 0.76 macro QoS score. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+  \item \textbf{Agentic Enterprise Assistant:} internal operations assistant where a Claude agent answers staff questions over grounded data, with RBAC enforced at the MCP server (Keycloak JWT), a grounding-validation gate, and auditable traces; hybrid BM25 + semantic search over Elasticsearch; FastAPI, PostgreSQL, Redis, Docker. Passed 13/13 evaluation cases. \href{https://github.com/abhijeetscode/Agentic-Enterprise-Assistant}{View on GitHub}
+  \item \textbf{PII Detection LLMs:} fine-tuned GPT (with LoRA) and BERT for Personally Identifiable Information detection; published models collectively reaching 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+\entry{King's College London}{}{MSc in Data Science}{London, UK}
+\vspace{-3pt}
+\entry{C-DAC, India}{}{Post Graduate Diploma in Advanced Computing (PG-DAC)}{Pune, India}
+\vspace{-3pt}
+\entry{University of Pune}{}{B.E. in Computer Science}{Pune, India}
+
+\end{document}

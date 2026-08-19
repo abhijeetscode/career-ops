@@ -1,0 +1,147 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AI Engineer -- Agentic AI. Burgess Hill, UK. Hybrid, 3 days onsite.
+% Req 00069813753, published 12 Aug 2026. Company NOT named in the posting
+% text supplied; financial services / regulated environment.
+% JD focus: hands-on build of PRODUCTION AGENTIC AI on real financial data
+% serving real customers, in a REGULATED customer-facing environment;
+% reliability, security and AUDITABILITY standards for autonomous AI.
+% Stack: Python/Go/TypeScript; AWS and/or GCP + KUBERNETES; REST/gRPC;
+% event-driven architectures incl. KAFKA; LangGraph/LangChain/Airflow.
+% Agentic/ML: integrating commercial + open-source LLMs into agentic
+% workflows; frameworks (LangChain, LlamaIndex, Semantic Kernel, CrewAI)
+% with judgment on frameworks vs lighter primitives; model-level work with
+% PYTORCH + HUGGING FACE (embeddings, fine-tuning, inference tooling);
+% schema/validation/state (Pydantic, Zod).
+% AI-assisted development: agentic dev tools for design, implementation,
+% testing, debugging, refactoring, applied responsibly.
+% Must-haves: Python (preferred) or Java; hands-on LLMs (OpenAI, Gemini,
+% Claude); building/integrating AI agents + workflow automation;
+% microservices; event-driven + distributed systems; Kafka; Enterprise Data
+% Hubs; PostgreSQL design; AWS/GCP; Kubernetes, Docker, CI/CD; DevOps,
+% DevSecOps, MLOps, LLMOps; Agentic AI frameworks + ADLC.
+% Eligibility: reside in UK; start within 4 weeks; onsite Burgess Hill 3
+% days/week. Preferred domain: financial services / regulated.
+% SOURCES: cv.md, incl. session-confirmed (2026-08-16/18) AI coding
+% assistants as daily drivers, production ops ownership (telemetry,
+% alerting, on-call, hands-on CI/CD, promotion/rollback), and mentoring /
+% code review / patterns others adopted.
+% HONEST -- NOT claimed: KUBERNETES, KAFKA / event-driven & distributed
+% messaging, gRPC, Go, TypeScript/Zod, Pydantic (named tool), OpenAI or
+% Gemini specifically (Anthropic Claude + open-weight/HF only), Semantic
+% Kernel, CrewAI, ADLC as a named lifecycle, DevSecOps, Enterprise Data Hub
+% products. Claude, LlamaIndex, LangChain/LangGraph, PyTorch, Hugging Face,
+% PostgreSQL, Docker, CI/CD, AWS/GCP are all genuine.
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.7cm,bottom=0.6cm,left=1.4cm,right=1.4cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{0.99}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{4pt}{3pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=0.5pt,topsep=0.5pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large AI Engineer: Agentic Systems, LLM Integration \& Production Delivery}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+AI engineer who builds production agentic systems on real financial data for real customers, inside a regulated environment. As an early hire at a FinTech I have shipped LLM-powered agents and workflow automation used daily by 5+ leading investment management firms, integrating commercial and open-weight models into agentic workflows and exercising judgment about when a framework earns its place versus a lighter-weight primitive. I work at model level as well as application level, fine-tuning with PyTorch and the Hugging Face ecosystem and publishing open models with 67K+ downloads. Everything I ship is held to reliability, security, and auditability standards: evaluation and guardrails, role-based access, PII protection, auditable traces, plus observability, CI/CD, and on-call support once live.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Agentic AI \& LLMs:} production AI agents \& business workflow automation, orchestration (LangGraph, LangChain, LlamaIndex, native tool-use loops), Anthropic Claude, open-weight models, Model Context Protocol (MCP), RAG \& semantic search, prompt \& tool-use patterns, planning \& task decomposition
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Model-Level ML:} PyTorch, TensorFlow, Hugging Face ecosystem (embeddings, fine-tuning with LoRA and BERT, inference tooling), transformers built from scratch, evaluation \& benchmarking
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Services \& Data:} Python (production-grade, TDD), FastAPI, REST APIs, async services \& containerised service architectures, PostgreSQL design \& development, SQL, Elasticsearch, Redis, ETL \& data integration pipelines
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{DevOps, MLOps \& LLMOps:} Docker, CI/CD build \& deployment pipelines, environment promotion \& rollback, Terraform (IaC), AWS \& GCP (Cloud Run, IAM), observability (OpenTelemetry, Arize Phoenix), drift \& quality monitoring, alerting, on-call \& incident response
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Responsible \& AI-Assisted Delivery:} guardrails \& grounding gates, role-based access (Keycloak JWT), PII detection \& redaction, auditable token-redacted traces; AI-assisted development with Claude Code and Copilot for design, implementation, testing and refactoring, with rigorous review
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Built and shipped production agentic AI operating on real financial data for 5+ leading investment management firms, including agents that automate analyst workflows and cut Discounted Cash Flow modelling time by 70\%.
+  \item Integrated commercial and open-weight LLMs into agentic workflows, using orchestration frameworks where they earn their place and lighter-weight tool-use loops where they do not, with deterministic fallbacks when a model fails.
+  \item Worked at model level as well as application level: fine-tuned models with PyTorch and the Hugging Face ecosystem, built embedding and inference pipelines, and published open models with 67K+ downloads.
+  \item Built containerised Python services and APIs (FastAPI, PostgreSQL, Redis, Elasticsearch) with a separate Model Context Protocol server exposing 180+ tools for enterprise integration.
+  \item Met reliability, security and auditability standards required for regulated financial clients: evaluation frameworks, groundedness gates, role-based access, PII protection, and auditable token-redacted traces.
+  \item Productionised and supported what I ship: hands-on CI/CD pipelines, environment promotion and rollback, observability with OpenTelemetry, drift and quality monitoring, alerting, and on-call incident response.
+  \item Used AI-assisted development tools (Claude Code, Copilot) daily for design, implementation, testing and refactoring, applying rigorous review to maintain production standards, and mentored junior engineers.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Built and evaluated deep-learning models (Graph Convolution Networks, GANs) over a million-row dataset, achieving a 63\% novelty-score improvement.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Agentic Enterprise Assistant:} LLM agent (Claude, native tool use) over grounded data with role-based access at the MCP server (Keycloak JWT), a grounding-validation gate, auditable traces, hybrid BM25 plus semantic search, and OpenTelemetry to Arize Phoenix. Passed 13/13 evaluation cases. \href{https://github.com/abhijeetscode/Agentic-Enterprise-Assistant}{View on GitHub}
+  \item \textbf{Spec-to-Code Agent:} autonomous ReAct agent on LangGraph and the Anthropic API that ships installable, tested packages from plain-language specs; 9/9 pass rate across a polyglot benchmark. \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+  \item \textbf{PII Detection LLMs:} fine-tuned GPT (LoRA) and BERT for personal-data detection, published as reusable production models; collectively 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\sep{\itshape MSc in Data Science}\hfill {\color{muted}London, UK}\par\vspace{1pt}
+{\color{company}\bfseries C-DAC}\sep{\itshape PG Diploma in Advanced Computing (PG-DAC)}\hfill {\color{muted}Pune, India}\par\vspace{1pt}
+{\color{company}\bfseries University of Pune}\sep{\itshape B.E. in Computer Science}\hfill {\color{muted}Pune, India}\par
+
+\end{document}

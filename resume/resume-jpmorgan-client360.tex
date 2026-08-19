@@ -1,0 +1,146 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Agentic AI Associate -- Client 360. J.P. Morgan, Commercial & Investment
+% Bank. London, on-site. Client360 = unifying the data fabric of all client
+% activity across Markets, Payments, Global Banking, Private Bank.
+% NOTE: this is a DELIVERY + OPERATIONS role, not a modelling role. Framing
+% is engineer-who-ships-and-runs-it, NOT ML research.
+% JD focus: build software enabling agentic AI operations (services, workflow
+% components, integrations, automations, internal tools); implement agentic
+% AI workbench + control environment (connectivity patterns, orchestration
+% hooks, evaluation/monitoring integrations); OWN small-to-medium deliverables
+% END TO END (requirements -> design -> implement -> test -> release -> post-
+% release support); CODE REVIEWS & quality gates; OPERATIONAL READINESS
+% (runbooks, instrumentation/telemetry, dashboards/alerts, incident learnings,
+% production hygiene); CI/CD (build/test pipelines, deployment workflows,
+% ENVIRONMENT PROMOTION, deployment verification, ROLLBACK readiness);
+% risk/control-aligned delivery + traceability; KPIs (stability, adoption,
+% time-to-value, automation effectiveness); cross-team stakeholder work.
+% REQUIRED: 2-4+ yrs shipping & supporting production software; operate with
+% minimal hand-holding; HANDS-ON AI CODING ASSISTANTS (GitHub Copilot /
+% Claude Code) with understanding of their limits + rigorous review/testing;
+% engineering fundamentals; CI/CD; communication; regulated environments
+% (secure SDLC, data governance, logging/monitoring, operational risk).
+% PREFERRED: agentic workflows / orchestration / LLM automation + OBSERVABILITY
+% FOR AI IN PRODUCTION; financial institution; CS degree.
+% SOURCES: cv.md + user confirmation in session (2026-08-16) that AI coding
+% assistants are a daily driver and that alerts/telemetry, on-call & incident
+% response, hands-on CI/CD, and release promotion/rollback are all genuine.
+% Both now recorded in cv.md.
+% HONEST -- NOT claimed: runbook authorship, formal SRE/production-support
+% rotation beyond the above, data governance ownership, secure SDLC formal
+% process ownership, investment banking operations domain.
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.7cm,bottom=0.6cm,left=1.4cm,right=1.4cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{0.99}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{4pt}{3pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=0.5pt,topsep=0.5pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large Agentic AI Engineer: Production Delivery, Operations \& Reliability}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+Engineer who translates intent into working software and then keeps it running. Over four years shipping to production in a regulated FinTech, I have owned deliverables end to end, from requirements clarification and design through implementation, testing, release, and post-release support, operating with minimal hand-holding. I build the services, integrations, and internal tools that make agentic AI usable day to day, plus the control layer around them: instrumentation and telemetry, dashboards and alerting, on-call and incident response, hands-on CI/CD pipelines, and release practices covering environment promotion, deployment verification, and rollback. I use Claude Code and GitHub Copilot as daily drivers, with the rigorous review and testing their limitations demand, and I explain technical trade-offs to non-technical stakeholders without jargon.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Software Delivery:} end-to-end ownership (requirements, design, implementation, testing, release, post-release support), code review \& quality gates, testing strategy \& TDD, debugging, version control (Git, GitHub)
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{CI/CD \& Release:} automated build \& test pipelines, deployment workflows, environment promotion, deployment verification, rollback readiness, Docker, Terraform (IaC), Airflow
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Operations \& Observability:} instrumentation \& telemetry (OpenTelemetry, Arize Phoenix), dashboards \& alerting, on-call \& incident response, incident-triggering mechanisms, production hygiene, reliability \& latency monitoring
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Agentic AI:} agent-led workflow automation, orchestration (LangGraph, LangChain, native tool-use loops), Model Context Protocol (MCP) connectivity, tool \& API integrations, RAG \& semantic search, evaluation \& monitoring integrations
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Engineering \& Controls:} Python (production-grade), FastAPI, SQL, PostgreSQL, AWS \& GCP, AI coding assistants (Claude Code, GitHub Copilot), role-based access (Keycloak JWT), PII protection, auditable traces
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Own engineering deliverables end to end as an early hire with minimal hand-holding: requirements clarification, design approach, implementation, testing, release, and post-release support for systems used by 5+ leading investment management firms.
+  \item Build software that puts agentic AI into day-to-day operations: services, workflow components, integrations, and internal tools, including agents that automate routine execution and cut analyst modelling time by 70\%.
+  \item Deliver the connectivity and orchestration layer, exposing 180+ tools through a production FastAPI Model Context Protocol server so agents integrate reliably with internal systems and third-party tooling.
+  \item Support operational readiness for what I ship: instrumentation and telemetry (OpenTelemetry to Arize Phoenix), dashboards and alerting, incident-triggering mechanisms, on-call and incident response, and ongoing production hygiene.
+  \item Work hands-on across CI/CD and release practice: automated build and test pipelines, deployment workflows, environment promotion, deployment verification, and rollback readiness.
+  \item Build evaluation and monitoring integrations that make automation measurable: agent evals, quality-of-service and groundedness metrics, drift and failure-mode signals, and ``terminal impact,'' an outcome metric from real client conversations.
+  \item Deliver in a regulated environment with control-aligned practices (role-based access, PII protection, auditable token-redacted traces), and partner with stakeholders across engineering and business, explaining technical concepts without jargon.
+  \item Use Claude Code and GitHub Copilot as daily development drivers, applying rigorous review and testing to generated code.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Built and evaluated deep-learning models over a million-row dataset, with a reproducible preprocessing and training pipeline.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Agentic Enterprise Assistant:} internal operations assistant where an LLM agent answers staff questions over grounded data, with role-based access at the MCP server (Keycloak JWT), a grounding-validation gate, auditable token-redacted traces, OpenTelemetry to Arize Phoenix, and Docker Compose deployment. Passed 13/13 evaluation cases. \href{https://github.com/abhijeetscode/Agentic-Enterprise-Assistant}{View on GitHub}
+  \item \textbf{Spec-to-Code Agent:} autonomous ReAct agent on LangGraph and the Anthropic API that ships installable, tested packages from plain-language specs; 9/9 pass rate across a polyglot benchmark (Python, Go, Rust, Java, JS). \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+  \item \textbf{PII Detection LLMs:} fine-tuned models detecting and protecting personal data, published as reusable production artefacts; collectively 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\sep{\itshape MSc in Data Science}\hfill {\color{muted}London, UK}\par\vspace{1pt}
+{\color{company}\bfseries C-DAC}\sep{\itshape PG Diploma in Advanced Computing (PG-DAC)}\hfill {\color{muted}Pune, India}\par\vspace{1pt}
+{\color{company}\bfseries University of Pune}\sep{\itshape B.E. in Computer Science}\hfill {\color{muted}Pune, India}\par
+
+\end{document}

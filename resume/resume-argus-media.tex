@@ -1,0 +1,139 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AI/ML Engineer -- Argus Media (Data Science). London.
+% Mission: bridge prototype -> production; productionise GenAI + agentic
+% systems (APIs, tools, integrations, workflows for LLMs/agents at scale);
+% support broader ML models/pipelines; primary partner to Engineering/
+% DevOps/Infra; own reliability, scalability, security, performance; set
+% production-readiness standards (testing, observability, versioning,
+% release mgmt); mentor DS + engineers; senior member.
+% Essential: strong Python (OOP, SOLID, clean code, design patterns,
+% testability); backend/API (FastAPI); AWS; Docker, GitHub, CI/CD;
+% cross-team delivery; debugging + perf optimisation; version control,
+% automated testing, monitoring.
+% Desirable: agentic AI (tool use, orchestration, multi-step, LangGraph/
+% LangChain); GenAI/LLM prod (RAG, prompt orchestration, evals, guardrails,
+% cost/latency); MCP + function-calling; MLOps (serving, monitoring,
+% retraining); real-time/streaming.
+% HONEST TAILORING -- candidate leads on: Python OOP/clean code, FastAPI
+% backend/APIs, AWS/Docker/GitHub/CI-CD, prototype->production, agentic
+% systems (LangGraph/ReAct/MCP + function calling), evals/guardrails/
+% groundedness, latency optimisation (p95), observability (OpenTelemetry),
+% cross-team client delivery, debugging + 85% perf gain.
+% NOT claimed: retraining workflows (serving/monitoring only), explicit
+% mentoring framed as standard-setting/ownership, CrewAI/AutoGen, streaming
+% (real-time voice claimed, not stream processing).
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.8cm,bottom=0.7cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.01}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{6pt}{4pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=2pt,topsep=2pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large AI/ML Engineer: Productionising GenAI \& Agentic Systems, Backend APIs \& MLOps}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+AI/ML engineer who closes the gap between promising prototypes and robust production systems. As an early-stage hire at a FinTech, I have productionised generative AI and agentic systems for 5+ leading investment management firms, building the secure APIs, tools, and integrations that let LLMs and agents run reliably at scale. I own the full journey to live: backend engineering in Python and FastAPI, evaluation and reliability, latency and cost optimisation, and deployment on AWS with Docker and CI/CD, partnering closely with engineering and infrastructure teams. Open-source proof: a coding agent at 9/9 on a polyglot benchmark and fine-tuned models with 67K+ HuggingFace downloads. MSc Data Science, King's College London.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Backend \& API Engineering:} Python (OOP, SOLID, clean code, design patterns, testability), FastAPI, REST APIs, modular design, TDD \& automated testing
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Agentic \& GenAI Systems:} Agentic systems (tool use, multi-step reasoning), orchestration (LangGraph, LangChain), Model Context Protocol (MCP), function calling, RAG, prompt orchestration, LLM integration
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Production \& MLOps:} Prototype to production, evaluation frameworks, guardrails \& groundedness, cost/latency optimisation, model serving \& monitoring, observability (OpenTelemetry), versioning
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Cloud \& DevOps:} AWS, Docker, GitHub, CI/CD, PostgreSQL, Redis, Elasticsearch, ETL \& data pipelines
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{ML Foundations:} PyTorch, TensorFlow, Scikit-Learn, deep learning, NLP, fine-tuning (LoRA, BERT), embeddings, vector databases
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Drove generative AI and agentic systems from prototype to production as an early-stage hire, owning reliability, scalability, and operational readiness for client-facing AI used daily by 5+ leading investment management firms.
+  \item Built secure backend APIs powering AI/ML: a FastAPI Model Context Protocol (MCP) server exposing 180+ tools through function-calling, with role-based access enforced by Keycloak JWT and token-redacted, auditable traces.
+  \item Engineered agentic systems integrating LLMs with tools and data sources into production pipelines (LangGraph, ReAct, multi-step reasoning), including an autonomous agent generating DCF models that cut analyst modelling time 70\%.
+  \item Set production-readiness standards with evaluation frameworks, Quality-of-Service metrics, groundedness guardrails, and observability (OpenTelemetry) tracking latency, cost, and failure modes in production.
+  \item Debugged and optimised performance across the AI/ML stack, rearchitecting the financial modelling engine into a graph-based system (Apache Hamilton + vectorisation) for an 85\% gain and 3x throughput on AWS with Docker and CI/CD.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Built and evaluated deep learning models (Graph Convolution Networks, GANs) over a million-row clinical dataset, achieving a 63\% improvement in the novelty score of generated structures.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Agentic Enterprise Assistant (production agent + MLOps):} LLM agent (Claude, native tool use) over grounded data with RBAC at the MCP server (Keycloak JWT), a grounding-validation gate, auditable traces, Elasticsearch hybrid search, and OpenTelemetry; passed 13/13 evaluation cases. \href{https://github.com/abhijeetscode/Agentic-Enterprise-Assistant}{View on GitHub}
+  \item \textbf{Agentic Search API (backend + latency):} FastAPI, PostgreSQL, and Elasticsearch semantic search with Claude tool-routing and a deterministic fallback for resilience; measured p95 175ms retrieval and a 0.76 macro QoS eval score. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+  \item \textbf{Spec-to-Code Agent (agentic + testing rigour):} autonomous ReAct agent on LangGraph and the Anthropic API that ships installable, tested packages from plain-language specs; 9/9 pass rate across a polyglot benchmark (Python, Go, Rust, Java, JS). \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\hfill {\color{muted}London, UK}\par
+{\itshape MSc in Data Science}\par\vspace{2pt}
+{\color{company}\bfseries C-DAC, India}\hfill {\color{muted}Pune, India}\par
+{\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\par\vspace{2pt}
+{\color{company}\bfseries University of Pune}\hfill {\color{muted}Pune, India}\par
+{\itshape B.E. in Computer Science}\par
+
+\end{document}

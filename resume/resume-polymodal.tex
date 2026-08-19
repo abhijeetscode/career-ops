@@ -1,0 +1,110 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Polymodal -- ML Research Engineer (founding, pre-seed). Tailored resume.
+% Framing: production ML, sequence/behavioral models, Python/Rust, edge inference, evals.
+% Fonts: Source Sans Pro. Accent: teal + purple. Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}
+\usepackage[a4paper,top=1.1cm,bottom=1.0cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}
+\definecolor{company}{HTML}{6C2BB3}
+\definecolor{muted}{HTML}{555555}
+
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{7pt}{4pt}
+
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=1pt,topsep=1pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large ML Research Engineer: Production Models, Python/Rust \& Eval Pipelines}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+ML research engineer who ships models that survive production, not just notebooks. As an early-stage hire I have owned ML end to end: training and eval pipelines, predictive and sequence models, and low-latency serving, and I build with AI agents in my own engineering loop. I work in Python and Rust, including a GPT-style transformer built from scratch with on-device Metal inference, care about scientific honesty over benchmark theatre, and move fast where research, product, and systems blur. MSc Data Science (King's College London); 67K+ HuggingFace downloads across open models I have fine-tuned and released.
+
+%======================= COMPETENCIES =======================
+\section{Core Strengths}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Production ML (end to end):} training \& eval pipelines, model services (API, batch), monitoring, shipping and owning models in production
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Modeling:} sequence models (transformers), classifiers, fine-tuning small models, predictive \& behavioural modelling, forecasting; PyTorch
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Systems \& Inference:} Python \& Rust, on-device / local inference (Metal), low-latency serving, vectorisation, profiling
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Research Loop:} AI agents in the engineering loop, hypothesis-driven evals, scientific rigour, fast iteration
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Owned ML systems end to end in production, from training through serving and monitoring, for 5+ enterprise clients.
+  \item Built eval pipelines on our own data: evals, Quality of Service metrics, and incident-triggering monitoring for latency, groundedness, and failure modes.
+  \item Defined "terminal impact", a behavioural outcome metric that classifies how users exit an agent conversation, computed from real client chat data to measure real impact rather than task completion.
+  \item Built and served low-latency ML (p95 around 175ms retrieval with local embeddings, no external API) and improved a modelling engine's performance by 85\% through a graph-based rearchitecture with vectorisation.
+  \item Developed predictive models over large, messy datasets, including one inferring missing values across property data to estimate rent per square foot across London postcodes.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Developed a deep learning model using Graph Convolution Networks and GANs for drug discovery, achieving a 63\% improvement in the novelty score of generated structures, over a preprocessing pipeline built for a million-row clinical dataset.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Transformer from Scratch in Rust:} GPT-style decoder-only transformer built from first principles (multi-head causal self-attention, pre-norm residual blocks, full training loop with SafeTensors checkpointing) using the Candle framework with on-device Metal GPU acceleration; character and BPE training. \href{https://github.com/abhijeetscode/transformer-rust}{View on GitHub}
+  \item \textbf{Spec-to-Code Agent:} autonomous ReAct-based coding agent (LangGraph + Anthropic API) that ships installable, tested packages from plain-language specs, a working example of AI in the engineering loop; 9/9 pass rate across a polyglot benchmark (Python, Go, Rust, Java, JS). \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+  \item \textbf{Agentic Search API:} production retrieval service (FastAPI, PostgreSQL, Elasticsearch) with hybrid lexical and semantic search and local Qwen3 embeddings. Achieves p95 around 175ms retrieval and a 0.76 macro QoS score. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+  \item \textbf{PII Detection LLMs:} fine-tuned GPT (with LoRA) and BERT for Personally Identifiable Information detection; published models collectively reaching 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+\entry{King's College London}{}{MSc in Data Science}{London, UK}
+\vspace{-3pt}
+\entry{C-DAC, India}{}{Post Graduate Diploma in Advanced Computing (PG-DAC)}{Pune, India}
+\vspace{-3pt}
+\entry{University of Pune}{}{B.E. in Computer Science}{Pune, India}
+
+\end{document}

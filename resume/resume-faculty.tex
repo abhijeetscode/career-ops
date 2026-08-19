@@ -1,0 +1,137 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Faculty -- Data Scientist. Applied AI dept, Retail & Consumer BU.
+% London, hybrid. Applied-AI consultancy (est. 2014), 350+ customers across
+% govt/finance/retail/energy/life-sciences/defence; "human-centric AI".
+% What you'll do: map end-to-end DS approaches + design software
+% architecture; drive technical scoping & feasibility for new projects;
+% build client relationships via technical advisory; deliver bespoke
+% algorithms + scalable software for high-stakes decisions; set technical
+% standards / code quality / delivery excellence; contribute thought
+% leadership (teaching, public speaking, open source).
+% Requirements: DS or quantitative-academic experience; strong maths/stats;
+% Python (NumPy, Pandas); deep learning (TensorFlow or PyTorch); core DS
+% (supervised/unsupervised, time-series, NLP, model validation); innovate
+% new algorithms; scientific + entrepreneurial mindset; exceptional
+% communication (translate to non-technical); project planning / delivery
+% estimation.
+% NOTE: honest tailoring -- candidate leads on end-to-end applied DS/ML in
+% production, statistical/predictive modelling + inference (property-value
+% model, numerical optimisation, forecasting), novel-algorithm design (KCL
+% GCN+GAN, transformer-from-scratch, missing-value inference model), NLP,
+% model validation (evals/QoS/groundedness/drift), client-facing advisory +
+% non-technical translation (conversational AI for 5+ firms, cashflow
+% explanation), delivery in ambiguous early-stage env, open-source thought
+% leadership (67K+ HF downloads). Retail domain NOT faked -- finance / real
+% estate = high-stakes decisions. Public speaking/teaching NOT claimed.
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.6cm,bottom=0.6cm,left=1.3cm,right=1.3cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{0.98}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{4pt}{2pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=1.5pt,topsep=1.5pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[2pt]
+  {\color{accent}\large Data Scientist: Applied ML, Statistical Modelling \& Client Delivery}\\[4pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+
+%======================= SUMMARY =======================
+\section{Summary}
+Data scientist who maps end-to-end approaches and delivers bespoke algorithms and scalable software for high-stakes decisions. As an early-stage hire in a regulated FinTech I have taken ambiguous business problems from scoping and feasibility through to production, working directly with clients as a technical advisor and translating solutions for non-technical audiences. Strong mathematical and statistical foundations with Python (NumPy, Pandas), PyTorch, and TensorFlow, across supervised and unsupervised learning, time-series, NLP, and rigorous model validation. I innovate new algorithms, set technical standards for code quality, and contribute to the field through open source with 67K+ model downloads.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Data Science \& Statistics:} supervised \& unsupervised learning, time-series \& forecasting, statistical inference, model validation, numerical optimisation, NLP
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Algorithms \& Modelling:} novel-algorithm design, deep learning (PyTorch, TensorFlow), graph neural networks, GANs, embeddings \& representation learning, fine-tuning (LoRA, BERT)
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Python \& Data:} Python (NumPy, Pandas, scikit-learn, XGBoost), SQL, ETL \& data pipelines, data modelling, PostgreSQL / MongoDB
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Applied AI \& Retrieval:} LLM applications, RAG \& semantic search, agentic workflows (LangGraph), Model Context Protocol (MCP), vector databases
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Delivery \& Communication:} technical scoping \& feasibility, client advisory, translating to non-technical audiences, project planning, evaluation \& QoS metrics, AWS / GCP, Docker, CI/CD
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Mapped end-to-end data science approaches and delivered bespoke algorithms and scalable software for high-stakes financial decisions, now used across 5+ leading investment management firms.
+  \item Designed and deployed a novel machine learning model to infer missing property values across London postcodes, on an ETL pipeline linking 80\% of records with geolocation enrichment; core engineer on an \href{https://gtr.ukri.org/projects?ref=10022996}{Innovate UK-funded R\&D project} (\pounds205,895 grant) enabling data-driven decisions for property investors.
+  \item Drove technical scoping and client advisory as a technical point of contact: built a client-facing conversational AI that lets investors query portfolios in natural language, and an agent that explains financial cashflows, translating technical outputs for non-technical audiences.
+  \item Set technical standards and model validation for a high-stakes domain: agent evals, quality-of-service metrics, groundedness, and ``terminal impact,'' plus monitoring for latency, drift, and failure modes.
+  \item Built end-to-end NLP and retrieval systems (embeddings, semantic search) and an agent that automates Discounted Cash Flow modelling from raw financials, cutting analyst modelling time by 70\%.
+  \item Rearchitected an inference-heavy engine into a graph-based pipeline (Apache Hamilton + vectorisation) for an 85\% performance gain, and exposed 180+ tools via a FastAPI MCP server as reusable components.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Innovated a novel deep learning model (Graph Convolution Networks, GANs) for drug discovery over a million-row dataset, achieving a 63\% improvement in novelty score, with a reproducible preprocessing and training pipeline.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Thought Leadership}
+\begin{tight}
+  \item \textbf{PII Detection LLMs (open source):} fine-tuned GPT (LoRA) and BERT to detect and classify entities in text, published as reusable production artefacts; collectively 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+  \item \textbf{Transformer from Scratch in Rust (first principles):} a GPT-style decoder-only transformer built from the ground up (multi-head attention, pre-norm blocks, training loop) with Metal GPU acceleration. \href{https://github.com/abhijeetscode/transformer-rust}{View on GitHub}
+  \item \textbf{Agentic Search API (retrieval + evals):} FastAPI + Elasticsearch semantic search with Qwen3 embeddings and Claude tool-calling; measured p95 $\approx$ 175ms and a 0.76 QoS eval score. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}, {\itshape MSc in Data Science}\hfill {\color{muted}London, UK}\par\vspace{1pt}
+{\color{company}\bfseries C-DAC}, {\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\hfill {\color{muted}Pune, India}\par\vspace{1pt}
+{\color{company}\bfseries University of Pune}, {\itshape B.E. in Computer Science}\hfill {\color{muted}Pune, India}\par
+
+\end{document}

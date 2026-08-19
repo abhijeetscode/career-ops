@@ -1,6 +1,24 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Encord -- Machine Learning Engineer (London) -- self-contained (no .cls).
-% Tailored: ML fundamentals, deep learning, CV/multimodal, end-to-end shipping.
+% Encord -- Machine Learning Engineer. London, on-site 4+ days/week. Series C.
+% Data layer for AI (index/curate/annotate/evaluate data across ML lifecycle).
+% NOTE: role is COMPUTER-VISION-heavy (OpenCV, geometric problems, cutting
+% edge of CV + deep learning). Candidate is NLP/LLM + DL, NOT computer
+% vision -- honest partial fit; CV not claimed. Leans on ML fundamentals,
+% deep learning, PyTorch, end-to-end shipping, mathematical/algorithmic
+% problem solving, research-to-production.
+% What you'll do: experiment/adapt latest ML into stack; solve statistical/
+% geometric/engineering problems; work w/ full-stack team to implement
+% research into product; broad stack (ReactJS, Python, REST/GraphQL, OpenCV,
+% PyTorch, GCP, AWS, CUDA, Kubernetes).
+% Reqs: 3+ yrs MLE w/ shipped models/systems; strong Python + ML libs
+% (OpenCV, PyTorch, TensorFlow, Fast.ai, Keras); strong maths/algorithmic
+% problem solving + applied ML. Bonus: CV; applied research + publications.
+% NOTE honest tailoring -- candidate leads on ML fundamentals + deep learning
+% (PyTorch/TensorFlow, GANs, GCNs, transformers from scratch), Python +
+% shipped models/systems (5+ firms), research-to-production (KCL research),
+% mathematical/algorithmic problem solving, experimentation. Gaps NOT faked:
+% computer vision / OpenCV NOT claimed (NLP/LLM background stated); CUDA/
+% Kubernetes not claimed; publications limited to open-source (67K downloads).
 % Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
 % Compile: pdflatex (2 passes).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -10,7 +28,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
-\usepackage[a4paper,top=1.4cm,bottom=1.2cm,left=1.6cm,right=1.6cm]{geometry}
+\usepackage[a4paper,top=0.7cm,bottom=0.7cm,left=1.4cm,right=1.4cm]{geometry}
 \usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage{xcolor}
@@ -27,14 +45,14 @@
 
 % ---- Remove paragraph indent, set sensible line spacing ----
 \setlength{\parindent}{0pt}
-\linespread{1.05}
+\linespread{1.0}
 \pagestyle{empty}
 
 % ---- Section headings: uppercase, bold, teal, thin rule underneath ----
 \titleformat{\section}
   {\normalfont\large\bfseries\color{accent}\scshape}
   {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
-\titlespacing*{\section}{0pt}{9pt}{5pt}
+\titlespacing*{\section}{0pt}{5pt}{3pt}
 
 % ---- Compact bullet list ----
 \newlist{tight}{itemize}{1}
@@ -56,7 +74,7 @@
 %======================= HEADER =======================
 \begin{center}
   {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
-  {\color{accent}\large Machine Learning Engineer: Deep Learning, Applied ML \& Production Systems}\\[5pt]
+  {\color{accent}\large Machine Learning Engineer: Deep Learning \& Applied ML}\\[5pt]
   {\small
     London, United Kingdom \sep
     \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
@@ -70,50 +88,49 @@
 
 %======================= SUMMARY =======================
 \section{Summary}
-Machine learning engineer with strong fundamentals and a bias for shipping. Built deep-learning systems from first principles, a GPT-style transformer in Rust and Graph Convolution Network / GAN models for drug discovery, and ships production ML end to end in FinTech (PyTorch, TensorFlow). Comfortable across the full ML lifecycle: experimentation, model evaluation, and integration into production platforms used by real customers. Computer-vision and multimodal experience via a CLIP-style dual-encoder. MSc Data Science (King's College London); open-source proof: 67K+ HuggingFace downloads, 9/9 polyglot agent benchmark.
+Machine Learning Engineer with strong ML fundamentals and practical engineering, who experiments with the latest models and ships them into production platforms. I build and adapt deep learning systems in PyTorch and TensorFlow, solve statistical and algorithmic problems end to end, and work closely with full-stack teams to turn research ideas into reliable, scalable features. I have a research background from King's College London and a track record of shipping models and systems used by real customers. I thrive at the intersection of hard ML problems and hands-on delivery, iterating based on what the data tells me.
 
 %======================= SKILLS =======================
 \section{Skills}
 \begin{tight}
-  \item[\textcolor{accent}{\small$\bullet$}] \textbf{ML \& Deep Learning:} Deep Learning, Neural Networks, Transformers, GANs, Graph Neural Networks, NLP, LLMs, RAG, Statistical \& Predictive Modelling
-  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Computer Vision \& Multimodal:} CLIP-style dual-encoders, embeddings, multimodal retrieval
-  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Foundations:} mathematical programming, algorithmic problem solving, numerical optimization, model evaluation
-  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Frameworks:} PyTorch, TensorFlow, Keras, scikit-learn, XGBoost, Candle, LangChain, LangGraph
-  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Languages \& Infra:} Python (production-grade, TDD), Rust, SQL, AWS, Docker, Git, CI/CD, PostgreSQL, Vector Databases
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Machine Learning:} applied ML, deep learning, PyTorch, TensorFlow, Keras, GANs, Graph Convolution Networks, transformers (built from scratch), fine-tuning (LoRA, BERT)
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Maths \& Problem Solving:} mathematical programming, algorithmic problem solving, statistics, numerical optimisation, experimentation \& iteration
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Engineering \& Shipping:} Python, shipped models \& systems end-to-end, REST \& GraphQL APIs, FastAPI, testing, Git, research-to-production
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{LLMs \& Retrieval:} LLMs, RAG, agents, embeddings, semantic search, evaluation frameworks (evals, quality-of-service, ``terminal impact'')
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Data \& Cloud:} data pipelines, PostgreSQL/MongoDB, vector databases, GCP \& AWS, Docker, ReactJS \& TypeScript (working)
 \end{tight}
 
 %======================= EXPERIENCE =======================
 \section{Experience}
 \entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
 \begin{tight}
-  \item Built and shipped production ML end to end (PyTorch, scikit-learn): a property-valuation model estimating rent per square foot across London postcodes, and an 85\% performance gain rearchitecting the modelling engine into a graph-based system (Apache Hamilton, vectorisation) for 3x throughput.
-  \item Ran the experimentation-to-production loop: model and agent evaluation, Quality of Service metrics, and monitoring of reliability, latency, and failure modes for systems used in production.
-  \item Built and deployed autonomous LLM agents (LangGraph, Anthropic API) for financial modelling and document intelligence, cutting analyst modelling time by 70\%, partnering closely with product and engineering.
-  \item Designed data pipelines and ETL on AWS, linking 80\% of property records across diverse datasets with geolocation enrichment to feed downstream models.
-  \item Core engineer on an \href{https://gtr.ukri.org/projects?ref=10022996}{Innovate UK funded R\&D project} (\pounds205,895 grant) building an ML data platform and street-level analytics for commercial real estate.
+  \item Experimented with and adapted the latest ML models into an existing production stack, shipping models and systems used by 5+ leading investment management firms.
+  \item Solved idiosyncratic statistical and engineering problems end to end, including a predictive model inferring missing values at scale and numerical optimisation of an inference engine.
+  \item Worked closely with a full-stack tech team to implement research solutions into the product, iterating based on what the data showed.
+  \item Built deep learning and LLM systems (PyTorch, TensorFlow, RAG, agents) with evaluation frameworks (evals, quality-of-service, groundedness, ``terminal impact'') for reliability at scale.
+  \item Rearchitected a production inference-heavy engine into a graph-based pipeline (Apache Hamilton + vectorisation) for an 85\% performance gain and 3x throughput.
 \end{tight}
 
 \entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
 \begin{tight}
-  \item Applied research in deep learning: built Graph Convolution Networks and GANs for drug discovery, achieving a 63\% improvement in the novelty score of generated molecular structures.
-  \item Designed a robust data preprocessing pipeline for clinical data, ensuring accuracy and completeness across a million-row dataset.
+  \item Researched and built deep learning models (Graph Convolution Networks, GANs) for drug discovery over a million-row dataset, achieving a 63\% improvement in novelty score, applying strong mathematical and statistical foundations.
 \end{tight}
 
 %======================= PROJECTS =======================
 \section{Open-Source \& Projects}
 \begin{tight}
-  \item \textbf{Transformer from Scratch in Rust:} GPT-style decoder-only transformer built from first principles, multi-head causal self-attention, pre-norm residual blocks, token/position embeddings, and a full training loop with SafeTensors checkpointing, using the Candle framework with Metal GPU acceleration. \href{https://github.com/abhijeetscode/transformer-rust}{View on GitHub}
-  \item \textbf{Text-to-Image Search:} CLIP-style dual-encoder for multimodal retrieval, matching natural-language queries to images through a shared embedding space. \href{https://github.com/abhijeetscode/text-to-image-search}{View on GitHub}
-  \item \textbf{PII Detection LLMs:} fine-tuned GPT (with LoRA) and BERT for Personally Identifiable Information detection, with model evaluation across datasets; published models collectively reaching 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
-  \item \textbf{Spec-to-Code Agent:} autonomous ReAct-based coding agent (LangGraph + Anthropic API) that ships installable, tested packages from plain-language specs; 9/9 pass rate across a polyglot benchmark (Python, Go, Rust, Java, JS). \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+  \item \textbf{Transformer from Scratch in Rust (deep learning, from first principles):} GPT-style decoder-only transformer with multi-head attention and a full training loop, built with the Candle framework and Metal GPU acceleration. \href{https://github.com/abhijeetscode/transformer-rust}{View on GitHub}
+  \item \textbf{PII Detection LLMs (applied ML, shipped):} fine-tuned GPT (LoRA) and BERT, deployed as reusable production artefacts; collectively 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+  \item \textbf{Agentic Search API (retrieval + evals):} FastAPI + Elasticsearch semantic search, Qwen3 embeddings and Claude tool-calling, with a deterministic fallback; measured p95 latency and 0.76 QoS eval score. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
 \end{tight}
 
 %======================= EDUCATION =======================
 \section{Education}
-\entry{King's College London}{}{MSc in Data Science}{London, UK}
-\vspace{-3pt}
-\entry{C-DAC, India}{}{Post Graduate Diploma in Advanced Computing (PG-DAC)}{Pune, India}
-\vspace{-3pt}
-\entry{University of Pune}{}{B.E. in Computer Science}{Pune, India}
+{\color{company}\bfseries King's College London}\hfill {\color{muted}London, UK}\par
+{\itshape MSc in Data Science}\par\vspace{2pt}
+{\color{company}\bfseries C-DAC, India}\hfill {\color{muted}Pune, India}\par
+{\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\par\vspace{2pt}
+{\color{company}\bfseries University of Pune}\hfill {\color{muted}Pune, India}\par
+{\itshape B.E. in Computer Science}\par
 
 \end{document}

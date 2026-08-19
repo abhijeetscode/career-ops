@@ -1,0 +1,139 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Ebury -- Senior Full-Stack Engineer, Flow (AI Agent Platform). London
+% Victoria, hybrid (4 days office). Regulated FinTech. "Flow" = internal
+% agentic AI platform: multi-step orchestration, tool use, RAG, reasoning/
+% Chain-of-Thought UI, evals (Ragas) + observability (Langfuse), cross-
+% system integration; discover -> industrialize -> productionize.
+% Stack: React/TypeScript (micro-frontend, Vite/Vitest); Python/FastAPI,
+% Strands Agents SDK, AWS Bedrock, RAG, Ragas, Langfuse; AWS (ECS Fargate,
+% Lambda, API GW, S3) + GCP; Terraform, GitHub Actions, Docker; event-driven.
+% Must: 5+ yrs SWE; strong Python/FastAPI (async, clean architecture);
+% STRONG React & TypeScript (architect non-trivial frontends, state mgmt,
+% perf, testing); system design; API/integration (REST, SSE/WebSockets);
+% SQL/NoSQL + modeling; testing/ownership; communication.
+% Nice: agentic AI (Strands/LangGraph/AutoGen), RAG, tool use, context eng.
+% NOTE: honest tailoring -- candidate is STRONG on Python/FastAPI backend,
+% agentic AI (orchestration/LangGraph, tool use, MCP), RAG, evals &
+% observability (evals/QoS/terminal impact), explainability/validation,
+% integrations, streaming LLMs, SQL/NoSQL, AWS+GCP, Docker/CI. Real GAP
+% (front-end): role wants STRONG React/TypeScript & architecting non-trivial
+% frontends -- candidate is familiar with TS/React but backend-leaning;
+% listed honestly, NOT claimed at architect level. Other gaps not faked:
+% Strands SDK / AWS Bedrock / Ragas / Langfuse / Terraform by name (has
+% equivalents); 5+ yrs vs ~4 (early-stage ownership offsets).
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.7cm,bottom=0.7cm,left=1.4cm,right=1.4cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=2pt,topsep=2pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large Full-Stack AI Engineer: Agentic Platforms, Python \& TypeScript}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+AI engineer who builds agentic platforms end to end in a regulated FinTech, strongest on the Python/FastAPI backend and the agentic layer. I design multi-step agent orchestration, tool use, and retrieval (RAG) grounded in real data stores, and I make agents measurably reliable with evaluation harnesses and observability. I own features from ambiguous idea to hardened, daily-deployed service, integrate messy upstream systems and cross-cloud services (AWS and GCP), and work across the stack in Python and TypeScript/React. I care about explainability, testing, and turning fast-moving prototypes into durable platform infrastructure.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Agentic AI:} multi-step agent orchestration (LangGraph, LangChain), tool use, RAG \& advanced retrieval, context engineering, Model Context Protocol (MCP), explainability
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Python Backend:} Python, FastAPI, async programming, clean architecture, production-grade code, REST \& streaming APIs, event-driven integration
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Evaluation \& Observability:} evaluation harnesses, custom evaluators \& datasets, regression suites, quality-of-service \& outcome metrics (``terminal impact''), groundedness \& drift, monitoring
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Frontend \& Data:} TypeScript \& React, SQL/NoSQL (PostgreSQL, MongoDB), query optimisation \& data modeling, vector databases
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Cloud \& Delivery:} AWS \& GCP (cross-cloud), Docker, CI/CD (GitHub Actions), testing/TDD, version control \& code review, RabbitMQ
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Built action-oriented agent workflows with multi-step orchestration, tool use, and retrieval grounded in data stores, used by 5+ leading investment management firms in a regulated environment.
+  \item Owned features end to end across a Python/FastAPI backend, including a production server exposing 180+ AI-powered tools through the Model Context Protocol (MCP) with secure enterprise access.
+  \item Made agents measurably reliable: built evaluation frameworks, custom metrics, and regression checks (evals, quality-of-service, groundedness, and ``terminal impact''), so changes ship on evidence, not vibes.
+  \item Applied validation and explainability so agent decisions and outputs are accurate and auditable, a core requirement in regulated finance.
+  \item Integrated internal APIs, data warehouses, and cross-cloud services (AWS and GCP) with robust error handling, driving prototypes through to hardened, daily-deployed services on CI/CD.
+  \item Optimised a production inference-heavy engine into a graph-based pipeline (Apache Hamilton + vectorisation) for an 85\% performance gain and 3x throughput.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Built and evaluated deep learning models (Graph Convolution Networks, GANs) over a million-row dataset, achieving a 63\% improvement in novelty score, with a reproducible preprocessing and training pipeline.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Agentic Search API (RAG + evals):} FastAPI + Elasticsearch semantic search, Qwen3 embeddings and Claude tool-calling, with a deterministic fallback for resilience; measured p95 latency and 0.76 QoS eval score. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+  \item \textbf{Spec-to-Code Agent (agent orchestration):} autonomous ReAct agent on LangGraph and the Anthropic API that ships installable, tested packages from specs; 9/9 pass rate across a polyglot benchmark. \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+  \item \textbf{PII Detection LLMs (open-source):} fine-tuned GPT (LoRA) and BERT, deployed as reusable production artefacts; collectively 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\hfill {\color{muted}London, UK}\par
+{\itshape MSc in Data Science}\par\vspace{2pt}
+{\color{company}\bfseries C-DAC, India}\hfill {\color{muted}Pune, India}\par
+{\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\par\vspace{2pt}
+{\color{company}\bfseries University of Pune}\hfill {\color{muted}Pune, India}\par
+{\itshape B.E. in Computer Science}\par
+
+\end{document}

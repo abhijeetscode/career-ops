@@ -1,0 +1,140 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Trafigura -- Applied AI Engineer, Document AI (Digital Transformation).
+% London. Commodities trading. Req R-017109. Hands-on IC.
+% Build production Agentic AI/LLM systems that transform commodities
+% trading; unlock data-rich proprietary documents. Document AI platform.
+% Responsibilities: Python AI apps; document workflows w/ LLMs + classical
+% NLP; debug model perf/edge cases/reliability; tests + monitoring for AI/ML;
+% rapid prototype -> evaluate -> production; code reviews / architecture;
+% translate business reqs into production code.
+% Required: 5-8+ yrs production AI/ML; modern Python (Pydantic, FastAPI,
+% asyncio, type safety); modern AI frameworks (favour Pydantic AI); HITL
+% systems + AI monitoring/observability; AI/ML evaluation frameworks;
+% agentic systems (MCP, tool calling, memory, vector knowledge stores,
+% guardrails); software design (microservices, event-driven, DDD, OOP, TDD);
+% SDLC (CI/CD, IaC, containerisation); cloud (AWS preferred). Plus:
+% commodities/fixed income/equities/asset management.
+% NOTE: honest tailoring -- candidate leads on production agentic AI/LLM
+% (MCP 180+ tools, tool calling, vector stores, guardrails), HITL + eval
+% frameworks + observability (evals/QoS/terminal impact/groundedness/drift),
+% document workflows (RAG + NLP over financial PDFs, DCF doc agent), modern
+% Python (FastAPI, async, OOP/TDD), microservices/event-driven, CI/CD +
+% Docker, AWS. GAP flagged: 5-8+ yrs required vs ~4 (early-stage end-to-end
+% ownership offsets). Not claimed by name: Pydantic AI, IaC/Terraform,
+% commodities domain.
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.7cm,bottom=0.7cm,left=1.4cm,right=1.4cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=2pt,topsep=2pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large Applied AI Engineer: Agentic LLM Systems \& Document AI}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+Applied AI engineer who builds production-ready agentic AI and LLM systems that unlock data-rich documents and automate complex workflows. In a regulated FinTech I have built document workflows with LLMs and classical NLP, agentic systems with tool calling, vector knowledge stores, and guardrails, and the human-in-the-loop evaluation and observability that keep them reliable in production. I write modern Python (FastAPI, asyncio, type safety) with strong software-design fundamentals (microservices, event-driven, OOP, TDD) and ship on AWS with CI/CD and containerisation. I prototype fast, evaluate rigorously, and take features to production, translating business requirements into robust code.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Agentic AI:} agentic systems, Model Context Protocol (MCP), tool calling, vector-based knowledge stores, memory, guardrails, orchestration (LangGraph, LangChain)
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Document AI \& LLMs:} document workflows with LLMs \& classical NLP, RAG over financial PDFs, extraction \& insights, prompt engineering, fine-tuning (LoRA, BERT), embeddings
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Evaluation \& Reliability:} AI/ML evaluation frameworks, human-in-the-loop systems, monitoring \& observability, quality-of-service \& outcome metrics (``terminal impact''), drift, edge-case debugging
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Modern Python \& Design:} Python (FastAPI, asyncio, type safety), microservices, event-driven architecture, OOP, test-driven development, REST APIs
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{SDLC \& Cloud:} CI/CD, containerisation (Docker), AWS \& GCP, PostgreSQL/MongoDB, code reviews \& architecture decisions
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Built production agentic AI/LLM systems for 5+ leading investment management firms, including a FastAPI server exposing 180+ tools through the Model Context Protocol (MCP) with tool calling and guardrails.
+  \item Built document workflows with LLMs and classical NLP: RAG over financial PDFs and an autonomous agent that authors Discounted Cash Flow (DCF) models from raw documents, cutting analyst time by 70\%.
+  \item Maintained human-in-the-loop systems with AI monitoring and observability, and built evaluation frameworks (evals, quality-of-service, groundedness, drift, ``terminal impact'') to keep systems reliable.
+  \item Wrote modern Python (FastAPI, async) with strong software design (microservices, event-driven, OOP, TDD), debugging model performance and edge cases for consistent reliability.
+  \item Rapidly prototyped features, evaluated them, and shipped to production on AWS with CI/CD and containerisation, participating in code reviews and architecture decisions.
+  \item Optimised a production inference-heavy engine into a graph-based pipeline (Apache Hamilton + vectorisation) for an 85\% performance gain and 3x throughput.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Built and evaluated deep learning models (Graph Convolution Networks, GANs) over a million-row dataset, achieving a 63\% improvement in novelty score, with a reproducible preprocessing and training pipeline.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Agentic Search API (agentic + evals):} FastAPI + Elasticsearch semantic search, Qwen3 embeddings and Claude tool-calling, with a deterministic fallback for resilience; measured p95 latency and 0.76 QoS eval score. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+  \item \textbf{Spec-to-Code Agent (tool-calling agent):} autonomous ReAct agent on LangGraph and the Anthropic API that ships installable, tested packages from specs; 9/9 pass rate across a polyglot benchmark. \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+  \item \textbf{PII Detection LLMs (document NLP):} fine-tuned GPT (LoRA) and BERT to detect entities in text, deployed as reusable production artefacts; collectively 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\hfill {\color{muted}London, UK}\par
+{\itshape MSc in Data Science}\par\vspace{2pt}
+{\color{company}\bfseries C-DAC, India}\hfill {\color{muted}Pune, India}\par
+{\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\par\vspace{2pt}
+{\color{company}\bfseries University of Pune}\hfill {\color{muted}Pune, India}\par
+{\itshape B.E. in Computer Science}\par
+
+\end{document}

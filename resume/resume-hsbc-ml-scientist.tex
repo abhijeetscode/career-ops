@@ -1,0 +1,149 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Senior Machine Learning Scientist -- HSBC. London, hybrid. Job ID 54734.
+% Posted 17 Aug 2026, apply by 31 Aug 2026. Wholesale banking use cases.
+% NOTE: title says "Scientist" but the JD is overwhelmingly MLOps / LLMOps
+% PLATFORM ENGINEERING. Framing is production-AI-services engineer, and the
+% JD says so explicitly: "not just notebooks/experiments".
+% JD focus: design/build/deploy/OPERATE production-grade AI services (ML
+% and/or GenAI) that are secure, scalable, REUSABLE across Wholesale;
+% PRODUCTIONISE PoC/PoV into hardened solutions with non-functional
+% requirements (performance, resilience, cost, security) + service ownership;
+% build/maintain MLOPS/LLMOPS PIPELINES (CI/CD, automated testing,
+% packaging, PROMOTION/ROLLBACK, model/version management) for repeatable
+% releases; REUSABLE ENGINEERING ASSETS (libraries, templates, reference
+% architectures, INFRASTRUCTURE-AS-CODE patterns); OBSERVABILITY for AI
+% (logging/metrics/tracing), model performance monitoring, quality/DRIFT
+% checks with ACTIONABLE ALERTING; partner with governance/risk on control,
+% AUDITABILITY, documentation; translate business requirements to technical
+% designs + communicate trade-offs; engineering standards (code reviews,
+% design reviews, documentation) + practical COACHING.
+% Requirements: strong SWE delivering end-to-end services in production with
+% RUN/SUPPORT ownership; Python + modern practice (clean code, testing,
+% packaging, dependency management, Git workflows); AI deployment patterns
+% (Docker, Kubernetes, API serving, batch/stream inference); practical
+% MLOps; PyTorch/TensorFlow working knowledge; complex multi-layered data
+% incl. IMBALANCED; Flask/FastAPI web APIs; SQL Server/Postgres; stakeholder
+% comms; delivery discipline; degree (Masters highly preferred); SHAP /
+% explainability (desirable).
+% SOURCES: cv.md, incl. user confirmation in session (2026-08-16/18) of
+% run/support ownership (telemetry, alerting, on-call & incident response,
+% hands-on CI/CD, release promotion & rollback) and mentoring + code review
+% + patterns others adopted. Both now recorded in cv.md.
+% HONEST -- NOT claimed: KUBERNETES (no evidence in cv.md), SHAP /
+% explainability tooling, IMBALANCED-data techniques specifically, STREAM
+% inference, SQL Server (Postgres only), wholesale/institutional banking
+% domain, model risk management (SR 11-7 / SS1-23 style) governance.
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.7cm,bottom=0.6cm,left=1.4cm,right=1.4cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{0.99}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{4pt}{3pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=0.5pt,topsep=0.5pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large Senior ML Scientist \& Engineer: Production AI Services, MLOps \& Observability}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+Machine learning engineer and scientist who ships production AI services rather than notebooks, and owns them once they are live. In a regulated FinTech I have designed, built, deployed, and operated ML and GenAI services used daily by 5+ leading investment management firms, taking proofs of concept through to hardened solutions with real non-functional requirements around performance, resilience, cost, and security. I build the MLOps and LLMOps layer around them: CI/CD pipelines, automated validation, release practice covering environment promotion and rollback, observability with logging, metrics and tracing, and quality and drift checks with actionable alerting, plus on-call and incident response. I develop reusable engineering assets that cut delivery time for other teams, and I partner with stakeholders on control, auditability, and documentation. MSc Data Science, King's College London.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{MLOps \& LLMOps:} CI/CD for ML, automated testing \& validation, release management (environment promotion, deployment verification, rollback), model \& version management, lifecycle management, repeatable releases
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Observability \& Run Support:} logging, metrics \& distributed tracing (OpenTelemetry, Arize Phoenix), model performance monitoring, quality \& drift checks, actionable alerting, on-call \& incident response, service ownership
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Deployment \& Serving:} Docker \& containerisation, API-based serving (FastAPI, Flask-style REST), async \& batch inference, microservices, Terraform (infrastructure as code), AWS \& GCP (Cloud Run, IAM)
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Software Engineering:} Python (clean code, testing/TDD, packaging, dependency management), Git-based workflows, code \& design reviews, reusable libraries \& reference patterns, documentation, SQL, PostgreSQL, Elasticsearch, Redis
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{ML \& GenAI:} PyTorch, TensorFlow, scikit-learn, LLM services \& agentic systems, RAG \& semantic search, fine-tuning (LoRA, BERT), evaluation frameworks \& guardrails, ETL \& multi-source data pipelines, PII protection \& role-based access
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Designed, built, deployed, and operated production-grade ML and GenAI services for 5+ leading investment management firms, owning run and support rather than handing off at deployment.
+  \item Productionised proofs of concept into hardened services against real non-functional requirements: an 85\% performance gain and 3x throughput by rearchitecting a compute-heavy engine into a graph-based pipeline, and p95 latency around 175ms in a production retrieval service.
+  \item Built and maintained MLOps and LLMOps pipelines: CI/CD build, test and deployment workflows, automated validation, and release practice covering environment promotion, deployment verification, and rollback for repeatable releases.
+  \item Implemented observability for AI services: logging, metrics and tracing with OpenTelemetry, model and agent performance monitoring, groundedness and drift checks, and incident-triggering alerting backed by on-call response.
+  \item Developed reusable engineering assets that accelerate delivery and reduce duplication, including a production FastAPI Model Context Protocol server exposing 180+ tools as shared capabilities, plus infrastructure defined as code with Terraform.
+  \item Integrated complex, multi-source data pipelines into AI services, linking 80\% of property records across diverse datasets with geolocation enrichment to feed a model inferring missing rental values across London postcodes.
+  \item Delivered under control and auditability expectations for regulated clients (role-based access, PII protection, auditable token-redacted traces), contributed to engineering standards through code and design reviews, mentored junior engineers, and translated technical trade-offs for non-technical stakeholders.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Built and evaluated deep-learning models (Graph Convolution Networks, GANs) over a million-row clinical dataset, achieving a 63\% novelty-score improvement, with a reproducible preprocessing and training pipeline.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Agentic Enterprise Assistant:} production-shaped LLM service over grounded enterprise data with role-based access at the MCP server (Keycloak JWT), a grounding-validation gate, auditable traces, OpenTelemetry to Arize Phoenix, and Docker Compose deployment. Passed 13/13 evaluation cases. \href{https://github.com/abhijeetscode/Agentic-Enterprise-Assistant}{View on GitHub}
+  \item \textbf{Agentic Search API:} FastAPI plus Elasticsearch retrieval service with local Qwen3 embeddings, chunked ingestion, and a deterministic fallback for resilience; p95 around 175ms and a 0.76 macro QoS eval score. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+  \item \textbf{PII Detection LLMs:} fine-tuned GPT (LoRA) and BERT for personal-data detection, packaged and published as reusable production models; collectively 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\sep{\itshape MSc in Data Science}\hfill {\color{muted}London, UK}\par\vspace{1pt}
+{\color{company}\bfseries C-DAC}\sep{\itshape PG Diploma in Advanced Computing (PG-DAC)}\hfill {\color{muted}Pune, India}\par\vspace{1pt}
+{\color{company}\bfseries University of Pune}\sep{\itshape B.E. in Computer Science}\hfill {\color{muted}Pune, India}\par
+
+\end{document}

@@ -1,0 +1,134 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Staff Applied AI Engineer -- Aviva. Ref R-171874. London. Insurance
+% (regulated FS). London salary from GBP 124K + bonus. Smart working.
+% JD focus: design/build/deploy PRODUCTION AI AGENTS + multi-agent pipelines;
+% own architecture & framework selection; MEMORY strategies, orchestration
+% patterns, tool integration; EVALUATION frameworks (DeepEval, Arize Phoenix,
+% Galileo, LangSmith) for quality/safety/fairness pre-launch; CONTEXT
+% ENGINEERING (chunking, hybrid search, re-ranking, knowledge graphs,
+% dynamic prompt construction); building & consuming MCP servers; production
+% reliability + incident response; technical guidance to juniors; responsible
+% AI (FCA Consumer Duty, GDPR, internal governance).
+% Desirable: fine-tuning (Unsloth/Axolotl/TRL), voice AI (ElevenLabs,
+% Deepgram), regulated financial services.
+% STRONGEST-MATCH ANGLE (all from cv.md): built AND consumed a production
+% FastAPI MCP server (180+ tools); OpenTelemetry to ARIZE PHOENIX; hybrid
+% BM25 + semantic with reciprocal rank fusion; chunked PDF ingestion;
+% multimodal + real-time VOICE agent (ElevenLabs/Recall/Tavus); evals, QoS,
+% groundedness, drift, incident-triggering; RBAC/PII in regulated FinTech.
+% HONEST -- NOT claimed: knowledge graphs, Mem0 / long-term & semantic memory
+% architectures, DeepEval/Galileo/LangSmith, Deepgram, Unsloth/Axolotl/TRL,
+% FCA Consumer Duty ownership, line management or formal mentoring.
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.7cm,bottom=0.6cm,left=1.4cm,right=1.4cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{4pt}{3pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=1pt,topsep=1pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large Applied AI Engineer: Production Agents, Context Engineering \& Evaluation}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+Applied AI engineer who designs, builds, and operates production AI agents in regulated financial services, owning them end to end from architecture through evaluation, deployment, and reliability. I have shipped customer-facing and internal agents for 5+ leading investment management firms, including a multimodal agent with real-time voice on live calls, and I build the layers that make agents trustworthy: context pipelines with chunked ingestion, hybrid search and reciprocal rank fusion; evaluation frameworks measuring quality, groundedness, and drift with OpenTelemetry traces to Arize Phoenix; and guardrails covering role-based access, PII protection, and auditable traces. I have both built and consumed Model Context Protocol servers in production.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{LLM \& Agent Systems:} production AI agents \& multi-agent pipelines, orchestration (LangGraph, native tool-use agent loops), tool integration \& function calling, RAG, prompt \& context engineering, multimodal \& real-time voice interfaces (ElevenLabs, Recall, Tavus)
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Context Engineering:} document ingestion \& chunking, auto-classification, embeddings (local Qwen3), hybrid BM25 plus semantic search with reciprocal rank fusion, Elasticsearch, vector databases
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Evaluation \& Reliability:} evaluation frameworks \& eval suites, quality-of-service, groundedness gates, drift \& failure-mode signals, incident-triggering alerts, observability (OpenTelemetry, Arize Phoenix)
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{MCP \& Integration:} designing \& consuming Model Context Protocol servers (FastAPI, 180+ enterprise tools), REST APIs, async services
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Responsible AI \& Cloud:} role-based access (Keycloak JWT), PII detection \& redaction, auditable traces, compliance-aware engineering; AWS \& GCP, Docker, CI/CD, Python (production-grade, TDD), fine-tuning (LoRA, BERT)
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Designed and delivered production AI agents across customer-facing and operational domains for 5+ leading investment management firms, including a multimodal conversational agent handling around 100 Slack messages a day and joining live meetings with real-time voice (ElevenLabs, Recall, Tavus).
+  \item Owned architecture and framework selection for individual AI systems: orchestration patterns, tool integration methods, and deterministic fallback paths for agents that decompose queries and route to specialised tools.
+  \item Implemented evaluation frameworks measuring AI quality and safety before and after launch: agent evals, quality-of-service metrics, groundedness checks, drift and failure-mode monitoring, incident-triggering alerts, and ``terminal impact,'' an outcome metric from real client conversations.
+  \item Engineered advanced context pipelines: chunked PDF ingestion with auto-classification, embeddings, and hybrid BM25 plus semantic search with reciprocal rank fusion over large document sets, cutting analyst review time.
+  \item Built and consumed Model Context Protocol servers, exposing 180+ AI-powered tools through a production FastAPI MCP server with secure enterprise access for Claude Desktop and Glean-compatible clients.
+  \item Embedded responsible AI into everyday engineering for regulated financial clients (role-based access, PII detection and redaction, grounding gates, auditable traces), and translated technical work for business and product stakeholders.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Built and evaluated deep-learning models (Graph Convolution Networks, GANs) over a million-row dataset, achieving a 63\% novelty-score improvement.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Agentic Enterprise Assistant:} LLM agent (Claude, native tool use) over grounded data with role-based access at the MCP server (Keycloak JWT), a grounding-validation gate, and auditable token-redacted traces; hybrid BM25 plus semantic search with reciprocal rank fusion, OpenTelemetry to Arize Phoenix. Passed 13/13 evaluation cases (tool selection, grounding, access compliance). \href{https://github.com/abhijeetscode/Agentic-Enterprise-Assistant}{View on GitHub}
+  \item \textbf{Agentic Search API:} production retrieval service on FastAPI plus Elasticsearch semantic search with local Qwen3 embeddings, chunked PDF ingestion, and a deterministic fallback; p95 around 175ms and a 0.76 macro QoS eval score. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+  \item \textbf{PII Detection LLMs:} fine-tuned GPT (LoRA) and BERT to detect and protect personal data, published as reusable production models; collectively 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\sep{\itshape MSc in Data Science}\hfill {\color{muted}London, UK}\par\vspace{1pt}
+{\color{company}\bfseries C-DAC}\sep{\itshape PG Diploma in Advanced Computing (PG-DAC)}\hfill {\color{muted}Pune, India}\par\vspace{1pt}
+{\color{company}\bfseries University of Pune}\sep{\itshape B.E. in Computer Science}\hfill {\color{muted}Pune, India}\par
+
+\end{document}

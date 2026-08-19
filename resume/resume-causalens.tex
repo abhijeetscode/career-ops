@@ -1,0 +1,134 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% causaLens -- AI Engineer. London (Hammersmith), office 1-2 days/week.
+% Build & deploy enterprise-grade AI systems and "Digital Workers"
+% (autonomous agents that execute complex workflows end-to-end). Forward-
+% deployed: embed with clients, untangle workflows, translate into reliable
+% scalable agentic systems; integrate models, data, enterprise infra.
+% Scope: LLMs, multi-agent coordination, retrieval & reasoning, enterprise
+% data integration; software that automates workflows and TAKES ACTION,
+% not static outputs. Stack: Python, LLM frameworks, orchestration, cloud
+% (AWS/GCP/Azure).
+% Bring: production LLMs, RAG pipelines, MCPs, agentic workflows; forward-
+% deployed client-first mindset (technical + business stakeholders); strong
+% delivery (business problem -> scalable AI system); measurable impact.
+% NOTE: honest tailoring -- candidate leads on agentic systems (MCP server
+% 180+ tools, LangGraph, multi-step agents), RAG/retrieval, enterprise
+% integration, client-facing delivery for 5+ investment firms, agents that
+% take action (DCF authoring agent), evals, Python + AWS/GCP, measurable
+% impact (70%, 85%/3x, 67K). Honest: Azure not claimed (AWS+GCP stated).
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.7cm,bottom=0.7cm,left=1.4cm,right=1.4cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=2pt,topsep=2pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large AI Engineer: Agentic Systems, LLMs \& Forward-Deployed Delivery}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+AI engineer who builds and deploys enterprise-grade agentic systems that automate workflows and take action, not static outputs. Embedded with clients at an early-stage FinTech, I untangle complex workflows and translate them into reliable, scalable systems spanning LLMs, multi-agent coordination, retrieval and reasoning, and enterprise data integration. I own delivery end to end, from concept to production, work directly with both technical teams and business stakeholders, and hold myself to measurable impact. Strong Python with modern LLM frameworks, orchestration, MCP, and cloud (AWS and GCP).
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Agentic AI \& LLMs:} multi-agent coordination, orchestration (LangGraph, LangChain), RAG, retrieval \& reasoning, MCP servers, tool use, prompt engineering, fine-tuning (LoRA, BERT)
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Forward-Deployed Delivery:} client-embedded delivery, translating business workflows into scalable AI systems, technical \& business stakeholder collaboration, end-to-end ownership (concept to production)
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Enterprise Integration:} enterprise data integration, REST APIs, FastAPI, microservices, event-driven patterns, RabbitMQ, PostgreSQL/MongoDB, vector databases
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Evaluation \& Reliability:} evals \& quality-of-service metrics, outcome metrics (``terminal impact''), groundedness \& drift, monitoring, incident alerts
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Cloud \& Engineering:} Python, AWS \& GCP, Docker, CI/CD, TypeScript, testing/TDD, performance \& cost optimisation
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Embedded with enterprise clients to untangle complex workflows and translate them into reliable agentic systems, delivering for 5+ leading investment management firms.
+  \item Shipped an autonomous agent that authors Discounted Cash Flow (DCF) models from raw financial data, automating a workflow and taking action end to end, cutting analyst modeling time by 70\%.
+  \item Built reusable platform infrastructure, including a production FastAPI server exposing 180+ AI-powered tools through the Model Context Protocol (MCP) with secure enterprise access.
+  \item Designed multi-agent and RAG systems spanning retrieval, reasoning, and enterprise data integration, owning delivery from concept through to production deployment.
+  \item Made systems measurably reliable with evals, quality-of-service metrics, groundedness and drift signals, and ``terminal impact,'' an outcome metric for whether users leave a dialogue satisfied.
+  \item Optimised a production inference-heavy engine into a graph-based pipeline (Apache Hamilton + vectorisation) for an 85\% performance gain and 3x throughput on AWS and GCP.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Built and evaluated deep learning models (Graph Convolution Networks, GANs) over a million-row dataset, achieving a 63\% improvement in novelty score, with a reproducible preprocessing and training pipeline.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Spec-to-Code Agent (agentic, takes action):} autonomous ReAct agent on LangGraph and the Anthropic API that ships installable, tested packages from specs; 9/9 pass rate across a polyglot benchmark. \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+  \item \textbf{Agentic Search API (retrieval \& reasoning):} FastAPI + Elasticsearch semantic search, Qwen3 embeddings and Claude tool-calling, with a deterministic fallback for resilience; measured p95 latency and 0.76 QoS eval score. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+  \item \textbf{PII Detection LLMs (open-source):} fine-tuned GPT (LoRA) and BERT, deployed as reusable production artefacts; collectively 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\hfill {\color{muted}London, UK}\par
+{\itshape MSc in Data Science}\par\vspace{2pt}
+{\color{company}\bfseries C-DAC, India}\hfill {\color{muted}Pune, India}\par
+{\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\par\vspace{2pt}
+{\color{company}\bfseries University of Pune}\hfill {\color{muted}Pune, India}\par
+{\itshape B.E. in Computer Science}\par
+
+\end{document}

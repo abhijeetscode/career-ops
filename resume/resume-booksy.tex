@@ -1,0 +1,109 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Booksy -- Senior Data Scientist (remote). Tailored resume.
+% Framing: end-to-end production ML, search & ranking, behavioural data, experimentation, NLP.
+% Fonts: Source Sans Pro. Accent: teal + purple. Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}
+\usepackage[a4paper,top=1.1cm,bottom=1.0cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}
+\definecolor{company}{HTML}{6C2BB3}
+\definecolor{muted}{HTML}{555555}
+
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{7pt}{4pt}
+
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=1pt,topsep=1pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large Senior Data Scientist: Production ML, Search \& Ranking, Behavioural Modelling}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+Data scientist and ML engineer who builds and owns customer-facing ML features end to end, from shaping ambiguous product ideas to deployed, monitored systems measured against business outcomes. I have built search and ranking with embedding-based retrieval, worked with behavioural and customer data, and shipped ML into production for 5+ enterprise clients, with the experimentation and evals to prove impact. Strong Python and SQL, comfortable across modelling and data preparation, with deep NLP and LLM experience. MSc Data Science (King's College London).
+
+%======================= COMPETENCIES =======================
+\section{Core Strengths}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Production ML (end to end):} ambiguous problem to deployed, monitored models measured against business KPIs; experimentation \& evals
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Search, Ranking \& Personalisation:} embedding-based retrieval, hybrid semantic + lexical ranking, dual-encoder similarity, reranking
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Behavioural \& Customer Data:} behavioural outcome metrics from real usage, predictive modelling, feature engineering
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Data \& Tools:} Python, SQL, ETL \& data pipelines, PostgreSQL, PyTorch, scikit-learn; AWS, Docker; NLP \& LLMs
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Built and owned customer-facing ML features end to end for 5+ enterprise clients, from ambiguous product ideas through modelling and experimentation to deployed, monitored production systems.
+  \item Built search and ranking systems with embedding-based retrieval, hybrid lexical and semantic ranking, and reranking, served at low latency (p95 around 175ms).
+  \item Worked with behavioural and customer data: defined "terminal impact", a behavioural outcome metric that classifies how users exit a conversation, computed from real usage to measure engagement rather than task completion.
+  \item Built ETL and data pipelines and predictive models over large, messy datasets, including one inferring missing values across property data to estimate rent per square foot.
+  \item Measured models against business outcomes, cutting analyst time by 70\% with one automation and improving a modelling engine's performance by 85\%, with evals and monitoring in production.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Developed a deep learning model using Graph Convolution Networks and GANs for drug discovery, achieving a 63\% improvement in the novelty score of generated structures, over a preprocessing pipeline built for a million-row clinical dataset.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Text-to-Image Search:} CLIP-style dual-encoder architecture for multimodal retrieval, matching natural-language queries to images through a shared embedding space, the same embedding-and-ranking family that powers recommendation and personalisation. \href{https://github.com/abhijeetscode/text-to-image-search}{View on GitHub}
+  \item \textbf{Agentic Search API:} production search and retrieval service (FastAPI, PostgreSQL, Elasticsearch) with hybrid lexical and semantic ranking and local Qwen3 embeddings. Achieves p95 around 175ms retrieval and a 0.76 macro QoS score. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+  \item \textbf{PII Detection LLMs:} fine-tuned GPT (with LoRA) and BERT for Personally Identifiable Information detection; published models collectively reaching 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+\entry{King's College London}{}{MSc in Data Science}{London, UK}
+\vspace{-3pt}
+\entry{C-DAC, India}{}{Post Graduate Diploma in Advanced Computing (PG-DAC)}{Pune, India}
+\vspace{-3pt}
+\entry{University of Pune}{}{B.E. in Computer Science}{Pune, India}
+
+\end{document}

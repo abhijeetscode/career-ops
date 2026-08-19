@@ -1,0 +1,142 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Senior AI/ML Scientist -- Quilter (AI Centre of Excellence, COO).
+% London / Southampton. Wealth management / financial services (regulated).
+% JD focus: end-to-end traditional + GenAI ML (discovery -> deploy);
+% RAG / GraphRAG pipeline design + evaluation (chunking, vectorization,
+% retriever-reranker, query retrieval); model evaluation + prompt eng
+% (precision/recall/F, LLM-as-a-Judge, ROUGE/BERTScore, hallucination
+% detection); Transformer-based deep learning; model tracing/observability
+% for LLMs in prod; SWE best practice (version control, testing, CI/CD);
+% Python (NumPy/Pandas/scikit-learn), PyTorch, Hugging Face, LangChain,
+% LangGraph, LlamaIndex; AWS/Azure, FastAPI, Docker; research-to-production;
+% experimental design + reproducible prototypes; financial-services domain.
+% HONEST TAILORING -- candidate leads on: RAG + retrieval pipelines (hybrid
+% BM25 + semantic, RRF, retriever-reranker, chunking, vector DBs) delivered
+% in FinTech/wealth-management context; LLM evaluation + observability
+% (groundedness, hallucination gate, QoS, OpenTelemetry -> Arize Phoenix);
+% deep-learning NLP + IR + GenAI; Transformer architecture depth (built one
+% from scratch); MSc Data Science + KCL deep-learning research (satisfies
+% advanced degree + research-to-production track).
+% NOT claimed (real gaps, left out to stay truthful): Databricks; formal
+% ontology/knowledge-base authoring; production "GraphRAG" (represented via
+% real graph-ML: GCN + graph-based modelling engine, framed as adjacent, not
+% as GraphRAG). Azure carried forward as working knowledge per candidate's
+% direct statement (2026-07-28), not a deep production claim. Named eval
+% metrics used only where truthful; LLM-as-a-Judge shown as the candidate's
+% real LLM-based outcome scoring (QoS / terminal impact).
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.8cm,bottom=0.7cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=2pt,topsep=2pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large Senior AI/ML Scientist: GenAI, RAG \& Retrieval, Model Evaluation}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+AI/ML scientist who takes solutions from research to production across deep-learning NLP, information retrieval, and Generative AI, delivered reliably in regulated financial services. As an early-stage hire at a FinTech, I have designed and shipped RAG and retrieval pipelines, agentic LLM systems, and traditional ML for investment-management and wealth clients, with rigorous evaluation and observability built in. I design experiments, formulate hypotheses, benchmark models, and build reproducible prototypes, across classical metrics (precision, recall, F-score) and GenAI evaluation (groundedness, hallucination detection, LLM-based scoring). Strong in Python (NumPy, Pandas, scikit-learn), PyTorch and Hugging Face, and modern GenAI libraries (LangChain, LangGraph, LlamaIndex), on AWS and Azure with FastAPI and Docker. Open-source proof: a wealth-management retrieval service scoring 0.76 macro QoS, a coding agent at 9/9 on a polyglot benchmark, and fine-tuned NLP models with 67K+ Hugging Face downloads. MSc Data Science and deep-learning research at King's College London.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{AI/ML \& GenAI:} LLMs, agents, Transformer-based deep learning, NLP, fine-tuning (LoRA, BERT), PyTorch, Hugging Face, scikit-learn, NumPy, Pandas; LangChain, LangGraph, LlamaIndex
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{RAG \& Retrieval:} RAG pipeline design, data chunking/splitting, vectorization \& embeddings, vector databases, hybrid BM25 + semantic search, reciprocal rank fusion, retriever-reranker, query retrieval; graph-based ML (Graph Convolution Networks, graph-structured engines)
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Evaluation \& Experimentation:} experimental design, hypothesis formulation, benchmarking, precision/recall/F-score, groundedness \& hallucination detection, LLM-based evaluation (LLM-as-a-Judge style), reproducible prototyping
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{MLOps \& Observability:} model tracing \& observability for LLMs in production (OpenTelemetry, Arize Phoenix), CI/CD, testing, version control, evaluation pipelines
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Cloud \& Backend:} AWS, Azure, FastAPI, Docker, Python (production-grade, TDD), PostgreSQL, Elasticsearch; technical \& business stakeholder collaboration
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Built and deployed a Retrieval-Augmented Generation system over financial documents (LLMs, embeddings, vector database), letting analysts query multiple documents in natural language and cutting manual review time.
+  \item Designed evaluation and observability for LLMs in production: agent evals, Quality-of-Service metrics, groundedness and failure-mode monitoring, and incident triggers, plus a ``terminal impact'' outcome metric computed from real client conversations to measure whether dialogues actually helped users.
+  \item Delivered GenAI and agentic systems for 5+ leading investment-management firms, including a FastAPI MCP server exposing 180+ tools with role-based access, LangGraph multi-step agents, and a multimodal conversational persona used across chat and live meetings.
+  \item Core engineer on an \href{https://gtr.ukri.org/projects?ref=10022996}{Innovate UK-funded R\&D project} (\pounds205,895 grant): built an ML data platform linking 80\% of property records and a model inferring missing rent-per-square-foot values; rearchitected the financial-modelling engine into a graph-based system (Apache Hamilton, vectorization) for an 85\% performance gain.
+  \item Developed and deployed an autonomous agent that generates Discounted Cash Flow models from raw financial data, reducing analyst modelling time by 70\%.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Built deep-learning models (Graph Convolution Networks and GANs) over a million-row dataset for drug discovery, achieving a 63\% improvement in the novelty score of generated structures, and designed the data-preprocessing and experimentation pipeline.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Agentic Search API (wealth-management retrieval \& evaluation):} cross-domain search for wealth-management advisors; an LLM decomposes queries and routes to lexical/semantic tools with a deterministic fallback for resilience. Local Qwen3 embeddings, hybrid BM25 + semantic search with reciprocal rank fusion, PDF ingestion with chunking; p95 $\approx$175ms retrieval and 0.76 macro QoS across mixed query types. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+  \item \textbf{Agentic Enterprise Assistant (RAG + grounding \& evaluation):} LLM agent (Claude, native tool use) over grounded data with a grounding-validation gate for hallucination control, RBAC at the MCP server, Elasticsearch hybrid search (Qwen3, reciprocal rank fusion), and OpenTelemetry to Arize Phoenix; passed 13/13 evaluation cases. \href{https://github.com/abhijeetscode/Agentic-Enterprise-Assistant}{View on GitHub}
+  \item \textbf{PII Detection LLMs (NLP fine-tuning):} fine-tuned GPT (LoRA) and BERT to detect and protect personal data, published as reusable production models with 67K+ downloads on Hugging Face. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+  \item \textbf{Transformer from Scratch in Rust (architecture depth):} decoder-only, GPT-style transformer built from first principles (multi-head causal self-attention, pre-norm residual blocks, full training loop); default config mirrors GPT-2 small. \href{https://github.com/abhijeetscode/transformer-rust}{View on GitHub}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\hfill {\color{muted}London, UK}\par
+{\itshape MSc in Data Science}\par\vspace{2pt}
+{\color{company}\bfseries C-DAC, India}\hfill {\color{muted}Pune, India}\par
+{\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\par\vspace{2pt}
+{\color{company}\bfseries University of Pune}\hfill {\color{muted}Pune, India}\par
+{\itshape B.E. in Computer Science}\par
+
+\end{document}

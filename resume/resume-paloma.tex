@@ -1,0 +1,123 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Paloma Health CV -- Abhijeet Lokhande. AI Engineer (London Bridge, hybrid).
+% Paloma = mission-driven health startup cutting NHS autism/ADHD assessment
+% waits for children; founding AI-team hire. JD is EVALUATION-FIRST: build
+% and run evaluation pipelines, gold/regression datasets, LLM-as-judge,
+% synthetic eval data, structured error analysis, human-in-the-loop with
+% clinicians, version every prompt/pipeline change and measure effect before
+% it ships; champion evaluation-driven development; build agentic AI in a
+% clinical, regulated, safety-first setting. Desirables the candidate hits:
+% Arize Phoenix (real), MCP + tools, RAG grounding, LangGraph, GCP, health/
+% clinical data. Honest: only cv.md facts + user-confirmed GCP; no NHS/CQC
+% product claims. Font: Source Sans Pro. Teal + purple. Compile: pdflatex.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.7cm,bottom=0.5cm,left=1.4cm,right=1.4cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{3pt}{2pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=1pt,topsep=1pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large AI Engineer: Evaluation-Driven LLM Products \& Agents}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+AI engineer who builds LLM products and owns them through the full loop of build, evaluate, and improve, not just prompt experiments. Evaluation is how I work: I build eval sets and gold/regression datasets, score and validate outputs, run structured failure analysis, and version every prompt and pipeline change so I can measure its effect before anything ships. At a FinTech I have taken agentic products to real users (5+ leading investment firms) with tool use, RAG grounding, and observability (OpenTelemetry, Arize Phoenix), all in clean, typed, tested Python on GCP and AWS. I have a healthcare research background from King's College London, where I built models over clinical data, and I care about getting things right in a setting where safety matters. I translate technical trade-offs clearly for non-technical colleagues.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{LLM evaluation:} evaluation pipelines, gold/regression datasets, output scoring \& automated groundedness validation (LLM-as-judge style), structured error \& failure analysis, human-in-the-loop review, prompt \& pipeline versioning, ship-gating metrics
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Agentic AI \& LLMs:} LLM-powered products \& agents, prompt engineering, tool use \& function calling (MCP), RAG grounding, orchestration (LangGraph, LangChain, LlamaIndex), fine-tuning (LoRA)
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Observability:} tracing \& monitoring (OpenTelemetry, Arize Phoenix), drift detection, quality-of-service \& outcome metrics, incident alerts
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Engineering:} clean, typed, tested Python (TDD), FastAPI, REST APIs, SQL (PostgreSQL, MongoDB), Docker, CI/CD, GCP (Cloud Run, GCS), AWS, Git
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Domain \& communication:} clinical/health data, data privacy (PII), auditable traces \& regulatory-minded documentation, clear cross-functional communication
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Owned LLM features through the full build, evaluate, and improve loop for 5+ leading investment firms, shipping to real users rather than experimenting with prompts.
+  \item Built and ran the evaluation that gates AI outputs: eval sets and output scoring, an automated groundedness-validation check on every answer, and structured regression and failure analysis to decide what ships.
+  \item Versioned prompts and pipeline changes and measured the effect of each change before release, and defined ``terminal impact,'' an outcome metric computed from real user conversations to track whether interactions actually help.
+  \item Built agentic products with tool use through an MCP server exposing 180+ tools, RAG grounding, and full observability (OpenTelemetry to Arize Phoenix), in typed, tested Python on GCP and AWS.
+  \item Worked as an early-stage hire with high agency, translating technical trade-offs for non-technical colleagues, including an autonomous agent that cut analyst modeling time 70\%.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Built deep learning models over clinical data for drug discovery (63\% higher structure novelty), backed by a reproducible preprocessing pipeline that ensured accuracy and completeness across a million-row clinical dataset.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Agentic Enterprise Assistant:} LLM agent over grounded data with RAG, role-based access at an MCP server (Keycloak JWT), an automated grounding-validation gate on every answer, and auditable traces with OpenTelemetry to Arize Phoenix. Passed 13/13 evaluation cases. \href{https://github.com/abhijeetscode/Agentic-Enterprise-Assistant}{View on GitHub}
+  \item \textbf{Agentic Search API:} production retrieval service (FastAPI, Elasticsearch, Qwen3 embeddings, Claude tool-calling) with a deterministic fallback when the LLM fails, evaluated at a 0.76 macro quality-of-service score and p95 around 175ms. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+  \item \textbf{Spec-to-Code Agent:} autonomous ReAct agent (LangGraph, Anthropic API) that ships installable, tested packages from plain-language specs, gated by an evaluation harness at a 9/9 pass rate across a polyglot benchmark. \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+  \item \textbf{PII Detection LLMs:} fine-tuned GPT (LoRA) and BERT to detect personally identifiable information, a privacy and data-protection task relevant to clinical data; shipped as reusable artefacts with 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London} \sep {\itshape MSc in Data Science}\hfill {\color{muted}London, UK}\par\vspace{1pt}
+{\color{company}\bfseries C-DAC, India} \sep {\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\hfill {\color{muted}Pune, India}\par\vspace{1pt}
+{\color{company}\bfseries University of Pune} \sep {\itshape B.E. in Computer Science}\hfill {\color{muted}Pune, India}\par
+
+\end{document}

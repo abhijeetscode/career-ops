@@ -1,0 +1,140 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 9fin -- Senior AI Engineer. Data & AI team. London, hybrid. AI platform
+% for global debt/credit markets (finance + legal docs, PDFs, workflows).
+% Scale-up, 300+ institutions.
+% Scope: design/build generative AI apps for complex financial & legal
+% workflows; drive end-to-end model dev lifecycle (reproducible research,
+% managed delivery/deployment); collaborate cross-functionally + mentor;
+% scope bets in internal-startup env; apply latest research fail-fast;
+% champion AI adoption across org.
+% Want: strong Python for production; DEEP expertise in ONE of {information
+% retrieval (chunking, finetuning embeddings, re-rankers); entity/relationship
+% extraction/resolution; knowledge graphs / graphRAG; recommendation/ranking;
+% tabular ML (GBDTs); statistical/predictive modelling} + familiarity w/
+% others; deep GenAI + agentic frameworks understanding; full model
+% lifecycle (experimentation/training/testing/monitoring/deployment) --
+% "we love our evals!"; product focus (end-to-end user impact); AWS AI infra.
+% NOTE: honest tailoring -- candidate leads on GenAI apps for financial docs
+% (RAG over financial PDFs, 5+ firms), information retrieval (chunking/
+% embeddings/semantic search in search-agent), entity extraction (PII models
+% = entity recognition), full model lifecycle + evals (evals/QoS/terminal
+% impact/groundedness/drift), agentic frameworks (LangGraph/MCP), predictive
+% & tabular ML (property value model, GBDT/XGBoost), Python production, AWS,
+% product focus. Familiarity-not-deep flagged internally: knowledge graphs
+% (GCN adjacent), re-rankers, recommendation (not claimed as deep).
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.7cm,bottom=0.7cm,left=1.4cm,right=1.4cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=2pt,topsep=2pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large Senior AI Engineer: GenAI, Retrieval \& Evaluation for Finance}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+Senior AI engineer who builds generative AI applications for complex financial workflows and drives them through the full model lifecycle. In a regulated FinTech I have designed GenAI and agentic systems over financial documents, owning experimentation, training, testing, monitoring, and deployment, with a data-centric, evaluation-first mindset. My depth is in information retrieval and GenAI (chunking, embeddings, RAG, semantic search) with strong familiarity across entity extraction, predictive and tabular ML, and agentic frameworks. I write production-ready Python on AWS, keep a sharp product focus on end-to-end user impact, and enjoy pushing AI adoption across an organisation.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Information Retrieval \& GenAI:} RAG, chunking strategies, embeddings \& fine-tuning, semantic search (Elasticsearch), vector databases, LLMs, prompt engineering
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Model Lifecycle \& Evals:} experimentation, training, testing, monitoring, deployment, reproducible research, evaluation frameworks, quality-of-service metrics, ``terminal impact,'' drift
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Agentic \& Extraction:} agentic frameworks (LangGraph, LangChain), tool use, Model Context Protocol (MCP), entity \& relationship extraction, NLP
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{ML \& Modelling:} predictive \& statistical modelling, tabular ML (GBDTs, XGBoost), deep learning (PyTorch, TensorFlow), fine-tuning (LoRA, BERT), graph neural networks
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Engineering \& Cloud:} Python (production), FastAPI, SQL, data pipelines, AWS AI infrastructure, Docker, CI/CD, PostgreSQL/MongoDB
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Designed and built generative AI applications for complex financial workflows, used by 5+ leading investment management firms, including RAG over financial documents and PDFs.
+  \item Drove the end-to-end model lifecycle with reproducible research and managed deployment: experimentation, training, testing, monitoring, and a data-centric evaluation culture (evals, quality-of-service, groundedness, drift, ``terminal impact'').
+  \item Built information-retrieval systems (chunking, embeddings, semantic search) and entity-extraction models, and applied predictive and tabular ML (a value-inference model over large datasets).
+  \item Built agentic systems and platform infrastructure, including a FastAPI server exposing 180+ tools through the Model Context Protocol (MCP) with secure enterprise access, on AWS.
+  \item Kept a strong product focus on end-to-end user impact, scoped bets in a fast-paced internal-startup environment, and pushed AI adoption across teams while mentoring colleagues.
+  \item Optimised a production inference-heavy engine into a graph-based pipeline (Apache Hamilton + vectorisation) for an 85\% performance gain and 3x throughput.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Built and evaluated deep learning models (Graph Convolution Networks, GANs) over a million-row dataset, achieving a 63\% improvement in novelty score, with a reproducible preprocessing and training pipeline.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Agentic Search API (information retrieval + evals):} FastAPI + Elasticsearch semantic search, Qwen3 embeddings and Claude tool-calling, with a deterministic fallback for resilience; measured p95 latency and 0.76 QoS eval score. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+  \item \textbf{PII Detection LLMs (entity extraction):} fine-tuned GPT (LoRA) and BERT to detect and classify entities in text, deployed as reusable production artefacts; collectively 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+  \item \textbf{Spec-to-Code Agent (agentic frameworks):} autonomous ReAct agent on LangGraph and the Anthropic API that ships installable, tested packages from specs; 9/9 pass rate across a polyglot benchmark. \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\hfill {\color{muted}London, UK}\par
+{\itshape MSc in Data Science}\par\vspace{2pt}
+{\color{company}\bfseries C-DAC, India}\hfill {\color{muted}Pune, India}\par
+{\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\par\vspace{2pt}
+{\color{company}\bfseries University of Pune}\hfill {\color{muted}Pune, India}\par
+{\itshape B.E. in Computer Science}\par
+
+\end{document}

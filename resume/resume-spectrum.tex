@@ -1,0 +1,109 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Spectrum (JetBrains incubator) -- Founding ML Engineer. Tailored resume.
+% Framing: LLM systems, agentic knowledge retrieval/RAG, developer tooling / code AI, MLOps.
+% Fonts: Source Sans Pro. Accent: teal + purple. Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}
+\usepackage[a4paper,top=1.1cm,bottom=1.0cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}
+\definecolor{company}{HTML}{6C2BB3}
+\definecolor{muted}{HTML}{555555}
+
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{7pt}{4pt}
+
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=1pt,topsep=1pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large ML Engineer: LLM Systems, Agentic Knowledge Retrieval \& Developer Tooling}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+ML engineer who owns the LLM stack end to end and has shaped an AI product from the early stage. I design LLM pipelines and agents for knowledge extraction, retrieval, and reasoning over enterprise code, docs, and issue data, with prompt engineering, model selection, fine-tuning, and evals, and I deploy them at scale on the Anthropic API. I go deep on fundamentals, including a GPT-style transformer written from scratch, and enjoy zero-to-one product building. Strong Python, some Kotlin. MSc Data Science (King's College London); 67K+ HuggingFace downloads across open models I have fine-tuned and released.
+
+%======================= COMPETENCIES =======================
+\section{Core Strengths}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{LLM Systems:} model architectures, fine-tuning (LoRA), prompt engineering, LLM pipeline design \& evaluation, model selection, inference optimisation
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Agentic RAG \& Knowledge Retrieval:} knowledge extraction, context-retrieval agents, vector databases, hybrid retrieval, reasoning over code, docs \& issues
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Developer Tooling \& Code AI:} spec-to-code agents, code generation, from-scratch transformers; Python, Rust, some Kotlin
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{MLOps \& Zero-to-One:} evals, observability (OpenTelemetry, Arize Phoenix), experiment tracking; early-stage AI stack ownership
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Shaped and owned the AI/ML stack as an early-stage hire, from architecture and model selection through to production for 5+ enterprise clients.
+  \item Built agents for knowledge extraction and context retrieval over enterprise customer and issue data, with RAG (hybrid lexical + semantic search), tool use, and grounding.
+  \item Designed LLM pipelines with prompt engineering, model selection, and evals, and deployed LLM apps at scale on the Anthropic API, including an MCP server exposing 180+ tools.
+  \item Established MLOps practices: evals, Quality of Service metrics, observability (OpenTelemetry to Arize Phoenix), and incident-triggering monitoring.
+  \item Optimised inference for latency and cost (local embeddings, p95 around 175ms) and improved a modelling engine's performance by 85\% through a graph-based rearchitecture.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Developed a deep learning model using Graph Convolution Networks and GANs for drug discovery (graph-based reasoning over molecular structures), achieving a 63\% improvement in the novelty score of generated structures.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Spec-to-Code Agent:} autonomous ReAct-based coding agent (LangGraph + Anthropic API) that keeps specification and code aligned, generating installable, tested packages from plain-language specs; 9/9 pass rate across a polyglot benchmark (Python, Go, Rust, Java, JS). \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+  \item \textbf{Agentic Enterprise Assistant:} agent that extracts and retrieves knowledge from grounded customer and issue data, with RBAC at an MCP server, a grounding-validation gate, and auditable traces; hybrid BM25 + semantic search over Elasticsearch; OpenTelemetry to Arize Phoenix. Passed 13/13 evaluation cases. \href{https://github.com/abhijeetscode/Agentic-Enterprise-Assistant}{View on GitHub}
+  \item \textbf{Transformer from Scratch in Rust:} GPT-style decoder-only transformer built from first principles (multi-head causal self-attention, pre-norm residual blocks, full training loop with SafeTensors checkpointing) using the Candle framework with Metal GPU acceleration. \href{https://github.com/abhijeetscode/transformer-rust}{View on GitHub}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+\entry{King's College London}{}{MSc in Data Science}{London, UK}
+\vspace{-3pt}
+\entry{C-DAC, India}{}{Post Graduate Diploma in Advanced Computing (PG-DAC)}{Pune, India}
+\vspace{-3pt}
+\entry{University of Pune}{}{B.E. in Computer Science}{Pune, India}
+
+\end{document}

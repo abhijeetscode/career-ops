@@ -1,0 +1,140 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% On (Swiss sportswear brand) -- Agentic AI Platform Engineer. London.
+% Newly established AI & ML Platform team (Data & AI Org). Mature scalability,
+% observability, governance of the AI platform; build blueprint for AI at
+% scale.
+% Mission: build/operate agentic infra (evaluation frameworks, routing,
+% gateways) reliable/secure/observable for internal + customer-facing
+% autonomous use cases; empower product teams w/ tooling + arch guidance;
+% AI & ML convergence (LLMOps + MLOps -> unified hybrid ecosystem); navigate
+% ambiguity + champion standards.
+% Your story: backend/platform/data eng background, pref MLOps/ML Platform.
+% Mid: 3+ yrs SWE + 1+ yr production agentic AI/LLM components. Senior: 5+.
+% Deep agentic + cloud (GCP preferred); vector/graph DBs, semantic caches,
+% LLM orchestration gateways, MCP integration; observability & evals
+% (LangSmith/LangFuse); governance vs velocity; zero-to-one; low-ego comms.
+% NOTE honest tailoring -- candidate leads on production agentic AI/LLM
+% components (MCP server 180+ tools, agent orchestration), evaluation
+% frameworks + observability (evals/QoS/terminal impact/groundedness/drift/
+% incident alerts), LLM orchestration + tool routing, MCP integration, vector
+% DBs + semantic search, MLOps (CI/CD, monitoring, versioning), zero-to-one
+% early-stage, governance in regulated FinTech, stakeholder partnership. Gaps
+% NOT faked: GCP preferred (AWS+GCP stated), graph DBs (vector yes, graph
+% not), LangSmith/LangFuse by name (own eval/observability stack instead);
+% dedicated platform-eng depth lighter than a pure infra hire. Mid track fit.
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.7cm,bottom=0.7cm,left=1.4cm,right=1.4cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=2pt,topsep=2pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large Agentic AI Platform Engineer: Evals, Observability \& MCP}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+Engineer who builds and operates production-grade agentic AI infrastructure: evaluation frameworks, LLM orchestration, tool routing, and the observability that keeps autonomous systems reliable, secure, and governable. As an early-stage hire I have taken agentic components far beyond the prototype phase, integrating tools through the Model Context Protocol (MCP) and grounding them in vector search, while acting as a trusted partner to product teams adopting AI. I bring a curiosity for how LLMOps and traditional MLOps converge, balance delivery velocity with safety, and thrive on ambiguous zero-to-one infrastructure challenges.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Agentic Infrastructure:} agent orchestration, LLM gateways \& tool routing, Model Context Protocol (MCP) integration, agentic frameworks (LangGraph, LangChain), cognitive architectures
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Evaluation \& Observability:} evaluation frameworks, agent performance/quality/cost monitoring, quality-of-service \& outcome metrics (``terminal impact''), groundedness, drift, incident-triggering alerts
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Platform \& MLOps:} MLOps \& LLMOps, CI/CD, model \& environment versioning, scalable APIs (FastAPI), reliability \& security, governance vs velocity
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Data \& Backend:} vector databases, semantic caching \& search, PostgreSQL/MongoDB, data pipelines, Python, backend \& data engineering
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Cloud \& ML:} GCP \& AWS, Docker, fine-tuning (LoRA, BERT), PyTorch, TensorFlow, RAG, embeddings
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Built and operated production-grade agentic infrastructure, including a FastAPI server exposing 180+ tools through the Model Context Protocol (MCP) with secure, observable access, used by 5+ leading investment management firms.
+  \item Built evaluation and observability frameworks to monitor agent performance, quality, and cost: evals, quality-of-service metrics, groundedness and drift signals, and incident-triggering alerts.
+  \item Implemented LLM orchestration and tool routing grounded in vector search, taking agentic components far beyond prototype into reliable production.
+  \item Acted as a trusted partner to teams adopting AI, providing tooling and architectural guidance, and establishing engineering standards across the org.
+  \item Balanced velocity with safety and governance in a regulated environment, and worked across LLMOps and traditional MLOps (CI/CD, versioning, monitoring).
+  \item Optimised a production inference-heavy engine into a graph-based pipeline (Apache Hamilton + vectorisation) for an 85\% performance gain and 3x throughput.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Built and evaluated deep learning models (Graph Convolution Networks, GANs) over a million-row dataset, achieving a 63\% improvement in novelty score, with a reproducible preprocessing and training pipeline.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Agentic Enterprise Assistant (agentic platform + governance):} LLM agent (Claude, native tool use) over grounded data with the MCP server as the authoritative RBAC boundary (Keycloak JWT), a grounding-validation gate, hybrid BM25 + semantic search, and OpenTelemetry observability; passed 13/13 evals (tool selection, grounding, RBAC). \href{https://github.com/abhijeetscode/Agentic-Enterprise-Assistant}{View on GitHub}
+  \item \textbf{Agentic Search API (gateway + evals + observability):} FastAPI + Elasticsearch semantic search, Qwen3 embeddings and Claude tool-calling, with a deterministic fallback for resilience; measured p95 latency and 0.76 QoS eval score. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+  \item \textbf{PII Detection LLMs (governance \& privacy):} fine-tuned GPT (LoRA) and BERT, deployed as reusable production artefacts; collectively 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\hfill {\color{muted}London, UK}\par
+{\itshape MSc in Data Science}\par\vspace{2pt}
+{\color{company}\bfseries C-DAC, India}\hfill {\color{muted}Pune, India}\par
+{\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\par\vspace{2pt}
+{\color{company}\bfseries University of Pune}\hfill {\color{muted}Pune, India}\par
+{\itshape B.E. in Computer Science}\par
+
+\end{document}

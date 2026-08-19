@@ -1,0 +1,137 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Staff Applied AI Engineer -- Aviva. London. Insurance (regulated). ~£130K.
+% IC path (NOT line management). Applied AI Engineering capability: design/
+% build/operate production-grade AI for measurable business + customer
+% outcomes; establish shared patterns, tooling, standards for safe consistent
+% AI delivery org-wide. Own applied AI end to end; accountable for technical
+% quality + reliability; define engineering practices other teams adopt;
+% shape technical direction; define what "good" looks like at scale.
+% Skills: strong Python + production-grade systems delivery/operation;
+% building + owning applied AI / LLM systems in live envs; system-level
+% architecture/design decisions (customer value vs delivery speed vs risk);
+% evaluation approaches clarifying quality/safety/correctness pre+post deploy;
+% regulated environments, responsible AI + security + compliance in everyday
+% engineering; raising engineering standards across teams.
+% HONEST TAILORING -- candidate leads on: owning applied AI/LLM systems in
+% production for 5+ firms, Python production-grade, system architecture
+% decisions (value/speed/risk, 85% rearchitecture), evaluation (quality/
+% safety/correctness pre+post deploy), responsible AI + security + compliance
+% (RBAC, PII, guardrails, auditable traces) for regulated financial clients,
+% reusable patterns/tooling (MCP 180+), engineering standards via code review.
+% IC role -> no line-management overclaim needed. NOT claimed: insurance
+% domain (regulated financial services bridge only).
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.8cm,bottom=0.7cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=2pt,topsep=2pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large Applied AI Engineer: Production LLM Systems, Evaluation \& Responsible AI at Scale}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+Applied AI engineer on the individual-contributor path who owns production AI systems end to end and defines what good looks like at scale. As an early-stage hire at a FinTech, I have built and operated applied AI and LLM-powered systems in live environments for 5+ leading investment management firms, accountable for technical quality and reliability. I make system-level architecture decisions that balance customer value, delivery speed, and risk, define evaluation approaches that clarify quality, safety, and correctness before and after deployment, and embed responsible AI, security, and compliance into everyday engineering for regulated clients. Open-source proof: a coding agent at 9/9 on a polyglot benchmark and fine-tuned models with 67K+ HuggingFace downloads. MSc Data Science, King's College London.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Applied AI \& LLM Systems:} Production LLM-powered systems, agentic workflows, RAG, orchestration (LangGraph), Model Context Protocol (MCP), prompt engineering, fine-tuning
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Architecture \& Delivery:} System-level architecture, design decisions (value vs speed vs risk), end-to-end ownership, reusable patterns \& tooling, engineering standards
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Evaluation \& Safety:} Evaluation approaches (quality, safety, correctness pre/post deployment), eval frameworks, groundedness, regression, observability (OpenTelemetry)
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Responsible AI \& Security:} Responsible AI, role-based access (Keycloak JWT), PII detection, guardrails, compliance-aware engineering, auditable traces
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Engineering \& Cloud:} Python (production-grade, TDD), FastAPI, CI/CD, AWS, Azure, Docker, PostgreSQL, Elasticsearch
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Built and owned applied AI and LLM-powered systems in live production for 5+ leading investment management firms as an early-stage hire, accountable for technical quality and reliability end to end.
+  \item Made system-level architecture and design decisions balancing customer value, delivery speed, and risk, including rearchitecting the modelling engine into a graph-based system for an 85\% performance gain and 3x throughput.
+  \item Defined evaluation approaches clarifying quality, safety, and correctness before and after deployment: evaluation frameworks, groundedness checks, QoS metrics, and OpenTelemetry observability.
+  \item Embedded responsible AI, security, and compliance into everyday engineering for regulated financial clients: role-based access (Keycloak JWT), PII detection and redaction, grounding gates, and token-redacted auditable traces.
+  \item Established reusable patterns and tooling other teams adopt, including a FastAPI MCP server exposing 180+ AI tools, and raised engineering standards through code review and documentation.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Built and evaluated deep learning models (Graph Convolution Networks, GANs) over a million-row dataset, achieving a 63\% improvement in the novelty score of generated structures.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Agentic Enterprise Assistant (applied AI + evals + guardrails):} LLM agent (Claude, native tool use) over grounded data with RBAC at the MCP server, a grounding-validation gate, Elasticsearch hybrid search, and OpenTelemetry; passed 13/13 evaluation cases. \href{https://github.com/abhijeetscode/Agentic-Enterprise-Assistant}{View on GitHub}
+  \item \textbf{PII Detection LLMs (responsible AI):} fine-tuned GPT (LoRA) and BERT to detect and protect personal data, deployed as reusable production models; collectively 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+  \item \textbf{Spec-to-Code Agent (engineering bar):} autonomous ReAct agent on LangGraph and the Anthropic API that ships installable, tested packages from plain-language specs; 9/9 pass rate across a polyglot benchmark (Python, Go, Rust, Java, JS). \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\hfill {\color{muted}London, UK}\par
+{\itshape MSc in Data Science}\par\vspace{2pt}
+{\color{company}\bfseries C-DAC, India}\hfill {\color{muted}Pune, India}\par
+{\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\par\vspace{2pt}
+{\color{company}\bfseries University of Pune}\hfill {\color{muted}Pune, India}\par
+{\itshape B.E. in Computer Science}\par
+
+\end{document}

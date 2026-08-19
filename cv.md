@@ -20,10 +20,12 @@ AI engineer committed to continuous learning and building impactful AI solutions
 ### Built AI — AI/ML Engineer (Early Stage Hire)
 **FinTech & AI Company · London, UK · April 2022 – Present**
 
-- Designed and deployed a client-facing conversational AI persona, now used by 5+ leading investment management firms and handling ~100 Slack messages/day, that helps investors manage their portfolios in natural language: users talk to her, message her on Slack, add her to Google Meet calls, and ask ad-hoc questions, served through a multi-channel agent across chat and live meetings.
+- Designed and deployed a client-facing, multimodal conversational AI persona, now used by 5+ leading investment management firms and handling ~100 Slack messages/day, that helps investors manage their portfolios in natural language: users talk to her, message her on Slack, add her to Google Meet calls, and ask ad-hoc questions, served through a multi-channel agent across chat and live meetings. Real-time voice on live calls is built with Recall (meeting-bot integration), ElevenLabs (text-to-speech), and Tavus (AI avatar/video).
 - Core engineer on an [Innovate UK funded R&D project](https://gtr.ukri.org/projects?ref=10022996) (£205,895 grant, 2022–23) that built a novel ML data platform and street-level analytics, enabling commercial real estate investors to make data-driven decisions over hyper-local market signals.
 - Enabled secure enterprise access to 180+ AI-powered tools by building a production-ready MCP server on FastAPI, exposed through the Model Context Protocol for Claude Desktop and Glean-compatible clients.
 - Designed agent evals, Quality of Service metrics, and incident-triggering mechanisms to monitor reliability, groundedness, latency, and failure modes in production.
+- Own production operations for the systems I ship: instrumentation, telemetry, dashboards and alerting; on-call and incident response; hands-on CI/CD build, test and deployment pipelines; and release practices covering environment promotion, deployment verification, and rollback.
+- Mentor junior engineers, review colleagues' code as a routine practice, and define engineering patterns, practices and reusable components that other engineers have adopted.
 - Defined and measured "terminal impact," a conversation-outcome metric that classifies the state in which a user exits an agent dialogue (positive, negative, or unsatisfied), computed from real client chats to track whether conversations actually help users rather than just complete.
 - Developed and deployed an autonomous AI agent that generates Discounted Cash Flow (DCF) financial models from raw financial data, reducing analyst modeling time by 70%.
 - Built a production-ready LLM agent to understand and explain financial cashflows to users, with robust validation to ensure accurate and reliable outputs.
@@ -50,6 +52,9 @@ AI engineer committed to continuous learning and building impactful AI solutions
 
 - **Spec-to-Code Agent:** Built an autonomous ReAct-based coding agent using LangGraph and the Anthropic API that generates installable, tested software packages from plain-language markdown specs. Achieves 9/9 pass rate across a polyglot benchmark (Python, Go, Rust, Java, JS).  
   https://github.com/abhijeetscode/Spec-to-Code-Agent
+
+- **Agentic Enterprise Assistant:** Built an internal operations assistant where an LLM agent (Claude, native tool use) answers staff questions in natural language over grounded customer and issue data, with role-based access enforced at the MCP server as the authoritative RBAC boundary (Keycloak JWT), a grounding-validation gate that checks every answer against tool results before responding, and fully auditable, token-redacted interaction traces. Hybrid BM25 + semantic search (Qwen3 embeddings, reciprocal rank fusion) over Elasticsearch; FastAPI, PostgreSQL, Redis, OpenTelemetry to Arize Phoenix; Docker Compose with a separate MCP server container. Passed 13/13 evaluation cases (100% tool selection, grounding, and RBAC compliance).  
+  https://github.com/abhijeetscode/Agentic-Enterprise-Assistant
 
 - **Agentic Search API:** Built a production-grade cross-domain search service (FastAPI, PostgreSQL, Elasticsearch semantic search) for wealth-management advisors. Claude decomposes queries and routes to specialized tools (lexical/semantic client search, document search) with a deterministic lexical + semantic fallback for resilience when the LLM fails. Local Qwen3 embeddings (no external embedding API), PDF ingestion with auto-classification and chunking, and read-your-write consistency. Achieves p95 ≈ 175ms deterministic retrieval and a 0.76 macro QoS evaluation score across mixed query types.  
   https://github.com/abhijeetscode/search-agent
@@ -79,4 +84,5 @@ Bachelor of Engineering in Computer Science · Pune, India
 **Languages:** Python, SQL, Rust  
 **Web/API:** FastAPI, Django, Test Driven Development  
 **Data:** ETL processes, Data pipelines, MySQL, PostgreSQL, MongoDB, Data Analysis  
-**Infrastructure:** AWS, Docker, Git, GitHub
+**Infrastructure:** AWS, GCP (BigQuery, Cloud Run, GCS, IAM), Airflow, Terraform (IaC), Docker, CI/CD, Git, GitHub
+**AI-Assisted Development:** Claude Code, GitHub Copilot (daily driver in day-to-day development, with rigorous review and testing of generated code)

@@ -1,0 +1,140 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Horison AI -- ML Engineer. London (hybrid). Via Hartleyco (recruiter).
+% Stealth-mode startup, ~6 people, EF-formed technical team. Foundational
+% intelligence platform for private equity / private capital: turn
+% fragmented proprietary information into durable institutional knowledge
+% firms can reason over and compound.
+% What you'll do: design ML pipelines that turn unstructured proprietary
+% data into structured, queryable representations; models for probabilistic
+% reasoning & multi-hop inference; human-in-the-loop systems where AI
+% supports judgment via explainable outputs + uncertainty; define eval
+% metrics & testing frameworks for high-stakes envs; ship ML into prod with
+% backend engineers + domain experts.
+% Requirements: strong ML foundations, esp. NLP / information extraction /
+% representation learning; comfortable with ambiguity + first principles;
+% systems thinking (not just model performance); full-stack a plus
+% (Next.js, Python, TypeScript). Bonus: shipped ML in prod (not just
+% research); financial services / capital markets / transactional data.
+% NOTE: honest tailoring -- candidate leads on NLP + information extraction
+% (PII entity models, RAG over financial PDFs at 5+ firms), representation
+% learning (CLIP-style dual encoder, embeddings, fine-tuning), evaluation
+% frameworks for high-stakes finance (evals/QoS/groundedness/terminal
+% impact/drift), human-in-the-loop w/ validated explainable outputs
+% (grounding-validation gate, cashflow-explanation agent), multi-hop /
+% agentic inference (query decomposition + tool routing), production ML in
+% regulated FinTech, systems thinking (graph rearchitecture, MCP platform).
+% Financial-services domain is a direct match. Full-stack TS/Next.js NOT in
+% CV -> not claimed.
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.6cm,bottom=0.6cm,left=1.3cm,right=1.3cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{0.98}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{4pt}{2pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=1.5pt,topsep=1.5pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[2pt]
+  {\color{accent}\large ML Engineer: NLP, Information Extraction \& Evaluation for Finance}\\[4pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+
+%======================= SUMMARY =======================
+\section{Summary}
+ML engineer who turns unstructured, proprietary financial information into structured, queryable representations that people can reason over. In a regulated FinTech I have built NLP and information-extraction systems over financial documents, owned the full model lifecycle to production, and shipped human-in-the-loop tools where AI supports analyst judgment through validated, explainable outputs. My foundations are in NLP, information extraction, and representation learning (embeddings, fine-tuning, dual-encoder models), and I design evaluation frameworks fit for high-stakes environments. I work from first principles in ambiguous settings and think in systems, not model metrics alone.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{NLP \& Information Extraction:} entity \& relationship extraction, named-entity recognition, document intelligence, chunking, RAG over financial PDFs, semantic search
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Representation Learning:} embeddings \& fine-tuning (LoRA, BERT), dual-encoder (CLIP-style) models, vector search, transformers from first principles
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Evaluation \& Reliability:} evaluation frameworks for high-stakes outputs, quality-of-service metrics, groundedness, ``terminal impact,'' drift monitoring
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Reasoning \& Agents:} multi-hop / multi-step inference, query decomposition, human-in-the-loop workflows, agentic frameworks (LangGraph, LangChain), Model Context Protocol (MCP)
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{ML \& Modelling:} predictive \& statistical inference over incomplete data, tabular ML (GBDTs, XGBoost), deep learning (PyTorch, TensorFlow), graph neural networks
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Engineering \& Cloud:} production Python, FastAPI, SQL, data pipelines / ETL, AWS \& GCP, Docker, CI/CD, PostgreSQL / MongoDB
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Designed ML pipelines that turn unstructured, proprietary financial documents into structured, queryable representations, using NLP, information extraction, chunking, embeddings, and RAG, now used across 5+ leading investment management firms.
+  \item Built human-in-the-loop systems where AI supports analyst judgment through explainable, validated outputs: a grounding-validation gate that checks every answer against source data before responding, and an agent that explains financial cashflows with robust validation for accuracy.
+  \item Shipped agents that perform multi-step inference over proprietary data, including one that generates Discounted Cash Flow models from raw financials (70\% less analyst modelling time) and a conversational assistant that decomposes investor queries and routes them across tools.
+  \item Defined evaluation metrics and testing frameworks suited to a high-stakes domain: agent evals, quality-of-service metrics, groundedness, and ``terminal impact'' (a conversation-outcome metric from real client chats), plus monitoring for latency, drift, and failure modes.
+  \item Applied predictive and statistical inference over incomplete data, building a model to infer missing property values across London postcodes; core engineer on an \href{https://gtr.ukri.org/projects?ref=10022996}{Innovate UK-funded R\&D project} (\pounds205,895 grant).
+  \item Worked from first principles with backend engineers and domain experts to ship ML into production, rearchitecting an inference-heavy engine into a graph-based pipeline (Apache Hamilton + vectorisation) for an 85\% performance gain, and exposing 180+ enterprise tools via an MCP server on FastAPI.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Built and evaluated deep learning models (Graph Convolution Networks, GANs) over a million-row dataset for drug discovery, achieving a 63\% improvement in novelty score, with a reproducible preprocessing and training pipeline.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{PII Detection LLMs (information extraction):} fine-tuned GPT (LoRA) and BERT to detect and classify entities in unstructured text, published as reusable production artefacts; collectively 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+  \item \textbf{Text-to-Image Search (representation learning):} CLIP-style dual-encoder that learns a shared embedding space for retrieval across modalities. \href{https://github.com/abhijeetscode/text-to-image-search}{View on GitHub}
+  \item \textbf{Agentic Search API (multi-hop retrieval + evals):} FastAPI + Elasticsearch semantic search with Qwen3 embeddings and Claude tool-calling that decomposes queries and routes across tools; measured p95 $\approx$ 175ms and a 0.76 QoS eval score. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}, {\itshape MSc in Data Science}\hfill {\color{muted}London, UK}\par\vspace{1pt}
+{\color{company}\bfseries C-DAC}, {\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\hfill {\color{muted}Pune, India}\par\vspace{1pt}
+{\color{company}\bfseries University of Pune}, {\itshape B.E. in Computer Science}\hfill {\color{muted}Pune, India}\par
+
+\end{document}

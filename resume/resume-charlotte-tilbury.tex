@@ -1,0 +1,137 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Charlotte Tilbury Beauty -- AI & ML Engineer. London, hybrid. Sits in
+% Data function, reports to Lead AI & ML Engineer. GCP-first stack.
+% Scope: agentic systems (RAG, grounding, prompt engineering, orchestration)
+% + conventional ML (recommenders, segmentation, forecasting, marketing
+% optimisation) + APIs/microservices + MLOps (CI/CD, IaC, drift monitoring)
+% + guardrails/evaluation + security/PII/governance. E-commerce/retail.
+% Wants: Python (FastAPI, testing, typing) + cloud-native (GCP preferred);
+% Vertex AI or equivalent (SageMaker/Azure ML) + orchestration (LangChain/
+% LangGraph/ADK); MLOps (CI/CD, Terraform, experiment tracking, registry,
+% monitoring); prod ML batch+real-time; RAG/prompt/guardrails/eval;
+% agentic capabilities (agent skills, MCP servers, tool use); security
+% (IAM, secrets, PII); degree.
+% NOTE: honest tailoring -- candidate leads on agentic systems, RAG,
+% prompt engineering, orchestration (LangGraph/LangChain), MCP servers +
+% tool use (180+ tools), evals/guardrails, PII/data privacy & governance,
+% Python/FastAPI, GCP + AWS, prod ML (batch+real-time), plus conventional
+% ML (regression/inference model, forecasting, embeddings/ranking).
+% Gaps NOT faked: recommender systems (adjacent ML + embeddings/ranking,
+% not direct); Vertex AI / Terraform / named eval tools (RAGAS/TruLens/
+% LangSmith) not claimed; e-commerce/retail domain (fintech background).
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.7cm,bottom=0.7cm,left=1.4cm,right=1.4cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=2pt,topsep=2pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large AI \& ML Engineer: Agentic Systems, RAG \& Production ML}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+AI \& ML Engineer who builds production-ready AI and machine learning across the full lifecycle, from discovery to deployment and monitoring. I design agentic systems using RAG, grounding, prompt engineering, and orchestration, and I build the APIs, microservices, and MCP servers that put them in production on cloud-native stacks (GCP and AWS). I also deliver conventional ML for non-GenAI use cases, from regression and inference models to forecasting and embeddings-based ranking. Strong Python (FastAPI, typing, testing), MLOps discipline (CI/CD, drift monitoring, batch and real-time serving), and robust guardrails, evaluation, and PII governance.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Agentic AI:} agentic systems, RAG, grounding, prompt engineering, orchestration (LangGraph, LangChain), MCP servers, tool use, agent skills, human-in-the-loop
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{ML \& Modelling:} supervised \& unsupervised ML, regression \& inference models, forecasting, segmentation \& clustering, embeddings-based ranking, PyTorch, TensorFlow, fine-tuning (LoRA, BERT)
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{MLOps \& Delivery:} CI/CD for ML, model \& data drift monitoring, batch \& real-time serving, Docker, observability, GCP \& AWS, FinOps awareness
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Guardrails \& Evaluation:} evals \& quality-of-service metrics, outcome metrics (``terminal impact''), prompt security \& guardrails, groundedness, regression gates
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Backend \& Security:} Python (FastAPI, typing, testing), microservices, REST APIs, PII handling \& data privacy, IAM/secrets awareness, PostgreSQL/MongoDB, vector databases
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Designed and deployed agentic systems using RAG, grounding, prompt engineering, and orchestration, used by 5+ leading investment management firms across the full lifecycle from proof of concept to production.
+  \item Built reusable platform components: a production API server on FastAPI exposing 180+ AI-powered tools through the Model Context Protocol (MCP), with secure enterprise access and tool use.
+  \item Established guardrails and practical evaluation frameworks: evals, quality-of-service metrics, groundedness and drift signals, and ``terminal impact,'' an outcome metric for whether users leave an agent dialogue satisfied.
+  \item Delivered conventional ML: a model inferring missing values across large-scale property datasets, plus a pipeline linking 80\% of records with geolocation enrichment for accurate area-level estimates.
+  \item Developed APIs and microservices with CI/CD, monitoring, and PII/data-privacy governance in a regulated environment, serving both batch and real-time workloads.
+  \item Rearchitected a production inference-heavy engine into a graph-based pipeline (Apache Hamilton + vectorisation) for an 85\% performance gain and 3x throughput on GCP and AWS with Docker.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Built and evaluated deep learning models (Graph Convolution Networks, GANs) for drug discovery over a million-row dataset, achieving a 63\% improvement in novelty score, with a reproducible preprocessing and training pipeline.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Agentic Search API (RAG + evals):} FastAPI + Elasticsearch semantic search, Qwen3 embeddings and Claude tool-calling, with a deterministic fallback for resilience; measured p95 latency and 0.76 QoS eval score. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+  \item \textbf{Spec-to-Code Agent (orchestration):} autonomous ReAct agent on LangGraph and the Anthropic API that ships installable, tested packages from specs; 9/9 pass rate across a polyglot benchmark. \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+  \item \textbf{PII Detection LLMs (guardrails \& privacy):} fine-tuned GPT (LoRA) and BERT to detect personally identifiable information, deployed as reusable production artefacts; collectively 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\hfill {\color{muted}London, UK}\par
+{\itshape MSc in Data Science}\par\vspace{2pt}
+{\color{company}\bfseries C-DAC, India}\hfill {\color{muted}Pune, India}\par
+{\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\par\vspace{2pt}
+{\color{company}\bfseries University of Pune}\hfill {\color{muted}Pune, India}\par
+{\itshape B.E. in Computer Science}\par
+
+\end{document}

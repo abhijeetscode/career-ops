@@ -1,0 +1,110 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Longshot Systems -- Senior Machine Learning Engineer (London). Tailored resume.
+% Software-engineering-first framing: production ML pipelines, data eng, performance.
+% Fonts: Source Sans Pro. Accent: teal + purple. Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}
+\usepackage[a4paper,top=1.1cm,bottom=1.0cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}
+\definecolor{company}{HTML}{6C2BB3}
+\definecolor{muted}{HTML}{555555}
+
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{7pt}{4pt}
+
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=1pt,topsep=1pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large Senior ML Engineer: Production Pipelines, Data Engineering \& Performance}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+Machine learning engineer with a software-first approach to putting ML into production. I build and maintain production ML pipelines and data engineering workflows, and I care about engineering excellence: clean, well-tested Python, scalable system design, and fast code. I re-architected a modelling engine into a graph-based pipeline (Apache Hamilton) with vectorisation for an 85\% performance gain, built ETL pipelines over large datasets, and productionised ML models with monitoring and evals. Comfortable across the modern Python ML and data stack, Docker, AWS, and Linux. MSc Data Science (King's College London).
+
+%======================= COMPETENCIES =======================
+\section{Core Strengths}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Pipelines \& Data Engineering:} production ML pipelines, ETL, batch processing, Apache Hamilton, pipeline orchestration, tooling
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Software Engineering:} clean, tested Python (TDD), system design, scalability, CI/CD, FastAPI, REST APIs
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Performance \& Optimization:} vectorisation, dataframe optimisation, graph-based rearchitecture, profiling, Rust
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{ML in Production:} PyTorch, scikit-learn, XGBoost, model monitoring, real-time inference; AWS, Docker, Linux
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Re-architected the financial modelling engine into a graph-based pipeline using Apache Hamilton and vectorisation, improving performance by 85\%.
+  \item Designed and built ETL and data ingestion pipelines linking 80\% of property records across diverse datasets with geolocation enrichment, feeding downstream ML models.
+  \item Productionised ML models end-to-end, including one that infers missing values across large-scale property datasets to estimate rent per square foot across London postcodes.
+  \item Built the reliability layer for ML in production: evals, Quality of Service metrics, and incident-triggering monitoring for latency, groundedness, and failure modes.
+  \item Built production retrieval and agentic systems (FastAPI, PostgreSQL, vector search) serving 5+ enterprise clients, including an autonomous agent that cut analyst modelling time by 70\%.
+  \item Core engineer on an \href{https://gtr.ukri.org/projects?ref=10022996}{Innovate UK funded R\&D project} (\pounds205,895 grant) building a novel ML data platform and street-level analytics.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Developed a deep learning model using Graph Convolution Networks and GANs for drug discovery, achieving a 63\% improvement in the novelty score of generated structures, over a preprocessing pipeline built for a million-row clinical dataset.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Transformer from Scratch in Rust:} GPT-style decoder-only transformer built from first principles (multi-head causal self-attention, pre-norm residual blocks, full training loop with SafeTensors checkpointing) using the Candle framework with Metal GPU acceleration. \href{https://github.com/abhijeetscode/transformer-rust}{View on GitHub}
+  \item \textbf{Agentic Search API:} production cross-domain retrieval service (FastAPI, PostgreSQL, Elasticsearch) with a deterministic lexical and semantic fallback for resilience, local Qwen3 embeddings, and PDF ingestion. Achieves p95 around 175ms retrieval and a 0.76 macro QoS score. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+  \item \textbf{PII Detection LLMs:} fine-tuned GPT (with LoRA) and BERT for Personally Identifiable Information detection; published models collectively reaching 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+\entry{King's College London}{}{MSc in Data Science}{London, UK}
+\vspace{-3pt}
+\entry{C-DAC, India}{}{Post Graduate Diploma in Advanced Computing (PG-DAC)}{Pune, India}
+\vspace{-3pt}
+\entry{University of Pune}{}{B.E. in Computer Science}{Pune, India}
+
+\end{document}

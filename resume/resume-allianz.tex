@@ -1,0 +1,110 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Allianz Global Investors -- Equity Platform AI Engineer (Frankfurt). Tailored resume.
+% Framing: applied AI in equities/asset management -- NLP, RAG, retrieval, forecasting,
+% predictive modelling over financial text + structured data; feature pipelines & MLOps.
+% Fonts: Source Sans Pro. Accent: teal + purple. Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}
+\usepackage[a4paper,top=1.1cm,bottom=1.0cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}
+\definecolor{company}{HTML}{6C2BB3}
+\definecolor{muted}{HTML}{555555}
+
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{7pt}{4pt}
+
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=1pt,topsep=1pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large AI Engineer: Applied AI for Equities \& Asset Management}\\[5pt]
+  {\small
+    London, UK (open to relocation to Frankfurt) \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+AI engineer who turns investment and research questions into production-ready AI, owning the full lifecycle from idea to deployment. In FinTech I have built NLP, RAG, retrieval, and predictive models over both structured financial data and unstructured research text, and shipped them for 5+ leading investment management firms with the feature pipelines, evaluation, and monitoring that keep them reliable. Strong Python and data engineering, a quantitative ML research background from King's College London, and open-source models with 67K+ HuggingFace downloads.
+
+%======================= COMPETENCIES =======================
+\section{Core Competencies}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Applied AI/ML:} NLP \& large-scale text analysis, RAG \& information retrieval, ranking, forecasting, predictive modelling
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{LLMs \& Data:} LLM solutions, fine-tuning (LoRA, BERT), embeddings, structured + unstructured financial data, knowledge extraction
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Pipelines \& MLOps:} feature \& inference pipelines, CI/CD, model deployment, monitoring \& governance, evals, observability
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Engineering \& Cloud:} Python, SQL, FastAPI, PostgreSQL, vector databases; AWS, Docker, Git
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Built NLP and RAG systems over unstructured financial research (documents, reports), letting analysts extract insights and query large document sets in natural language.
+  \item Developed predictive models over structured and messy financial and property data, including one inferring missing values at scale to estimate values across markets.
+  \item Built and maintained feature and inference pipelines (ETL linking 80\% of records with enrichment) and productionised models with CI/CD, monitoring, and evaluation.
+  \item Built reusable AI components and services, including an MCP server exposing 180+ tools reused across teams, with evals, Quality of Service metrics, and model monitoring and governance.
+  \item Shipped an autonomous agent generating Discounted Cash Flow (DCF) models from raw financial data (70\% less analyst time), improved a modelling engine's performance by 85\%, and translated investment questions from non-technical stakeholders into solutions delivered via APIs and reports.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Developed deep learning models (Graph Convolution Networks, GANs) for drug discovery, achieving a 63\% improvement in novelty score, over a reproducible preprocessing pipeline on a million-row clinical dataset.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Agentic Enterprise Assistant:} agent that extracts and retrieves knowledge from grounded data, with RBAC at an MCP server, a grounding-validation gate, and auditable traces; hybrid BM25 + semantic search over Elasticsearch; OpenTelemetry to Arize Phoenix. Passed 13/13 evaluation cases. \href{https://github.com/abhijeetscode/Agentic-Enterprise-Assistant}{View on GitHub}
+  \item \textbf{Agentic Search API:} production retrieval and ranking service (FastAPI, PostgreSQL, Elasticsearch) with hybrid lexical and semantic search and local Qwen3 embeddings. Achieves p95 around 175ms retrieval and a 0.76 macro QoS score. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+  \item \textbf{PII Detection LLMs:} fine-tuned GPT (LoRA) and BERT for entity extraction over text; published models collectively reaching 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+\entry{King's College London}{}{MSc in Data Science}{London, UK}
+\vspace{-3pt}
+\entry{C-DAC, India}{}{Post Graduate Diploma in Advanced Computing (PG-DAC)}{Pune, India}
+\vspace{-3pt}
+\entry{University of Pune}{}{B.E. in Computer Science}{Pune, India}
+
+\end{document}

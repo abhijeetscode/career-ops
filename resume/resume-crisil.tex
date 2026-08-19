@@ -1,0 +1,141 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AI Engineer, Platform -- Crisil Limited. London, UK. Financial analytics.
+% Platform (product) engineering, NOT infrastructure. Experience 2-5 yrs.
+% Duties: build/enhance/maintain AI product features (continuous product
+% enhancement, measurable end-user value); engineer production AI (agent
+% tools, prompt optimisation, evaluation + observability); quality-first
+% delivery (testing frameworks, automated checks, model/feature validation);
+% partner with DS/AI eng/platform.
+% Key: AI feature dev + enhancement; agent tools/connectors/integrations;
+% prompt optimisation (safety/reliability); experiment tracking + model/
+% version mgmt (MLflow or equiv); testing/eval frameworks (accuracy,
+% robustness, regressions, hallucination controls; agent-based testing /
+% AI-validating-AI); quality gates, release readiness; champion/challenger;
+% model observability + dashboards; productionise research; agile delivery.
+% Essential: 3+ yrs ML/AI eng w/ production features; strong Python; ML/AI
+% lifecycle (experimentation, eval, release); experiment tracking; comms.
+% Preferred: MLOps (MLflow); agent frameworks (LangChain/LangSmith/CrewAI/
+% Azure/AWS Strands); GenAI app dev + prompt iteration; cloud (AWS/Azure)/
+% Databricks; Git + CI/CD; financial services / regulated.
+% HONEST TAILORING -- candidate leads on: production AI feature dev for 5+
+% firms, agent tools/connectors (MCP 180+), prompt optimisation, evaluation
+% frameworks (accuracy/groundedness/regression/hallucination), quality gates,
+% model observability + dashboards (OpenTelemetry -> Arize Phoenix), Python,
+% ML/AI lifecycle, LangChain/LangGraph, AWS, Git/CI-CD, FinTech/financial.
+% NOT claimed: MLflow, LangSmith/CrewAI/Azure/AWS Strands, Azure, Databricks
+% (AWS + generic experiment-tracking/versioning stated honestly).
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.8cm,bottom=0.7cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=2pt,topsep=2pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large AI Engineer: Production AI Features, Agent Tools, Evaluation \& Observability}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+AI engineer who builds and enhances production AI product features that deliver measurable end-user value. As an early-stage hire at a FinTech, I have shipped AI-powered features for 5+ leading investment management firms, developing agent tools and integrations, optimising prompts for production, and treating evaluation and observability as core to delivery. I build quality-first: evaluation frameworks for accuracy, regressions, and hallucination controls, quality gates for release readiness, and dashboards that track quality and usage in production. Strong in Python across the ML/AI lifecycle, from experimentation to release. Open-source proof: a coding agent at 9/9 on a polyglot benchmark and fine-tuned models with 67K+ HuggingFace downloads. MSc Data Science, King's College London.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{AI Features \& Agents:} Production AI feature development, agent tools / connectors / integrations, prompt optimisation, agentic workflows, LLM APIs (Claude, GPT), MCP, orchestration (LangChain, LangGraph)
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Evaluation \& Quality:} Evaluation frameworks (accuracy, robustness, regression, hallucination controls), quality gates, automated checks, release-readiness criteria, grounding validation
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Observability \& Lifecycle:} Model observability \& dashboards, monitoring (OpenTelemetry, Arize Phoenix), experiment tracking \& model versioning, ML/AI lifecycle
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Engineering:} Python (design, build, test, maintain AI/ML apps), FastAPI, TDD \& testing frameworks, Git, CI/CD, code review
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Cloud \& Data:} AWS, Docker, PostgreSQL, RAG, vector databases, Elasticsearch, ETL pipelines
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Built and enhanced production AI-powered features for 5+ leading investment management firms as an early-stage hire, prioritising incremental improvements, adoption, and measurable end-user value.
+  \item Developed agent tools, connectors, and integrations enabling AI workflows: a FastAPI MCP server exposing 180+ tools with role-based access, plus multi-step agents (LangGraph) with optimised prompts and reliability controls.
+  \item Built evaluation frameworks for AI and agent performance (accuracy, groundedness, regression checks, hallucination controls) with quality gates and a grounding-validation gate as release-readiness criteria.
+  \item Contributed to model observability and dashboards, tracking quality, latency, and usage patterns via OpenTelemetry to Arize Phoenix, with incident-triggering when reliability thresholds slipped.
+  \item Productionised research outcomes into reliable product capabilities and optimised performance 85\% (3x throughput) by rearchitecting the modelling engine on AWS, working in agile delivery with Git and CI/CD.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Researched and productionised deep learning models (Graph Convolution Networks, GANs) over a million-row dataset, achieving a 63\% improvement in the novelty score of generated structures.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Agentic Enterprise Assistant (agent tools + evals + observability):} LLM agent (Claude, native tool use) over grounded data with RBAC at the MCP server, a grounding-validation gate, Elasticsearch hybrid search, and OpenTelemetry monitoring; passed 13/13 evaluation cases. \href{https://github.com/abhijeetscode/Agentic-Enterprise-Assistant}{View on GitHub}
+  \item \textbf{Spec-to-Code Agent (quality-first, testing):} autonomous ReAct agent on LangGraph and the Anthropic API that ships installable, tested packages from plain-language specs with an AI-driven build-and-test loop; 9/9 pass rate across a polyglot benchmark. \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+  \item \textbf{Agentic Search API (RAG + evaluation):} FastAPI, PostgreSQL, and Elasticsearch retrieval with Claude query-routing and a deterministic fallback for resilience; measured p95 175ms retrieval and a 0.76 macro QoS eval score. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\hfill {\color{muted}London, UK}\par
+{\itshape MSc in Data Science}\par\vspace{2pt}
+{\color{company}\bfseries C-DAC, India}\hfill {\color{muted}Pune, India}\par
+{\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\par\vspace{2pt}
+{\color{company}\bfseries University of Pune}\hfill {\color{muted}Pune, India}\par
+{\itshape B.E. in Computer Science}\par
+
+\end{document}

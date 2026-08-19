@@ -1,0 +1,124 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ClaimSorted CV -- Abhijeet Lokhande. AI/ML Engineer.
+% Tailored for ClaimSorted (YC/Atomico/Eurazeo-backed insurance-claims TPA,
+% London, office-based). Leads on: production AI/ML concept-to-production
+% improving company metrics, turning processes into AI-driven workflows,
+% deploying ML at scale, early-hire/0-to-1 ownership, and building for
+% non-technical users. Insurance framed as FinTech-adjacent, honestly.
+% Honest: only skills/metrics from cv.md + verified proof points.
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.7cm,bottom=0.7cm,left=1.4cm,right=1.4cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=1pt,topsep=1pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large AI/ML Engineer: LLMs, Agents \& Production ML}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+AI/ML engineer who takes AI systems from concept to production and moves real business metrics. As an early hire in a fast-moving FinTech, I turned manual, expert-heavy processes into AI-driven workflows for leading enterprise customers, cutting analyst time by up to 70\% and shipping LLM agents and ML models at scale. I work directly with founders and with non-technical users, translating their operational problems into deployed products, and I back every system with disciplined evaluation, observability, and cloud deployment. Strong Python (FastAPI) engineering, and I share fine-tuned models in open source (67K+ HuggingFace downloads).
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{AI/ML:} machine learning \& deep learning, LLMs, AI agents, AI-driven workflow automation, RAG, NLP, predictive modelling, forecasting, fine-tuning (LoRA, BERT)
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{LLMs \& Agents:} agentic workflows \& orchestration (LangGraph, LangChain), retrieval, prompt engineering, Model Context Protocol (MCP), embeddings, vector databases
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Production \& MLOps:} model deployment \& serving at scale, CI/CD, Docker, evaluation frameworks, monitoring \& drift, observability (OpenTelemetry), quality-of-service metrics
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Backend \& Data:} Python, FastAPI, REST APIs, microservices, structured \& unstructured data, ETL pipelines, semantic \& BM25 search, Elasticsearch, PostgreSQL, MongoDB
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Cloud \& Practices:} AWS \& GCP, testing/TDD, code review, security \& data privacy (PII), performance \& cost optimisation, working with non-technical stakeholders
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item As an early hire, took AI/ML systems from concept to production and shipped LLM agents used by 5+ leading enterprise customers, helping build engineering practices and shape technical culture from the ground up.
+  \item Turned manual, expert-heavy processes into AI-driven workflows: an autonomous agent that authors financial models from raw data, cutting analyst time 70\%, and a document-processing pipeline that raised productivity 30\%.
+  \item Built a client-facing conversational AI used by 5+ investment firms where non-technical users query portfolios in natural language over chat and live calls, improving customer experience.
+  \item Deployed ML at scale: a predictive model inferring missing values across large datasets, powered by an ETL pipeline linking 80\% of records, and an 85\% performance gain from a graph-based rearchitecture (Apache Hamilton).
+  \item Built evaluation frameworks and observability for models and agents: evals, quality-of-service metrics, groundedness and drift signals, and incident-triggering alerts.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Built deep learning models (Graph Convolution Networks, GANs) achieving a 63\% novelty improvement, with a reproducible preprocessing pipeline over a million-row dataset.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Agentic Enterprise Assistant:} LLM agent answering questions over grounded data with RAG, RBAC and OAuth at an MCP server (Keycloak JWT), a grounding-validation gate, and auditable traces; hybrid BM25 plus semantic search, OpenTelemetry to Arize Phoenix. Passed 13/13 evaluation cases. \href{https://github.com/abhijeetscode/Agentic-Enterprise-Assistant}{View on GitHub}
+  \item \textbf{Agentic Search API:} cross-domain search on FastAPI plus Elasticsearch semantic search, Qwen3 embeddings and Claude tool-calling, with a deterministic fallback for resilience; p95 around 175ms and a 0.76 macro QoS eval score. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+  \item \textbf{Spec-to-Code Agent:} autonomous ReAct agent on LangGraph and the Anthropic API that ships installable, tested packages from specs; 9/9 pass rate across a polyglot benchmark (Python, Go, Rust, Java, JS). \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+  \item \textbf{PII Detection LLMs:} fine-tuned GPT (LoRA) and BERT to detect personally identifiable information, deployed as reusable production artefacts; collectively 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\hfill {\color{muted}London, UK}\par
+{\itshape MSc in Data Science}\par\vspace{2pt}
+{\color{company}\bfseries C-DAC, India}\hfill {\color{muted}Pune, India}\par
+{\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\par\vspace{2pt}
+{\color{company}\bfseries University of Pune}\hfill {\color{muted}Pune, India}\par
+{\itshape B.E. in Computer Science}\par
+
+\end{document}

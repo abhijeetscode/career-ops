@@ -1,0 +1,141 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Causaly -- Senior AI Engineer. London, remote. Biomedical knowledge
+% platform: high-precision Knowledge Graph + GenAI + agents helping
+% scientists find insights across biomedical literature, trials, regulatory
+% docs. Trust via guardrails, biomedical curation, robust deployment.
+% Scope: design/implement ML/AI end-to-end (idea/data -> deploy/monitor);
+% strong SW-eng (modularity, testing, code review, CI/CD, observability);
+% choose right approach (classical ML/NLP vs LLM vs agentic); product
+% collaboration; document architecture; champion model & data quality
+% (dataset versioning, robust eval, fairness/bias, real-world tracking);
+% mentor juniors.
+% Need: MSc+; 5+ yrs AI/ML in production owning full lifecycle; Python +
+% ML/agentic frameworks (PyTorch/TF/LangChain), packaging models into APIs;
+% LLMs for NLP (embeddings, prompt eng, fine-tuning); SW-eng foundations;
+% product-team experience; end-to-end system reasoning (perf/latency/observ);
+% communication. Plus: MLOps/LLMOps; PhD; life-sciences/health-tech.
+% NOTE: honest tailoring -- candidate leads on GenAI/agents/LLMs/NLP
+% (embeddings/prompt/fine-tuning), end-to-end lifecycle ownership, eval &
+% data quality (evals/QoS/terminal impact, PII fairness-adjacent), SW-eng
+% (testing/CI-CD/Docker/FastAPI), product collaboration, AWS+GCP, and a
+% genuine LIFE-SCIENCES hook (KCL drug-discovery GAN + million-row clinical
+% data). Gaps NOT faked: 5+ yrs vs ~4 (lifecycle ownership offsets);
+% Knowledge Graph -> graph neural nets (GCN) framed as adjacent, not a KG
+% platform.
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.7cm,bottom=0.7cm,left=1.4cm,right=1.4cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=2pt,topsep=2pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large Senior AI Engineer: GenAI, Agents \& Applied ML for Science}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+Senior AI engineer who designs and ships ML/AI systems end to end, from idea and data exploration through to deployment and monitoring, balancing cutting-edge techniques with pragmatism for measurable impact. I build with generative AI, agents, and LLMs for NLP (embeddings, prompt engineering, fine-tuning), and choose the right approach for the problem across classical ML, LLM, and agentic solutions. I apply strong software engineering (testing, code review, CI/CD, containerisation, observability) and champion model and data quality with robust evaluation. I also bring a life-sciences research background: deep-learning for drug discovery and large-scale biomedical data pipelines at King's College London.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{GenAI \& Agents:} LLMs, agents, orchestration (LangChain, LangGraph), RAG, prompt engineering, fine-tuning (LoRA, BERT), embeddings, Model Context Protocol (MCP)
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{ML \& NLP:} PyTorch, TensorFlow, classical ML, NLP, GANs, Graph Convolution Networks, predictive modelling
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Evaluation \& Data Quality:} robust evaluation frameworks, dataset versioning, quality-of-service \& outcome metrics (``terminal impact''), fairness/bias awareness (PII), guardrails, real-world performance tracking
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Software Engineering:} Python, version control, unit \& integration testing, CI/CD, containerisation (Docker), APIs (FastAPI), reliability \& scale
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Cloud \& Domain:} AWS \& GCP, PostgreSQL/MongoDB, vector databases, life-sciences \& biomedical data (drug discovery, clinical datasets)
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Designed and shipped ML/AI solutions end to end, from idea and data exploration to deployment and monitoring, delivering measurable impact for 5+ leading investment management firms.
+  \item Chose the right approach per problem across classical ML, LLM, and agentic solutions, and packaged models into APIs, including a FastAPI server exposing 180+ tools through the Model Context Protocol (MCP).
+  \item Championed model and data quality with robust evaluation: evals, quality-of-service metrics, groundedness and drift signals, and ``terminal impact,'' an outcome metric tracking real-world performance.
+  \item Applied strong software engineering (modularity, testing, code review, CI/CD, observability) so AI systems are reliable, maintainable, and production-ready.
+  \item Collaborated with product and engineering to scope work and incrementally ship user-facing AI features, and set technical direction and standards for the team.
+  \item Optimised a production inference-heavy engine into a graph-based pipeline (Apache Hamilton + vectorisation) for an 85\% performance gain and 3x throughput.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Built deep learning models (Graph Convolution Networks, GANs) for drug discovery, achieving a 63\% improvement in the novelty score of generated drug structures.
+  \item Engineered a robust preprocessing pipeline over a million-row clinical dataset, ensuring accuracy and completeness of biomedical data for research.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{PII Detection LLMs (NLP, open-source):} fine-tuned GPT (LoRA) and BERT for entity detection, deployed as reusable production artefacts; collectively 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+  \item \textbf{Agentic Search API (retrieval + evals):} FastAPI + Elasticsearch semantic search, Qwen3 embeddings and Claude tool-calling, with a deterministic fallback for resilience; measured p95 latency and 0.76 QoS eval score. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+  \item \textbf{Spec-to-Code Agent (agentic):} autonomous ReAct agent on LangGraph and the Anthropic API that ships installable, tested packages from specs; 9/9 pass rate across a polyglot benchmark. \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\hfill {\color{muted}London, UK}\par
+{\itshape MSc in Data Science}\par\vspace{2pt}
+{\color{company}\bfseries C-DAC, India}\hfill {\color{muted}Pune, India}\par
+{\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\par\vspace{2pt}
+{\color{company}\bfseries University of Pune}\hfill {\color{muted}Pune, India}\par
+{\itshape B.E. in Computer Science}\par
+
+\end{document}

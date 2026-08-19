@@ -1,0 +1,127 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% JetBrains CV -- Abhijeet Lokhande. Staff/Senior AI Engineer, AI for Code.
+% Team builds production coding agents / agentic workflows in the IDE:
+% take internal (Mellum2) + open-weight models and turn them into reliable
+% coding agents. JD emphasis: build production coding agents & the agent
+% loop (tool use, execution strategy, safeguards, task completion), turn
+% model capabilities into dependable behaviour via prompt design, context
+% engineering, fine-tuning / post-training; evaluation suites (online +
+% offline, regression checks, failure analysis, release criteria); feedback
+% loops from real usage (logs, user signals, edge cases); pragmatic model
+% placement across hosted frontier APIs + open-weight on capability,
+% latency, reliability, privacy, cost; strong SWE shipping to production.
+% Hero match: Spec-to-Code coding agent (9/9 polyglot) + transformer built
+% from scratch (model depth) + LoRA fine-tuning. Honest: only cv.md facts;
+% no large-model-training or RLHF/DPO claims. Font: Source Sans Pro. Teal +
+% purple. Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.7cm,bottom=0.5cm,left=1.4cm,right=1.4cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{3pt}{2pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=1pt,topsep=1pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large Senior AI Engineer: Coding Agents, Agent Loops \& LLM Evaluation}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+AI engineer who turns model capabilities into production coding agents that people rely on, not demos. I have built agentic systems end to end: designing the agent loop (tool use, execution strategy, safeguards, and task completion), improving behaviour through prompt design, context engineering, and fine-tuning, and building the evaluation suites and feedback loops that keep them dependable. My open-source coding agent ships installable, tested software from plain-language specs at a 9/9 rate on a polyglot benchmark, and I have built a transformer from scratch, so I am comfortable from the agent loop down to the model. I make pragmatic calls across hosted frontier APIs and open-weight models on capability, latency, reliability, privacy, and cost, and I bring strong software engineering and a track record of shipping to production.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Coding agents \& agent loops:} agentic workflows, ReAct agents, tool use \& function calling, execution strategy, multi-step task completion, safeguards \& guardrails, orchestration (LangGraph, LangChain, LlamaIndex), MCP
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Model behaviour \& post-training:} prompt design, context engineering, fine-tuning (LoRA/PEFT), instruction tuning, retrieval-augmented context, open-weight \& hosted frontier models
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Evaluation \& quality:} online \& offline evals, task-grounded success metrics, regression checks, failure analysis, release criteria, feedback loops from real usage (logs, user signals, edge cases), tracing (OpenTelemetry)
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Model selection \& performance:} trade-offs across capability, latency, reliability, privacy, and cost; self-hosted vs API model placement; throughput \& latency optimisation
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Engineering:} production-grade Python (typed, tested, TDD), Rust, FastAPI, REST APIs, SQL, Docker, CI/CD, AWS, GCP; transformers built from scratch
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Shipped production LLM agents that tens of users rely on across 5+ leading investment firms, designing the agent loop, tool use through an MCP server exposing 180+ tools, execution, and guardrails, for reliable multi-step task completion.
+  \item Turned model capabilities into dependable product behaviour through prompt design, context engineering, and fine-tuning, and built feedback loops from real usage: logs, user signals, and edge cases feeding data, evals, and agent behaviour, including a ``terminal impact'' outcome metric computed from real client chats.
+  \item Built evaluation suites and quality infrastructure: online and offline evals, groundedness checks, regression and failure analysis, incident alerts, and release-gating metrics for agent behaviour.
+  \item Made pragmatic model choices across hosted frontier APIs and open-weight models on capability, latency, reliability, privacy, and cost, holding p95 around 175ms with a deterministic fallback and delivering an 85\% performance gain by rearchitecting an inference engine into a graph-based pipeline.
+  \item Brought strong software engineering to production AI (typed, tested Python, CI/CD), including an autonomous agent that authors Discounted Cash Flow models from raw data and cut analyst modeling time 70\%.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Improved drug-structure novelty 63\% by building deep learning models (Graph Convolution Networks, GANs), backed by a reproducible preprocessing pipeline over a million-row dataset.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Spec-to-Code Agent:} autonomous ReAct coding agent (LangGraph, Anthropic API) that turns plain-language specs into installable, tested software packages, with an agent loop over tools and iteration; 9/9 pass rate across a polyglot benchmark (Python, Go, Rust, Java, JS). \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+  \item \textbf{Transformer from Scratch (Rust):} GPT-style decoder-only transformer built from first principles in the Candle framework, with multi-head causal self-attention, pre-norm residual blocks, and a full training loop with SafeTensors checkpointing and Metal GPU acceleration. \href{https://github.com/abhijeetscode/transformer-rust}{View on GitHub}
+  \item \textbf{Agentic Enterprise Assistant:} LLM agent over grounded data with an agent loop, tool use, and RAG, role-based access at an MCP server (Keycloak JWT), a grounding-validation safeguard, and auditable traces. Passed 13/13 evaluation cases. \href{https://github.com/abhijeetscode/Agentic-Enterprise-Assistant}{View on GitHub}
+  \item \textbf{PII Detection LLMs:} fine-tuned GPT (LoRA) and BERT for personally identifiable information detection (a privacy-focused post-training task), shipped as reusable production artefacts; collectively 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London} \sep {\itshape MSc in Data Science}\hfill {\color{muted}London, UK}\par\vspace{1pt}
+{\color{company}\bfseries C-DAC, India} \sep {\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\hfill {\color{muted}Pune, India}\par\vspace{1pt}
+{\color{company}\bfseries University of Pune} \sep {\itshape B.E. in Computer Science}\hfill {\color{muted}Pune, India}\par
+
+\end{document}

@@ -1,0 +1,143 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% GSK -- AIML Software Engineer, AI for Science (AI4S), Job 435679.
+% London (The Stanley Building) + SF/Zug/Heidelberg/Cambridge MA. Hybrid.
+% Platform/software-engineering role: design/build/operate scalable cloud
+% infrastructure + model-serving that AI systems and agentic apps run on;
+% own reliability (CI/CD, testing, monitoring/alerting, incident response);
+% cloud-native architectures for AI/ML workloads; production services for
+% GSK scientists on vast biomedical data.
+% Required: Python + FastAPI robust scalable software; cloud (GCP, Azure) +
+% cloud-native; reusable/testable components; basic DL framework (PyTorch/
+% JAX/TF); CLI/shell; SW-eng best practice (CI/CD, containerization, IaC);
+% debugging in cluster/cloud; operate prod services (monitoring/observability
+% /alerting); SQL DB design & admin; hands-on GCP (Cloud Run, GKE, Cloud
+% Storage, Artifact Registry, Cloud SQL).
+% Preferred: ML principles; commercial cloud-native infra; large-scale AI +
+% agentic systems in prod; distributed training (PyTorch/TF); perf/cost
+% optimisation & efficient compute; SLOs/SLIs; incident response + post-
+% incident review; Terraform IaC; Kubernetes/GKE; GCP networking/security
+% (VPC/VPC-SC); open-source contributions; biomedical data / disease biology.
+% NOTE: honest tailoring -- candidate leads on production Python + FastAPI,
+% model-serving (MCP 180+ tools), reliability/monitoring/alerting, agentic
+% systems in prod, perf & cost optimisation (85%/3x), SQL, GCP + AWS, open-
+% source (67K HF downloads), and has a genuine AI-for-Science hook (KCL drug-
+% discovery GAN + million-row clinical-data pipeline). Gaps NOT faked: GKE/
+% Kubernetes, Terraform/IaC, specific GCP services (Cloud Run/Artifact
+% Registry/Cloud SQL), distributed training, formal SLOs, VPC networking --
+% none claimed; GCP + Docker stated honestly.
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.7cm,bottom=0.7cm,left=1.4cm,right=1.4cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=2pt,topsep=2pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large AIML Software Engineer: Production Python, Model Serving \& Cloud-Native}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+Software engineer who designs, builds, and operates the scalable infrastructure and services that AI systems and agentic applications run on. I write production-grade Python with FastAPI, build model-serving and APIs that expose models with efficient use of compute, and own reliability through CI/CD, automated testing, monitoring, alerting, and incident response. I care about reusable, testable, well-designed components on cloud-native architectures (GCP and AWS with Docker), and about performance and cost optimisation. I also have a scientific background: deep-learning research for drug discovery and large-scale biomedical data pipelines at King's College London.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Production Python \& Services:} Python, FastAPI, reusable \& testable components, design patterns, microservices, REST APIs, MCP servers, CLI \& shell scripting
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Model Serving \& Reliability:} model-serving infrastructure, deployment \& scaling, CI/CD \& release processes, automated testing, monitoring, alerting, incident response
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Cloud-Native \& MLOps:} GCP \& AWS, Docker \& containerisation, cloud-native architectures, observability, performance \& cost optimisation (efficient compute)
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Data \& Databases:} SQL (schema design, query performance), PostgreSQL/MongoDB, data pipelines \& processing, vector databases
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{ML \& Agentic Systems:} large-scale LLMs \& agentic systems in production, PyTorch, TensorFlow, fine-tuning (LoRA, BERT), deep learning
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Designed, built, and operated scalable services that support AI models and agentic systems across the full software development life cycle, used by 5+ leading investment management firms.
+  \item Built and operated model-serving and API infrastructure, including a production FastAPI server exposing 180+ AI-powered tools through the Model Context Protocol (MCP) with secure enterprise access.
+  \item Owned reliability with CI/CD, automated testing, monitoring, and incident-triggering alerts, diagnosing and resolving issues in live production systems.
+  \item Optimised performance and compute cost by rearchitecting a production inference-heavy engine into a graph-based pipeline (Apache Hamilton + vectorisation), delivering an 85\% gain and 3x throughput.
+  \item Delivered robust, tested, high-performance Python (FastAPI) on cloud-native architectures (GCP and AWS with Docker), building reusable components and designing SQL schemas for reliable data access.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Built deep learning models (Graph Convolution Networks, GANs) for drug discovery, achieving a 63\% improvement in the novelty score of generated drug structures.
+  \item Engineered a robust preprocessing pipeline over a million-row clinical dataset, ensuring accuracy and completeness of biomedical data for research.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{PII Detection LLMs (open-source):} fine-tuned GPT (LoRA) and BERT, deployed as reusable production artefacts; collectively 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+  \item \textbf{Agentic Search API (production service):} FastAPI + Elasticsearch semantic search with embeddings and a deterministic fallback for resilience; measured p95 latency and 0.76 quality-of-service eval score. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+  \item \textbf{Spec-to-Code Agent (agentic system):} autonomous ReAct agent on LangGraph and the Anthropic API that ships installable, tested packages from specs; 9/9 pass rate across a polyglot benchmark. \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\hfill {\color{muted}London, UK}\par
+{\itshape MSc in Data Science}\par\vspace{2pt}
+{\color{company}\bfseries C-DAC, India}\hfill {\color{muted}Pune, India}\par
+{\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\par\vspace{2pt}
+{\color{company}\bfseries University of Pune}\hfill {\color{muted}Pune, India}\par
+{\itshape B.E. in Computer Science}\par
+
+\end{document}

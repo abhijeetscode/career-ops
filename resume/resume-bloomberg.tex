@@ -1,0 +1,133 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bloomberg -- Senior AI Engineer, Generative AI & Search (AI Experiences,
+% Engineering AI dept). London. Ref 10050592.
+% Focus: IR, Search, NLP, Generative AI for client-facing financial search.
+% Build/deploy RAG systems; curate data for training & eval; build
+% evaluation frameworks for rapid iteration on real user interactions;
+% LLM-powered search agents for complex client queries at scale; traditional
+% ML + GenAI; robust search APIs; low-latency; full lifecycle ownership;
+% open-source / conference representation.
+% Wants: practical NLP/IR/Search/GenAI experience (Solr/Elasticsearch a
+% plus); MSc/PhD or track record; enterprise SW-eng (data structures,
+% algorithms, data-driven problem solving); communication.
+% NOTE: honest tailoring -- candidate leads on RAG + search (search-agent
+% on Elasticsearch w/ eval harness), LLM search agents for investment firms,
+% evaluation frameworks (evals/QoS/terminal impact), traditional ML + GenAI,
+% APIs/FastAPI, transformers from scratch (DS&A fundamentals), financial
+% domain, open-source (67K HF downloads). MSc Data Science. All honest.
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.7cm,bottom=0.7cm,left=1.4cm,right=1.4cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=2pt,topsep=2pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large Senior AI Engineer: Generative AI, Search \& RAG for Finance}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+AI Engineer who builds client-facing search and generative-AI systems over financial data. I design and deploy Retrieval-Augmented Generation (RAG) systems and LLM-powered search agents that handle complex queries, and I build the evaluation frameworks that let teams iterate rapidly on real user interactions. I combine information retrieval and NLP with strong software engineering: robust APIs, solid data-structures and algorithms fundamentals, and low-latency, production-quality systems. I own the full lifecycle from idea to deployment, blend traditional ML with generative AI, and share my work through open-source (67K+ HuggingFace downloads).
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Search \& Information Retrieval:} RAG, semantic \& vector search (Elasticsearch), dense vector databases, retrieval strategies, LLM-powered search agents, ranking, embeddings
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Generative AI \& NLP:} LLMs, agents, tool use, prompt engineering, fine-tuning (LoRA, BERT), transformers (built from scratch), grounding
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Evaluation \& Data:} evaluation frameworks, evals \& quality-of-service metrics, outcome metrics (``terminal impact''), data curation for training \& eval, groundedness \& drift
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Software Engineering:} Python, data structures \& algorithms, APIs (FastAPI), microservices, testing/TDD, CI/CD, low-latency \& high-throughput systems
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Production \& Cloud:} model deployment \& serving, monitoring, AWS \& GCP, Docker, PostgreSQL/MongoDB, traditional ML (PyTorch, TensorFlow)
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Built LLM-powered search and conversational agents that handle complex financial queries for 5+ leading investment management firms, across chat and live calls.
+  \item Designed and deployed RAG systems over financial documents with embeddings and vector search, letting analysts query large collections in natural language with relevant, grounded results.
+  \item Built evaluation frameworks for rapid iteration on real user interactions: evals, quality-of-service metrics, groundedness and drift signals, and ``terminal impact,'' an outcome metric for whether users leave a query satisfied.
+  \item Built robust APIs and services for search and tool use, including a production FastAPI server exposing 180+ AI-powered tools through the Model Context Protocol (MCP) with secure enterprise access.
+  \item Blended traditional ML with generative AI: a predictive model inferring missing values at scale across property datasets, alongside client-facing generative-AI products.
+  \item Rearchitected a production inference-heavy engine into a graph-based pipeline (Apache Hamilton + vectorisation) for an 85\% performance gain and 3x throughput, owning the full lifecycle to deployment.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Built and evaluated deep learning models (Graph Convolution Networks, GANs) over a million-row dataset, achieving a 63\% improvement in novelty score, with a reproducible preprocessing and training pipeline.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Agentic Search API (search + RAG + evals):} FastAPI + Elasticsearch semantic search, Qwen3 embeddings and Claude tool-calling, with a deterministic fallback for resilience; measured p95 latency and 0.76 QoS eval score. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+  \item \textbf{Transformer from Scratch in Rust (fundamentals):} GPT-style decoder-only transformer built from first principles (multi-head attention, training loop) using the Candle framework with Metal GPU acceleration. \href{https://github.com/abhijeetscode/transformer-rust}{View on GitHub}
+  \item \textbf{PII Detection LLMs (NLP, open-source):} fine-tuned GPT (LoRA) and BERT to detect personally identifiable information, deployed as reusable production artefacts; collectively 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\hfill {\color{muted}London, UK}\par
+{\itshape MSc in Data Science}\par\vspace{2pt}
+{\color{company}\bfseries C-DAC, India}\hfill {\color{muted}Pune, India}\par
+{\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\par\vspace{2pt}
+{\color{company}\bfseries University of Pune}\hfill {\color{muted}Pune, India}\par
+{\itshape B.E. in Computer Science}\par
+
+\end{document}

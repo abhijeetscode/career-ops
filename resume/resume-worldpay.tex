@@ -1,0 +1,133 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AI Engineer -- Worldpay / Global Payments. AI Innovation & Technology.
+% London, hybrid, full time. Req JR0610359.
+% Scope: assess/design/build/deploy ML/AI + foundation models; research &
+% evaluate emerging AI, prototype + PoCs; GenAI, Agentic AI, ML, LLMs;
+% take PoC idea -> production; agentic workflows (LangChain/similar);
+% observability/scalability/compliance; AI governance/security.
+% Need: 5+ yrs AI/ML/DS; strong Python (PyTorch, TensorFlow, Hugging Face);
+% deep learning, NLP, LLM architectures; fine-tuning LLMs / domain models,
+% RAG, embeddings, vector DBs; agentic orchestration; cloud (Azure/AWS/GCP);
+% multimodal, AI governance, MLOps. Bonus: advanced degree; research/
+% open-source; payments/fintech/financial-services knowledge.
+% HONEST TAILORING -- candidate leads on: Python, PyTorch/TF/HF, deep
+% learning/NLP/LLM architecture (transformer-from-scratch), fine-tuning
+% (LoRA + BERT), RAG/embeddings/vector DBs, agentic orchestration
+% (LangGraph/LangChain), PoC->production for 5+ investment firms, multimodal
+% (voice/avatar), MLOps/observability, AWS, FinTech, MSc, open source.
+% NOT claimed: Azure, GCP (AWS satisfies "such as"); payments-specific.
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.8cm,bottom=0.7cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.01}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{6pt}{4pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=2pt,topsep=2pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large AI Engineer: Generative \& Agentic AI, LLM Fine-Tuning \& Production ML}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+AI engineer who takes emerging AI from proof-of-concept to production, with a research-and-experimentation mindset and the engineering to ship it. As an early-stage hire at a FinTech, I have designed, built, and deployed generative and agentic AI, LLMs, and ML models for 5+ leading investment management firms, embedding observability, evaluation, and governance in every design. Deep on LLM architectures (I built a GPT-style transformer from scratch), fine-tuning (LoRA, BERT), RAG, embeddings, and vector databases, with hands-on PyTorch, TensorFlow, and Hugging Face. Open-source proof: fine-tuned models with 67K+ HuggingFace downloads and a coding agent at 9/9 on a polyglot benchmark. MSc Data Science, King's College London.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Generative \& Agentic AI:} LLMs, agentic AI workflows, orchestration (LangChain, LangGraph), RAG, prompt engineering, multimodal AI (real-time voice, avatar/video), Model Context Protocol (MCP)
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{ML \& Deep Learning:} PyTorch, TensorFlow, Keras, Scikit-Learn, deep learning, NLP, LLM architectures, fine-tuning (LoRA, BERT), domain-specific models
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Data \& Retrieval:} Embeddings, vector databases, Elasticsearch (hybrid BM25 + semantic search), RAG pipelines, PostgreSQL, ETL \& data pipelines
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{MLOps \& Governance:} PoC to production, evaluation frameworks, monitoring \& observability (OpenTelemetry), groundedness \& hallucination checks, AI governance, RBAC, PII detection
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Cloud \& Engineering:} AWS, Docker, CI/CD, Python (production-grade, TDD), FastAPI, Rust, SQL, Hugging Face
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Took AI proof-of-concepts from idea to production as an early-stage hire, shipping to 5+ leading investment management firms, including a multimodal conversational AI agent with real-time voice and avatar/video on live calls (Recall, ElevenLabs, Tavus).
+  \item Cut analyst modelling time 70\% by building and deploying an autonomous agentic workflow that generates Discounted Cash Flow (DCF) models from raw financial data (Python, LangGraph).
+  \item Shipped RAG systems over financial documents with LLMs, embeddings, and vector search, plus a FastAPI MCP server exposing 180+ AI-powered tools with secure enterprise access (Keycloak JWT).
+  \item Embedded MLOps and governance in production: evaluation frameworks, Quality-of-Service metrics, incident-triggering, and observability (OpenTelemetry) to track groundedness, latency, and failure modes.
+  \item Improved financial modelling engine performance 85\% with a 3x throughput gain by rearchitecting it into a graph-based system (Apache Hamilton + vectorisation) on AWS.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Researched and built deep learning models (Graph Convolution Networks, GANs) for drug discovery over a million-row clinical dataset, achieving a 63\% improvement in the novelty score of generated structures.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{PII Detection LLMs (fine-tuning + governance):} fine-tuned GPT (LoRA) and BERT to detect and protect personal data, deployed as reusable production models on Hugging Face; collectively 67K+ downloads. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+  \item \textbf{Transformer from Scratch in Rust (LLM architectures):} GPT-style decoder-only transformer built from first principles (multi-head causal attention, pre-norm blocks, BPE tokenisation, full training loop) using the Candle framework with Metal GPU acceleration. \href{https://github.com/abhijeetscode/transformer-rust}{View on GitHub}
+  \item \textbf{Spec-to-Code Agent (agentic AI):} autonomous ReAct agent on LangGraph and the Anthropic API that plans, calls tools, and ships installable, tested packages from plain-language specs; 9/9 pass rate across a polyglot benchmark (Python, Go, Rust, Java, JS). \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\hfill {\color{muted}London, UK}\par
+{\itshape MSc in Data Science}\par\vspace{2pt}
+{\color{company}\bfseries C-DAC, India}\hfill {\color{muted}Pune, India}\par
+{\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\par\vspace{2pt}
+{\color{company}\bfseries University of Pune}\hfill {\color{muted}Pune, India}\par
+{\itshape B.E. in Computer Science}\par
+
+\end{document}

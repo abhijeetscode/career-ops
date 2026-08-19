@@ -1,0 +1,80 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cover letter -- Scale AI, Machine Learning Engineer, Platform (Scale GP).
+% Matches the resume design: Source Sans Pro, teal + purple, clickable
+% links. Achievements as bullet points. One page. Compile: pdflatex.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}
+\usepackage[a4paper,top=1.0cm,bottom=1.0cm,left=1.6cm,right=1.6cm]{geometry}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+\definecolor{accent}{HTML}{117A8B}   % teal
+\definecolor{company}{HTML}{6C2BB3}  % purple
+\definecolor{muted}{HTML}{555555}
+
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\linespread{1.03}
+\pagestyle{empty}
+
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=3pt,topsep=3pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{22}{24}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large Machine Learning Engineer: Retrieval, RAG \& Agentic Platforms}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+
+{\color{accent!35}\hrule height 1pt}
+\vspace{4pt}
+
+{\color{muted}\small Cover Letter \sep Machine Learning Engineer, Platform \sep Scale AI, London}
+
+\vspace{2pt}
+
+Dear Hiring Manager,
+
+I build retrieval and agentic systems for a living, and Scale GP is the platform version of exactly what I do: knowledge retrieval, RAG, evaluation, and agentic workflows exposed as reliable APIs. I want to help build the retrieval and knowledge systems at the heart of it, and I care as much about recall, precision, latency, and cost as I do about the models themselves.
+
+For the last few years at Built AI, an early-stage FinTech, I have owned ML components end to end, from research and prototyping through to production, for leading investment management firms. I work where retrieval, agents, and solid backend engineering meet, and I am comfortable in ambiguous problem spaces where research has to become a dependable product.
+
+A few things I have delivered that map to this role:
+
+\begin{tight}
+  \item Designed RAG pipelines over enterprise documents (chunking, embedding, indexing, retrieval) with semantic search on Elasticsearch, balancing recall, precision, latency, and cost.
+  \item Built evaluation frameworks, datasets, and metrics for retrieval quality and agent performance, including ``terminal impact,'' an outcome metric for whether a user leaves a query satisfied.
+  \item Built reliable backend services and data pipelines for LLM components, including a FastAPI server exposing 180+ tools through the Model Context Protocol (MCP).
+  \item Optimised a production inference-heavy engine into a graph-based pipeline, delivering an 85\% performance gain and 3x throughput.
+\end{tight}
+
+I also work in the open. My PII-detection language models have passed 67,000 downloads on HuggingFace, my \href{https://github.com/abhijeetscode/search-agent}{search-agent} project pairs Elasticsearch retrieval with a measured evaluation harness, and my research background at King's College London gives me grounding in graph-based representations relevant to knowledge systems.
+
+At Scale I would focus on making retrieval both higher quality and more measurable: strengthening RAG pipelines, building the evaluation datasets and metrics that keep context relevant, and integrating retrieval cleanly with enterprise data sources and vector stores, so agents deliver real, trustworthy impact for customers. I am used to shipping fast with tight feedback loops and owning what I build in production.
+
+I would welcome the chance to discuss how I can contribute. Thank you for your consideration.
+
+\vspace{4pt}
+{\color{company}\bfseries Abhijeet Lokhande}
+
+\end{document}

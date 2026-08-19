@@ -1,0 +1,139 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Hyperlayer -- Senior AI Engineer. Paddington, London. In-office, perm.
+% Reports to Head of AI (second in command). Intelligent banking platform
+% for the "agentic economy"; regulated FinTech (Tier 1/2 FIs). Focus:
+% real-time conversational AI, agentic commerce, personalisation; build AI
+% into payment flows/customer journeys; system-level design & architecture;
+% mentor juniors; scale/reliable/secure AI meeting financial-regulation
+% objectives. Wants: Python+SQL, LLM frameworks (LangChain), prompt &
+% context engineering, AWS (+GCP), Docker/K8s, APIs/real-time/streaming,
+% LLMs/GenAI, data-driven. Bonus: Go; evaluation frameworks + fine-tuning;
+% agentic commerce protocols (A2A, MCP, Agent-to-Payments); multimodal
+% WebRTC (LiveKit); GPT-4V/Gemini Live; vector DBs (Pinecone/Qdrant) for
+% RAG; security/privacy in AI (encryption, anonymization, compliance);
+% bias/safety.
+% Candidate leads on: regulated FinTech; conversational + agentic AI;
+% MCP (built a 180+ tool production MCP server); LLMs + prompt/context
+% engineering (LangGraph/LangChain); evaluation + fine-tuning (LoRA/BERT);
+% vector-DB RAG; AI security/privacy (PII detection & redaction, RBAC,
+% audit); AWS + Docker; real-time agents on live calls; technical ownership
+% + system design.
+% GAP (not claimed): Go; Kubernetes (Docker stated); multimodal WebRTC /
+% LiveKit / GPT-4V / Gemini Live; explicit people-management/mentoring
+% (framed as technical leadership/ownership only). NOTE: no UK visa
+% sponsorship -- candidate is London-based (confirm non-sponsored RTW).
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.7cm,bottom=0.7cm,left=1.4cm,right=1.4cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=1pt,topsep=1pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large Senior AI Engineer: Agentic \& Conversational AI in Regulated FinTech}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+Senior AI engineer who builds agentic and conversational AI into financial products, with the controls regulated institutions need. In FinTech I took LLM agents from prototype to production for 5+ leading investment firms, weaving AI into real customer journeys over chat and live calls. I built a production Model Context Protocol server exposing 180+ tools to agents, own evaluation and fine-tuning, and design for security and privacy from the start (PII detection and redaction, role-based access, audit trails). Strong Python on AWS with prompt and context engineering, and I take technical ownership across system design, reliability, and architecture.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{LLMs \& Agents:} agentic workflows \& orchestration (LangGraph, LangChain), prompt \& context engineering, Model Context Protocol (MCP), tool-calling, real-time conversational AI, RAG
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Evaluation \& Fine-tuning:} evaluation frameworks, quality-of-service \& outcome metrics, groundedness, drift monitoring, fine-tuning (LoRA, BERT), embeddings
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Security, Privacy \& Compliance:} PII detection \& redaction, role-based access control, audit trails, data privacy, safety guardrails, regulated-FinTech controls
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Platform \& Data:} Python, SQL, FastAPI, REST \& real-time APIs, microservices, vector databases, Elasticsearch, PostgreSQL, AWS \& GCP, Docker, CI/CD, observability
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Engineering leadership:} system-level design \& architecture, technical ownership across a team, prototyping to production, data-driven decisions
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Took LLM agents from prototype to production for 5+ leading investment firms, building AI into real customer journeys over chat and live calls, and taking technical ownership across the team's AI work.
+  \item Designed and built a production FastAPI Model Context Protocol (MCP) server exposing 180+ tools to agents with secure enterprise access, plus reusable patterns for adding tools safely.
+  \item Built evaluation and fine-tuning into the workflow: evals, quality-of-service and groundedness metrics, drift signals, and incident-triggering alerts, so agents stay reliable and are promoted on the numbers.
+  \item Engineered AI systems for security and regulation: PII detection and redaction, role-based access enforced at the server, and audit trails, alongside prompt and context engineering for reliable outputs.
+  \item Contributed to system-level design and delivered an 85\% performance gain by rearchitecting a production engine into a graph-based pipeline (Apache Hamilton), and cut analyst time 70\% with an autonomous agent.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Researched and built deep learning models (Graph Convolution Networks, GANs) over a million-row dataset, achieving a 63\% novelty improvement with rigorous evaluation.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Agentic Enterprise Assistant (MCP + security):} agent over grounded data with role-based access and OAuth at an MCP server (Keycloak JWT), a grounding-validation gate, and auditable, token-redacted traces; hybrid BM25 plus semantic search. Passed 13/13 evaluation cases. \href{https://github.com/abhijeetscode/Agentic-Enterprise-Assistant}{View on GitHub}
+  \item \textbf{Agentic Search API (vector RAG):} FastAPI agent decomposing queries and routing to semantic (Qwen3 embeddings) and lexical search, with a deterministic fallback; p95 around 175ms and a 0.76 macro QoS eval score. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+  \item \textbf{PII Detection LLMs (privacy):} fine-tuned GPT (LoRA) and BERT for detection and redaction of personal data; collectively 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\hfill {\color{muted}London, UK}\par
+{\itshape MSc in Data Science}\par\vspace{2pt}
+{\color{company}\bfseries C-DAC, India}\hfill {\color{muted}Pune, India}\par
+{\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\par\vspace{2pt}
+{\color{company}\bfseries University of Pune}\hfill {\color{muted}Pune, India}\par
+{\itshape B.E. in Computer Science}\par
+
+\end{document}

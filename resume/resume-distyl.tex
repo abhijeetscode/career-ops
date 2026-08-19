@@ -1,0 +1,142 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Distyl AI -- AI Engineer. London, UK (new office), hybrid. Applied-AI
+% company deploying production LLM systems for Fortune 500s.
+% Role: design/deploy production-grade AI powered by LLMs; work directly w/
+% F500 customers; build real-world AI apps (agents, full-stack AI products);
+% prototype->production; shape technical direction across engagements.
+% Responsibilities: build production AI (LLMs, prompt eng, agent workflows,
+% tool use, full-stack); work w/ customers; lead system architecture
+% (perf/reliability/cost/maintainability); develop internal LLM app platform
+% (Distillery) w/ reusable infra/tools/workflows; rigorous evaluation
+% frameworks (accuracy/latency/cost/reliability/safety); ship w/ observability/
+% reliability/security; raise engineering bar.
+% Who: 3+ yrs SWE; Python or TypeScript; built/deployed LLM apps or agents in
+% production; modern LLM tooling (LangChain, LlamaIndex, Guardrails, MCP,
+% agent frameworks); RAG/tool use/multi-step workflows; AI evaluation +
+% debugging + observability; reliable prod systems + DevOps. Plus: enterprise
+% AI deploys; cloud (AWS/GCP/Azure); agent architectures + long-horizon
+% execution; responsible AI (auditability, governance).
+% NOTE honest tailoring -- candidate is a near 1:1 fit: production LLM apps +
+% agents (MCP 180+ tools, agent workflows, tool use), RAG + multi-step
+% workflows, rigorous evaluation frameworks (evals/QoS/terminal impact across
+% accuracy/latency/cost/reliability), observability, reusable internal
+% platform (MCP server = internal LLM platform analogue), customer-facing
+% delivery for 5+ firms, responsible AI (Agentic Enterprise Assistant:
+% MCP-RBAC + auditability + governance, 13/13 evals), Python + TypeScript,
+% AWS+GCP, DevOps. No gaps requiring fabrication. 3+ yrs met.
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.7cm,bottom=0.7cm,left=1.4cm,right=1.4cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=2pt,topsep=2pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large AI Engineer: Production LLM Systems, Agents \& Evaluation}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+AI engineer who designs and deploys production-grade AI systems powered by LLMs and works directly with enterprise customers. As an early-stage hire I have built and shipped real-world AI applications, from intelligent agents to full-stack products, and operated them at scale in mission-critical environments. I lead system architecture balancing performance, reliability, cost, and maintainability, build reusable internal platform infrastructure, and develop rigorous evaluation frameworks that measure accuracy, latency, cost, reliability, and safety. Strong in Python and TypeScript with modern LLM tooling, and I raise the engineering bar on observability, reliability, and responsible AI.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{LLM Applications \& Agents:} production LLM apps, intelligent agents, agent workflows, tool use, multi-step \& long-horizon execution, prompt engineering, full-stack AI products
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{LLM Tooling:} LangChain, LangGraph, Model Context Protocol (MCP), agent frameworks, RAG pipelines, embeddings, vector databases
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Evaluation \& Observability:} rigorous evaluation frameworks (accuracy, latency, cost, reliability, safety), quality-of-service \& outcome metrics (``terminal impact''), groundedness, debugging, monitoring
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Architecture \& Platform:} scalable production architectures, reusable internal platform infrastructure, APIs (FastAPI), reliability, security, maintainability, DevOps/CI-CD
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Engineering \& Cloud:} Python, TypeScript, responsible AI (auditability, governance), AWS \& GCP, Docker, PostgreSQL, MongoDB, customer-facing delivery
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Designed, developed, and deployed production AI applications powered by LLMs, from intelligent agents to full-stack products, used by 5+ leading investment management firms at scale.
+  \item Built reusable internal platform infrastructure, including a FastAPI server exposing 180+ AI-powered tools through the Model Context Protocol (MCP) across deployments.
+  \item Developed rigorous evaluation frameworks measuring accuracy, latency, cost, reliability, and safety: evals, quality-of-service metrics, groundedness and drift signals, and ``terminal impact.''
+  \item Led system architecture for production AI, balancing performance, reliability, cost, and maintainability, and shipped with strong observability, reliability, and security.
+  \item Partnered directly with enterprise stakeholders to translate complex problems into impactful AI solutions, and raised engineering standards across the team.
+  \item Optimised a production inference-heavy engine into a graph-based pipeline (Apache Hamilton + vectorisation) for an 85\% performance gain and 3x throughput.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Built and evaluated deep learning models (Graph Convolution Networks, GANs) over a million-row dataset, achieving a 63\% improvement in novelty score, with a reproducible preprocessing and training pipeline.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Agentic Enterprise Assistant (agents + governance + evals):} LLM agent (Claude, tool use) over grounded data with the MCP server as the authoritative RBAC boundary (Keycloak JWT), a grounding-validation gate, hybrid BM25 + semantic search, and OpenTelemetry observability; passed 13/13 evals. \href{https://github.com/abhijeetscode/Agentic-Enterprise-Assistant}{View on GitHub}
+  \item \textbf{Agentic Search API (RAG + evals):} FastAPI + Elasticsearch semantic search, Qwen3 embeddings and Claude tool-calling, with a deterministic fallback for resilience; measured p95 latency and 0.76 QoS eval score. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+  \item \textbf{Spec-to-Code Agent (agent frameworks):} autonomous ReAct agent on LangGraph and the Anthropic API that ships installable, tested packages from specs; 9/9 pass rate across a polyglot benchmark. \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\hfill {\color{muted}London, UK}\par
+{\itshape MSc in Data Science}\par\vspace{2pt}
+{\color{company}\bfseries C-DAC, India}\hfill {\color{muted}Pune, India}\par
+{\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\par\vspace{2pt}
+{\color{company}\bfseries University of Pune}\hfill {\color{muted}Pune, India}\par
+{\itshape B.E. in Computer Science}\par
+
+\end{document}

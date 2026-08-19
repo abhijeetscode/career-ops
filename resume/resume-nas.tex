@@ -1,0 +1,137 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nas.com (Nas Company) -- AI Software Engineer. SINGAPORE, hybrid, full-
+% time. Founded by Nas Daily team. AI-powered platform for solopreneurs.
+% NOTE: Singapore-based role -- candidate is London/UK; relocation / work
+% authorisation is the real gating question, NOT skills fit.
+% Scope: design/build/deploy AI-powered products; AI agents & workflow
+% automation with modern LLMs; integrate OpenAI/Anthropic/Google APIs;
+% reliable backend services; optimise prompts, RAG, tool calling, agent
+% performance; evaluate new models, rapid prototyping; ship with Product/
+% Design/Eng; monitor & maintain AI in production.
+% Need: 3+ yrs SWE; Python (pref) or JS/TS; LLM apps; AI API integration &
+% deployment; prompt eng, embeddings, vector DBs, RAG; cloud (AWS/GCP/Azure);
+% backend frameworks/REST; problem-solving; English.
+% Bonus: autonomous agents; MCP servers, function calling, multi-agent;
+% LangGraph/LangChain/LlamaIndex; deploy at scale; fine-tuning/eval/RL;
+% open-source AI contributions.
+% NOTE: honest tailoring -- candidate is a very strong skills match: LLM
+% products, autonomous agents, MCP server (180+ tools), Anthropic/OpenAI
+% API integration, RAG/embeddings/vector DBs, prompt & tool-calling, evals
+% (evals/QoS/terminal impact), fine-tuning (LoRA/BERT), Python + TypeScript,
+% AWS+GCP, open-source (67K HF downloads). Azure not claimed.
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.7cm,bottom=0.7cm,left=1.4cm,right=1.4cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=2pt,topsep=2pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large AI Software Engineer: LLMs, AI Agents \& Automation}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+AI software engineer who loves building products with the latest AI. I design, build, and deploy LLM-powered products, autonomous agents, and workflow automations, integrating APIs from OpenAI, Anthropic, and Google into reliable backend services. I optimise prompts, retrieval (RAG), tool calling, and agent performance, evaluate new models fast, and ship high-impact features with product and design teams. I move quickly, experiment often, and maintain AI systems in production, with strong Python (and TypeScript), cloud experience (AWS and GCP), and open-source contributions (67K+ HuggingFace downloads).
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{LLMs \& Agents:} LLM-powered products, autonomous \& multi-agent systems, MCP servers, function/tool calling, orchestration (LangGraph, LangChain), prompt engineering
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Retrieval \& RAG:} RAG architectures, embeddings, vector databases, semantic search (Elasticsearch), retrieval \& tool-calling optimisation
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{AI APIs \& Backend:} OpenAI / Anthropic / Google API integration, FastAPI, REST APIs, reliable backend services, event-driven patterns
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Evaluation \& Ops:} evaluation frameworks, quality-of-service \& outcome metrics (``terminal impact''), monitoring, agent-performance optimisation, fine-tuning (LoRA, BERT)
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Languages \& Cloud:} Python, TypeScript, AWS \& GCP, Docker, CI/CD, PostgreSQL/MongoDB, open-source
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Designed, built, and deployed LLM-powered products and autonomous agents used by 5+ leading investment management firms, moving fast and shipping features that delight users.
+  \item Built reliable backend services and reusable infrastructure, including a production FastAPI server exposing 180+ AI-powered tools through the Model Context Protocol (MCP) with secure access.
+  \item Integrated modern LLM APIs (Anthropic and others) and optimised prompts, retrieval (RAG), tool calling, and agent performance for accuracy and speed.
+  \item Evaluated new AI models and rapidly prototyped ideas, backed by evaluation frameworks, quality-of-service metrics, and ``terminal impact,'' an outcome metric for user satisfaction.
+  \item Monitored, improved, and maintained AI systems in production, collaborating with product and engineering to ship high-impact features iteratively.
+  \item Optimised a production inference-heavy engine into a graph-based pipeline (Apache Hamilton + vectorisation) for an 85\% performance gain and 3x throughput.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Built and evaluated deep learning models (Graph Convolution Networks, GANs) over a million-row dataset, achieving a 63\% improvement in novelty score, with a reproducible training pipeline.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Spec-to-Code Agent (autonomous agent):} autonomous ReAct agent on LangGraph and the Anthropic API that ships installable, tested packages from specs; 9/9 pass rate across a polyglot benchmark. \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+  \item \textbf{Agentic Search API (RAG + tool calling):} FastAPI + Elasticsearch semantic search, Qwen3 embeddings and Claude tool-calling, with a deterministic fallback for resilience; measured p95 latency and 0.76 QoS eval score. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+  \item \textbf{PII Detection LLMs (open-source, fine-tuning):} fine-tuned GPT (LoRA) and BERT, deployed as reusable production artefacts; collectively 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\hfill {\color{muted}London, UK}\par
+{\itshape MSc in Data Science}\par\vspace{2pt}
+{\color{company}\bfseries C-DAC, India}\hfill {\color{muted}Pune, India}\par
+{\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\par\vspace{2pt}
+{\color{company}\bfseries University of Pune}\hfill {\color{muted}Pune, India}\par
+{\itshape B.E. in Computer Science}\par
+
+\end{document}

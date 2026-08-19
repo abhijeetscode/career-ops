@@ -1,0 +1,110 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Catapult -- Founding AI Research Engineer (London). Tailored resume.
+% Single column, real text, standard headers, ATS-clean.
+% Fonts: Source Sans Pro. Accent: teal + purple. Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}
+\usepackage[a4paper,top=1.1cm,bottom=1.0cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}
+\definecolor{company}{HTML}{6C2BB3}
+\definecolor{muted}{HTML}{555555}
+
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{7pt}{4pt}
+
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=1pt,topsep=1pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large AI Research Engineer: LLMs, Retrieval \& Production ML}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+AI research engineer who takes ideas from hypothesis to product, reading current NLP and ML research and building on it. I have implemented a GPT-style transformer from first principles in Rust, fine-tuned and released open models (67K+ HuggingFace downloads), and built production retrieval and agentic systems over enterprise knowledge bases. Earlier I ran deep-learning research at King's College London on graph neural networks and GANs for drug discovery. Strong Python, cloud, and SQL/NoSQL, comfortable owning both the scientific and engineering sides end to end. MSc Data Science (King's College London).
+
+%======================= COMPETENCIES =======================
+\section{Core Strengths}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Research \& Experimentation:} reading and implementing papers, hypothesis testing, GNNs, GANs, building models from first principles
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Retrieval \& Knowledge Systems:} RAG, hybrid BM25 + semantic search, embeddings, vector databases, agent orchestration
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{LLMs \& Deep Learning:} fine-tuning (LoRA, BERT), transformers, PyTorch, Candle, NLP, evals \& observability
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Engineering:} Python (TDD), Rust, FastAPI, PostgreSQL, MongoDB, Elasticsearch, AWS, Docker
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Built production retrieval and RAG systems over enterprise knowledge bases, combining semantic search, embeddings, and vector databases so analysts can query large document sets in natural language.
+  \item Took AI systems end-to-end from hypothesis to product: an autonomous agent generating Discounted Cash Flow models from raw data (70\% less analyst time) and a client-facing conversational AI now used by 5+ investment management firms.
+  \item Designed evals, Quality of Service metrics, and monitoring to test hypotheses about model behaviour in production (groundedness, latency, failure modes) and iterate on them.
+  \item Improved the modelling engine's performance by 85\% by rearchitecting it into a graph-based system using Apache Hamilton and vectorisation.
+  \item Core engineer on an \href{https://gtr.ukri.org/projects?ref=10022996}{Innovate UK funded R\&D project} (\pounds205,895 grant) building a novel ML data platform and street-level analytics.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Developed a deep learning model using Graph Convolution Networks and Generative Adversarial Networks (GANs) for drug discovery, achieving a 63\% improvement in the novelty score of generated drug structures, over a preprocessing pipeline built for a million-row clinical dataset.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Transformer from Scratch in Rust:} GPT-style decoder-only transformer built from first principles (multi-head causal self-attention, pre-norm residual blocks, full training loop with SafeTensors checkpointing) using the Candle framework with Metal GPU acceleration; character and BPE training. \href{https://github.com/abhijeetscode/transformer-rust}{View on GitHub}
+  \item \textbf{Agentic Search API:} production cross-domain retrieval service (FastAPI, PostgreSQL, Elasticsearch) where Claude decomposes queries and routes to lexical and semantic tools, with a deterministic fallback when the LLM fails; local Qwen3 embeddings. Achieves p95 around 175ms retrieval and a 0.76 macro QoS score. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+  \item \textbf{Agentic Enterprise Assistant:} internal operations assistant where a Claude agent answers staff questions over grounded data, with RBAC at the MCP server, a grounding-validation gate, and auditable traces; hybrid BM25 + semantic search over Elasticsearch. Passed 13/13 evaluation cases. \href{https://github.com/abhijeetscode/Agentic-Enterprise-Assistant}{View on GitHub}
+  \item \textbf{PII Detection LLMs:} fine-tuned GPT (with LoRA) and BERT for Personally Identifiable Information detection; published models collectively reaching 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+\entry{King's College London}{}{MSc in Data Science}{London, UK}
+\vspace{-3pt}
+\entry{C-DAC, India}{}{Post Graduate Diploma in Advanced Computing (PG-DAC)}{Pune, India}
+\vspace{-3pt}
+\entry{University of Pune}{}{B.E. in Computer Science}{Pune, India}
+
+\end{document}
