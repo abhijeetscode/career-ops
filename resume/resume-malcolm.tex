@@ -1,0 +1,147 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Malcolm (via Founders Factory, London Studio) -- CTO & Co-Founder,
+% Insurtech infrastructure venture. London, hybrid. Co-founder equity stake.
+% Company: infrastructure layer between AI agents and insurer APIs; makes
+% LLM-led conversational insurance-distribution flows reliable, compliant,
+% production-ready. Live with Aviva (Home & Life) via MCP (Model Context
+% Protocol) + 1st-party chat. Sits between the AI agent and the insurer's
+% quoting API: structured conversation, data validation, enrichment,
+% submission. Small eng team (1-3).
+% JD -- what you'll own: architecture of a multi-class, multi-insurer
+% platform; the agent-first orchestration engine (conversational layer);
+% grow & lead the eng team; work directly with insurer partners on
+% integrations; be a genuine co-founder partner (product, commercial,
+% fundraising).
+% Who: shipped production systems; strong architecture opinions; can code
+% AND lead; excited by making LLM-led conversational flows DETERMINISTIC
+% enough for a regulated financial-services context; wants to build a
+% company; London-based; comfortable with early-stage ambiguity; knows the
+% difference between moving fast and moving carelessly in a regulated
+% industry.
+% SOURCES: cv.md + config/profile.yml. Hero mapping -- client-facing
+% conversational AI for 5+ investment firms (agent-led conversational flows
+% collecting/validating data); production MCP server 180+ tools (the exact
+% protocol Malcolm runs); grounding gates + deterministic lexical+semantic
+% fallback when the model fails (making LLM flows deterministic/reliable);
+% agent evals / QoS / incident triggers; RBAC (Keycloak) + PII + auditable
+% traces (compliance in regulated financial services); early-stage hire who
+% mentors and defines reusable patterns others adopt (founding-engineer).
+% HONEST -- positioned as FOUNDING / LEAD AI ENGINEER, not CTO. NOT claimed:
+% prior CTO / founder title, leading an engineering org at scale, running a
+% fundraise, insurance-domain experience (candidate is investment-management
+% FinTech, not insurance), P&L / commercial ownership. Framed as transferable
+% regulated-financial-services + agent-infrastructure depth.
+% LOCATION: London -- candidate is London-based, fits.
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes). A4, 10pt.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=1.2cm,bottom=1.0cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal primary
+\definecolor{company}{HTML}{6C2BB3}  % purple accent
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=1.5pt,topsep=1.5pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large Founding AI Engineer: Reliable Agent Orchestration for Regulated Financial Services}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+AI engineer who makes LLM-led conversational flows reliable enough to run in a regulated financial-services context. As an early hire at a FinTech I built and run a client-facing conversational AI now used by 5+ leading investment management firms, that collects and validates data through natural dialogue, and I built the orchestration behind it on the Model Context Protocol: a production MCP server exposing 180+ tools. I make non-deterministic models dependable with grounding-validation gates, deterministic fallbacks when the model fails, structured validation, and evaluation and monitoring tied to reliability and groundedness, all held to the access-control, PII, and auditability bar that regulated clients require. I own systems end to end, mentor engineers, and define the patterns the team builds on.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Agent Orchestration \& MCP:} agent-first conversational orchestration, Model Context Protocol (MCP) servers \& tool integration, multi-step tool flows, LangGraph, LangChain, structured outputs, RAG \& retrieval
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Reliability \& Determinism:} grounding-validation gates, deterministic fallbacks when the model fails, schema \& structured validation, agent evals, Quality of Service, incident-triggering monitoring
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Regulated FinTech \& Compliance:} role-based access (Keycloak JWT), PII detection \& redaction, auditable token-redacted traces, guardrails, production for regulated financial clients
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Conversational AI:} client-facing multi-channel agents (chat, Slack, live voice \& video), data collection \& validation through dialogue, conversation-outcome metrics
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Engineering \& Early-Stage Leadership:} Python (production, async, TDD), FastAPI, PostgreSQL, Elasticsearch, Redis, AWS, GCP, Docker, CI/CD; end-to-end ownership, mentoring, reusable patterns adopted by the team
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Built and run a client-facing conversational AI now used by 5+ leading investment management firms, collecting and validating data through natural dialogue across chat, Slack, and live meeting calls.
+  \item Made LLM-led flows reliable enough for production: grounding-validation gates, a deterministic lexical and semantic fallback when the model fails, structured validation, and agent evals with Quality of Service and incident-triggering monitoring of failure modes.
+  \item Built the orchestration layer on the Model Context Protocol: a production MCP server on FastAPI exposing 180+ AI-powered tools for enterprise integration.
+  \item Met the compliance bar for regulated financial clients: role-based access enforced at the tool boundary (Keycloak JWT), PII detection and redaction, and auditable, token-redacted traces.
+  \item Operated as an early-stage hire: owned systems end to end, mentored junior engineers, defined engineering patterns and reusable components other engineers adopted, and used AI (Claude Code, Copilot) daily with rigorous review.
+  \item Built autonomous agents (LangGraph, Anthropic API) for financial workflows, cutting analyst modelling time by 70\%.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Developed a novel deep learning model utilizing Graph Convolution Network and Generative Adversarial Network (GAN) techniques for drug discovery, achieving a 63\% improvement in the novelty score of drug structures.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Agentic Enterprise Assistant:} LLM agent (Claude, native tool use) over grounded data, with a grounding-validation gate on every answer, role-based access enforced at the MCP server (Keycloak JWT), auditable traces, and OpenTelemetry to Arize Phoenix. Passed 13/13 evaluation cases across tool selection, grounding, and access control. \href{https://github.com/abhijeetscode/Agentic-Enterprise-Assistant}{View on GitHub}
+  \item \textbf{Agentic Search API:} cross-domain search where Claude decomposes and routes queries to specialized tools, with a deterministic lexical plus semantic fallback for resilience when the model fails; p95 around 175ms deterministic retrieval. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+  \item \textbf{PII Detection LLMs:} fine-tuned GPT (with LoRA) and BERT to classify and flag personal data for redaction; published models collectively reaching 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\sep{\itshape MSc in Data Science}\hfill {\color{muted}London, UK}\par\vspace{1pt}
+{\color{company}\bfseries C-DAC}\sep{\itshape PG Diploma in Advanced Computing (PG-DAC)}\hfill {\color{muted}Pune, India}\par\vspace{1pt}
+{\color{company}\bfseries University of Pune}\sep{\itshape B.E. in Computer Science}\hfill {\color{muted}Pune, India}\par
+
+\end{document}

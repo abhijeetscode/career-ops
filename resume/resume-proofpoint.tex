@@ -1,0 +1,140 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Proofpoint -- Software Engineer, AI Agents (Satori). Belfast, N. Ireland.
+% Req R14681, posted 31 Aug 2026. ON-SITE requirement at the Belfast office.
+% Satori = enterprise AI agent platform for autonomous security operations,
+% orchestrating capabilities across the Proofpoint portfolio + partners.
+% APPLICATION-ENGINEERING / PLATFORM role: build the agent runtimes and SDKs
+% that fellow product engineers build on; shape what "release-ready" means
+% (eval suites, safety checks, telemetry, AuthX gating rollouts); turn
+% one-off integrations into reusable platform capabilities; own
+% production-grade services; non-deterministic systems, high bar.
+% JD stack / asks: microservices cloud env; agent frameworks / LLM SDKs
+% (LangGraph, OpenAI/Anthropic Agents SDK, MCP, LangChain); agentic/LLM
+% systems in production incl. eval, observability, rollback; Python (primary),
+% TypeScript/Node a plus; debugging distributed systems from traces,
+% OpenTelemetry GenAI semantic conventions a plus; cloud-native, containers,
+% AWS a plus; on-call; mentoring; AI-driven dev (Claude Code, Codex);
+% agentic protocols (A2A, MCP).
+% SOURCES: cv.md + config/profile.yml, incl. session-confirmed AI coding
+% assistants as daily drivers, production-ops ownership (telemetry, alerting,
+% on-call, hands-on CI/CD, promotion/rollback), mentoring / code review /
+% reusable patterns others adopted, 67K+ HuggingFace downloads.
+% HONEST -- NOT claimed: TypeScript/Node, Go, the A2A protocol specifically
+% (MCP is genuine), OpenAI/Gemini specifically (Anthropic Claude + open-weight
+% only), the OpenTelemetry GenAI semantic conventions by name (OpenTelemetry +
+% Arize Phoenix are genuine), Codex specifically (Claude Code + Copilot are
+% genuine), large-scale event processing.
+% LOCATION NOTE: role requires on-site presence in Belfast; candidate is London-based.
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes). A4, 10pt.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.7cm,bottom=0.6cm,left=1.4cm,right=1.4cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal primary
+\definecolor{company}{HTML}{6C2BB3}  % purple accent
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{0.99}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{4pt}{3pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=0.5pt,topsep=0.5pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large AI Engineer: Agent Platforms, LLM Runtimes \& Production Reliability}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+AI engineer who builds production agentic systems and the platform primitives other engineers build on. As an early hire at a FinTech I have shipped LLM-powered agents used daily by 5+ leading investment management firms, and built the shared capabilities behind them: a Model Context Protocol server exposing 180+ tools for enterprise integration, agent evaluation and Quality of Service metrics that gate what ships, and the observability, guardrails and access controls that let non-deterministic systems run safely in production. Everything I ship is held to reliability, security and auditability standards: evals and grounding gates, role-based access, PII protection, auditable traces, plus telemetry, CI/CD, promotion and rollback, and on-call support once live. I also work at model level, fine-tuning with PyTorch and the Hugging Face ecosystem and publishing open models with 67K+ downloads.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Agentic AI \& LLM Platforms:} production AI agents \& workflow automation, agent runtimes \& orchestration (LangGraph, LangChain, LlamaIndex, native tool-use loops), Anthropic Claude, open-weight models, Model Context Protocol (MCP) servers \& tool integration, RAG \& semantic search, prompt \& tool-use patterns, planning \& task decomposition
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Release-Ready Gating:} agent evaluation suites \& benchmarking, Quality of Service metrics, groundedness \& safety guardrails, role-based access (Keycloak JWT), PII detection \& redaction, auditable token-redacted traces, incident-triggering checks
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Services \& Data:} Python (production-grade, TDD), FastAPI, REST APIs, async \& containerised microservices, PostgreSQL design \& development, SQL, Elasticsearch, Redis, ETL \& data integration pipelines
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Cloud, DevOps \& Observability:} Docker, cloud-native development, CI/CD build \& deployment pipelines, environment promotion \& rollback, Terraform (IaC), AWS \& GCP (Cloud Run, IAM), OpenTelemetry, Arize Phoenix, distributed-trace debugging, drift \& quality monitoring, alerting, on-call \& incident response
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Model-Level ML \& AI-Assisted Delivery:} PyTorch, TensorFlow, Hugging Face ecosystem (embeddings, fine-tuning with LoRA and BERT, inference tooling), transformers built from scratch; AI-assisted development with Claude Code and Copilot for design, implementation, testing and refactoring, with rigorous review
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Built the shared platform behind our agents: a production Model Context Protocol server on FastAPI exposing 180+ AI-powered tools, turning one-off integrations into reusable capabilities that fellow engineers and Claude Desktop / Glean-compatible clients build on.
+  \item Shaped what "release-ready" means for non-deterministic systems, designing agent evals, Quality of Service metrics and incident-triggering checks that monitor reliability, groundedness, latency and failure modes before and after rollout.
+  \item Shipped production agentic AI on real financial data for 5+ leading investment management firms, including agents that automate analyst workflows and cut Discounted Cash Flow modelling time by 70\%.
+  \item Met the reliability, security and auditability bar for regulated financial clients: grounding gates, role-based access (Keycloak JWT), PII protection, and auditable token-redacted traces.
+  \item Owned production operations for what I ship: instrumentation and telemetry with OpenTelemetry (to Arize Phoenix), distributed-trace debugging, hands-on CI/CD, environment promotion and rollback, alerting, and on-call incident response.
+  \item Used AI-assisted development tools (Claude Code, Copilot) daily for design, implementation, testing and refactoring with rigorous review, mentored junior engineers, and defined engineering patterns other engineers adopted.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Built and evaluated deep-learning models (Graph Convolution Networks, GANs) over a million-row dataset, achieving a 63\% novelty-score improvement.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Agentic Enterprise Assistant:} LLM agent (Claude, native tool use) over grounded data with role-based access enforced at the MCP server (Keycloak JWT), a grounding-validation gate, auditable traces, hybrid BM25 plus semantic search, and OpenTelemetry to Arize Phoenix. Passed 13/13 evaluation cases. \href{https://github.com/abhijeetscode/Agentic-Enterprise-Assistant}{View on GitHub}
+  \item \textbf{Spec-to-Code Agent:} autonomous ReAct agent on LangGraph and the Anthropic API that ships installable, tested packages from plain-language specs; 9/9 pass rate across a polyglot benchmark. \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+  \item \textbf{PII Detection LLMs:} fine-tuned GPT (LoRA) and BERT for personal-data detection, published as reusable production models; collectively 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\sep{\itshape MSc in Data Science}\hfill {\color{muted}London, UK}\par\vspace{1pt}
+{\color{company}\bfseries C-DAC}\sep{\itshape PG Diploma in Advanced Computing (PG-DAC)}\hfill {\color{muted}Pune, India}\par\vspace{1pt}
+{\color{company}\bfseries University of Pune}\sep{\itshape B.E. in Computer Science}\hfill {\color{muted}Pune, India}\par
+
+\end{document}

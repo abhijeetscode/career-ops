@@ -1,0 +1,134 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Data Scientist -- Murphy AI (getmurphy.ai). Voice AI agents for debt
+% collection at financial institutions (Santander, Revolut, BBVA).
+% London, hybrid (3 office / 2 remote). Full time.
+% Scope: contact-strategy models (who/when/how-often/which channel);
+% propensity & uplift models (pickup, payment likelihood, channel);
+% A/B tests + bandit experiments on timing/cadence/voice/negotiation;
+% own business outcomes via statistical rigor & experimentation.
+% Need: degree in maths/stats/ML/CS; 2+ yrs shipping production ML with
+% measurable business impact; expert Python for production codebases
+% (models as code, not notebooks); strong experimental design & causal
+% inference; A/B + bandits on live traffic; translate models to decisions.
+% HONEST TAILORING -- candidate leads on: production ML with measured
+% business impact (70% analyst time cut, 85% engine speedup, property
+% valuation ML), expert production Python + TDD, statistics/forecasting/
+% XGBoost, evaluation & outcome metrics, voice AI agents (real-time voice
+% + avatar; directly relevant to Murphy's product), FinTech, MSc DS.
+% NOT claimed: causal inference, A/B testing, multi-armed bandits,
+% uplift/propensity modelling by name (adjacent XGBoost/stats only).
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.8cm,bottom=0.7cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{4pt}{3pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=2pt,topsep=2pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large Data Scientist: Production ML, Statistical Modelling \& Applied AI}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+Data scientist and ML engineer who ships production models that move business metrics. As an early-stage hire at a FinTech, I have built and deployed ML and AI systems for 5+ leading investment management firms, owning outcomes end to end with evaluation, outcome metrics, and monitoring built in. Directly relevant to voice-first products, I designed and deployed a multimodal conversational voice AI agent (real-time voice and avatar) used across chat and live calls. Strong Python for production codebases (models shipped as code, not notebooks, with TDD), plus statistics, forecasting, and gradient-boosted models, with measurable impact: 70\% faster analyst modelling and an 85\% engine speedup. MSc Data Science, King's College London.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Statistical \& ML Modelling:} Python (production, TDD), Scikit-Learn, XGBoost, statistics, forecasting, numerical optimization, deep learning, NLP
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Production ML:} models shipped as code (not notebooks), evaluation frameworks, Quality-of-Service \& outcome metrics, monitoring \& observability (OpenTelemetry), CI/CD
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Applied \& Generative AI:} LLMs, agentic workflows (LangGraph, LangChain), RAG, embeddings, vector databases, multimodal voice AI (real-time voice, avatar/video)
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Data Engineering:} ETL \& data pipelines, PostgreSQL, MySQL, MongoDB, Elasticsearch (hybrid BM25 + semantic search), geospatial enrichment
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Cloud \& Tooling:} AWS, GCP (BigQuery, Cloud Run), Docker, Git, FastAPI, SQL, Rust
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Own business outcomes for the ML systems I ship: defined and measured a conversation-outcome metric (``terminal impact'') from real client chats to track whether interactions actually help users, plus evaluation and Quality-of-Service metrics for groundedness, latency, and failure modes in production.
+  \item Shipped production ML that moved business metrics: an autonomous workflow that generates Discounted Cash Flow (DCF) models from raw financial data, cutting analyst modelling time 70\%.
+  \item Built and deployed a machine learning model to infer missing rental values (rent per square foot) across London postcodes, on a pipeline linking 80\% of property records with geospatial enrichment.
+  \item Designed and deployed a multimodal conversational voice AI agent, with real-time voice and avatar/video on live calls (Recall, ElevenLabs, Tavus), used by 5+ leading investment management firms across chat and meetings.
+  \item Improved financial modelling engine performance 85\% by rearchitecting it into a graph-based system (Apache Hamilton, vectorisation) on AWS; production Python shipped as code with TDD and CI/CD.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Researched and built deep learning models (Graph Convolution Networks, GANs) over a million-row clinical dataset for drug discovery, achieving a 63\% improvement in the novelty score of generated structures, on a robust data preprocessing pipeline ensuring accuracy and completeness.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{PII Detection LLMs (fine-tuning + model shipping):} fine-tuned GPT (LoRA) and BERT to detect and protect personal data, deployed as reusable production models on Hugging Face; collectively 67K+ downloads. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+  \item \textbf{Agentic Search API (evaluation \& metrics rigor):} production cross-domain search service (FastAPI, PostgreSQL, Elasticsearch) with a deterministic lexical + semantic fallback; measured p95 $\approx$ 175ms retrieval and a 0.76 macro Quality-of-Service score across mixed query types. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+  \item \textbf{Transformer from Scratch in Rust (ML fundamentals):} GPT-style decoder-only transformer built from first principles (multi-head causal attention, BPE tokenisation, full training loop) using the Candle framework with Metal GPU acceleration. \href{https://github.com/abhijeetscode/transformer-rust}{View on GitHub}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\hfill {\color{muted}London, UK}\par
+{\itshape MSc in Data Science}\par\vspace{2pt}
+{\color{company}\bfseries C-DAC, India}\hfill {\color{muted}Pune, India}\par
+{\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\par\vspace{2pt}
+{\color{company}\bfseries University of Pune}\hfill {\color{muted}Pune, India}\par
+{\itshape B.E. in Computer Science}\par
+
+\end{document}

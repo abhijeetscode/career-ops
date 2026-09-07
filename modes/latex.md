@@ -10,7 +10,7 @@ Export a tailored, ATS-optimized CV as a `.tex` file and compile it to PDF via `
 4. Extract 15-20 keywords from the JD
 5. Detect JD language → CV language (EN default)
 6. Detect role archetype → adapt framing
-7. Rewrite Professional Summary injecting JD keywords (same rules as `pdf` mode — NEVER invent skills)
+7. Rewrite Professional Summary injecting JD keywords (same rules as `pdf` mode — NEVER invent skills). Keep it to 2 lines: it renders as its own section right under the header, above Work Experience.
 8. Select top 3-4 most relevant projects for the offer, and populate `awards[]` from `cv.md`'s Awards / Honors section when it has entries that support the role (omit the key otherwise — the section is dropped, header included; never invent an award)
 9. Reorder experience bullets by JD relevance
 10. Inject keywords naturally into existing achievements
@@ -38,6 +38,7 @@ Write a JSON file with this structure. `build-cv-latex.mjs` handles template mer
   "email": { "url": "jane@example.com", "display": "jane@example.com" },
   "linkedin": { "url": "https://linkedin.com/in/janesmith", "display": "linkedin.com/in/janesmith" },
   "github": { "url": "https://github.com/janesmith", "display": "github.com/janesmith" },
+  "summary": "Two-line personalized summary with JD keywords injected (honest vs cv.md).",
   "education": [
     {
       "institution": "University Name",
@@ -91,6 +92,7 @@ Write a JSON file with this structure. `build-cv-latex.mjs` handles template mer
 | `linkedin.display` | string | Display text only (no scheme) |
 | `github.url` | string | Full URL with scheme for `\href{}` (sanitized via sanitizeUrl, not LaTeX-escaped) |
 | `github.display` | string | Display text only (no scheme) |
+| `summary` | string | Two-line personalized summary with keywords. Renders as its own "Professional Summary" section right under the header. |
 | `education[].institution` | string | From cv.md Education |
 | `education[].location` | string | Institution location |
 | `education[].degree` | string | Degree name |
@@ -135,8 +137,8 @@ Write a JSON file with this structure. `build-cv-latex.mjs` handles template mer
 ## ATS Rules (same as pdf mode)
 
 - Single-column layout (enforced by template)
-- Standard section headers: Education, Work Experience, Personal Projects, Awards & Honors, Technical Skills
-- Optional sections (Personal Projects, Education, Awards & Honors) are dropped entirely — header included — when their array is empty or absent
+- Section order: Professional Summary, Work Experience, Personal Projects, Awards & Honors, Technical Skills, Education (Education last by design — recruiters scan top down for role fit first)
+- Optional sections (Personal Projects, Awards & Honors) are dropped entirely — header included — when their array is empty or absent. Education is expected on every CV and is not auto-dropped.
 - UTF-8, machine-readable via `\pdfgentounicode=1`
 - Keywords distributed: first bullet of each role, skills section
 - No images, no graphics, no color in body text

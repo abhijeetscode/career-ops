@@ -44,9 +44,12 @@ function buildProjects(entries) {
   const blocks = [];
   for (const e of entries) {
     if (!e) continue;
+    const projectName = e.url
+      ? `\\href{${sanitizeUrl(e.url)}}{\\textbf{${escapeLatex(e.name)}}}`
+      : `\\textbf{${escapeLatex(e.name)}}`;
     const context = e.context ? ` \\emph{$|$ ${escapeLatex(e.context)}}` : '';
     const bullets = Array.isArray(e.bullets) ? e.bullets.map(b => `            \\resumeItem{${escapeLatex(b)}}`).join('\n') : '';
-    blocks.push(`    \\resumeProjectHeading\n      {\\textbf{${escapeLatex(e.name)}}${context}}{${escapeLatex(e.dates)}}\n      \\resumeItemListStart\n${bullets}\n      \\resumeItemListEnd`);
+    blocks.push(`    \\resumeProjectHeading\n      {${projectName}${context}}{${escapeLatex(e.dates)}}\n      \\resumeItemListStart\n${bullets}\n      \\resumeItemListEnd`);
   }
   return blocks.join('\n\n');
 }
@@ -152,6 +155,7 @@ async function main() {
     LINKEDIN_DISPLAY: escapeLatex(linkedinDisplay),
     GITHUB_URL: githubUrl,
     GITHUB_DISPLAY: escapeLatex(githubDisplay),
+    SUMMARY: escapeLatex(payload.summary || ''),
     EDUCATION: buildEducation(payload.education),
     EXPERIENCE: buildExperience(payload.experience),
     PROJECTS: buildProjects(payload.projects),
@@ -214,6 +218,7 @@ async function runSelfTest() {
     email: { url: 'test@example.com', display: 'test@example.com' },
     linkedin: { url: 'https://linkedin.com/in/test', display: 'linkedin.com/in/test' },
     github: { url: 'https://github.com/test', display: 'github.com/test' },
+    summary: 'Test engineer focused on automated quality gates and CI/CD. Ships reliable pipelines fast.',
     education: [{
       institution: 'Test University',
       location: 'City, State',
@@ -280,6 +285,7 @@ async function runSelfTest() {
     LINKEDIN_DISPLAY: escapeLatex(linkedinDisplay),
     GITHUB_URL: githubUrl,
     GITHUB_DISPLAY: escapeLatex(githubDisplay),
+    SUMMARY: escapeLatex(sample.summary || ''),
     EDUCATION: buildEducation(sample.education),
     EXPERIENCE: buildExperience(sample.experience),
     PROJECTS: buildProjects(sample.projects),

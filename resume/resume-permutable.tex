@@ -1,0 +1,143 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Permutable.AI -- AI Engineer (LLMs, NLP & Market Intelligence). London,
+% hybrid (regular presence at the Vauxhall office). Permanent. Early-career.
+% Company: market-intelligence infrastructure that processes multilingual
+% news, economic and geopolitical information into structured intelligence
+% for financial institutions, banks, and asset managers.
+% JD responsibilities: design & deploy LLM and NLP production systems
+% (architectures, information extraction, agentic workflows); build
+% retrieval, embeddings, and semantic search; develop evaluation frameworks
+% and model monitoring; build AWS-based ML infrastructure and data
+% pipelines; own systems from experimentation through production; collaborate
+% on product direction.
+% Required: excellent Python; strong SWE fundamentals; deploying ML beyond
+% experimentation; practical NLP / transformer / LLM work; API & data
+% pipeline expertise; Docker & CI/CD; independent problem-solving.
+% Nice-to-have: deployed LLM/NLP to real users; transformer fine-tuning;
+% GenAI evaluation frameworks; RAG; multilingual datasets; production ML.
+% Stack: PyTorch, TensorFlow, JAX, Hugging Face, AWS (S3, ECS/EKS, Redshift,
+% Lambda), Docker, Kubernetes, Airflow, GitHub Actions, Pulumi, vector DBs, SQL.
+% SOURCES: cv.md + config/profile.yml. Hero mapping -- LLM/NLP production +
+% agentic workflows for 5+ investment firms (deployed to real users); info
+% extraction (PII models 67K+, financial document pipeline on AWS Textract);
+% retrieval/embeddings/semantic search (search-agent: Qwen3 embeddings,
+% hybrid BM25+semantic, vector search); evaluation frameworks + monitoring
+% (evals/QoS/groundedness/drift); AWS + Airflow + ETL pipelines; transformer
+% fine-tuning (LoRA, BERT) + transformer built from scratch; Python, Docker,
+% CI/CD; financial domain.
+% HONEST -- NOT claimed: multilingual NLP (not evidenced in cv.md), JAX,
+% Kubernetes, Pulumi, Redshift (candidate has AWS/GCP, Terraform, Airflow,
+% GitHub/CI-CD -- all genuine). TensorFlow, PyTorch, Hugging Face genuine.
+% LOCATION: London, hybrid -- candidate is London-based, fits well.
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes). A4, 10pt.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=1.2cm,bottom=1.0cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal primary
+\definecolor{company}{HTML}{6C2BB3}  % purple accent
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=1.5pt,topsep=1.5pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large AI Engineer: LLMs, NLP \& Retrieval for Market Intelligence}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+AI engineer who designs and deploys LLM and NLP systems in production, from experimentation through to real users. In a FinTech I have built generative AI and agentic workflows over financial data used daily by 5+ leading investment management firms, information-extraction systems, and the retrieval and evaluation layers behind them. My depth is in NLP and information retrieval, transformer fine-tuning, embeddings, semantic search, and RAG, paired with the engineering to run it: AWS infrastructure, data pipelines, Docker, and CI/CD. I own systems end to end with an evaluation-first, data-centric mindset, and I keep a sharp product focus on the intelligence my systems deliver to financial users. Open-source proof: fine-tuned models with 67K+ HuggingFace downloads and a transformer built from scratch.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{LLMs \& NLP:} transformers, LLMs, information extraction, agentic workflows, prompt \& tool-use patterns, transformer fine-tuning (LoRA, BERT), classification, entity extraction
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Retrieval \& Semantic Search:} RAG, embeddings, chunking strategies, semantic search (Elasticsearch), vector databases, hybrid BM25 plus semantic retrieval
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Evaluation \& Monitoring:} generative-AI evaluation frameworks, Quality of Service metrics, groundedness, drift \& quality monitoring, model monitoring, benchmarking
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{ML Infra \& Pipelines:} AWS (S3, Lambda, ECS), data \& ETL pipelines, Apache Airflow, Docker, CI/CD (GitHub Actions), Terraform (IaC), model serving
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Engineering:} Python (production-grade, async, TDD), FastAPI, REST APIs, SQL, PostgreSQL, PyTorch, TensorFlow, Hugging Face ecosystem
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Designed and deployed LLM and NLP production systems, including generative AI and agentic workflows over financial data, used daily by 5+ leading investment management firms.
+  \item Built information-extraction and document-intelligence pipelines, including an automated financial document pipeline on AWS Textract that delivered a 30\% productivity gain.
+  \item Built retrieval and semantic search: chunking, embeddings, hybrid BM25 plus semantic search over Elasticsearch, and vector search for natural-language querying over financial documents.
+  \item Developed evaluation frameworks and model monitoring: structured evals, Quality of Service metrics, groundedness, drift, and failure-mode monitoring, owning systems from experimentation through production.
+  \item Built AWS-based ML infrastructure and data pipelines (Airflow, ETL, Docker, CI/CD) and improved a modelling engine by 85\% via a graph-based rearchitecture; mentored engineers and collaborated on product direction.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Developed a novel deep learning model utilizing Graph Convolution Network and Generative Adversarial Network (GAN) techniques for drug discovery, achieving a 63\% improvement in the novelty score of drug structures.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Agentic Search API:} FastAPI and Elasticsearch semantic search with local Qwen3 embeddings and Claude tool-calling, PDF ingestion with auto-classification and chunking, and a deterministic lexical plus semantic fallback; p95 around 175ms with a 0.76 macro QoS evaluation score. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+  \item \textbf{PII Detection LLMs:} fine-tuned GPT (with LoRA) and BERT to detect and classify entities in text, deployed as reusable production models; collectively 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+  \item \textbf{Transformer from Scratch in Rust:} decoder-only GPT-style transformer built from first principles (multi-head causal self-attention, full training loop, SafeTensors checkpointing) using the Candle framework with Metal GPU acceleration. \href{https://github.com/abhijeetscode/transformer-rust}{View on GitHub}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\sep{\itshape MSc in Data Science}\hfill {\color{muted}London, UK}\par\vspace{1pt}
+{\color{company}\bfseries C-DAC}\sep{\itshape PG Diploma in Advanced Computing (PG-DAC)}\hfill {\color{muted}Pune, India}\par\vspace{1pt}
+{\color{company}\bfseries University of Pune}\sep{\itshape B.E. in Computer Science}\hfill {\color{muted}Pune, India}\par
+
+\end{document}

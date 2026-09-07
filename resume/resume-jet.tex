@@ -1,0 +1,139 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Data Scientist -- Just Eat Takeaway.com, AI Growth team.
+% London or Amsterdam. Hybrid, 3 days office / 2 days home. Permanent.
+% JD focus: embedding models for SEARCH + RECOMMENDATIONS, fine-tuned LLMs,
+% ranking systems, personalisation, foundation model platform, targeting.
+% End-to-end ML: problem framing -> data exploration -> production ->
+% measurement. Production Python beyond notebooks + efficient SQL over
+% complex data warehouses. MLOps + monitored pipelines. Communicate to
+% commercial stakeholders.
+% HONEST TAILORING -- candidate leads on: embeddings + vector similarity
+% search, hybrid semantic/lexical retrieval + ranking (BM25 + RRF),
+% LLM fine-tuning (LoRA/BERT, 67K+ HF downloads), LLMs in production with
+% PROMPT ENGINEERING, STRUCTURED OUTPUT VALIDATION and GENERATIVE OUTPUT
+% QUALITY assessment (grounding gates, evals, QoS), production Python (TDD),
+% SQL + BigQuery, MLOps/monitored pipelines, end-to-end ownership.
+% NOT claimed -- REAL GAPS, flagged to candidate:
+%   - A/B TESTING / experimentation / statistical significance / offline-vs-
+%     online gap. This is a CORE repeated requirement. Candidate has model
+%     EVALUATION (evals, QoS, terminal impact), which is NOT the same thing.
+%   - Learning-to-rank (RRF is rank fusion, not LTR).
+%   - Recommender systems / sequential / session-based recsys.
+%   - Causal inference & uplift modelling ('causal' in cv.md is causal
+%     self-attention in the Rust transformer).
+%   - Streaming / real-time pipelines. Window functions / partitioning.
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex -output-directory=output resume/resume-jet.tex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.8cm,bottom=0.7cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{4pt}{3pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=2pt,topsep=2pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large Data Scientist: Embeddings, Search \& Retrieval, LLMs in Production}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+Data scientist who delivers machine learning end to end, from framing an ambiguous business problem through data exploration to production deployment and measurement. My work centres on the techniques behind search and personalisation: embedding models and vector similarity search, hybrid semantic and lexical retrieval with ranking, and LLMs applied in production with prompt engineering, fine-tuning, structured output validation and quality assessment of generative output. I write production-grade Python well beyond notebooks, query data warehouses in SQL, and productionise models with engineers on monitored pipelines. I publish fine-tuned models openly (67K+ downloads) and explain results to commercial stakeholders in language they can act on.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Search, Retrieval \& Embeddings:} embedding models, vector similarity search, vector databases, hybrid BM25 plus semantic retrieval, reciprocal rank fusion, ranking, chunking \& ingestion pipelines, Elasticsearch
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{LLMs in Production:} fine-tuning (LoRA, BERT), prompt engineering, structured output validation, generative output quality assessment, groundedness \& hallucination checks, guardrails, agentic techniques, Anthropic API, Hugging Face
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{ML \& Statistics:} PyTorch, TensorFlow, Scikit-Learn, XGBoost, deep learning, NLP, predictive modelling, forecasting, statistics, model evaluation \& benchmarking
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Python \& Data:} production Python (clean, testable, TDD), FastAPI, SQL, BigQuery, PostgreSQL, MongoDB, Redis, ETL \& data pipelines, Airflow, Geopandas, Rust
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{MLOps \& Delivery:} CI/CD, Docker, Terraform (IaC), AWS \& GCP, monitored pipelines, drift \& quality monitoring, OpenTelemetry observability, alerting, on-call, stakeholder communication
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Delivered machine learning end to end for 5+ leading investment management firms, owning well-scoped workstreams from problem framing and data exploration through to production deployment and measurement.
+  \item Built search and retrieval over large document corpora using embeddings and vector similarity search combined with lexical retrieval and rank fusion.
+  \item Applied LLMs in production with prompt engineering, fine-tuning, structured output validation on every response, and quality assessment of generative output through groundedness and hallucination checks.
+  \item Owned how results were measured: evaluation frameworks, Quality-of-Service metrics, latency and cost tracking, and ``terminal impact,'' an outcome metric for the state in which users exit a dialogue, computed from real client conversations.
+  \item Built a predictive model inferring missing values across large-scale property datasets to estimate rent per square foot by London postcode, fed by a pipeline linking 80\% of records with geolocation enrichment.
+  \item Wrote production-quality Python beyond notebooks (test-driven, reviewed) and productionised models with engineers on monitored pipelines (CI/CD, Docker, drift monitoring, alerting, on-call), including an 85\% runtime cut via a graph-based rearchitecture.
+  \item Translated ambiguous commercial questions into modelling approaches and presented findings to business stakeholders; built a Discounted Cash Flow agent that cut analyst modelling time by 70\%.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Built and benchmarked deep learning models (Graph Convolution Networks, GANs) for drug discovery, achieving a 63\% improvement in novelty score over a million-row clinical dataset.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Agentic Search API:} search service combining local Qwen3 embeddings, semantic and lexical retrieval and ranking over Elasticsearch, with query decomposition and a deterministic fallback; p95 around 175ms and a 0.76 macro quality score. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+  \item \textbf{PII Detection LLMs:} fine-tuned GPT (LoRA) and BERT for personal-data detection, published as reusable production models; 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+  \item \textbf{Agentic Enterprise Assistant:} retrieval over grounded data with hybrid BM25 plus semantic search and reciprocal rank fusion, plus a grounding-validation gate on every answer. Passed 13/13 evaluation cases. \href{https://github.com/abhijeetscode/Agentic-Enterprise-Assistant}{View on GitHub}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}, {\itshape MSc in Data Science}\hfill {\color{muted}London, UK}\par\vspace{2pt}
+{\color{company}\bfseries C-DAC}, {\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\hfill {\color{muted}Pune, India}\par\vspace{2pt}
+{\color{company}\bfseries University of Pune}, {\itshape B.E. in Computer Science}\hfill {\color{muted}Pune, India}\par
+
+\end{document}

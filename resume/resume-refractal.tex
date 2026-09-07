@@ -1,0 +1,144 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Refractal -- AI Research Engineer (London). In-person, London. + equity.
+% Company: AI security / cybersecurity -- runtime enforcement that monitors,
+% evaluates and controls AI agent actions before execution; protects against
+% prompt injection, goal manipulation, tool abuse, data exfiltration via
+% runtime classification, evidence preservation, and policy enforcement.
+% One of the first engineering hires after the technical co-founder.
+% JD -- what you'll work on: runtime classification stack deciding whether an
+% agent's proposed action is authorised before it executes; action-boundary
+% controls (allow / block / redact sensitive data from flagged actions);
+% evidence pipelines recording every AI action, verdict and rationale;
+% compile natural-language policy/regulation into executable runtime
+% controls; multimodal ingestion & detection across models, tools, data
+% types; own systems end-to-end into high-consequence customer deployments.
+% Looking for: exceptional builder who cares about AI safety/security and
+% grounds research in real-world impact; early-career band; strong CS/ML/
+% cybersecurity foundation; evidence of building (production systems, lab
+% research, startup, or open source); rigorous grasp of how AI systems fail
+% and how adversaries exploit them; fast, clear, independent.
+% SOURCES: cv.md + config/profile.yml. Hero mapping -- grounding-validation
+% gate on every answer + RBAC enforced at the tool boundary + PII detection/
+% redaction (action-boundary controls); auditable token-redacted traces of
+% action/verdict/rationale + OpenTelemetry (evidence pipelines); agent evals
+% + QoS + failure-mode/groundedness monitoring (runtime classification &
+% evaluation); multimodal persona (chat + live voice/video) + CLIP
+% text-to-image (multimodal detection); PII classifiers 67K+ downloads,
+% Agentic Enterprise Assistant 13/13 (open-source evidence of building).
+% HONEST -- NOT claimed: offensive red-team / adversarial exploit development,
+% penetration testing, CTF; the safety work here is DEFENSIVE (guardrails,
+% access control, redaction, evidence, evals). Also not claimed: TypeScript/
+% Go, Kubernetes, named vendors beyond Anthropic + open-weight.
+% LOCATION: London, in-person -- candidate is London-based, fits.
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes). A4, 10pt.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=1.2cm,bottom=1.0cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal primary
+\definecolor{company}{HTML}{6C2BB3}  % purple accent
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{7pt}{4pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=1.5pt,topsep=1.5pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large AI Research Engineer: Agent Safety, Runtime Controls \& Auditable Evidence}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+AI engineer who makes agents safe and auditable in production, not just capable. As an early hire at a FinTech I shipped LLM agents used by 5+ leading investment management firms and built the controls around them: a grounding-validation gate on every answer, role-based access enforced at the tool boundary, PII detection and redaction of sensitive data, and auditable, token-redacted traces that record every action, verdict, and rationale. I designed the evaluation and monitoring layer that classifies reliability, groundedness, latency, and failure modes at runtime, and I work across modalities, from chat and live voice and video to text-to-image retrieval. I ground safety in real deployments rather than synthetic tests. Open-source proof: PII classification models with 67K+ HuggingFace downloads and a coding agent at 9/9 on a polyglot benchmark.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Agent Safety \& Runtime Controls:} grounding-validation gates, action-boundary controls (allow / block / redact), role-based access at the tool boundary (Keycloak JWT), PII detection \& redaction, policy enforcement over tool use
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Runtime Classification \& Evaluation:} fine-tuned classifiers (LoRA, BERT), structured agent evals, Quality of Service metrics, incident-triggering monitoring of groundedness, reliability, latency \& failure modes
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Evidence \& Observability:} auditable token-redacted traces recording action, verdict \& rationale, OpenTelemetry, Arize Phoenix, distributed-trace debugging
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Multimodal \& Retrieval:} multimodal agents (chat, live voice \& video), CLIP dual-encoder text-to-image, RAG, embeddings, hybrid BM25 plus semantic search
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Engineering \& LLMs:} Python (production-grade, async, TDD), FastAPI, PostgreSQL, Elasticsearch, Redis, Docker, CI/CD, AWS, GCP; LangGraph, LangChain, MCP, Anthropic Claude, open-weight models
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Built the controls that make agents safe in production for 5+ leading investment management firms: a grounding-validation gate on every answer, role-based access enforced at the tool boundary, and PII detection with redaction of sensitive data.
+  \item Designed the runtime evaluation and monitoring layer that classifies agent behaviour: structured evals, Quality of Service metrics, and incident-triggering monitoring of groundedness, latency, and failure modes.
+  \item Built auditable, token-redacted traces recording every agent action, verdict, and rationale, with observability through OpenTelemetry to Arize Phoenix.
+  \item Shipped agents across modalities (chat, Slack, live voice and video calls) and a Model Context Protocol server exposing 180+ AI-powered tools, with access enforced at the tool boundary.
+  \item Built autonomous agents (LangGraph, Anthropic API) for financial workflows, cutting analyst modelling time by 70\%; used AI (Claude Code, Copilot) daily with rigorous review.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Developed a novel deep learning model utilizing Graph Convolution Network and Generative Adversarial Network (GAN) techniques for drug discovery, achieving a 63\% improvement in the novelty score of drug structures.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Agentic Enterprise Assistant:} LLM agent (Claude, native tool use) over grounded data, with a grounding-validation gate on every answer, role-based access enforced at the MCP server (Keycloak JWT), auditable token-redacted traces, and OpenTelemetry to Arize Phoenix. Passed 13/13 evaluation cases across tool selection, grounding, and access control. \href{https://github.com/abhijeetscode/Agentic-Enterprise-Assistant}{View on GitHub}
+  \item \textbf{PII Detection LLMs:} fine-tuned GPT (with LoRA) and BERT to classify and flag personal data for redaction; published models collectively reaching 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+  \item \textbf{Spec-to-Code Agent:} autonomous ReAct agent (LangGraph + Anthropic API) with tool use and orchestration that ships installable, tested packages from plain-language specs; 9/9 pass rate across a polyglot benchmark. \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\sep{\itshape MSc in Data Science}\hfill {\color{muted}London, UK}\par\vspace{1pt}
+{\color{company}\bfseries C-DAC}\sep{\itshape PG Diploma in Advanced Computing (PG-DAC)}\hfill {\color{muted}Pune, India}\par\vspace{1pt}
+{\color{company}\bfseries University of Pune}\sep{\itshape B.E. in Computer Science}\hfill {\color{muted}Pune, India}\par
+
+\end{document}

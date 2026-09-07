@@ -1,0 +1,139 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Vitol / CCI -- Applied AI Engineer (Global Data Science). Energy/commodities
+% trading. Help internal tech + commercial teams adopt approved AI tooling.
+% Focus: CONTEXT ENGINEERING, AI tooling configuration, assistant & knowledge-
+% base setup, RAG + document intelligence, EVALUATION, documentation, and
+% STAKEHOLDER ENABLEMENT. Configure GenAI projects, agents, skills, knowledge
+% bases, SQL resources, model presets, MCP-enabled tools. Responsible AI:
+% access control, auditability, data sensitivity, escalation. Stack: Python,
+% SQL, langgraph/langchain, Pydantic, FastAPI/MCP; RAG, embeddings, vector
+% search, tool calling, HITL. Bonus: commodities/energy/trading, Snowflake,
+% vector DBs, AWS/Azure, Claude/Copilot/Cursor.
+% NOTE: this JD is the OPPOSITE of the conversational-agent seats -- here an
+% internal knowledge base / RAG / enterprise-copilot enablement IS the bar.
+% Candidate HERO match: production MCP server exposing 180+ approved AI tools
+% to Claude/Glean clients; RAG + document-intelligence assistants over
+% financial docs with RBAC, grounding-validation gate, auditable traces
+% (13/13 eval); evals/QoS/groundedness + ship-or-rollback; classification/
+% extraction; mentoring + reusable patterns adopted by other engineers.
+% GAP (not claimed): commodities/energy/trading domain (has FinTech/investment
+% management -- adjacent, stated honestly); Snowflake; Azure (uses AWS + GCP);
+% Pydantic AI framework specifically (uses Pydantic-style validation +
+% Anthropic API tool use).
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.7cm,bottom=0.7cm,left=1.4cm,right=1.4cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=1pt,topsep=1pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large Applied AI Engineer: Enterprise AI Tooling, RAG \& Evaluation}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+Applied AI engineer who helps internal technology and commercial teams adopt approved AI tooling and turns business workflows into reliable, governed, reusable AI solutions. At a FinTech I built the enterprise AI tooling layer: a production MCP server exposing 180+ approved AI tools to Claude and Glean-compatible clients, plus RAG and document-intelligence assistants over financial documents with role-based access, grounding validation, and auditable, token-redacted traces. I engineer the context that makes these systems dependable, system instructions, prompt templates, retrieval sources, output formats, and workflow guardrails, and I own the evaluation spine that gates quality: golden cases, groundedness and quality-of-service checks, and ship-or-rollback decisions made on the numbers. I work hands-on in Python, SQL, and FastAPI, translate business needs into technical requirements for technical and non-technical stakeholders, and own outcomes end to end.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Context Engineering \& AI Tooling:} system instructions, prompt \& context templates, few-shot examples, reference material, output formats, model presets, knowledge-base setup, MCP-enabled tools
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{RAG \& Document Intelligence:} document ingestion, chunking, metadata design, retrieval quality, structured extraction, embeddings, vector \& hybrid (BM25 + semantic) search, validation with subject-matter experts
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Evaluation \& Responsible AI:} golden-case suites, groundedness \& quality-of-service checks, accuracy \& formatting evals, ship-or-rollback on numbers, access control, auditability, data sensitivity, human-in-the-loop review
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Agentic Workflows:} agent orchestration (LangGraph, LangChain), tool calling, query routing, deterministic fallbacks, multi-tool pipelines
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Engineering \& Data:} Python, SQL, FastAPI, REST \& JSON APIs, PostgreSQL, Elasticsearch, AWS \& GCP, Docker, Git, CI/CD, observability (OpenTelemetry)
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Enablement \& Communication:} reusable playbooks, templates \& demos, documentation, mentoring, translating business needs to technical requirements, explaining AI capabilities and limits in plain language
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 to Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Enabled secure enterprise access to 180+ approved AI tools by building a production MCP server on FastAPI, exposed through the Model Context Protocol to Claude Desktop and Glean-compatible clients, so internal teams use governed tooling instead of ad-hoc access.
+  \item Built a conversational assistant that analyses financial documents with LLMs, RAG, embeddings, and a vector database, letting analysts query many PDFs in natural language and cutting manual document review time.
+  \item Designed the evaluation spine for production AI: agent evals, quality-of-service metrics, groundedness checks, and incident-triggering monitoring for reliability, latency, and failure modes, with configuration improved from feedback and test cases over time.
+  \item Defined ``terminal impact,'' a conversation-outcome metric that classifies how each dialogue ends, computed from real client chats to measure whether AI outputs deliver business value rather than just complete.
+  \item Built and deployed an autonomous agent that generates financial models from raw data, reducing analyst modelling time 70\%, and an AWS Textract document-processing pipeline that delivered a 30\% productivity gain.
+  \item Mentor engineers, review colleagues' code as routine practice, and define reusable engineering patterns and components that other engineers have adopted across the product.
+\end{tight}
+
+\entry{King's College London}{March 2021 to January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Built and evaluated deep learning models (Graph Convolution Networks, GANs) over a million-row clinical dataset, achieving a 63\% novelty improvement, with a robust data preprocessing pipeline.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Agentic Enterprise Assistant:} internal operations assistant where a Claude agent answers staff questions over grounded customer and issue data, with role-based access enforced at the MCP server (Keycloak JWT), a grounding-validation gate on every answer, auditable token-redacted traces, and hybrid BM25 + semantic retrieval (Qwen3 embeddings) over Elasticsearch; passed 13/13 evaluation cases. \href{https://github.com/abhijeetscode/Agentic-Enterprise-Assistant}{View on GitHub}
+  \item \textbf{Agentic Search API:} production cross-domain search service where Claude decomposes queries and routes to specialised lexical/semantic tools with a deterministic fallback for resilience; PDF ingestion with auto-classification and chunking, gated by evals; p95 around 175ms and a 0.76 macro QoS score. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+  \item \textbf{PII Detection LLMs (extraction \& classification):} fine-tuned GPT (LoRA) and BERT to detect and redact Personally Identifiable Information, deployed as reusable production artefacts; collectively 67K+ downloads on Hugging Face. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\hfill {\color{muted}London, UK}\par
+{\itshape MSc in Data Science}\par\vspace{2pt}
+{\color{company}\bfseries C-DAC, India}\hfill {\color{muted}Pune, India}\par
+{\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\par\vspace{2pt}
+{\color{company}\bfseries University of Pune}\hfill {\color{muted}Pune, India}\par
+{\itshape B.E. in Computer Science}\par
+
+\end{document}

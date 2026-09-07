@@ -1,0 +1,136 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AI Engineer -- Vega. London, on-site most of the week. Full time.
+% AI-native operating system for private markets / alternative asset mgmt.
+% Founded by ex-Elliott & KKR investors; VC-backed; large AUM on platform.
+% Role: build AI-powered features across AltOS -- agents, DOCUMENT
+% INTELLIGENCE, WORKFLOW AUTOMATION, KNOWLEDGE RETRIEVAL. Own end-to-end
+% from scoping/architecture through shipping and iteration; take ideas from
+% research to production; work directly with business teams on client
+% requirements; help define how AI is applied across products.
+% HONEST TAILORING -- candidate leads on: investor-facing agents shipped to
+% 5+ investment management firms (direct private-markets client-work match),
+% DCF + cashflow agents, financial document intelligence (AWS Textract, RAG),
+% MCP server (180+ tools), Anthropic API, guardrails + grounding validation,
+% evals/QoS, Python/FastAPI/PostgreSQL, Docker/CI-CD, AWS.
+% NOT claimed (their stack list, absent from cv.md): Java 21, Node/TypeScript
+% (Hono), React/Vite/Tailwind/TanStack/Vitest/Playwright, Kafka+Avro, EKS/
+% Kubernetes, Helm, AWS Bedrock + Knowledge Bases, S3 Vectors, pgvector,
+% promptfoo, Claude Vision, Claude Agent SDK, SSE streaming, ontology,
+% jOOQ/Flyway/Kysely, JUnit/TestContainers/Mockito/Cucumber, OpenAPI codegen,
+% Cognito/KMS/CloudFront, GitHub Actions (Git/GitHub + CI/CD are genuine).
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex -output-directory=output resume/resume-vega.tex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.8cm,bottom=0.7cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{4pt}{3pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=2pt,topsep=2pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large AI Engineer: Agents, Document Intelligence \& Knowledge Retrieval}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+AI-native builder who ships AI-powered product features end to end, from scoping and architecture through to production and iteration. As an early-stage hire at a FinTech I have built agents, document intelligence, workflow automation and knowledge retrieval used daily by 5+ leading investment management firms, so the client work of private markets is familiar ground: investor-facing dialogue, financial document processing, and cashflow and valuation workflows, held to a high-stakes reliability bar. I take ideas from research to production myself and own the problem rather than the ticket.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{AI \& LLM:} Anthropic API (Claude), Model Context Protocol (MCP), AI agents \& multi-step tool orchestration, RAG \& knowledge retrieval, embeddings \& vector databases, hybrid semantic search, document intelligence, AI guardrails \& grounding validation, agent evaluation \& QoS metrics, fine-tuning (LoRA, BERT)
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Frameworks:} LangGraph, LangChain, LlamaIndex, PyTorch, Hugging Face, TensorFlow
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Back-end:} Python (production, TDD), FastAPI, REST APIs, PostgreSQL, Elasticsearch, Redis, MongoDB, SQL, ETL \& data pipelines, Airflow, Rust
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Cloud \& Infra:} AWS (S3, Textract), GCP (BigQuery, Cloud Run, GCS, IAM), Docker, CI/CD, Terraform (IaC), Git \& GitHub, OpenTelemetry observability, alerting, on-call \& incident response
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Ways of working:} AI-assisted development (Claude Code, GitHub Copilot) with rigorous review, mentoring \& code review
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Built AI-powered features across an investor-facing platform for 5+ leading investment management firms, spanning agents, document intelligence, workflow automation and knowledge retrieval, owned end to end from scoping and architecture through to shipping and iteration.
+  \item Shipped a client-facing multimodal agent that investors use to manage portfolios in natural language, handling around 100 Slack messages a day across chat and live meetings.
+  \item Automated high-stakes investment workflows: an autonomous agent that authors Discounted Cash Flow models from raw financial data, cutting analyst modelling time by 70\%, and an agent that explains financial cashflows with validation on every output.
+  \item Built document intelligence over financial PDFs (LLMs, retrieval, embeddings, vector database) plus an automated document pipeline on AWS Textract delivering a 30\% productivity gain.
+  \item Built multi-step agent orchestration on the Anthropic API and a production MCP server exposing 180+ tools with secure enterprise access.
+  \item Helped define how AI is applied and measured: guardrails and grounding validation, agent evals, QoS metrics, latency and cost tracking, and ``terminal impact,'' an outcome metric for the state in which users exit a dialogue.
+  \item Took research to production repeatedly: an 85\% performance gain on the modelling engine via a graph-based rearchitecture, and core engineering on an \href{https://gtr.ukri.org/projects?ref=10022996}{Innovate UK funded R\&D project} (\pounds205,895 grant).
+  \item Work directly with business stakeholders to turn client requirements into production systems; mentor junior engineers and set patterns others adopted.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Built deep learning models (Graph Convolution Networks, GANs) for drug discovery, achieving a 63\% improvement in novelty score over a million-row clinical dataset.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Agentic Enterprise Assistant:} agent over grounded client data with role-based access enforced at the MCP server (Keycloak JWT), a grounding-validation guardrail checking every answer against tool results, auditable token-redacted traces, and hybrid BM25 plus semantic retrieval. Passed 13/13 evaluation cases. \href{https://github.com/abhijeetscode/Agentic-Enterprise-Assistant}{View on GitHub}
+  \item \textbf{Agentic Search API:} knowledge retrieval service where Claude decomposes queries and routes to specialised search tools, with a deterministic fallback when the model fails. p95 around 175ms and a 0.76 macro QoS score. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+  \item \textbf{PII Detection LLMs:} fine-tuned GPT (LoRA) and BERT for personal-data detection; 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}, {\itshape MSc in Data Science}\hfill {\color{muted}London, UK}\par\vspace{2pt}
+{\color{company}\bfseries C-DAC}, {\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\hfill {\color{muted}Pune, India}\par\vspace{2pt}
+{\color{company}\bfseries University of Pune}, {\itshape B.E. in Computer Science}\hfill {\color{muted}Pune, India}\par
+
+\end{document}

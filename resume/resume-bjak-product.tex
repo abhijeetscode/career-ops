@@ -1,0 +1,149 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% bjak / ActAI -- AI Email App role, at the intersection of product and
+% engineering. United Kingdom, Hybrid.
+% Mission: proactive, AI-native everyday apps (email, notes, tasks,
+% calendar) for billions who don't prompt; high reliability for long-running
+% workflows, persistent context, real-world task completion; reduce
+% hallucinations. Small, high-talent-density, hands-on team.
+% Role: sits at the intersection of user needs, model capability, and
+% engineering constraints. Deeply technical, hands-on;
+% expected to challenge technical decisions.
+% JD -- what you'll own: define end-to-end requirements for AI capabilities
+% (model -> system -> UX); translate model capabilities/eval results into
+% product & system decisions; make trade-offs across quality, latency, cost,
+% reliability, safety, UX; work with ML/backend/client engineers on system
+% design, evaluation, iteration; define & evolve evaluation frameworks
+% (offline metrics, online experiments, human feedback); set quality bars &
+% feedback loops; identify failure modes, ensure predictable behaviour &
+% graceful recovery; own product quality end-to-end (correctness,
+% reliability, usefulness, user trust).
+% Looking for: strong CS fundamentals & system design; solid modern ML +
+% how AI behaves in production; strong intuition for model limits,
+% hallucinations, evaluation, failure modes; experience owning complex
+% technical products end-to-end; hands-on LLM-based systems; model
+% evaluation / experimentation / prompting; zero-to-one; bias to shipping;
+% can challenge engineers. Engineering background a strong plus.
+% SOURCES: cv.md + config/profile.yml. Hero mapping -- owns AI products
+% end-to-end for 5+ investment firms; agent/model evals + QoS + human-
+% feedback "terminal impact" (evaluation frameworks, human feedback);
+% grounding gates that cut hallucinations + deterministic fallback + failure-
+% mode/incident monitoring (predictable behaviour, graceful recovery); early-
+% stage hire shipping fast (zero-to-one); LLM systems, prompting, agents,
+% RAG; strong CS fundamentals + system design.
+% HONEST -- NOT claimed: consumer-app / B2C shipping (candidate is B2B
+% enterprise FinTech), a product-manager title, online A/B experimentation
+% platform ownership. Framed on transferable eval/reliability/product-
+% judgement depth; engineering background is genuine.
+% LOCATION: UK, hybrid -- candidate is London-based, fits.
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes). A4, 10pt.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=1.2cm,bottom=1.0cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal primary
+\definecolor{company}{HTML}{6C2BB3}  % purple accent
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=1.5pt,topsep=1.5pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large AI Engineer: Evaluation, Reliability \& Trustworthy LLM Product Quality}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+AI engineer who works at the intersection of user needs, model capability, and engineering constraints, and owns AI product quality end to end. As an early hire at a FinTech I have shipped LLM-powered products used daily by 5+ leading investment management firms, defining how the system should behave, how we measure it, and how it improves, from model behaviour to system behaviour to user experience. I build the evaluation and reliability layer that makes non-deterministic AI trustworthy: structured evals, quality bars, grounding gates that reduce hallucinations, deterministic fallbacks, and monitoring so systems behave predictably and recover gracefully. I turn ambiguous problems into clear requirements and measurable outcomes, balance quality, latency, cost and reliability, and ship fast in a zero-to-one environment. Open-source proof: fine-tuned models with 67K+ HuggingFace downloads and an agent at 9/9 on a polyglot benchmark.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Evaluation \& Quality:} agent \& model evaluation frameworks, offline metrics, human-feedback loops, Quality of Service, quality bars, benchmarking, experimentation
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Reliability \& Failure Handling:} grounding-validation gates that reduce hallucinations, deterministic fallbacks and graceful recovery, incident-triggering monitoring of failure modes, latency \& groundedness
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Product Judgement:} turning ambiguous problems into clear requirements and measurable outcomes, trade-offs across quality, latency, cost, reliability, safety \& UX, user-outcome metrics \& user trust
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{LLM Systems:} LLM-based products, prompting \& tool-use patterns, AI agents, RAG \& retrieval, MCP, LangGraph, LangChain, Anthropic Claude, open-weight models
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Engineering \& CS:} strong fundamentals \& system design, Python (production, async, TDD), FastAPI, PostgreSQL, Elasticsearch, Redis, AWS, GCP, Docker, CI/CD
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Owned AI products end to end for 5+ leading investment management firms, defining how the system should behave, how it is measured, and how it improves, from model behaviour to system behaviour to user experience.
+  \item Defined and evolved evaluation frameworks: structured agent and model evals, Quality of Service metrics, and a human-feedback outcome measure, "terminal impact," computed from real user conversations.
+  \item Made non-deterministic AI reliable and trustworthy: grounding-validation gates that reduce hallucinations, deterministic fallbacks when the model fails, and incident-triggering monitoring so systems behave predictably and recover gracefully.
+  \item Balanced quality, latency, cost, and reliability trade-offs in production, turning ambiguous problems into clear requirements and measurable outcomes, and challenged technical decisions with the engineers building them.
+  \item Shipped fast in a zero-to-one environment: worked directly with ML and engineering, cut analyst workflow time by 70\%, mentored engineers, and defined patterns the team builds on.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Developed a novel deep learning model utilizing Graph Convolution Network and Generative Adversarial Network (GAN) techniques for drug discovery, achieving a 63\% improvement in the novelty score of drug structures.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Agentic Enterprise Assistant:} LLM agent (Claude, native tool use) over grounded data, with a grounding-validation gate on every answer, role-based access, auditable traces, and OpenTelemetry to Arize Phoenix. Passed 13/13 evaluation cases across tool selection, grounding, and access control. \href{https://github.com/abhijeetscode/Agentic-Enterprise-Assistant}{View on GitHub}
+  \item \textbf{Agentic Search API:} cross-domain search where Claude decomposes and routes queries to specialized tools, with a deterministic lexical plus semantic fallback for graceful recovery when the model fails; p95 around 175ms deterministic retrieval. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
+  \item \textbf{PII Detection LLMs:} fine-tuned GPT (with LoRA) and BERT to classify personal data in text; published models collectively reaching 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\sep{\itshape MSc in Data Science}\hfill {\color{muted}London, UK}\par\vspace{1pt}
+{\color{company}\bfseries C-DAC}\sep{\itshape PG Diploma in Advanced Computing (PG-DAC)}\hfill {\color{muted}Pune, India}\par\vspace{1pt}
+{\color{company}\bfseries University of Pune}\sep{\itshape B.E. in Computer Science}\hfill {\color{muted}Pune, India}\par
+
+\end{document}

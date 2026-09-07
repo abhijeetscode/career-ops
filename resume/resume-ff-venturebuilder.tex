@@ -1,0 +1,140 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Founders Factory -- Venture Builder | HealthTech (London). 6-month
+% contract (possible extension / FT). Venture studio: take ideas from zero
+% to venture-backable; work with founders on strategy, validate problems,
+% build MVPs, find early PMF. Cross-functional (product, design, growth,
+% tech). Explicitly NOT a pure designer or engineer; NOT a consultant.
+% JD required: demonstrated zero-to-one experience in DIGITAL HEALTH or
+% MEDTECH (startup, side project, research, or volunteering; applying AI /
+% innovative health devices highly advantageous); lean/experimental, speed
+% over perfection; wear multiple hats; strong technical mindset able to
+% build no-code/low-code prototypes/POCs; commercially curious (ICPs, value
+% props, pricing, early GTM); clear communication; comfortable with
+% ambiguity and founder relationships.
+% SOURCES: cv.md + config/profile.yml. Honest angle -- TECHNICAL BUILDER who
+% ships zero-to-one products fast. Hero mapping: early-stage hire taking AI
+% products from zero to production for 5+ investment firms (0->1 delivery);
+% "terminal impact" user-outcome metric + product-value focus (product
+% mindset); AI-assisted rapid prototyping (Claude Code, Copilot) to build
+% POCs fast (no-/low-code-style speed); direct customer work; ships things
+% real people use (67K+ downloads); HEALTH BRIDGE = King's College deep
+% learning for drug discovery (applying AI to a health/medtech problem).
+% HONEST -- candidate is FINTECH, not digital-health; the health experience
+% is a research project, not health-venture building. NOT claimed: prior
+% venture-builder/founder role, digital-health startup 0->1, GTM / pricing /
+% ICP ownership, product-management or design title, commercial P&L.
+% The digital-health-0->1 requirement is a genuine gap (user chose to apply
+% anyway). Framed on transferable 0->1 + product + AI + health-AI research.
+% LOCATION: London -- candidate is London-based, fits.
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes). A4, 10pt.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=1.2cm,bottom=1.0cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal primary
+\definecolor{company}{HTML}{6C2BB3}  % purple accent
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=1.5pt,topsep=1.5pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large Technical Builder: Zero-to-One Products, AI Prototyping \& Product Impact}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+Technical builder who takes ideas from zero to shipped products people actually use. As an early hire at a FinTech I took AI products from problem definition through to production used daily by 5+ leading investment management firms, working directly with customers and iterating fast on what the data showed. I care about user outcomes over technical vanity, and I built a product-value metric to prove it. I move quickly with lean, experimental approaches, prototyping with AI tools to validate ideas in days, and I have the technical range to build the prototype myself rather than wait on specialist support. My AI work spans finance and, earlier, health: I built deep learning models for drug discovery at King's College London. I share my work in the open, with models and agents used by tens of thousands of people.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Zero-to-One Delivery:} early-stage product building, MVP scoping to production, lean and experimental iteration, ownership under ambiguity, working directly with customers and founders
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Rapid Prototyping \& AI:} AI-assisted build (Claude Code, Copilot) for fast prototypes and proofs of concept, LLMs, AI agents, RAG, fine-tuning, validating ideas quickly with real users
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Product Mindset:} user-outcome metrics, business value over model performance for its own sake, shaping product from real usage, clear communication of progress and trade-offs
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Technical Range:} Python, FastAPI, data pipelines, PostgreSQL, cloud (AWS, GCP), CI/CD, plus enough breadth to wear product, tech, and data hats and know when to pull in specialists
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Applied \& Health AI:} deep learning (PyTorch, GCN, GAN), NLP, machine learning for drug discovery and financial workflows, MSc Data Science
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item As one of the first hires, took AI products from zero to production used by 5+ leading investment management firms, owning problem definition through MVP, shipping, testing, and iteration.
+  \item Worked directly with customers and shaped the product from real usage, defining "terminal impact," a user-outcome metric that measures whether the product actually helps people rather than just runs.
+  \item Shipped fast with lean, experimental approaches: prototyped with AI tools (Claude Code, Copilot), put working versions in front of real users, and iterated on the results.
+  \item Built the underlying systems as well as the product (conversational AI, autonomous agents, tool integrations, data pipelines), cutting analyst workflow time by 70\% and moving from idea to working prototype without waiting on specialist support.
+  \item Mentored engineers and defined the patterns and reusable components the team builds on.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Applied AI to a health problem: developed deep learning models (Graph Convolution Network, Generative Adversarial Network) for drug discovery, achieving a 63\% improvement in the novelty score of drug structures over a million-row clinical dataset.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{PII Detection LLMs:} fine-tuned models (LoRA, BERT) that classify personal data in text, shipped as reusable products; collectively 67K+ downloads on HuggingFace, real usage by real people. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+  \item \textbf{Spec-to-Code Agent:} autonomous ReAct agent (LangGraph + Anthropic API) that ships installable, tested software from plain-language specs; 9/9 pass rate across a polyglot benchmark, an end-to-end zero-to-working-product build. \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+  \item \textbf{Agentic Enterprise Assistant:} LLM agent over grounded data with access control, validation, and auditable traces; passed 13/13 evaluation cases. \href{https://github.com/abhijeetscode/Agentic-Enterprise-Assistant}{View on GitHub}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\sep{\itshape MSc in Data Science}\hfill {\color{muted}London, UK}\par\vspace{1pt}
+{\color{company}\bfseries C-DAC}\sep{\itshape PG Diploma in Advanced Computing (PG-DAC)}\hfill {\color{muted}Pune, India}\par\vspace{1pt}
+{\color{company}\bfseries University of Pune}\sep{\itshape B.E. in Computer Science}\hfill {\color{muted}Pune, India}\par
+
+\end{document}

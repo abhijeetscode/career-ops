@@ -1,0 +1,133 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Applied AI / ML Engineer -- Penta Group. London, on-site, full time.
+% Early-career, AI-native builder role in the Data Science team.
+% Scope: build AI-native tools & LLM workflows with Claude Code (primary
+% build tool), agents, skills, MCP tools; stand up & operate AWS
+% (EC2/ECS/S3/Lambda/IAM/CloudWatch), IaC, DevOps/MLOps; Python/SQL/APIs;
+% summarisation, classification, embeddings, vector search, RAG; evaluate
+% LLM outputs for quality/cost/reliability; ship working software fast.
+% Essential: hands-on with an AI-native tool (Claude Code etc.) + examples;
+% strong Python; prompting & context engineering; APIs/JSON/structured
+% outputs; SQL; Git; bias to shipping (not notebooks).
+% HONEST TAILORING -- candidate leads on: Claude Code as daily driver,
+% production MCP server (180+ tools), LLM agents/workflows shipped to prod,
+% RAG + embeddings + hybrid semantic search, LLM evaluation/QoS metrics &
+% observability, Python (TDD) + FastAPI, AWS (incl. Textract), Docker/CI-CD,
+% fine-tuning (LoRA/BERT, 67K+ HF downloads), FinTech, MSc DS.
+% NOT claimed: LiteLLM, OpenWebUI, Cowork (their example tools); specific
+% AWS EC2/ECS/Lambda services beyond what's in cv.md (AWS + Textract kept).
+% Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
+% Compile: pdflatex (2 passes).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}   % professional, neutral sans (Source Sans Pro)
+\usepackage[a4paper,top=0.8cm,bottom=0.7cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% ---- Colours (echo the HTML CV: teal primary, purple accent) ----
+\definecolor{accent}{HTML}{117A8B}   % teal  (hsl 187,74%,32%)
+\definecolor{company}{HTML}{6C2BB3}  % purple (hsl 270,70%,45%)
+\definecolor{muted}{HTML}{555555}
+
+% ---- Links: clickable label text, coloured teal (no raw URLs) ----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Remove paragraph indent, set sensible line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.0}
+\pagestyle{empty}
+
+% ---- Section headings: uppercase, bold, teal, thin rule underneath ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}\scshape}
+  {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{4pt}{3pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=2pt,topsep=2pt,parsep=0pt,label=\textcolor{accent}{\small$\bullet$}}
+
+% ---- Entry: company / dates on line 1, role / location on line 2 ----
+\newcommand{\entry}[4]{%
+  {\color{company}\bfseries #1}\hfill {\color{muted}#2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Inline divider for the contact line ----
+\newcommand{\sep}{\,\textcolor{accent!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{24}{26}\selectfont\bfseries Abhijeet Lokhande}\\[3pt]
+  {\color{accent}\large Applied AI / ML Engineer: AI-Native Development, LLM Workflows \& Agents}\\[5pt]
+  {\small
+    London, United Kingdom \sep
+    \href{mailto:abhijeet_lokhande@proton.me}{abhijeet\_lokhande@proton.me} \sep
+    07480801382 \\[2pt]
+    \href{https://www.linkedin.com/in/ablds/}{LinkedIn} \sep
+    \href{https://github.com/abhijeetscode}{GitHub} \sep
+    \href{https://huggingface.co/ab-ai}{Hugging Face}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+AI-native builder who ships working software, not notebooks. I use Claude Code as my daily driver to prototype, build, debug, and document faster, with the judgement to read, test, and harden what it generates before it ships. As an early-stage FinTech hire, I have taken LLM agents and workflows from prototype to production for 5+ leading investment management firms, including a production MCP server exposing 180+ AI-powered tools, RAG systems, and evaluation and observability to keep them reliable. Strong Python (production-grade, TDD), FastAPI, APIs and structured outputs, plus RAG, embeddings, vector search, and hands-on AWS. Open-source proof: fine-tuned models with 67K+ HuggingFace downloads and an autonomous coding agent at 9/9 on a polyglot benchmark. MSc Data Science, King's College London.
+
+%======================= SKILLS =======================
+\section{Skills}
+\begin{tight}
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{AI-Native Development:} Claude Code (daily driver), GitHub Copilot, prompting \& context engineering, structured outputs, MCP tools, agentic workflows (LangGraph, LangChain), human-in-the-loop
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{LLM Workflows \& Applied AI:} LLMs, RAG, embeddings, vector databases, hybrid semantic search (Elasticsearch, BM25 + semantic), summarisation \& classification, LLM output evaluation (quality, cost, reliability)
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Python \& Engineering:} Python (production, TDD), FastAPI, SQL, JSON \& REST APIs, Git, Rust, strong debugging \& problem-solving
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Cloud \& MLOps:} AWS (incl. Textract), Docker, CI/CD, monitoring \& observability (OpenTelemetry), logging, cost control
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{ML Foundations:} deep learning, NLP, fine-tuning (LoRA, BERT), model evaluation, classification, PyTorch, TensorFlow, Scikit-Learn
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
+\begin{tight}
+  \item Build AI-native every day: Claude Code and Copilot as daily drivers to accelerate prototyping, debugging, and documentation, with rigorous review and testing of generated code (read it, test it, make it safe to ship).
+  \item Built a production MCP server on FastAPI exposing 180+ AI-powered tools with secure enterprise access, over the Model Context Protocol for Claude Desktop and Glean-compatible clients.
+  \item Took LLM agents and workflows from prototype to production for 5+ investment firms, including an autonomous agent that generates DCF financial models from raw data (cutting analyst modelling time 70\%) and RAG systems over financial documents (embeddings, vector search).
+  \item Embedded evaluation and observability in production: agent evals, Quality-of-Service metrics, and incident-triggering (OpenTelemetry) to track groundedness, latency, cost, and failure modes.
+  \item Own operations for what I ship: instrumentation, dashboards and alerting, hands-on CI/CD on AWS and Docker, and release practices covering deployment verification and rollback.
+\end{tight}
+
+\entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
+\begin{tight}
+  \item Researched and built deep learning models (Graph Convolution Networks, GANs) over a million-row clinical dataset for drug discovery, achieving a 63\% improvement in the novelty score of generated structures.
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Open-Source \& Projects}
+\begin{tight}
+  \item \textbf{Spec-to-Code Agent (AI-native building):} autonomous ReAct agent on LangGraph and the Anthropic API that plans, calls tools, and ships installable, tested packages from plain-language specs; 9/9 pass rate across a polyglot benchmark (Python, Go, Rust, Java, JS). \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+  \item \textbf{Agentic Enterprise Assistant (MCP + evals + RBAC):} LLM agent (Claude, native tool use) answering staff questions over grounded data, with RBAC enforced at the MCP server, a grounding-validation gate, and hybrid BM25 + semantic search; passed 13/13 evaluation cases (tool selection, grounding, RBAC). \href{https://github.com/abhijeetscode/Agentic-Enterprise-Assistant}{View on GitHub}
+  \item \textbf{PII Detection LLMs (fine-tuning):} fine-tuned GPT (LoRA) and BERT to detect and protect personal data, deployed as reusable production models on Hugging Face; collectively 67K+ downloads. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+{\color{company}\bfseries King's College London}\hfill {\color{muted}London, UK}\par
+{\itshape MSc in Data Science}\par\vspace{2pt}
+{\color{company}\bfseries C-DAC, India}\hfill {\color{muted}Pune, India}\par
+{\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\par\vspace{2pt}
+{\color{company}\bfseries University of Pune}\hfill {\color{muted}Pune, India}\par
+{\itshape B.E. in Computer Science}\par
+
+\end{document}

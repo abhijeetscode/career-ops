@@ -3,10 +3,10 @@
 % Company-neutral, all-round CV for UK AI/ML Engineer applications. Balanced
 % across agentic AI/LLMs, RAG & search, production ML, MLOps & evaluation,
 % and backend engineering. Honest: only skills/metrics from cv.md +
-% confirmed updates (search-agent, terminal impact, GCP, TypeScript/React,
-% RabbitMQ, led AI initiatives). No fabricated tools or domains.
+% confirmed proof points (67K+ HF downloads, Innovate UK GBP 205,895 grant).
+% No fabricated tools or domains.
 % Font: Source Sans Pro. Accent: teal + purple. Links: clickable labels.
-% Compile: pdflatex (2 passes).
+% Compile: pdflatex -output-directory=output resume/resume-general-uk.tex (2 passes).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[10pt,a4paper]{article}
@@ -38,7 +38,7 @@
 \titleformat{\section}
   {\normalfont\large\bfseries\color{accent}\scshape}
   {}{0em}{}[{\color{accent!35}\titlerule[1pt]}]
-\titlespacing*{\section}{0pt}{5pt}{3pt}
+\titlespacing*{\section}{0pt}{4pt}{2pt}
 
 % ---- Compact bullet list ----
 \newlist{tight}{itemize}{1}
@@ -74,51 +74,49 @@
 
 %======================= SUMMARY =======================
 \section{Summary}
-AI/ML Engineer who builds and ships production AI systems end to end, from LLM agents and RAG to the pipelines, APIs, and evaluation that keep them reliable. In a regulated FinTech I have led multiple AI initiatives, taking models from experimentation to production for leading investment firms, with strong software engineering in Python (FastAPI) and disciplined MLOps: CI/CD, containerisation, monitoring, and evaluation. I combine applied deep learning and NLP with a research background from King's College London, and I share my work in open source (67K+ HuggingFace downloads).
+AI/ML Engineer who ships production AI systems end to end, from LLM agents and RAG to the pipelines, APIs, evaluation, and operations that keep them reliable. As an early-stage hire in a FinTech I have led AI initiatives from experimentation to production for leading investment management firms, backed by strong Python engineering (FastAPI, TDD) and disciplined MLOps: CI/CD, containerisation, telemetry, on-call, and evaluation. I pair applied deep learning and NLP with a research background from King's College London, mentor other engineers, and publish open source (67K+ HuggingFace downloads).
 
 %======================= SKILLS =======================
 \section{Skills}
 \begin{tight}
-  \item[\textcolor{accent}{\small$\bullet$}] \textbf{LLMs \& Agents:} agentic systems, tool use \& orchestration (LangGraph, LangChain), RAG, prompt engineering, Model Context Protocol (MCP), fine-tuning (LoRA, BERT), embeddings
-  \item[\textcolor{accent}{\small$\bullet$}] \textbf{ML \& Deep Learning:} PyTorch, TensorFlow, transformers (built from scratch), GANs, Graph Convolution Networks, predictive modelling, forecasting, NLP
-  \item[\textcolor{accent}{\small$\bullet$}] \textbf{MLOps \& Evaluation:} CI/CD, Docker, model deployment \& serving, monitoring \& drift, evaluation frameworks, quality-of-service \& outcome metrics, observability
-  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Backend \& Data:} Python, TypeScript \& React, FastAPI, REST APIs, microservices, RabbitMQ, SQL, PostgreSQL/MongoDB, vector databases, data pipelines
-  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Cloud \& Practices:} AWS \& GCP, testing/TDD, version control \& code review, security \& data privacy (PII), performance \& cost optimisation
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{LLMs \& Agents:} agentic systems, tool use \& orchestration (LangGraph, LangChain, LlamaIndex), RAG, prompt \& context engineering, Model Context Protocol (MCP), fine-tuning (LoRA, BERT), embeddings, vector search
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{ML \& Deep Learning:} PyTorch, TensorFlow/Keras, Scikit-Learn, XGBoost, transformers (built from scratch), GANs, Graph Convolution Networks, forecasting, NLP, statistics
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{MLOps \& Evaluation:} CI/CD, Docker, Terraform (IaC), Airflow, model deployment \& serving, monitoring \& drift, agent evals, quality-of-service metrics, OpenTelemetry observability, on-call
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Backend \& Data:} Python, Rust, SQL, FastAPI, Django, REST APIs, microservices, PostgreSQL/MySQL/MongoDB, Elasticsearch, Redis, vector databases, ETL \& data pipelines
+  \item[\textcolor{accent}{\small$\bullet$}] \textbf{Cloud \& Practices:} AWS, GCP (BigQuery, Cloud Run, GCS, IAM), TDD, code review \& mentoring, data privacy (PII), performance \& cost optimisation, AI-assisted development (Claude Code, Copilot)
 \end{tight}
 
 %======================= EXPERIENCE =======================
 \section{Experience}
 \entry{Built AI (FinTech \& AI Company)}{April 2022 -- Present}{AI/ML Engineer (Early Stage Hire)}{London, UK}
 \begin{tight}
-  \item Led multiple AI initiatives from experimentation to production, delivering LLM agents and RAG systems used by 5+ leading investment management firms across chat and live calls.
-  \item Built reusable platform infrastructure, including a production FastAPI server exposing 180+ AI-powered tools through the Model Context Protocol (MCP) with secure enterprise access.
-  \item Implemented evaluation and observability for models and agents: evals, quality-of-service metrics, groundedness and drift signals, incident-triggering alerts, and ``terminal impact,'' an outcome metric for whether users leave a dialogue satisfied.
-  \item Built a predictive model inferring missing values at scale across large property datasets, powered by a pipeline linking 80\% of records with geolocation enrichment.
-  \item Shipped an autonomous agent that authors Discounted Cash Flow (DCF) models from raw financial data, cutting analyst modeling time by 70\% with validation on every output.
-  \item Optimised a production inference-heavy engine by rearchitecting it into a graph-based pipeline (Apache Hamilton + vectorisation) for an 85\% performance gain and 3x throughput.
+  \item Designed and deployed a client-facing multimodal conversational AI persona used by 5+ leading investment management firms and handling around 100 Slack messages a day, as a multi-channel agent spanning chat and live meetings (Recall, ElevenLabs, Tavus).
+  \item Core engineer on an \href{https://gtr.ukri.org/projects?ref=10022996}{Innovate UK funded R\&D project} (\pounds205,895 grant) delivering a novel ML data platform and street-level analytics for commercial real estate investors.
+  \item Enabled secure enterprise access to 180+ AI-powered tools by building a production FastAPI server exposed through the Model Context Protocol (MCP) for Claude Desktop and Glean-compatible clients.
+  \item Made agent reliability measurable in production through evals, quality-of-service metrics, groundedness and latency signals, incident-triggering alerts, and ``terminal impact,'' an outcome metric for the state in which users exit a dialogue.
+  \item Cut analyst modelling time by 70\% with an autonomous agent that authors Discounted Cash Flow models from raw financial data, plus a RAG assistant over financial PDFs (embeddings, vector database) replacing manual document review.
+  \item Delivered an 85\% performance gain on the production financial modelling engine by rearchitecting it into a graph-based pipeline (Apache Hamilton, vectorisation), a 30\% productivity gain via an AWS Textract document pipeline, and a model inferring missing values across large property datasets from an ingestion pipeline linking 80\% of records.
+  \item Own production operations for what I ship (telemetry, dashboards, alerting, on-call, CI/CD, release verification and rollback), mentor juniors, and set patterns other engineers adopted.
 \end{tight}
 
 \entry{King's College London}{March 2021 -- January 2022}{Research Associate}{London, UK}
 \begin{tight}
-  \item Built deep learning models (Graph Convolution Networks, GANs) for drug discovery, achieving a 63\% improvement in novelty score, with a reproducible preprocessing pipeline over a million-row clinical dataset.
+  \item Achieved a 63\% improvement in novelty score for generated drug structures by building deep learning models (Graph Convolution Networks, GANs) over a reproducible preprocessing pipeline across a million-row clinical dataset.
 \end{tight}
 
 %======================= PROJECTS =======================
 \section{Open-Source \& Projects}
 \begin{tight}
-  \item \textbf{Agentic Enterprise Assistant:} agent answering questions over grounded data with RBAC and OAuth at an MCP server (Keycloak JWT), a grounding-validation gate, and auditable traces; hybrid BM25 + semantic search; OpenTelemetry to Arize Phoenix. Passed 13/13 evaluation cases. \href{https://github.com/abhijeetscode/Agentic-Enterprise-Assistant}{View on GitHub}
-  \item \textbf{Agentic Search API:} FastAPI + Elasticsearch semantic search, Qwen3 embeddings and Claude tool-calling, with a deterministic fallback for resilience; p95 around 175ms and a 0.76 macro QoS eval score. \href{https://github.com/abhijeetscode/search-agent}{View on GitHub}
-  \item \textbf{Spec-to-Code Agent:} autonomous ReAct agent on LangGraph and the Anthropic API that ships installable, tested packages from specs; 9/9 pass rate across a polyglot benchmark (Python, Go, Rust, Java, JS). \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
-  \item \textbf{PII Detection LLMs:} fine-tuned GPT (LoRA) and BERT to detect personally identifiable information, deployed as reusable production artefacts; collectively 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+  \item \textbf{Agentic Enterprise Assistant:} LLM agent answering questions over grounded data with RBAC enforced at an MCP server (Keycloak JWT), a grounding-validation gate, auditable traces, and hybrid BM25 + semantic search; passed 13/13 evaluation cases. \href{https://github.com/abhijeetscode/Agentic-Enterprise-Assistant}{View on GitHub}
+  \item \textbf{Spec-to-Code Agent:} autonomous ReAct agent on LangGraph and the Anthropic API that ships installable, tested packages from plain-language specs; 9/9 on a polyglot benchmark (Python, Go, Rust, Java, JS). \href{https://github.com/abhijeetscode/Spec-to-Code-Agent}{View on GitHub}
+  \item \textbf{PII Detection LLMs:} fine-tuned GPT (LoRA) and BERT to detect personally identifiable information, published as reusable production models; collectively 67K+ downloads on HuggingFace. \href{https://huggingface.co/ab-ai/pii_model}{View on Hugging Face}
+  \item \textbf{Transformer from Scratch in Rust:} GPT-style decoder-only transformer built from first principles with Candle: multi-head causal attention, pre-norm residual blocks, and a full training loop at GPT-2 small scale. \href{https://github.com/abhijeetscode/transformer-rust}{View on GitHub}
 \end{tight}
 
 %======================= EDUCATION =======================
 \section{Education}
-{\color{company}\bfseries King's College London}\hfill {\color{muted}London, UK}\par
-{\itshape MSc in Data Science}\par\vspace{2pt}
-{\color{company}\bfseries C-DAC, India}\hfill {\color{muted}Pune, India}\par
-{\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\par\vspace{2pt}
-{\color{company}\bfseries University of Pune}\hfill {\color{muted}Pune, India}\par
-{\itshape B.E. in Computer Science}\par
+{\color{company}\bfseries King's College London}, {\itshape MSc in Data Science}\hfill {\color{muted}London, UK}\par\vspace{2pt}
+{\color{company}\bfseries C-DAC}, {\itshape Post Graduate Diploma in Advanced Computing (PG-DAC)}\hfill {\color{muted}Pune, India}\par\vspace{2pt}
+{\color{company}\bfseries University of Pune}, {\itshape B.E. in Computer Science}\hfill {\color{muted}Pune, India}\par
 
 \end{document}
