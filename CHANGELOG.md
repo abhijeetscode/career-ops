@@ -1,5 +1,26 @@
 # Changelog
 
+## [1.14.0](https://github.com/abhijeetscode/career-ops/compare/career-ops-v1.13.0...career-ops-v1.14.0) (2026-09-07)
+
+
+### Features
+
+* add modes/_custom.md for user custom instructions ([#1198](https://github.com/abhijeetscode/career-ops/issues/1198)) ([3cc8844](https://github.com/abhijeetscode/career-ops/commit/3cc8844c51975e2bcd94cb9078bc734a75626c71))
+* **batch:** add --limit flag + budget guide ([0607ee5](https://github.com/abhijeetscode/career-ops/commit/0607ee57e176c93422732ee1ad1530cd606f70b6))
+* **cli:** add Grok Build CLI support ([0a89381](https://github.com/abhijeetscode/career-ops/commit/0a8938186ed8a4787a84b2e5bc1680a55aac59ca))
+* **cv:** add opt-in profile photo for DACH/European CVs ([fcccd58](https://github.com/abhijeetscode/career-ops/commit/fcccd58abf4be7b2d620576ffe754861cab933d4))
+* **modes:** add Danish (da) locale ([5407811](https://github.com/abhijeetscode/career-ops/commit/54078118a70fa6b42123a68450bb584206af8ac4))
+* **modes:** add EU SWE application calibration mode ([f024317](https://github.com/abhijeetscode/career-ops/commit/f02431721ad1cbb7e49882b23ebb4dec00eaafff))
+* **modes:** add recruiter-side application heuristics ([2ea0814](https://github.com/abhijeetscode/career-ops/commit/2ea0814b8436aeae76200a70d2df6be795e498e0))
+* **providers:** add Comeet ATS provider ([#1222](https://github.com/abhijeetscode/career-ops/issues/1222)) ([f5af817](https://github.com/abhijeetscode/career-ops/commit/f5af81760436b38901ba4f1c090c1f077b90941e))
+* **providers:** add Personio ATS provider ([#1223](https://github.com/abhijeetscode/career-ops/issues/1223)) ([f25570b](https://github.com/abhijeetscode/career-ops/commit/f25570b3a5ecbaa18adf6ef6579e167ed3b68294))
+* **resume:** add tailored LaTeX resumes for multiple companies and modern template ([d7a210f](https://github.com/abhijeetscode/career-ops/commit/d7a210fd592b0ffa6efc52b57b23a89bf2dfe266))
+
+
+### Bug Fixes
+
+* **template:** scope break-inside to atomic units to prevent CV pagination breaks ([7ef8182](https://github.com/abhijeetscode/career-ops/commit/7ef81821684b9959acc0f9e76bef2169ca5d6ec0))
+
 ## [1.27.0](https://github.com/santifer/career-ops/compare/career-ops-v1.26.0...career-ops-v1.27.0) (2026-08-18)
 
 
