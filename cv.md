@@ -18,9 +18,9 @@ AI engineer committed to continuous learning and building impactful AI solutions
 ## Experience
 
 ### Built AI, AI/ML Engineer (Early Stage Hire)
-**FinTech & AI Company · London, UK · April 2022 – Present**
+**FinTech & AI Company · London, UK · April 2022 to September 2026**
 
-- Designed and deployed a client facing multimodal conversational AI assistant for 5+ leading investment management firms, handling thousands of Slack messages across chat and live meetings using Recall, ElevenLabs, and Tavus.
+- Designed and deployed a client facing multimodal conversational AI assistant for leading investment management firms, handling thousands of Slack messages across chat and live meetings using Recall, ElevenLabs, and Tavus.
 - Core engineer on an [Innovate UK funded R&D project](https://gtr.ukri.org/projects?ref=10022996) (£205,895 grant, 2022 to 2023) that built an ML data platform and street level analytics for commercial real estate investors.
 - Enabled secure enterprise access to 180+ AI powered tools through a production ready FastAPI MCP server for Claude Desktop and Glean compatible clients.
 - Defined terminal impact from real client chats and designed agent evaluations, Quality of Service metrics, and incident mechanisms to make reliability, groundedness, latency, and failure modes measurable.
@@ -81,9 +81,9 @@ Bachelor of Engineering in Computer Science · Pune, India
 ## Technical Skills
 
 **AI/ML:** Machine Learning, Deep Learning, NLP, LLMs, AI Agents, RAG, Numerical Optimization, Statistics, Forecasting  
-**Frameworks:** Scikit-Learn, TensorFlow, Keras, PyTorch, Candle, XGBoost, LangChain, LlamaIndex, LangGraph, Geopandas  
+**Frameworks:** Scikit-Learn, TensorFlow, Keras, PyTorch, Candle, XGBoost, LangChain, LlamaIndex, LangGraph, CrewAI, AutoGen, Geopandas  
 **Languages:** Python, SQL, Rust  
 **Web/API:** FastAPI, Django, Test Driven Development  
-**Data:** ETL processes, Data pipelines, MySQL, PostgreSQL, MongoDB, Data Analysis  
-**Infrastructure:** AWS, GCP (BigQuery, Cloud Run, GCS, IAM), Airflow, Terraform (IaC), Docker, CI/CD, Git, GitHub
+**Data:** ETL processes, Data pipelines, MySQL, PostgreSQL, MongoDB, Neo4j, Knowledge Graphs, Data Analysis  
+**Infrastructure:** AWS (EMR, SageMaker), GCP (BigQuery, Cloud Run, GCS, IAM, Vertex AI Agent Builder, Google ADK), Airflow, Terraform (IaC), Docker, CI/CD, Git, GitHub
 **AI-Assisted Development:** Claude Code, GitHub Copilot (daily driver in day-to-day development, with rigorous review and testing of generated code)
