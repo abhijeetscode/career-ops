@@ -1,0 +1,135 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Modern ATS-friendly CV template — self-contained, single column
+% Font: Charter (formal serif). Accent: teal + purple.
+% No dashes rule: use "to" for ranges, split compound adjectives.
+% Compile: pdflatex (2 passes) or tectonic
+%
+% Usage:
+%   1. Copy this file to output/cv-{candidate}-{company}-{date}.tex
+%   2. Replace the {{PLACEHOLDER}} values below
+%   3. Compile: pdflatex -output-directory=output your-file.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{charter}
+\usepackage[a4paper,top=1.3cm,bottom=1.1cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+\usepackage{parskip}
+
+% ---- Colours ----
+\definecolor{primary}{HTML}{117A8B}    % teal
+\definecolor{accent}{HTML}{6C2BB3}     % purple
+\definecolor{muted}{HTML}{555555}
+\definecolor{rulecolor}{HTML}{E2E2E2}
+
+% ---- Remove paragraph indent, set line spacing ----
+\setlength{\parindent}{0pt}
+\linespread{1.08}
+\pagestyle{empty}
+
+% ---- Section headings ----
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{primary}\scshape}
+  {}{0em}{}[{\color{rulecolor}\titlerule[1.2pt]}]
+\titlespacing*{\section}{0pt}{10pt}{6pt}
+
+% ---- Compact bullet list ----
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em,itemsep=3pt,topsep=3pt,parsep=0pt,label=\textcolor{primary}{\small$\bullet$}}
+
+% ---- Entry header: company | dates ; role | location ----
+\newcommand{\entry}[4]{%
+  {\color{accent}\bfseries #1}\hfill {\color{muted}\small #2}\par
+  \vspace{1pt}
+  {\itshape #3}\hfill {\color{muted}\small\itshape #4}\par
+  \vspace{3pt}%
+}
+
+% ---- Project entry ----
+\newcommand{\project}[2]{%
+  {\color{accent}\bfseries #1}\hfill {\color{muted}\small #2}\par
+  \vspace{2pt}%
+}
+
+% ---- Inline divider ----
+\newcommand{\sep}{\,\textcolor{primary!60}{\textbar}\,}
+
+\begin{document}
+
+%======================= HEADER =======================
+\begin{center}
+  {\fontsize{26}{28}\selectfont\bfseries {{NAME}}}\\[4pt]
+  {\color{primary}\large {{HEADLINE}}}\\[6pt]
+  {\small
+    {{LOCATION}} \sep
+    \href{mailto:{{EMAIL}}}{{{EMAIL}}} \sep
+    {{PHONE}} \\[2pt]
+    \href{https://{{LINKEDIN_URL}}}{{{LINKEDIN_DISPLAY}}} \sep
+    \href{https://{{GITHUB_URL}}}{{{GITHUB_DISPLAY}}} \sep
+    \href{https://{{WEBSITE_URL}}}{{{WEBSITE_DISPLAY}}}
+  }
+\end{center}
+\vspace{2pt}
+
+%======================= SUMMARY =======================
+\section{Summary}
+{{SUMMARY}}
+
+%======================= SKILLS =======================
+\section{Core Skills}
+\begin{tight}
+  \item \textbf{{{SKILL_CATEGORY_1}}:} {{SKILL_ITEMS_1}}
+  \item \textbf{{{SKILL_CATEGORY_2}}:} {{SKILL_ITEMS_2}}
+  \item \textbf{{{SKILL_CATEGORY_3}}:} {{SKILL_ITEMS_3}}
+  \item \textbf{{{SKILL_CATEGORY_4}}:} {{SKILL_ITEMS_4}}
+\end{tight}
+
+%======================= EXPERIENCE =======================
+\section{Experience}
+\entry{{{COMPANY_1}}}{{{DATES_1}}}{{{ROLE_1}}}{{{LOCATION_1}}}
+\begin{tight}
+  \item {{BULLET_1_1}}
+  \item {{BULLET_1_2}}
+  \item {{BULLET_1_3}}
+  \item {{BULLET_1_4}}
+\end{tight}
+
+\entry{{{COMPANY_2}}}{{{DATES_2}}}{{{ROLE_2}}}{{{LOCATION_2}}}
+\begin{tight}
+  \item {{BULLET_2_1}}
+  \item {{BULLET_2_2}}
+\end{tight}
+
+%======================= PROJECTS =======================
+\section{Selected Projects}
+\project{{{PROJECT_1}}}{{{PROJECT_TECH_1}}}
+\begin{tight}
+  \item {{PROJECT_DESC_1}} \href{https://{{PROJECT_URL_1}}}{{{PROJECT_URL_1}}}
+\end{tight}
+
+\project{{{PROJECT_2}}}{{{PROJECT_TECH_2}}}
+\begin{tight}
+  \item {{PROJECT_DESC_2}} \href{https://{{PROJECT_URL_2}}}{{{PROJECT_URL_2}}}
+\end{tight}
+
+\project{{{PROJECT_3}}}{{{PROJECT_TECH_3}}}
+\begin{tight}
+  \item {{PROJECT_DESC_3}} \href{https://{{PROJECT_URL_3}}}{{{PROJECT_URL_3}}}
+\end{tight}
+
+%======================= EDUCATION =======================
+\section{Education}
+\entry{{{EDU_INSTITUTION_1}}}{{{EDU_DATES_1}}}{{{EDU_DEGREE_1}}}{{{EDU_LOCATION_1}}}
+\vspace{-4pt}
+\entry{{{EDU_INSTITUTION_2}}}{{{EDU_DATES_2}}}{{{EDU_DEGREE_2}}}{{{EDU_LOCATION_2}}}
+\vspace{-4pt}
+\entry{{{EDU_INSTITUTION_3}}}{{{EDU_DATES_3}}}{{{EDU_DEGREE_3}}}{{{EDU_LOCATION_3}}}
+
+\end{document}
