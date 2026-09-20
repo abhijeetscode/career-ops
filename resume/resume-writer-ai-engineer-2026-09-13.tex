@@ -1,0 +1,201 @@
+%-------------------------
+% Career-Ops LaTeX CV Template — Modern (colorful variant)
+% Structure: same dynamic block placeholders as cv-template.tex
+% (EDUCATION / EXPERIENCE / PROJECTS / AWARDS / SKILLS), so it drops
+% into build-cv-latex.mjs with no script changes.
+% Style: Charter serif, teal + purple accents.
+% License: MIT
+%------------------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Random Stuff %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[a4paper,10pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage{charter}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{xcolor}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome}
+\usepackage{multicol}
+\usepackage{microtype}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% ---- Colours ----
+\definecolor{primary}{HTML}{117A8B}    % teal
+\definecolor{accent}{HTML}{6C2BB3}     % purple
+\definecolor{muted}{HTML}{555555}
+\definecolor{rulecolor}{HTML}{E2E2E2}
+
+% Sections formatting — teal small-caps heading, light rule
+\titleformat{\section}{
+  \vspace{-7pt}\scshape\raggedright\large\bfseries\color{primary}
+}{}{0em}{}[\color{rulecolor}\titlerule \vspace{0pt}]
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Commands  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-3pt}}
+  }
+}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-3pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\color{accent}#1} & \textbf{\small\color{muted}#2} \\
+      \textit{\small#3} & \textit{\small\color{muted}#4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeSubheadingContinue}[2]{
+  \vspace{-3pt}
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small\color{muted}#2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeProjectHeading}[2]{
+  \vspace{-3pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\color{accent}#1} & \textbf{\small\color{muted}#2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{0pt}}
+\renewcommand\labelitemi{\color{primary}$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{\color{primary}$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Heading  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+    \begin{center}
+        % NAME
+        {\Huge\bfseries Abhijeet Lokhande}
+        % SUBHEADING
+        \\[2pt] {\color{muted}London, United Kingdom \textbar{} 07480801382}\\
+        \small
+        % EMAIL
+        % EMAIL_URL already carries its scheme: sanitizeUrl() prefixes bare
+        % addresses with mailto:, so the template must not add a second one.
+        \href{mailto:abhijeet_lokhande@proton.me}{\raisebox{-0.2\height}{\color{primary}\faEnvelope}\  \underline{abhijeet\_lokhande@proton.me}} ~
+        % LINKEDIN
+        \href{https://www.linkedin.com/in/ablds/}{\raisebox{-0.2\height}{\color{primary}\faLinkedin}\ \underline{linkedin.com/in/ablds}}  ~
+        % GITHUB
+        \href{https://github.com/abhijeetscode}{\raisebox{-0.2\height}{\color{primary}\faGithub}\ \underline{github.com/abhijeetscode}}
+    \end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Summary  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Professional Summary}
+\vspace{-5pt}
+{\color{muted}AI engineer who architects, builds, and deploys high performance LLM and agent systems into production for enterprise customers, with a strong foundation in deep learning and natural language processing. Ships robust, well tested integrations on AWS and GCP and keeps them trustworthy through evaluation, groundedness checks, and monitoring. Open source author whose fine tuned models have 67K+ HuggingFace downloads, with a research background in deep learning.}
+\vspace{2pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Experience  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Work Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Built AI}{April 2022 to September 2026}
+      {AI/ML Engineer (Early Stage Hire)}{London, UK}
+      \resumeItemListStart
+            \resumeItem{Designed and deployed a high performance client facing multimodal conversational AI assistant for leading investment management firms, handling thousands of Slack messages across chat and live meetings using Recall, ElevenLabs, and Tavus.}
+            \resumeItem{Designed agent evaluations, Quality of Service metrics, and incident mechanisms that made reliability, groundedness, latency, and failure modes measurable, supporting trustworthy AI in production.}
+            \resumeItem{Enabled secure enterprise access to 180+ AI powered tools through a production ready FastAPI MCP server for Claude Desktop and Glean compatible clients, ensuring robust integrations across the platform.}
+            \resumeItem{Built financial document intelligence using LLMs, RAG, embeddings, and a vector database, letting analysts query multiple PDFs in natural language and cutting manual review time.}
+            \resumeItem{Built and deployed an autonomous AI agent that generates Discounted Cash Flow models from raw financial data, reducing analyst modelling time by 70\%.}
+            \resumeItem{Own the AI lifecycle in production, including instrumentation, telemetry, alerting, CI/CD, deployment verification, and rollback; mentor junior engineers and establish reusable engineering practices.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {King's College London}{March 2021 to January 2022}
+      {Research Associate}{London, UK}
+      \resumeItemListStart
+            \resumeItem{Developed a deep learning model using Graph Convolution Network and Generative Adversarial Network (GAN) techniques for drug discovery, improving the novelty score of generated drug structures by 63\%.}
+            \resumeItem{Built a robust data preprocessing pipeline for clinical data, ensuring accuracy and completeness across a million row dataset.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%  PROJECTS  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Relevant Open Source Projects}
+\resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\href{https://huggingface.co/ab-ai/PII-Model-Phi3-Mini}{\textbf{PII Detection LLMs}} \emph{$|$ LoRA fine tuning, GPT and BERT, HuggingFace}}{}
+      \resumeItemListStart
+            \resumeItem{Fine tuned GPT (LoRA) and BERT to detect Personally Identifiable Information; published models with 67K+ combined downloads on HuggingFace.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\href{https://github.com/abhijeetscode/Agentic-Enterprise-Assistant}{\textbf{Agentic Enterprise Assistant}} \emph{$|$ Claude native tool use, MCP, FastAPI, Elasticsearch}}{}
+      \resumeItemListStart
+            \resumeItem{LLM agent with native tool use, a grounding validation gate on every answer, and role based access enforced at the MCP server (Keycloak JWT); passed 13/13 evaluation cases for tool selection, grounding, and RBAC compliance.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\href{https://github.com/abhijeetscode/search-agent}{\textbf{Agentic Search API}} \emph{$|$ FastAPI, Elasticsearch, Qwen3 embeddings}}{}
+      \resumeItemListStart
+            \resumeItem{Production grade cross domain semantic search service where Claude decomposes queries and routes to lexical and semantic tools with a deterministic fallback; p95 near 175ms retrieval and a 0.76 macro QoS score across mixed query types.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\href{https://github.com/abhijeetscode/gpt-from-scratch-pytorch}{\textbf{GPT from Scratch in PyTorch}} \emph{$|$ PyTorch, transformer internals}}{}
+      \resumeItemListStart
+            \resumeItem{Decoder only GPT with every component hand written in PyTorch: tiled FlashAttention with online softmax, RMSNorm, sinusoidal positional encoding, and pre norm transformer blocks with residual connections.}
+      \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Technical Skills  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Technical Skills}
+\vspace{-7pt}
+\begin{itemize}
+[leftmargin=0.15in, label={}]\small{\item{
+        \textbf{AI/ML \& NLP}{: LLMs, NLP, Deep Learning, AI Agents, RAG, Embeddings, Semantic Search, Fine Tuning (LoRA), AI Evaluation and Groundedness} \\
+        \textbf{ML Frameworks}{: PyTorch, TensorFlow, Scikit-Learn, Hugging Face, LangGraph, LangChain, CrewAI, AutoGen, Candle} \\
+        \textbf{Languages}{: Python, SQL, Rust} \\
+        \textbf{Backend \& Data}{: FastAPI, REST APIs, ETL, Data Pipelines, PostgreSQL, Elasticsearch, Vector Databases, Redis} \\
+        \textbf{Cloud \& MLOps}{: AWS (SageMaker, EMR), GCP (Vertex AI, BigQuery, Cloud Run), Docker, CI/CD, Terraform, Airflow, Model Monitoring, Git} \\
+        \textbf{Working Knowledge}{: AWS (Lambda, ECS/EKS, Redshift), Kubernetes, Pulumi, JAX} \\
+}}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Education  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {King's College London}{London, UK}
+      {MSc in Data Science}{}
+
+    \resumeSubheading
+      {C-DAC (Centre for Development of Advanced Computing)}{Pune, India}
+      {Post Graduate Diploma in Advanced Computing (PG-DAC)}{}
+
+    \resumeSubheading
+      {University of Pune}{Pune, India}
+      {Bachelor of Engineering in Computer Science}{}
+  \resumeSubHeadingListEnd
+
+%%%%  END  %%%%
+
+\end{document}
